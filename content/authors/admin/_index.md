@@ -6,7 +6,7 @@ title: 인숙영
 superuser: true
 
 # Role/position
-role: ''
+role: '전북대학교 컴퓨터인공지능학부 재학생'
 
 # Status emoji
 status:
