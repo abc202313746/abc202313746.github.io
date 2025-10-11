@@ -4,10 +4,10 @@
 
 # Default language
 ko:
-  languageCode: ko-kr
+  languageCode: ko-KR
   weight: 1
 en:
-  languageCode: en-us
+  languageCode: en-US 
   weight: 2
   # Uncomment for multi-lingual sites, and move English content into `en` sub-folder.
   #contentDir: content/en
