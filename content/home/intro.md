@@ -3,7 +3,6 @@ widget: about.avatar
 headless: true
 weight: 10
 active: false
-author: admin
 ---
 
 <p class="justify-text" style="color: #FFC107;">
