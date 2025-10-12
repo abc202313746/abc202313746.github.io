@@ -10,7 +10,7 @@ main:
     url: '#about'
     weight: 10
   - name: 프로젝트
-    url: '/ko/project/'
+    url: '#portfolio'
     weight: 20
   - name: 경력
     url: '#experience'
@@ -21,5 +21,4 @@ main:
   - name: 이력서
     url: '/uploads/resume.pdf'
     weight: 50
-
    
