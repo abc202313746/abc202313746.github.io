@@ -2,7 +2,7 @@
 # Use the Intro widget of the Blog template
 widget: about.avatar
 # This file represents a page section.
-headless: true
+headless: false
 
 # Order that this section will appear in.
 weight: 10
