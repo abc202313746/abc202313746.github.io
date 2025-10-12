@@ -4,6 +4,7 @@
 # See https://docs.hugoblox.com/widget/portfolio/
 widget: portfolio
 active: true
+headless: true
 # This file represents a page section.
 
 # Order that this section appears on the page.
