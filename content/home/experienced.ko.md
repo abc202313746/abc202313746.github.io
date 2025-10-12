@@ -1,5 +1,6 @@
 ---
 widget: experience
+active: true
 headless: true
 weight: 40
 title: Experience

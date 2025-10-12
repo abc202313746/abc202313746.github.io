@@ -7,7 +7,7 @@ headless: true
 
 # Order that this section will appear in.
 weight: 10
-
+active: true
 author: admin
 #design:
 #  background:
