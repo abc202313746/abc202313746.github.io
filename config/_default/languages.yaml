@@ -5,12 +5,12 @@
 # Default language
 en:
   languageCode: en-US
+  contentDir: content/en
   weight: 1
 ko:
   languageCode: ko-KR
+  contentDir: content/ko
   weight: 2
-  # Uncomment for multi-lingual sites, and move English content into `en` sub-folder.
-  #contentDir: content/en
 
 # Uncomment the lines below to configure your website in a second language.
 #zh:
