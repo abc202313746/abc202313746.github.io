@@ -3,8 +3,13 @@
 # Hugo Documentation: https://gohugo.io/getting-started/configuration/#all-configuration-settings
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
-title: Hugo Portfolio Theme # Website name
-baseURL: 'https://example.com/' # Website URL
+# config.yaml
+
+baseURL: 'https://abc202313746.github.io/'
+title: 'SookYoung In | Portfolio'
+defaultContentLanguage: en
+theme: hugo-theme-stack
+paginate: 5
 
 ############################
 ## PAGE OPTIONS
