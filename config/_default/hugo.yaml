@@ -7,7 +7,6 @@
 
 baseURL: 'https://abc202313746.github.io/'
 title: '인숙영의 포트폴리오'
-theme: hugo-theme-stack 
 paginate: 5
 
 ############################
