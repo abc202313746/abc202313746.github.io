@@ -12,4 +12,4 @@ I am particularly interested in technologies like React and TypeScript.<br>
 My goal is to create the best, most helpful web experiences for users.
 </p>
 
-Check out my [resumé](/about/) and portfolio below 😍
+Check out my [resumé](/uploads/resume.pdf) and portfolio below 😍
