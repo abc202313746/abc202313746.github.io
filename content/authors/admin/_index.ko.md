@@ -1,12 +1,12 @@
 ---
 # Display name
-title: Sook-Young In
+title: 인숙영
 
 # Is this the primary user of the site?
 superuser: true
 
 # Role/position
-role: '3rd year student, School of Computer Science and AI, JBNU'
+role: '전북대학교 공과대학 컴퓨터인공지능학부 3학년 재학생'
 
 # Status emoji
 status:
@@ -53,7 +53,7 @@ social:
     link: https://instagram.com/geocushen
 # Uncomment below for Github link
 #- icon: github
-#  icon_pack: fab
+#  pack: fab
 #  link: https://github.com/gcushen
 
 # Link to a PDF of your resume/CV from the About widget.
@@ -66,8 +66,6 @@ social:
 #email: ""
 ---
 
-Alice Wu is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
-
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
 
-{{< icon name="download" pack="fas" >}} {{< staticref "uploads/resume.pdf" "newtab" >}}Download{{< /staticref >}} my resumé as a PDF.
+{{< icon name="download" pack="fas" >}} {{< staticref "uploads/resume.pdf" "newtab" >}}이력서 다운로드{{< /staticref >}}
