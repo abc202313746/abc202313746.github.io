@@ -9,6 +9,7 @@ tags:
   - Infix/Postfix
 date: 2023-06-15
 external_link: ''
+featured: featured.png
 ---
 자료구조 수업 과제로, **스택(Stack)의 LIFO(Last-In, First-Out) 특성을 활용해 복잡한 수식을 계산하는 프로그램**을 C++로 구현했습니다.
 
