@@ -4,19 +4,28 @@ widget: about.avatar
 # This file represents a page section.
 headless: true
 
-# Order that this section will appear in.
-weight: 10
-active: true
-author: admin
 design:
   background:
     color: '#090a0b'
     text_color_light: true
     image:
-      filename: ""
+      filename: space.jpg
       filters:
         brightness: 0.5
   css_class: d-flex fullscreen align-items-center
+
+
+# Order that this section will appear in.
+weight: 10
+active: true
+author: admin
+#design:
+#  background:
+#    color: '#090a0b'
+#    text_color_light: true
+#    video:
+#      path:  # enter filename of a video in /assets/media
+#  css_class: fullscreen
 ---
 
 <p class="justify-text" style="color: #FFC107;">
