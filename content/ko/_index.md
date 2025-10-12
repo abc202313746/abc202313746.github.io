@@ -45,4 +45,20 @@ sections:
           date_start: '2024-09-11'
           date_end: '2024-12-13'
           description: '선배 멘토와의 상호작용을 통해 실무 기술 역량을 강화하는 멘토링 프로그램에 참여.'
+
+  - block: map
+    section_id: contact
+    content:
+      title: 오시는 길
+      text: 전북대학교 (Jeonbuk National University)
+      map:
+        provider: OpenStreetMap
+        zoom: 15
+        center:
+          lat: 35.8469
+          lng: 127.1295
+        markers:
+          - title: 전북대학교
+            lat: 35.8469
+            lng: 127.1295
 ---
