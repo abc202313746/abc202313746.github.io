@@ -2,7 +2,7 @@
 widget: about.avatar
 headless: true
 weight: 10
-active: true
+active: false
 author: admin
 ---
 
