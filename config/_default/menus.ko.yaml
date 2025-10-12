@@ -19,5 +19,7 @@ main:
     url: '#contact'
     weight: 40
   - name: 이력서
-    url: 'uploads/resume.pdf'
+    url: '/uploads/resume.pdf'
     weight: 50
+
+   
