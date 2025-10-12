@@ -45,4 +45,19 @@ sections:
           date_start: '2024-09-11'
           date_end: '2024-12-13'
           description: 'Participated in a mentoring program to enhance practical technical skills through interaction with a senior mentor.'
----
+
+  - block: contact
+    section_id: contact
+    content:
+      title: Contact
+      text: Jeonbuk National University
+      map:
+        provider: OpenStreetMap
+        zoom: 15
+        center:
+          lat: 35.8469
+          lng: 127.1295
+        markers:
+          - title: Jeonbuk National University
+            lat: 35.8469
+            lng: 127.1295
