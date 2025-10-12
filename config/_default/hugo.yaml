@@ -6,9 +6,8 @@
 # config.yaml
 
 baseURL: 'https://abc202313746.github.io/'
-title: 'SookYoung In | Portfolio'
-defaultContentLanguage: en
-theme: hugo-theme-stack
+title: '인숙영의 포트폴리오'
+theme: hugo-theme-stack 
 paginate: 5
 
 ############################

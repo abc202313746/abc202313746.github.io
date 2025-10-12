@@ -4,7 +4,7 @@
 
 # Default language
 en:
-  languageCode: en-US 
+  languageCode: en-US
   weight: 1
 ko:
   languageCode: ko-KR
