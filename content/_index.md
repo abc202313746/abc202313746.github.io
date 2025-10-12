@@ -1,6 +1,7 @@
 ---
 # Homepage
 type: landing
+draft: true
 sections:
   - block: about.avatar
     section_id: about
