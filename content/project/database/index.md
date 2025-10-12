@@ -1,6 +1,7 @@
 ---
 title: Jeonju Cultural Tourism Integrated System Database Design
 summary: A project to design a relational database for providing personalized services by integrating scattered tourism information in the Jeonju area.
+featured: featured.png
 tags:
   - Database Design
   - SQL
