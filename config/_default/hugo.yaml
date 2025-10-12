@@ -17,3 +17,14 @@ module:
   imports:
     - path: github.com/HugoBlox/hugo-blox-builder/modules/blox-plugin-netlify
     - path: github.com/HugoBlox/hugo-blox-builder/modules/blox-bootstrap/v5
+
+############################
+## SECURITY
+############################
+
+security:
+  funcs:
+    getenv:
+      - ^HUGO_
+      - ^CI$
+      - ^WC_
