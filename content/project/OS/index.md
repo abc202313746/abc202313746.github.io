@@ -1,6 +1,7 @@
 ---
 title: Implementation of File System and Memory Management in xv6
 summary: A project focused on implementing file system features and memory management in the xv6 operating system.
+featured: featured.png
 tags:
   - Operating Systems
   - File System
