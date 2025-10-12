@@ -6,11 +6,11 @@
 en:
   languageCode: en-US
   contentDir: content
-  weight: 1
+  weight: 2
 ko:
   languageCode: ko-KR
   contentDir: content/ko
-  weight: 2
+  weight: 1
 
 # Uncomment the lines below to configure your website in a second language.
 #zh:

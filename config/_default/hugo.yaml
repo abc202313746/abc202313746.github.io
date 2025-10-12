@@ -1,15 +1,15 @@
 baseURL: 'https://abc202313746.github.io/'
 title: '인숙영의 포트폴리오'
-defaultContentLanguage: en
+defaultContentLanguage: ko
 hasCJKLanguage: true
 defaultContentLanguageInSubdir: false
 
 languages:
-  en:
-    languageCode: en-US
-    weight: 1
   ko:
     languageCode: ko-KR
+    weight: 1
+  en:
+    languageCode: en-US
     weight: 2
 
 
