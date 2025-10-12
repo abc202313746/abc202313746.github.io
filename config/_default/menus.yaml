@@ -10,7 +10,7 @@ main:
     url: '/'
     weight: 10
   - name: Projects
-    url: '#portfolio'
+    url: '/project/'
     weight: 20
   - name: Experience
     url: '#experience'

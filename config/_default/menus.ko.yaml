@@ -10,7 +10,7 @@ main:
     url: '#about'
     weight: 10
   - name: 프로젝트
-    url: '#portfolio'
+    url: '/ko/project/'
     weight: 20
   - name: 경력
     url: '#experience'
