@@ -23,7 +23,7 @@ sections:
       subtitle: ''
       page_type: project
     design:
-      view: mycard1
+      view: masonry
       columns: '1'
 
   - block: experience
