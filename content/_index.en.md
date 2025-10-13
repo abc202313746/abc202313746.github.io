@@ -34,15 +34,18 @@ sections:
         - title: "Frontend Portfolio"
           content: "React · TypeScript"
           background:
-            color: "#7C4DFF"
+            image:
+              filename: slider-react.svg
         - title: "Database & OS"
           content: "Course Projects"
           background:
-            color: "#1E293B"
+            image:
+              filename: slider-class.svg
         - title: "Learning by Building"
           content: "From idea to demo"
           background:
-            color: "#0EA5E9"
+            image:
+              filename: slider-math.svg
 
   
 

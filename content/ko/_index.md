@@ -38,24 +38,17 @@ sections:
           content: "전북대 컴퓨터·AI 3학년, 프론트엔드 지향"
           background:
             image:
-              filename: unsplash-frontend.svg
+              filename: slider-react.svg
         - title: "협력"
           content: "코드 리뷰와 페어 프로그래밍, 팀과 함께 성장"
           background:
             image:
-              filename: unsplash-systems.svg
+              filename: slider-class.svg
         - title: "관심사"
           content: "React/TypeScript · 데이터 모델링 · 시스템 이해"
           background:
             image:
-              filename: unsplash-build.svg
-
-  # Fallback slider via shortcode (renders even if block: slider is skipped)
-  - block: markdown
-    content:
-      title: ""
-      text: |
-        {{< slider items="/uploads/unsplash-frontend.svg|자기소개|전북대 컴퓨터·AI 3학년, 프론트엔드 지향; /uploads/unsplash-systems.svg|협력|코드 리뷰와 페어 프로그래밍, 팀과 함께 성장; /uploads/unsplash-build.svg|관심사|React/TypeScript · 데이터 모델링 · 시스템 이해" height="360" autoplay="true" interval="4000" >}}
+              filename: slider-math.svg
 
   
   
