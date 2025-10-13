@@ -1,12 +1,12 @@
 ---
 # Display name
-title: Sookyung In
+title: SookYoung In
 
 # Is this the primary user of the site?
 superuser: true
 
 # Role/position
-role: 'JBNU — Computer & AI'
+role: 'JBNU — School of Computer & Artificial Intelligence'
 
 # Profile photo (put `avatar.jpg` in this folder to use it)
 avatar: avatar.jpg

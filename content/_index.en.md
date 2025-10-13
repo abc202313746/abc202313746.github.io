@@ -71,15 +71,6 @@ sections:
           date_end: '2024-12-13'
           description: 'Participated in a mentoring program to enhance practical technical skills through interaction with a senior mentor.'
 
-  - block: collection
-    content:
-      title: Projects
-      count: 9
-      filters:
-        folders: ["project"]
-    design:
-      columns: 3
-      view: card
 
   - block: contact
     section_id: contact
