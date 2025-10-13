@@ -31,7 +31,7 @@ education:
 
 # Status emoji
 status:
-  icon: ☕️
+  icon: 🐥
 
 # Short bio (displayed in user profile at end of posts)
 bio: 저의 주요 관심사는 프론트엔드 개발, 특히 React와 TypeScript입니다.
