@@ -43,7 +43,31 @@ sections:
     content:
       title: 자기소개 슬라이드
       text: |
-  {{< slider items="https://images.unsplash.com/photo-1500576992153-0271099def59?auto=format&fit=crop&w=1600&q=80|Hello sticker|안녕하세요! 전북대 컴퓨터인공지능학부 3학년 인숙영입니다.; https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1600&q=80|Code|프론트엔드 React TypeScript 로 사용자 경험을 만듭니다.; https://images.unsplash.com/photo-1526378722419-350d4f3de0bb?auto=format&fit=crop&w=1600&q=80|Database|데이터베이스 설계와 정규화를 프로젝트에 적용.; https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80|Operating System|운영체제 핵심 프로세스 스레드 동기화 학습.; https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=1600&q=80|Teamwork|팀과 함께 성장하며 배운 것을 공유합니다." height="360" interval="4200" >}}
+        <div class="cc-slider" data-autoplay="true" data-interval="4200">
+          <div class="cc-slider__track">
+            <figure>
+              <img src="https://images.unsplash.com/photo-1500576992153-0271099def59?auto=format&fit=crop&w=1600&q=80" alt="Hello sticker" style="height:360px;" />
+              <figcaption>안녕하세요! 전북대 컴퓨터·AI 3학년 인숙영입니다.</figcaption>
+            </figure>
+            <figure>
+              <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1600&q=80" alt="Code" style="height:360px;" />
+              <figcaption>프론트엔드 React TypeScript 로 사용자 경험을 만듭니다.</figcaption>
+            </figure>
+            <figure>
+              <img src="https://images.unsplash.com/photo-1526378722419-350d4f3de0bb?auto=format&fit=crop&w=1600&q=80" alt="Database" style="height:360px;" />
+              <figcaption>데이터베이스 설계와 정규화를 프로젝트에 적용.</figcaption>
+            </figure>
+            <figure>
+              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80" alt="Operating System" style="height:360px;" />
+              <figcaption>운영체제 핵심 프로세스·스레드·동기화 학습.</figcaption>
+            </figure>
+            <figure>
+              <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=1600&q=80" alt="Teamwork" style="height:360px;" />
+              <figcaption>팀과 함께 성장하며 배운 것을 공유합니다.</figcaption>
+            </figure>
+          </div>
+          <div class="cc-slider__dots"></div>
+        </div>
   - block: markdown
     content:
       title: 커스텀 카드 예시
@@ -56,7 +80,23 @@ sections:
     content:
       title: 이미지 슬라이더
       text: |
-  {{< slider items="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80|AI|Artificial Intelligence; https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1600&q=80|Code|Coding; https://images.unsplash.com/photo-1526378722419-350d4f3de0bb?auto=format&fit=crop&w=1600&q=80|Data|Data" >}}
+        <div class="cc-slider" data-autoplay="true" data-interval="3500">
+          <div class="cc-slider__track">
+            <figure>
+              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80" alt="AI" />
+              <figcaption>Artificial Intelligence</figcaption>
+            </figure>
+            <figure>
+              <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1600&q=80" alt="Code" />
+              <figcaption>Coding</figcaption>
+            </figure>
+            <figure>
+              <img src="https://images.unsplash.com/photo-1526378722419-350d4f3de0bb?auto=format&fit=crop&w=1600&q=80" alt="Data" />
+              <figcaption>Data</figcaption>
+            </figure>
+          </div>
+          <div class="cc-slider__dots"></div>
+        </div>
 
   - block: markdown
     content:
