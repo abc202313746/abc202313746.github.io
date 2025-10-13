@@ -1,65 +1,41 @@
----
 # Homepage
 type: landing
-draft: true
+title: "인숙영의 포트폴리오"
 sections:
-  - block: about.avatar
-    section_id: about
+  - block: hero
     content:
-      username: admin
+      title: "인숙영 · 포트폴리오"
+      text: "프론트엔드(React/TS) & 전공 과제(DB/OS/자료구조)"
+      primary_action:
+        text: "프로젝트 보기"
+        url: "/project/"
+      secondary_action:
+        text: "게시글 보기"
+        url: "/post/"
+
+  - block: slider
+    content:
+      slides:
+        - title: "React · TypeScript"
+          subtitle: "프론트엔드 프로젝트"
+          image:
+            filename: uploads/slider-react.svg
+        - title: "DB · OS · 자료구조"
+          subtitle: "수업/실습 정리"
+          image:
+            filename: uploads/slider-class.svg
+        - title: "Learning by Building"
+          subtitle: "아이디어에서 데모까지"
+          image:
+            filename: uploads/slider-math.svg
+
+  - block: collection
+    content:
+      title: "프로젝트"
+      count: 9
+      filters:
+        folders: ["project"]
+      sort: "date"
     design:
-      background:
-        color: '#090a0b'
-        text_color_light: true
-        image:
-          filename: ""
-          filters:
-            brightness: 0.5
-      css_class: d-flex fullscreen align-items-center
-
-  - block: portfolio
-    section_id: portfolio
-    content:
-      title: Projects
-      subtitle: ''
-      page_type: project
-    design:
-      view: masonry
-      columns: '1'
-
-  - block: experience
-    section_id: experience
-    content:
-      title: Experience
-      subtitle: ''
-      date_format: Jan 2006
-      items:
-        - title: Club Member
-          company: Koala
-          location: Jeonbuk National University
-          date_start: '2024-03-02'
-          date_end: '2024-06-20'
-          description: 'Participated in club activities to cultivate algorithmic problem-solving abilities and logical thinking.'
-        - title: SW Mentoring Mentee
-          company: Online
-          location: Jeonbuk National University
-          date_start: '2024-09-11'
-          date_end: '2024-12-13'
-          description: 'Participated in a mentoring program to enhance practical technical skills through interaction with a senior mentor.'
-
-  - block: contact
-    section_id: contact
-    content:
-      title: Contact
-      text: Jeonbuk National University
-      map:
-        provider: OpenStreetMap
-        zoom: 15
-        center:
-          lat: 35.8469
-          lng: 127.1295
-        markers:
-          - title: Jeonbuk National University
-            lat: 35.8469
-            lng: 127.1295
----
+      view: card
+      columns: 3
