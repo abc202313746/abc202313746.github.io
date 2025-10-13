@@ -27,6 +27,20 @@ sections:
       columns: '1'
   - block: markdown
     content:
+      title: 빠른 액션
+      text: |
+        <div class="d-flex flex-wrap gap-2">
+          <a class="btn btn-primary btn-lg d-inline-flex align-items-center" href="#top"><i class="fas fa-arrow-up me-2"></i>Top</a>
+          <a class="btn btn-primary btn-lg d-inline-flex align-items-center" href="/project/"><i class="fas fa-layer-group me-2"></i>프로젝트</a>
+          <a class="btn btn-primary btn-lg d-inline-flex align-items-center" href="/uploads/resume.pdf"><i class="fas fa-file-alt me-2"></i>이력서(PDF)</a>
+          <a class="btn btn-primary btn-lg d-inline-flex align-items-center" href="mailto:isy0110@jbnu.ac.kr"><i class="fas fa-envelope me-2"></i>연락하기</a>
+          <a class="btn btn-primary btn-lg d-inline-flex align-items-center" href="tel:+821045440797"><i class="fas fa-phone me-2"></i>전화걸기</a>
+          <a class="btn btn-primary btn-lg d-inline-flex align-items-center" href="https://maps.google.com/?q=35.8469,127.1295" target="_blank" rel="noopener"><i class="fas fa-map-marker-alt me-2"></i>위치(지도)</a>
+          <a class="btn btn-primary btn-lg d-inline-flex align-items-center" href="/en/"><i class="fas fa-globe me-2"></i>한국어/English</a>
+          <a class="btn btn-primary btn-lg d-inline-flex align-items-center" href="https://jbnu.macs.or.kr" target="_blank" rel="noopener"><i class="fas fa-external-link-alt me-2"></i>학과 홈페이지</a>
+        </div>
+  - block: markdown
+    content:
       title: 커스텀 카드 예시
       text: |
         {{< card_overlay title="데이터베이스 설계" subtitle="전주 문화관광 통합" image="/project/database/featured.png" link="/project/database/" >}}
