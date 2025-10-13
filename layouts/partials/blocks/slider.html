@@ -36,26 +36,46 @@
       {{ $title := .title }}
       {{ $desc := or .content .subtitle }}
       {{ $fn := "" }}
-      {{ with .background }}{{ with .image }}{{ with .filename }}{{ $fn = . }}{{ end }}{{ end }}{{ end }}
-      {{ if eq $fn "" }}{{ with .image }}{{ with .filename }}{{ $fn = . }}{{ end }}{{ end }}{{ end }}
+      {{/* Allow multiple schemas: background.image.filename | background.image (string) | image.filename | image (string) | media (string) */}}
+      {{ with .background }}
+        {{ with .image }}
+          {{ if .filename }}
+            {{ $fn = .filename }}
+          {{ else }}
+            {{ $fn = printf "%v" . }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+      {{ if eq $fn "" }}
+        {{ with .image }}
+          {{ if .filename }}
+            {{ $fn = .filename }}
+          {{ else }}
+            {{ $fn = printf "%v" . }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+      {{ if eq $fn "" }}{{ with .media }}{{ $fn = . }}{{ end }}{{ end }}
       {{ $bgColor := .background.color }}
       <figure style="min-width:80%;margin:0;position:relative;scroll-snap-align:start;border-radius:12px;overflow:hidden;">
-        {{/* Resolve image URL with graceful fallbacks */}}
+        {{/* Resolve image URL with graceful fallbacks (prefer assets/media) */}}
         {{ $url := "" }}
         {{ if $fn }}
           {{ if hasPrefix $fn "/" }}
             {{ $url = $fn }}
-          {{ else if (fileExists (printf "static/uploads/%s" $fn)) }}
-            {{ $url = (printf "/uploads/%s" $fn) }}
           {{ else }}
             {{ with (resources.Get (printf "media/%s" $fn)) }}
               {{ $url = .RelPermalink }}
+            {{ else }}
+              {{ if (fileExists (printf "static/uploads/%s" $fn)) }}
+                {{ $url = (printf "/uploads/%s" $fn) }}
+              {{ end }}
             {{ end }}
           {{ end }}
         {{ end }}
 
         {{ if $url }}
-          <img src="{{ $url }}" alt="{{ $title }}" style="width:100%;height:320px;object-fit:cover;display:block;" loading="lazy" />
+          <img src="{{ $url }}" data-src-debug="{{ $fn }}" alt="{{ $title }}" style="width:100%;height:320px;object-fit:cover;display:block;" loading="lazy" />
         {{ else }}
           <div class="cc-slide-bg" style="width:100%;height:320px;background:linear-gradient(135deg,#7C4DFF,#651FFF);" {{ with $bgColor }}data-bg="{{ . }}"{{ end }}></div>
         {{ end }}
@@ -74,24 +94,43 @@
         {{ $title := .title }}
         {{ $desc := or .content .subtitle }}
         {{ $fn := "" }}
-        {{ with .background }}{{ with .image }}{{ with .filename }}{{ $fn = . }}{{ end }}{{ end }}{{ end }}
-        {{ if eq $fn "" }}{{ with .image }}{{ with .filename }}{{ $fn = . }}{{ end }}{{ end }}{{ end }}
+        {{ with .background }}
+          {{ with .image }}
+            {{ if .filename }}
+              {{ $fn = .filename }}
+            {{ else }}
+              {{ $fn = printf "%v" . }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+        {{ if eq $fn "" }}
+          {{ with .image }}
+            {{ if .filename }}
+              {{ $fn = .filename }}
+            {{ else }}
+              {{ $fn = printf "%v" . }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+        {{ if eq $fn "" }}{{ with .media }}{{ $fn = . }}{{ end }}{{ end }}
         {{ $bgColor := .background.color }}
         {{ $url := "" }}
         {{ if $fn }}
           {{ if hasPrefix $fn "/" }}
             {{ $url = $fn }}
-          {{ else if (fileExists (printf "static/uploads/%s" $fn)) }}
-            {{ $url = (printf "/uploads/%s" $fn) }}
           {{ else }}
             {{ with (resources.Get (printf "media/%s" $fn)) }}
               {{ $url = .RelPermalink }}
+            {{ else }}
+              {{ if (fileExists (printf "static/uploads/%s" $fn)) }}
+                {{ $url = (printf "/uploads/%s" $fn) }}
+              {{ end }}
             {{ end }}
           {{ end }}
         {{ end }}
         <figure style="margin:0;border-radius:12px;overflow:hidden;">
           {{ if $url }}
-            <img src="{{ $url }}" alt="{{ $title }}" style="width:100%;height:220px;object-fit:cover;display:block;" />
+            <img src="{{ $url }}" data-src-debug="{{ $fn }}" alt="{{ $title }}" style="width:100%;height:220px;object-fit:cover;display:block;" />
           {{ else }}
             <div class="cc-slide-bg" style="width:100%;height:220px;background:linear-gradient(135deg,#7C4DFF,#651FFF);" {{ with $bgColor }}data-bg="{{ . }}"{{ end }}></div>
           {{ end }}
