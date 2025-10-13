@@ -10,8 +10,17 @@ main:
     url: '#about'
     weight: 10
   - name: 프로젝트
+    identifier: projects
     url: '/project/'
     weight: 20
+  - name: 데이터베이스
+    parent: projects
+    url: '/project/database/'
+    weight: 21
+  - name: 운영체제
+    parent: projects
+    url: '/project/os/'
+    weight: 22
   - name: 경력
     url: '#experience'
     weight: 30
