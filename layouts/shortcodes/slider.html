@@ -4,8 +4,8 @@
 {{ $autoplay := .Get "autoplay" | default "true" }}
 {{ $interval := .Get "interval" | default "3500" }}
 
-<div class="cc-slider" data-autoplay="{{ $autoplay }}" data-interval="{{ $interval }}" style="position:relative;">
-  <div class="cc-slider__track" style="display:flex;gap:12px;overflow-x:auto;padding:8px;scroll-snap-type:x mandatory;scrollbar-width:none;">
+<div class="cc-slider" data-autoplay="{{ $autoplay }}" data-interval="{{ $interval }}" style="position:relative;min-height: {{ $height }}px;">
+  <div class="cc-slider__track" style="display:flex;gap:12px;overflow-x:auto;white-space:nowrap;padding:8px;scroll-snap-type:x mandatory;scrollbar-width:none;">
     {{- range $list -}}
       {{- $entry := . | trim " " -}}
       {{- if gt (len $entry) 0 -}}
@@ -20,6 +20,22 @@
     {{- end -}}
   </div>
   <div class="cc-slider__dots" style="display:flex;gap:8px;justify-content:center;margin:8px 0 0 0;"></div>
+  <noscript>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;">
+      {{- range $list -}}
+        {{- $entry := . | trim " " -}}
+        {{- if gt (len $entry) 0 -}}
+          {{- $parts := split $entry "|" -}}
+          <figure style="margin:0;border-radius:12px;overflow:hidden;">
+            <img src="{{ index $parts 0 }}" alt="{{ if ge (len $parts) 2 }}{{ index $parts 1 }}{{ end }}" style="width:100%;height:{{ $height }}px;object-fit:cover;display:block;" />
+            {{ if ge (len $parts) 3 }}
+              <figcaption style="padding:8px 0;opacity:.8;">{{ index $parts 2 }}</figcaption>
+            {{ end }}
+          </figure>
+        {{- end -}}
+      {{- end -}}
+    </div>
+  </noscript>
 </div>
 
 <style>
