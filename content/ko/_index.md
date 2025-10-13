@@ -41,6 +41,11 @@ sections:
         </div>
   - block: markdown
     content:
+      title: 자기소개 슬라이드
+      text: |
+        {{< slider items="https://images.unsplash.com/photo-1500576992153-0271099def59?auto=format&fit=crop&w=1600&q=80|Hello sticker|안녕하세요! 반가워요." >}}
+  - block: markdown
+    content:
       title: 커스텀 카드 예시
       text: |
         {{< card_overlay title="데이터베이스 설계" subtitle="전주 문화관광 통합" image="/project/database/featured.png" link="/project/database/" >}}

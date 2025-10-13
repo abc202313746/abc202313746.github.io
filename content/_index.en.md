@@ -39,6 +39,11 @@ sections:
           <a class="btn btn-primary btn-lg d-inline-flex align-items-center" href="/"><i class="fas fa-globe me-2"></i>Korean/English</a>
           <a class="btn btn-primary btn-lg d-inline-flex align-items-center" href="https://jbnu.macs.or.kr" target="_blank" rel="noopener"><i class="fas fa-external-link-alt me-2"></i>Department</a>
         </div>
+  - block: markdown
+    content:
+      title: Self-Intro Slide
+      text: |
+        {{< slider items="https://images.unsplash.com/photo-1500576992153-0271099def59?auto=format&fit=crop&w=1600&q=80|Hello sticker|Hello! Nice to meet you." >}}
 
   - block: experience
     section_id: experience
