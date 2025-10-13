@@ -69,7 +69,7 @@ features:
   privacy_pack:
     enable: false
   repository:
-    url: 'https://github.com/<username>/<repository>'
+    url: 'https://github.com/abc202313746/abc202313746.github.io'
     content_dir: content
     branch: main
   avatar:

@@ -43,17 +43,20 @@ sections:
     content:
       slides:
         - title: "Frontend Portfolio"
-          subtitle: "React · TypeScript"
-          image:
-            filename: uploads/unsplash-frontend.svg
+          content: "React · TypeScript"
+          background:
+            image:
+              filename: unsplash-frontend.svg
         - title: "Database & OS"
-          subtitle: "Course Projects"
-          image:
-            filename: uploads/unsplash-systems.svg
+          content: "Course Projects"
+          background:
+            image:
+              filename: unsplash-systems.svg
         - title: "Learning by Building"
-          subtitle: "From idea to demo"
-          image:
-            filename: uploads/unsplash-build.svg
+          content: "From idea to demo"
+          background:
+            image:
+              filename: unsplash-build.svg
 
   - block: experience
     section_id: experience

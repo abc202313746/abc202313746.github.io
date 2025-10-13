@@ -49,17 +49,20 @@ sections:
     content:
       slides:
         - title: "자기소개"
-          subtitle: "전북대 컴퓨터·AI 3학년, 프론트엔드 지향"
-          image:
-            filename: uploads/unsplash-frontend.svg
+          content: "전북대 컴퓨터·AI 3학년, 프론트엔드 지향"
+          background:
+            image:
+              filename: unsplash-frontend.svg
         - title: "협력"
-          subtitle: "코드 리뷰와 페어 프로그래밍, 팀과 함께 성장"
-          image:
-            filename: uploads/unsplash-systems.svg
+          content: "코드 리뷰와 페어 프로그래밍, 팀과 함께 성장"
+          background:
+            image:
+              filename: unsplash-systems.svg
         - title: "관심사"
-          subtitle: "React/TypeScript · 데이터 모델링 · 시스템 이해"
-          image:
-            filename: uploads/unsplash-build.svg
+          content: "React/TypeScript · 데이터 모델링 · 시스템 이해"
+          background:
+            image:
+              filename: unsplash-build.svg
 
   
   - block: markdown
