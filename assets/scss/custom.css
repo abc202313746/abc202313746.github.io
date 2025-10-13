@@ -45,3 +45,12 @@
   box-shadow: 0 10px 20px rgba(0,0,0,0.25);
 }
 .cc-fab__btn i { font-size: 18px; }
+
+/* Ensure contact map is visible with a fixed height */
+.home-section#contact .leaflet-container,
+#contact .leaflet-container,
+.section-contact .leaflet-container,
+#contact .js-map {
+  height: 340px !important;
+  min-height: 340px;
+}
