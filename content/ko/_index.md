@@ -72,9 +72,9 @@ sections:
     content:
       title: 커스텀 카드 예시
       text: |
-        {{< card_overlay title="데이터베이스 설계" subtitle="전주 문화관광 통합" image="/project/database/featured.png" link="/project/database/" >}}
+        {{< card_overlay title="데이터베이스 설계" subtitle="전주 문화관광 통합" image="https://images.unsplash.com/photo-1526378722419-350d4f3de0bb?auto=format&fit=crop&w=1200&q=80" link="/project/database/" >}}
         
-        {{< card_compact title="운영체제 핵심 개념" meta="C, 스케줄링, 동기화" image="/project/os/featured.png" link="/project/os/" >}}
+        {{< card_compact title="운영체제 핵심 개념" meta="C, 스케줄링, 동기화" image="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80" link="/project/os/" >}}
 
   - block: markdown
     content:
@@ -103,15 +103,15 @@ sections:
       title: 9개 카드 그리드
       text: |
         <div class="row row-cols-1 row-cols-md-3 g-3">
-          <div class="col">{{< card_compact title="DB 설계" meta="관계형 모델" image="/project/database/featured.png" link="/project/database/" >}}</div>
-          <div class="col">{{< card_compact title="운영체제" meta="프로세스/스케줄링" image="/project/os/featured.png" link="/project/os/" >}}</div>
-          <div class="col">{{< card_compact title="스택 계산기" meta="C++ 자료구조" image="/project/stack/featured.png" link="/project/stack/" >}}</div>
-          <div class="col">{{< card_overlay title="DB 설계" subtitle="전주 문화관광" image="/project/database/featured.png" link="/project/database/" >}}</div>
-          <div class="col">{{< card_overlay title="운영체제" subtitle="동기화/스레드" image="/project/os/featured.png" link="/project/os/" >}}</div>
-          <div class="col">{{< card_overlay title="스택 계산기" subtitle="중위→후위" image="/project/stack/featured.png" link="/project/stack/" >}}</div>
-          <div class="col">{{< card_compact title="DB 설계" meta="정규화" image="/project/database/featured.png" link="/project/database/" >}}</div>
-          <div class="col">{{< card_compact title="운영체제" meta="교착상태" image="/project/os/featured.png" link="/project/os/" >}}</div>
-          <div class="col">{{< card_compact title="스택 계산기" meta="스택 연산" image="/project/stack/featured.png" link="/project/stack/" >}}</div>
+          <div class="col">{{< card_compact title="DB 설계" meta="관계형 모델" image="https://images.unsplash.com/photo-1526378722419-350d4f3de0bb?auto=format&fit=crop&w=1200&q=80" link="/project/database/" >}}</div>
+          <div class="col">{{< card_compact title="운영체제" meta="프로세스/스케줄링" image="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80" link="/project/os/" >}}</div>
+          <div class="col">{{< card_compact title="스택 계산기" meta="C++ 자료구조" image="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1200&q=80" link="/project/stack/" >}}</div>
+          <div class="col">{{< card_overlay title="DB 설계" subtitle="전주 문화관광" image="https://images.unsplash.com/photo-1526378722419-350d4f3de0bb?auto=format&fit=crop&w=1200&q=80" link="/project/database/" >}}</div>
+          <div class="col">{{< card_overlay title="운영체제" subtitle="동기화/스레드" image="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80" link="/project/os/" >}}</div>
+          <div class="col">{{< card_overlay title="스택 계산기" subtitle="중위→후위" image="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1200&q=80" link="/project/stack/" >}}</div>
+          <div class="col">{{< card_compact title="DB 설계" meta="정규화" image="https://images.unsplash.com/photo-1526378722419-350d4f3de0bb?auto=format&fit=crop&w=1200&q=80" link="/project/database/" >}}</div>
+          <div class="col">{{< card_compact title="운영체제" meta="교착상태" image="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80" link="/project/os/" >}}</div>
+          <div class="col">{{< card_compact title="스택 계산기" meta="스택 연산" image="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1200&q=80" link="/project/stack/" >}}</div>
         </div>
 
   - block: experience
