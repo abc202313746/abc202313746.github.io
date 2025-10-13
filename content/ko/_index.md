@@ -33,6 +33,32 @@ sections:
         
         {{< card_compact title="운영체제 핵심 개념" meta="C, 스케줄링, 동기화" image="/project/os/featured.png" link="/project/os/" >}}
 
+  - block: markdown
+    content:
+      title: 이미지 슬라이더
+      text: |
+        {{< slider 
+            (dict "src" "https://images.unsplash.com/photo-1518770660439-4636190af475" "alt" "AI" "caption" "Artificial Intelligence") 
+            (dict "src" "https://images.unsplash.com/photo-1518779578993-ec3579fee39f" "alt" "Code" "caption" "Coding")
+            (dict "src" "https://images.unsplash.com/photo-1526378722419-350d4f3de0bb" "alt" "Data" "caption" "Data")
+        >}}
+
+  - block: markdown
+    content:
+      title: 9개 카드 그리드
+      text: |
+        <div class="row row-cols-1 row-cols-md-3 g-3">
+          <div class="col">{{< card_compact title="DB 설계" meta="관계형 모델" image="/project/database/featured.png" link="/project/database/" >}}</div>
+          <div class="col">{{< card_compact title="운영체제" meta="프로세스/스케줄링" image="/project/os/featured.png" link="/project/os/" >}}</div>
+          <div class="col">{{< card_compact title="스택 계산기" meta="C++ 자료구조" image="/project/stack/featured.png" link="/project/stack/" >}}</div>
+          <div class="col">{{< card_overlay title="DB 설계" subtitle="전주 문화관광" image="/project/database/featured.png" link="/project/database/" >}}</div>
+          <div class="col">{{< card_overlay title="운영체제" subtitle="동기화/스레드" image="/project/os/featured.png" link="/project/os/" >}}</div>
+          <div class="col">{{< card_overlay title="스택 계산기" subtitle="중위→후위" image="/project/stack/featured.png" link="/project/stack/" >}}</div>
+          <div class="col">{{< card_compact title="DB 설계" meta="정규화" image="/project/database/featured.png" link="/project/database/" >}}</div>
+          <div class="col">{{< card_compact title="운영체제" meta="교착상태" image="/project/os/featured.png" link="/project/os/" >}}</div>
+          <div class="col">{{< card_compact title="스택 계산기" meta="스택 연산" image="/project/stack/featured.png" link="/project/stack/" >}}</div>
+        </div>
+
   - block: experience
     section_id: experience
     content:

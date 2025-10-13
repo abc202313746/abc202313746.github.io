@@ -1,3 +1,17 @@
 .justify-text {
   text-align: justify !important;
 }
+
+/* Theming: primary color and button hover */
+:root {
+  --bs-primary: #7C4DFF; /* Deep purple */
+}
+.btn-primary {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #651FFF; /* Hover shade */
+  border-color: #651FFF;
+}
