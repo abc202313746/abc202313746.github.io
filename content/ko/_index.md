@@ -41,33 +41,21 @@ sections:
         </div>
   - block: markdown
     content:
-      title: 자기소개 슬라이드
+      title: 자기소개 슬라이더
       text: |
-        <div class="cc-slider" data-autoplay="true" data-interval="4200">
-          <div class="cc-slider__track">
-            <figure>
-              <img src="https://images.unsplash.com/photo-1500576992153-0271099def59?auto=format&fit=crop&w=1600&q=80" alt="Hello sticker" style="height:360px;" />
-              <figcaption>안녕하세요! 전북대 컴퓨터·AI 3학년 인숙영입니다.</figcaption>
-            </figure>
-            <figure>
-              <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1600&q=80" alt="Code" style="height:360px;" />
-              <figcaption>프론트엔드 React TypeScript 로 사용자 경험을 만듭니다.</figcaption>
-            </figure>
-            <figure>
-              <img src="https://images.unsplash.com/photo-1526378722419-350d4f3de0bb?auto=format&fit=crop&w=1600&q=80" alt="Database" style="height:360px;" />
-              <figcaption>데이터베이스 설계와 정규화를 프로젝트에 적용.</figcaption>
-            </figure>
-            <figure>
-              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80" alt="Operating System" style="height:360px;" />
-              <figcaption>운영체제 핵심 프로세스·스레드·동기화 학습.</figcaption>
-            </figure>
-            <figure>
-              <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=1600&q=80" alt="Teamwork" style="height:360px;" />
-              <figcaption>팀과 함께 성장하며 배운 것을 공유합니다.</figcaption>
-            </figure>
-          </div>
-          <div class="cc-slider__dots"></div>
-        </div>
+        {{< slider items="https://images.unsplash.com/photo-1500576992153-0271099def59?auto=format&fit=crop&w=1600&q=80|Hello|안녕하세요! 전북대 컴퓨터·AI 3학년 인숙영입니다.; https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1600&q=80|Code|React와 TypeScript로 사용자 경험을 만듭니다.; https://images.unsplash.com/photo-1526378722419-350d4f3de0bb?auto=format&fit=crop&w=1600&q=80|Database|DB 설계와 정규화 적용; https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80|Operating System|프로세스·스레드·동기화 학습" height="360" autoplay="true" interval="3800" >}}
+
+  - block: markdown
+    content:
+      title: 협력 슬라이더
+      text: |
+        {{< slider items="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=1600&q=80|Teamwork|팀과 함께 성장하고 협업합니다.; https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1600&q=80|Pair Programming|코드 리뷰와 페어 프로그래밍; https://images.unsplash.com/photo-1500576992153-0271099def59?auto=format&fit=crop&w=1600&q=80|Communication|사용자와 팀을 잇는 소통" height="360" autoplay="true" interval="4200" >}}
+
+  - block: markdown
+    content:
+      title: 관심사 슬라이더
+      text: |
+        {{< slider items="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1600&q=80|Frontend|프론트엔드 UI/UX; https://images.unsplash.com/photo-1526378722419-350d4f3de0bb?auto=format&fit=crop&w=1600&q=80|Data|데이터 모델링; https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80|Systems|시스템 이해와 최적화" height="360" autoplay="true" interval="4000" >}}
   - block: markdown
     content:
       title: 커스텀 카드 예시
@@ -76,27 +64,7 @@ sections:
         
         {{< card_compact title="운영체제 핵심 개념" meta="C, 스케줄링, 동기화" image="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80" link="/project/os/" >}}
 
-  - block: markdown
-    content:
-      title: 이미지 슬라이더
-      text: |
-        <div class="cc-slider" data-autoplay="true" data-interval="3500">
-          <div class="cc-slider__track">
-            <figure>
-              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80" alt="AI" />
-              <figcaption>Artificial Intelligence</figcaption>
-            </figure>
-            <figure>
-              <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1600&q=80" alt="Code" />
-              <figcaption>Coding</figcaption>
-            </figure>
-            <figure>
-              <img src="https://images.unsplash.com/photo-1526378722419-350d4f3de0bb?auto=format&fit=crop&w=1600&q=80" alt="Data" />
-              <figcaption>Data</figcaption>
-            </figure>
-          </div>
-          <div class="cc-slider__dots"></div>
-        </div>
+  
 
   - block: markdown
     content:
