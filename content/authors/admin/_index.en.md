@@ -18,6 +18,9 @@ social:
   - icon: github
     icon_pack: fab
     link: https://github.com/abc202313746
+  - icon: instagram
+    icon_pack: fab
+    link: https://www.instagram.com/insookyoung/
 ---
 
 I am a third-year student at Jeonbuk National University (Computer Science & AI). I focus on Frontend (React, TypeScript) and creating helpful user experiences.
