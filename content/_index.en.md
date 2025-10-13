@@ -24,6 +24,8 @@ sections:
       subtitle: ''
       count: 9
       page_type: project
+      filters:
+        folders: ["project"]
       text: ""
     design:
       view: card
