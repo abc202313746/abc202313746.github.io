@@ -20,7 +20,7 @@ sections:
           content: "프론트엔드 프로젝트"
           background:
             image:
-              filename: slider-react.svg   # 참고: assets/media/ 에 두는 걸 권장
+              filename: slider-react.svg 
         - title: "DB · OS · 자료구조"
           content: "수업/실습 정리"
           background:
@@ -31,6 +31,12 @@ sections:
           background:
             image:
               filename: slider-math.svg
+
+  - block: markdown
+    content:
+      title: ""
+      text: |
+        {{< slider items="/uploads/slider-react.svg|React · TypeScript|프론트엔드 프로젝트; /uploads/slider-class.svg|DB · OS · 자료구조|수업/실습 정리; /uploads/slider-math.svg|Learning by Building|아이디어에서 데모까지" height="360" autoplay="true" interval="4000" >}}
 
   - block: collection
     content:

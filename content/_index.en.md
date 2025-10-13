@@ -25,20 +25,6 @@ sections:
     design:
       view: masonry
       columns: '1'
-  - block: markdown
-    content:
-      title: Quick Actions
-      text: |
-        <div class="d-flex flex-wrap gap-2">
-          <a class="btn btn-primary btn-lg d-inline-flex align-items-center" href="#top"><i class="fas fa-arrow-up me-2"></i>Top</a>
-          <a class="btn btn-primary btn-lg d-inline-flex align-items-center" href="/en/project/"><i class="fas fa-layer-group me-2"></i>Projects</a>
-          <a class="btn btn-primary btn-lg d-inline-flex align-items-center" href="/uploads/resume.pdf"><i class="fas fa-file-alt me-2"></i>Resumé (PDF)</a>
-          <a class="btn btn-primary btn-lg d-inline-flex align-items-center" href="mailto:isy0110@jbnu.ac.kr"><i class="fas fa-envelope me-2"></i>Contact</a>
-          <a class="btn btn-primary btn-lg d-inline-flex align-items-center" href="tel:+821045440797"><i class="fas fa-phone me-2"></i>Call</a>
-          <a class="btn btn-primary btn-lg d-inline-flex align-items-center" href="https://maps.google.com/?q=35.8469,127.1295" target="_blank" rel="noopener"><i class="fas fa-map-marker-alt me-2"></i>Map</a>
-          <a class="btn btn-primary btn-lg d-inline-flex align-items-center" href="/"><i class="fas fa-globe me-2"></i>Korean/English</a>
-          <a class="btn btn-primary btn-lg d-inline-flex align-items-center" href="https://jbnu.macs.or.kr" target="_blank" rel="noopener"><i class="fas fa-external-link-alt me-2"></i>Department</a>
-        </div>
   - block: slider
     content:
       slides:
@@ -57,6 +43,13 @@ sections:
           background:
             image:
               filename: unsplash-build.svg
+
+  # Fallback slider via shortcode (renders even if block: slider is skipped)
+  - block: markdown
+    content:
+      title: ""
+      text: |
+        {{< slider items="/uploads/unsplash-frontend.svg|Frontend Portfolio|React · TypeScript; /uploads/unsplash-systems.svg|Database & OS|Course Projects; /uploads/unsplash-build.svg|Learning by Building|From idea to demo" height="360" autoplay="true" interval="4000" >}}
 
   - block: experience
     section_id: experience
