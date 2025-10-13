@@ -41,7 +41,7 @@ sections:
         </div>
   - block: slider
     content:
-      items:
+      slides:
         - title: "Frontend Portfolio"
           subtitle: "React · TypeScript"
           image:
