@@ -39,7 +39,11 @@ sections:
       filters:
         folders: ["project"]
       sort: "date"
-    design:
-      view: card
-      columns: 3
----
+    ---
+    title: "(unused) root homepage placeholder"
+    headless: true
+    _build:
+      render: never
+      list: never
+    ---
+    <!-- This file conflicted with the English homepage. It is intentionally disabled. -->
