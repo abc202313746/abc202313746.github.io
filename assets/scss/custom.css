@@ -15,3 +15,33 @@
   background-color: #651FFF; /* Hover shade */
   border-color: #651FFF;
 }
+
+/* Floating FAB buttons */
+.cc-fab {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1050;
+}
+.cc-fab__btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--bs-primary);
+  color: #fff !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+  transition: transform .15s ease, background-color .15s ease, box-shadow .15s ease;
+}
+.cc-fab__btn:hover,
+.cc-fab__btn:focus {
+  background: #651FFF;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+.cc-fab__btn i { font-size: 18px; }

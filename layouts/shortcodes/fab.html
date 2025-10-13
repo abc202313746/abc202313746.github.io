@@ -1,0 +1,13 @@
+{{ $lang := .Page.Language.Lang }}
+{{ $prefix := cond (eq $lang "en") "/en" "" }}
+{{ $toggle := cond (eq $lang "en") "/" "/en/" }}
+
+<div class="cc-fab" aria-label="Quick actions">
+  <a class="cc-fab__btn" href="#about" title="Top"><i class="fas fa-arrow-up" aria-hidden="true"></i></a>
+  <a class="cc-fab__btn" href="{{ printf "%s/project/" $prefix }}" title="Projects"><i class="fas fa-layer-group" aria-hidden="true"></i></a>
+  <a class="cc-fab__btn" href="/uploads/resume.pdf" title="Resumé"><i class="fas fa-file-alt" aria-hidden="true"></i></a>
+  <a class="cc-fab__btn" href="mailto:isy0110@jbnu.ac.kr" title="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+  <a class="cc-fab__btn" href="tel:+821045440797" title="Call"><i class="fas fa-phone" aria-hidden="true"></i></a>
+  <a class="cc-fab__btn" href="https://maps.google.com/?q=35.8469,127.1295" target="_blank" rel="noopener" title="Map"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></a>
+  <a class="cc-fab__btn" href="{{ $toggle }}" title="Language"><i class="fas fa-globe" aria-hidden="true"></i></a>
+</div>

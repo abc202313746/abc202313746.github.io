@@ -80,4 +80,7 @@ sections:
           - title: Jeonbuk National University
             lat: 35.8469
             lng: 127.1295
----
+  - block: markdown
+    content:
+      text: |
+        {{< fab >}}
