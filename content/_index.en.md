@@ -48,7 +48,7 @@ sections:
           content: "From idea to demo"
           background:
             image:
-              filename: slider-math.svg
+              filename: unsplash-frontend.svg
     design:
       slide_height: '300px'
       slide_min_width: '90%'

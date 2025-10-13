@@ -30,11 +30,44 @@
   ) }}
 {{ end }}
 
-{{/* Size controls from front matter */}}
-{{ $height := 320 }}
-{{ with $block.design.height }}{{ $height = . }}{{ end }}
-{{ with $block.design.slide_height }}{{ $height = (replaceRE "[^0-9]" "" (printf "%v" .)) }}{{ end }}
-{{ if and (not (isset $block "design")) (isset $block "content") }}{{ with $block.content.height }}{{ $height = . }}{{ end }}{{ end }}
+{{/* Size controls from front matter (compute CSS-ready and numeric values) */}}
+{{ $heightCss := "320px" }}
+{{ $heightNum := 320 }}
+{{ if isset $block "design" }}
+  {{ with $block.design.slide_height }}
+    {{ $h := printf "%v" . }}
+    {{ if gt (len (findRE "^[0-9]+$" $h)) 0 }}
+      {{ $heightCss = printf "%spx" $h }}
+      {{ $heightNum = (int $h) }}
+    {{ else }}
+      {{ $heightCss = $h }}
+      {{ $heightNum = (int (replaceRE "[^0-9]" "" $h)) }}
+    {{ end }}
+  {{ else }}
+    {{ with $block.design.height }}
+      {{ $h := printf "%v" . }}
+      {{ if gt (len (findRE "^[0-9]+$" $h)) 0 }}
+        {{ $heightCss = printf "%spx" $h }}
+        {{ $heightNum = (int $h) }}
+      {{ else }}
+        {{ $heightCss = $h }}
+        {{ $heightNum = (int (replaceRE "[^0-9]" "" $h)) }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ else if and (not (isset $block "design")) (isset $block "content") }}
+  {{ with $block.content.height }}
+    {{ $h := printf "%v" . }}
+    {{ if gt (len (findRE "^[0-9]+$" $h)) 0 }}
+      {{ $heightCss = printf "%spx" $h }}
+      {{ $heightNum = (int $h) }}
+    {{ else }}
+      {{ $heightCss = $h }}
+      {{ $heightNum = (int (replaceRE "[^0-9]" "" $h)) }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
 {{ $slideMin := "80%" }}
 {{ with $block.design.slide_min_width }}{{ $slideMin = . }}{{ end }}
 {{ $nsHeight := 220 }}
@@ -45,7 +78,16 @@
 {{ with $block.design.loop }}{{ $autoplay = . }}{{ end }}
 {{ $fullscreen := false }}
 {{ with $block.design.is_fullscreen }}{{ $fullscreen = . }}{{ end }}
-<div class="cc-slider" data-autoplay="{{ $autoplay }}" data-interval="{{ $interval }}" data-height="{{ $height }}" data-slide-minwidth="{{ $slideMin }}" data-fullscreen="{{ $fullscreen }}" style="position:relative;min-height:1px;">
+
+{{/* Apply fullscreen overrides for initial render */}}
+{{ $hInline := $heightCss }}
+{{ $minWInline := $slideMin }}
+{{ if $fullscreen }}
+  {{ $hInline = "100vh" }}
+  {{ $minWInline = "100%" }}
+{{ end }}
+
+<div class="cc-slider" data-autoplay="{{ $autoplay }}" data-interval="{{ $interval }}" data-height="{{ $heightNum }}" data-slide-minwidth="{{ $slideMin }}" data-fullscreen="{{ $fullscreen }}" style="position:relative;min-height:1px;">
   <div class="slider-debug" style="display:none" data-count="{{ len $slides }}">slider-partial-rendered</div>
   <div class="cc-slider__track" style="display:flex;gap:12px;overflow-x:auto;white-space:nowrap;padding:8px;scroll-snap-type:x mandatory;scrollbar-width:none;">
     {{ range $slides }}
@@ -73,7 +115,7 @@
       {{ end }}
       {{ if eq $fn "" }}{{ with .media }}{{ $fn = . }}{{ end }}{{ end }}
       {{ $bgColor := .background.color }}
-  <figure style="min-width:80%;margin:0;position:relative;scroll-snap-align:start;border-radius:12px;overflow:hidden;">
+  <figure style="min-width:90%;margin:0;position:relative;scroll-snap-align:start;border-radius:12px;overflow:hidden;">
         {{/* Resolve image URL with graceful fallbacks (prefer assets/media) */}}
         {{ $url := "" }}
         {{ if $fn }}
@@ -91,9 +133,9 @@
         {{ end }}
 
         {{ if $url }}
-          <img src="{{ $url }}" data-src-debug="{{ $fn }}" alt="{{ $title }}" style="width:100%;height:320px;object-fit:cover;display:block;" loading="lazy" />
+          <img src="{{ $url }}" data-src-debug="{{ $fn }}" alt="{{ $title }}" style="width:100%;height:300px;object-fit:cover;display:block;" loading="lazy" />
         {{ else }}
-          <div class="cc-slide-bg" style="width:100%;height:320px;background:linear-gradient(135deg,#7C4DFF,#651FFF);" {{ with $bgColor }}data-bg="{{ . }}"{{ end }}></div>
+          <div class="cc-slide-bg" style="width:100%;height:300px;background:linear-gradient(135deg,#7C4DFF,#651FFF);" {{ with $bgColor }}data-bg="{{ . }}"{{ end }}></div>
         {{ end }}
 
         <figcaption style="position:absolute;left:0;right:0;bottom:0;color:#fff;background:linear-gradient(transparent, rgba(0,0,0,.55));padding:14px 16px;">
