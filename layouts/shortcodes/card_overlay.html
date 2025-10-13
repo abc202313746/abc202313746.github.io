@@ -1,0 +1,13 @@
+<a class="cc-card cc-card--overlay" href="{{ .Get "link" }}" style="display:block;text-decoration:none;border-radius:12px;overflow:hidden;">
+  <figure class="cc-card__media" style="position:relative;background-size:cover;background-position:center;height:220px;margin:0;background-image:url('{{ .Get "image" }}');">
+    <div class="cc-card__overlay" style="position:absolute;inset:0;background:rgba(0,0,0,0.45);"></div>
+    <figcaption class="cc-card__caption" style="position:absolute;left:0;right:0;bottom:0;color:#fff;padding:16px;">
+      <div class="cc-card__title" style="font-weight:700;">{{ .Get "title" }}</div>
+      {{ with .Get "subtitle" }}
+        <div class="cc-card__subtitle" style="opacity:0.9;font-weight:500;">{{ . }}</div>
+      {{ end }}
+    </figcaption>
+  </figure>
+  <span class="sr-only">{{ .Get "title" }}</span>
+  
+</a>

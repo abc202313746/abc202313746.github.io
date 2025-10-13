@@ -25,6 +25,13 @@ sections:
     design:
       view: masonry
       columns: '1'
+  - block: markdown
+    content:
+      title: 커스텀 카드 예시
+      text: |
+        {{< card_overlay title="데이터베이스 설계" subtitle="전주 문화관광 통합" image="/project/database/featured.png" link="/project/database/" >}}
+        
+  {{< card_compact title="운영체제 핵심 개념" meta="C, 스케줄링, 동기화" image="/project/os/featured.png" link="/project/os/" >}}
 
   - block: experience
     section_id: experience
@@ -50,7 +57,10 @@ sections:
     section_id: contact
     content:
       title: 오시는 길
-      text: 전북대학교 (Jeonbuk National University)
+      text: |
+        전북대학교 (Jeonbuk National University)
+        
+        연락처: [GitHub](https://github.com/abc202313746) · [Instagram](https://www.instagram.com/insookyoung/)
       map:
         provider: OpenStreetMap
         zoom: 15
