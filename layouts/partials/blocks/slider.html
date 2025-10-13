@@ -15,11 +15,12 @@
   3) assets/media/<filename>         → resources.Get "media/<filename>" → .RelPermalink
 */}}
 
-{{ $block := or .block . }}
-{{ with $block.content.slides }}
+{{ $block := or .block (or .section .) }}
+{{ $slides := $block.content.slides }}
 <div class="cc-slider" data-autoplay="true" data-interval="3500" style="position:relative;min-height: 320px;">
+  <div class="slider-debug" style="display:none">slider-partial-rendered</div>
   <div class="cc-slider__track" style="display:flex;gap:12px;overflow-x:auto;white-space:nowrap;padding:8px;scroll-snap-type:x mandatory;scrollbar-width:none;">
-    {{ range . }}
+    {{ range $slides }}
       {{ $title := .title }}
       {{ $desc := .content }}
       {{ $fn := .background.image.filename }}
@@ -55,7 +56,7 @@
   <div class="cc-slider__dots" style="display:flex;gap:8px;justify-content:center;margin:8px 0 0 0;"></div>
   <noscript>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;">
-      {{ range . }}
+      {{ range $slides }}
         {{ $title := .title }}
         {{ $desc := .content }}
         {{ $fn := .background.image.filename }}
@@ -87,7 +88,6 @@
     </div>
   </noscript>
 </div>
-{{ end }}
 
 <style>
   .cc-slider__track::-webkit-scrollbar { display:none; }
