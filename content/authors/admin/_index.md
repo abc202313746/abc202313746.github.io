@@ -1,34 +1,50 @@
 ---
 # Display name
-title: Sook-Young In
+title: 인숙영
 
 # Is this the primary user of the site?
 superuser: true
 
 # Role/position
-role: '3rd year student, School of Computer Science and AI, JBNU'
+role: '전북대학교 공과대학 컴퓨터인공지능학부 3학년 재학생'
+
+# Profile photo (put `avatar.jpg` in this folder to use it)
+avatar: avatar.jpg
+
+# Affiliation / Organization
+organizations:
+  - name: 전북대학교 컴퓨터인공지능학부
+    url: ''
+
+# Interests
+interests:
+  - 프론트엔드 개발
+  - React
+  - TypeScript
+
+# Education
+education:
+  courses:
+    - course: 컴퓨터인공지능학부 (학사 과정)
+      institution: 전북대학교
+      year: 2023 ~ 현재
 
 # Status emoji
 status:
   icon: ☕️
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include distributed robotics, mobile computing and programmable matter.
+bio: 저의 주요 관심사는 프론트엔드 개발, 특히 React와 TypeScript입니다.
 
 social:
-  - icon: envelope
-    icon_pack: fas
-    link: 'about/#contact'
-  - icon: twitter
+  - icon: github
     icon_pack: fab
-    link: https://twitter.com/wowchemy
-  - icon: instagram
-    icon_pack: fab
-    link: https://instagram.com/geocushen
+    link: https://github.com/abc202313746
+  # - icon: envelope
+  #   icon_pack: fas
+  #   link: 'about/#contact'
 ---
 
-I am a third-year Computer Science and AI student at Jeonbuk National University. My main interests include front-end development, particularly focusing on React and TypeScript. I aim to create user-friendly web experiences that make a positive impact.
+저는 전북대학교 컴퓨터인공지능학부에서 3학년으로 재학 중입니다. 주로 프론트엔드 개발에 관심이 있으며, 특히 React와 TypeScript를 중심으로 학습하고 있습니다. 사용자에게 도움이 되는 웹 경험을 만드는 것이 저의 목표입니다.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
-
-{{< icon name="download" pack="fas" >}} {{< staticref "uploads/resume.pdf" "newtab" >}}Download{{< /staticref >}} my resumé as a PDF.
+{{< icon name="download" pack="fas" >}} {{< staticref "uploads/resume.pdf" "newtab" >}}이력서 다운로드{{< /staticref >}}

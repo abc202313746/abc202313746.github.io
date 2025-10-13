@@ -14,6 +14,6 @@ weight: 10
 
 title: Hello
 
-# Choose the user profile to display (inactive)
-# author: admin
+# Choose the user profile to display
+author: admin
 ---
