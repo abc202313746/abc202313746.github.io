@@ -82,6 +82,8 @@ body { color: var(--text-strong); }
 html.dark,
 body.dark,
 [data-theme="dark"],
+.dark [data-wc-theme="dark"],
+[data-wc-theme="dark"],
 .dark {
   --text-strong: #f1f3f5;
   --text-muted: #c8cbd0;
@@ -104,3 +106,12 @@ body.dark,
 .home-section#about .article-style .text-muted { color: var(--text-strong) !important; }
 .home-section#about .article-style .text-muted { color: var(--text-muted) !important; }
 .home-section#about .article-style a { color: var(--link) !important; }
+
+/* Strong override for About widget text (handles theme-specific classes) */
+#about .portrait-title h2, #about .portrait-title h3 { color: var(--text-strong) !important; }
+#about :where(h1,h2,h3,h4,h5,h6,p,li,small,span,strong,em) { color: var(--text-strong) !important; }
+#about .text-muted { color: var(--text-muted) !important; opacity: 1 !important; }
+#about a:not(.btn):not(.badge):not(.nav-link) { color: var(--link) !important; }
+#about .network-icon a { color: var(--link) !important; }
+/* Bio block commonly used by About widget */
+#about .bio, #about .bio p, #about .bio li, #about .bio small { color: var(--text-strong) !important; }
