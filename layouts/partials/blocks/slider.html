@@ -1,0 +1,135 @@
+{{/*
+  Local Slider Block Partial
+  Renders sections with `block: slider` using the expected schema:
+  content:
+    slides:
+      - title: "..."
+        content: "..."
+        background:
+          image:
+            filename: my-image.svg | /uploads/my-image.svg
+
+  Image resolution order per slide filename (no build failure if missing):
+  1) Absolute path (starts with '/') → use as-is
+  2) static/uploads/<filename>       → /uploads/<filename>
+  3) assets/media/<filename>         → resources.Get "media/<filename>" → .RelPermalink
+*/}}
+
+{{ $block := .block }}
+{{ if not $block }}{{/* Attempt fallback if builder passes current scope as the block itself */}}{{ $block = . }}{{ end }}
+{{ $slides := $block.content.slides }}
+{{ if not $slides }}{{/* Nothing to render if no slides */}}{{ return }}{{ end }}
+
+<div class="cc-slider" data-autoplay="true" data-interval="3500" style="position:relative;min-height: 320px;">
+  <div class="cc-slider__track" style="display:flex;gap:12px;overflow-x:auto;white-space:nowrap;padding:8px;scroll-snap-type:x mandatory;scrollbar-width:none;">
+    {{ range $slides }}
+      {{ $title := .title }}
+      {{ $desc := .content }}
+      {{ $fn := .background.image.filename }}
+      <figure style="min-width:80%;margin:0;position:relative;scroll-snap-align:start;border-radius:12px;overflow:hidden;">
+        {{/* Resolve image URL with graceful fallbacks */}}
+        {{ $url := "" }}
+        {{ if $fn }}
+          {{ if hasPrefix $fn "/" }}
+            {{ $url = $fn }}
+          {{ else if (fileExists (printf "static/uploads/%s" $fn)) }}
+            {{ $url = (printf "/uploads/%s" $fn) }}
+          {{ else }}
+            {{ with (resources.Get (printf "media/%s" $fn)) }}
+              {{ $url = .RelPermalink }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+
+        {{ if $url }}
+          <img src="{{ $url }}" alt="{{ $title }}" style="width:100%;height:320px;object-fit:cover;display:block;" loading="lazy" />
+        {{ else }}
+          <div style="width:100%;height:320px;background:linear-gradient(135deg,#7C4DFF,#651FFF);"></div>
+        {{ end }}
+
+        <figcaption style="position:absolute;left:0;right:0;bottom:0;color:#fff;background:linear-gradient(transparent, rgba(0,0,0,.55));padding:14px 16px;">
+          {{ with $title }}<div style="font-weight:700;font-size:1.1rem;line-height:1.3;">{{ . }}</div>{{ end }}
+          {{ with $desc }}<div style="opacity:.9;">{{ . }}</div>{{ end }}
+        </figcaption>
+      </figure>
+    {{ end }}
+  </div>
+  <div class="cc-slider__dots" style="display:flex;gap:8px;justify-content:center;margin:8px 0 0 0;"></div>
+  <noscript>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;">
+      {{ range $slides }}
+        {{ $title := .title }}
+        {{ $desc := .content }}
+        {{ $fn := .background.image.filename }}
+        {{ $url := "" }}
+        {{ if $fn }}
+          {{ if hasPrefix $fn "/" }}
+            {{ $url = $fn }}
+          {{ else if (fileExists (printf "static/uploads/%s" $fn)) }}
+            {{ $url = (printf "/uploads/%s" $fn) }}
+          {{ else }}
+            {{ with (resources.Get (printf "media/%s" $fn)) }}
+              {{ $url = .RelPermalink }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+        <figure style="margin:0;border-radius:12px;overflow:hidden;">
+          {{ if $url }}<img src="{{ $url }}" alt="{{ $title }}" style="width:100%;height:220px;object-fit:cover;display:block;" />{{ end }}
+          <figcaption style="padding:8px 0;opacity:.85;">
+            {{ with $title }}<div style="font-weight:700;">{{ . }}</div>{{ end }}
+            {{ with $desc }}<div>{{ . }}</div>{{ end }}
+          </figcaption>
+        </figure>
+      {{ end }}
+    </div>
+  </noscript>
+</div>
+
+<style>
+  .cc-slider__track::-webkit-scrollbar { display:none; }
+  .cc-slider__dot { width:28px;height:4px;border-radius:2px;background:#c7c7c7;opacity:.6;transition:opacity .2s,background-color .2s }
+  .cc-slider__dot[aria-current="true"] { background: var(--bs-primary, #7C4DFF); opacity:1 }
+  @media (max-width: 768px){ .cc-slider figure{ min-width: 92%; } }
+  @media (prefers-reduced-motion: reduce){ .cc-slider__track{ scroll-behavior: auto; } }
+  .cc-slider[hidden] { display: none !important; }
+</style>
+<script>
+  (function(){
+    function init(el){
+      if (el.dataset.enhanced) return; el.dataset.enhanced = '1';
+      const track = el.querySelector('.cc-slider__track');
+      const figs = Array.from(track.querySelectorAll('figure'));
+      const dotsWrap = el.querySelector('.cc-slider__dots');
+      if (!figs.length) { el.setAttribute('hidden',''); return; }
+      dotsWrap.innerHTML = '';
+      figs.forEach((_,i)=>{
+        const dot = document.createElement('button');
+        dot.type = 'button';
+        dot.className = 'cc-slider__dot';
+        dot.setAttribute('aria-label','Go to slide '+(i+1));
+        dot.addEventListener('click',()=>{
+          const target = figs[i];
+          track.scrollTo({ left: target.offsetLeft - track.offsetLeft, behavior:'smooth' });
+        });
+        dotsWrap.appendChild(dot);
+      });
+      const setActive = ()=>{
+        const idx = Math.round(track.scrollLeft / (track.scrollWidth / figs.length));
+        Array.from(dotsWrap.children).forEach((d,j)=>d.setAttribute('aria-current', j===idx ? 'true':'false'));
+      };
+      track.addEventListener('scroll', ()=>{ window.requestAnimationFrame(setActive); });
+      setActive();
+      // autoplay
+      if (el.dataset.autoplay === 'true'){
+        let i=0; let timer; const interval = parseInt(el.dataset.interval||'3500',10);
+        const play=()=>{ timer = setInterval(()=>{ i = (i+1)%figs.length; const t = figs[i]; track.scrollTo({ left: t.offsetLeft - track.offsetLeft, behavior:'smooth' }); }, interval); };
+        const pause=()=>{ if (timer) clearInterval(timer); };
+        el.addEventListener('mouseenter', pause);
+        el.addEventListener('mouseleave', ()=>{ play(); });
+        play();
+      }
+    }
+    function onReady(){ document.querySelectorAll('.cc-slider').forEach(init); }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', onReady); else onReady();
+  })();
+</script>
