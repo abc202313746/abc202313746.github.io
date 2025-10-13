@@ -6,14 +6,14 @@ title: 인숙영
 superuser: true
 
 # Role/position
-role: '전북대학교 공과대학 3학년 재학생'
+role: '소속: 전북대학교 공과대학'
 
 # Profile photo (put `avatar.jpg` in this folder to use it)
 avatar: avatar.jpg
 
 # Affiliation / Organization
 organizations:
-  - name: 전북대학교 컴퓨터인공지능학부
+  - name: 전공:컴퓨터인공지능학부
     url: ''
 
 # Interests

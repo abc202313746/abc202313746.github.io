@@ -12,7 +12,7 @@ role: 'JBNU — School of Computer & Artificial Intelligence'
 avatar: avatar.jpg
 
 # Short bio
-bio: Interested in Frontend & UX. Projects in DB/OS/Data Structures.
+bio: Frontend & UX-focused. Projects in Database, Operating Systems, and Data Structures.
 
 status:
   icon: 🐥
@@ -26,4 +26,18 @@ social:
     link: https://www.instagram.com/insookyoung/
 ---
 
-I am a third-year student at Jeonbuk National University (Computer Science & AI). I focus on Frontend (React, TypeScript) and creating helpful user experiences.
+Hello, I'm SookYoung In. I focus on Frontend development with React and TypeScript, aiming to "build fast while keeping code readable and experiences delightful."
+
+Key experiences
+- Jeonju Cultural Tourism DB Design: Requirements → ERD → 3NF normalization → Oracle SQL schema and data build
+- Operating Systems core topics: processes/threads, scheduling, and synchronization with hands-on C examples and analysis
+- Stack-based calculator: convert infix to postfix and evaluate using a custom stack implementation (C/C++)
+
+What I value when working
+- Usability (UX) & accessibility: clear interaction, information structure, and both dark/light modes
+- Collaboration & documentation: tidy commits, issue-scoped tasks, and lightweight docs for shareable outputs
+- CI/CD: automated static site build/deploy with GitHub Actions
+
+Now learning more about Next.js/TypeScript, testing (Vitest/Jest), design systems (Storybook), SEO and performance. See my resume and projects below for more details.
+
+{{< icon name="download" pack="fas" >}} {{< staticref "uploads/resume.pdf" "newtab" >}}Download Resumé{{< /staticref >}}

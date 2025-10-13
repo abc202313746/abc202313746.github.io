@@ -32,7 +32,7 @@ sections:
     content:
       slides:
         - title: "자기소개"
-          content: "전북대 컴퓨터·AI 3학년, 프론트엔드 지향"
+          content: "전북대 컴퓨터인공지능학부 3학년, 프론트엔드 지향"
           background:
             image:
               filename: unsplash-frontend.svg
