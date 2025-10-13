@@ -13,24 +13,41 @@ sections:
         text: "게시글 보기"
         url: "/post/"
 
-  - block: slider
-    content:
-      slides:
-        - title: "React · TypeScript"
-          content: "프론트엔드 프로젝트"
-          background:
-            image:
-              filename: slider-react.svg 
-        - title: "DB · OS · 자료구조"
-          content: "수업/실습 정리"
-          background:
-            image:
-              filename: slider-class.svg
-        - title: "Learning by Building"
-          content: "아이디어에서 데모까지"
-          background:
-            image:
-              filename: slider-math.svg
+
+`  - block: slider
+-    content:
+-      items:
+-        - title: "React · TypeScript"
+-          subtitle: "관심 있는 언어"
+-          image:
+-            filename: uploads/slider-react.jpg
+-        - title: "DB · OS · 자료구조"
+-          subtitle: "수업/실습 정리"
+-          image:
+-            filename: uploads/slider-class.jpg
+-        - title: "Learning by Building"
+-          subtitle: "아이디어에서 데모까지"
+-          image:
+-            filename: uploads/slider-math.jpg
++  - block: slider
++    content:
++      slides:
++        - title: "React · TypeScript"
++          content: "프론트엔드 프로젝트"     
++          background:
++            image:
++              filename: slider-react.jpg     
++        - title: "DB · OS · 자료구조"
++          content: "수업/실습 정리"
++          background:
++            image:
++              filename: slider-class.jpg
++        - title: "Learning by Building"
++          content: "아이디어에서 데모까지"
++          background:
++            image:
++              filename: slider-math.jpg
+
 
   - block: markdown
     content:
