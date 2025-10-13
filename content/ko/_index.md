@@ -15,7 +15,7 @@ sections:
           filename: ""
           filters:
             brightness: 0.5
-      css_class: d-flex fullscreen align-items-center
+      css_class: d-flex fullscreen align-items_center
 
   - block: portfolio
     section_id: portfolio
@@ -28,7 +28,7 @@ sections:
     design:
       view: card
       columns: '3'
-  
+
 
   - block: slider
     content:
@@ -50,8 +50,7 @@ sections:
             image:
               filename: slider-math.svg
 
-  
-  
+
 
   - block: experience
     section_id: experience
@@ -80,7 +79,7 @@ sections:
       title: 오시는 길
       text: |
         전북대학교 (Jeonbuk National University)
-        
+
         [GitHub](https://github.com/abc202313746) · [Instagram](https://www.instagram.com/insookyoung/)
         전화: [010-4544-0797](tel:+821045440797)
         이메일: [isy0110@jbnu.ac.kr](mailto:isy0110@jbnu.ac.kr)
