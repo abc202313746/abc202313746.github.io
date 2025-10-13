@@ -8,8 +8,8 @@ sections:
       username: admin
     design:
       background:
-        color:
-        text_color_light: true
+        color: '#f7f5ff'
+        text_color_light: false
         image:
           filename: ""
           filters:

@@ -54,3 +54,28 @@
   height: 340px !important;
   min-height: 340px;
 }
+
+/* Hero text color for light pastel background */
+.home-section#about {
+  color: #0d0e10;
+}
+.home-section#about h1,
+.home-section#about h2,
+.home-section#about h3,
+.home-section#about .lead {
+  color: #0d0e10;
+}
+
+/* Auto dark mode: prefer darker background and light text */
+@media (prefers-color-scheme: dark) {
+  .home-section#about {
+    background-color: #111318 !important;
+    color: #f1f3f5;
+  }
+  .home-section#about h1,
+  .home-section#about h2,
+  .home-section#about h3,
+  .home-section#about .lead {
+    color: #f1f3f5;
+  }
+}
