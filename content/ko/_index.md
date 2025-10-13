@@ -56,7 +56,7 @@ sections:
     content:
       title: 이미지 슬라이더
       text: |
-        {{< slider items="https://images.unsplash.com/photo-1518770660439-4636190af475|AI|Artificial Intelligence; https://images.unsplash.com/photo-1518779578993-ec3579fee39f|Code|Coding; https://images.unsplash.com/photo-1526378722419-350d4f3de0bb|Data|Data" >}}
+        {{< slider items="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80|AI|Artificial Intelligence; https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1600&q=80|Code|Coding; https://images.unsplash.com/photo-1526378722419-350d4f3de0bb?auto=format&fit=crop&w=1600&q=80|Data|Data" >}}
 
   - block: markdown
     content:
