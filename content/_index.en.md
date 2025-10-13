@@ -33,20 +33,23 @@ sections:
       text: ""
       slides:
         - title: "Frontend Portfolio"
-          content: "React · TypeScript"
+          content: "Building delightful UX with React and TypeScript"
           background:
             image:
-              filename: slider-react.svg
-        - title: "Database & OS"
-          content: "Course Projects"
+              filename: unsplash-coffee-keyboard.jpg
+        - title: "Collaboration"
+          content: "Growing via code reviews and pairing"
           background:
             image:
-              filename: slider-class.svg
+              filename: unsplash-developer-desk.jpg
         - title: "Learning by Building"
           content: "From idea to demo"
           background:
             image:
               filename: slider-math.svg
+    design:
+      slide_height: '300px'
+      slide_min_width: '90%'
 
   - block: experience
     section_id: experience

@@ -35,20 +35,23 @@ sections:
       text: ""
       slides:
         - title: "자기소개"
-          content: "전북대 컴퓨터·AI 3학년, 프론트엔드 지향"
+          content: "React/TypeScript를 중심으로 사용자 경험을 만드는 개발자 지망생"
           background:
             image:
-              filename: slider-react.svg
+              filename: unsplash-coffee-keyboard.jpg
         - title: "협력"
-          content: "코드 리뷰와 페어 프로그래밍, 팀과 함께 성장"
+          content: "코드 리뷰 · 페어 프로그래밍으로 함께 성장하는 팀워크 지향"
           background:
             image:
-              filename: slider-class.svg
+              filename: unsplash-developer-desk.jpg
         - title: "관심사"
           content: "React/TypeScript · 데이터 모델링 · 시스템 이해"
           background:
             image:
               filename: slider-math.svg
+    design:
+      slide_height: '300px'
+      slide_min_width: '90%'
 
 
 
