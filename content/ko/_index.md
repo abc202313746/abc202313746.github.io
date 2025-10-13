@@ -37,11 +37,7 @@ sections:
     content:
       title: 이미지 슬라이더
       text: |
-        {{< slider 
-            (dict "src" "https://images.unsplash.com/photo-1518770660439-4636190af475" "alt" "AI" "caption" "Artificial Intelligence") 
-            (dict "src" "https://images.unsplash.com/photo-1518779578993-ec3579fee39f" "alt" "Code" "caption" "Coding")
-            (dict "src" "https://images.unsplash.com/photo-1526378722419-350d4f3de0bb" "alt" "Data" "caption" "Data")
-        >}}
+        {{< slider items="https://images.unsplash.com/photo-1518770660439-4636190af475|AI|Artificial Intelligence; https://images.unsplash.com/photo-1518779578993-ec3579fee39f|Code|Coding; https://images.unsplash.com/photo-1526378722419-350d4f3de0bb|Data|Data" >}}
 
   - block: markdown
     content:
