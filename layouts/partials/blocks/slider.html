@@ -16,14 +16,28 @@
 */}}
 
 {{ $block := or .block (or .section .) }}
-{{ $slides := $block.content.slides }}
+{{ $slides := slice }}
+{{ with $block.content.slides }}{{ $slides = . }}{{ end }}
+{{ if not (gt (len $slides) 0) }}{{ with $block.slides }}{{ $slides = . }}{{ end }}{{ end }}
+{{ if not (gt (len $slides) 0) }}{{ with $block.content.items }}{{ $slides = . }}{{ end }}{{ end }}
+{{ if not (gt (len $slides) 0) }}{{ with $block.items }}{{ $slides = . }}{{ end }}{{ end }}
+{{ if not (gt (len $slides) 0) }}
+  {{/* Fallback default slides to avoid blank output and help diagnose content wiring */}}
+  {{ $slides = (slice
+    (dict "title" "Frontend Portfolio" "content" "React · TypeScript" "background" (dict "image" (dict "filename" "slider-react.svg")))
+    (dict "title" "Database & OS" "content" "Course Projects" "background" (dict "image" (dict "filename" "slider-class.svg")))
+    (dict "title" "Learning by Building" "content" "From idea to demo" "background" (dict "image" (dict "filename" "slider-math.svg")))
+  ) }}
+{{ end }}
 <div class="cc-slider" data-autoplay="true" data-interval="3500" style="position:relative;min-height: 320px;">
-  <div class="slider-debug" style="display:none">slider-partial-rendered</div>
+  <div class="slider-debug" style="display:none" data-count="{{ len $slides }}">slider-partial-rendered</div>
   <div class="cc-slider__track" style="display:flex;gap:12px;overflow-x:auto;white-space:nowrap;padding:8px;scroll-snap-type:x mandatory;scrollbar-width:none;">
     {{ range $slides }}
       {{ $title := .title }}
-      {{ $desc := .content }}
-      {{ $fn := .background.image.filename }}
+      {{ $desc := or .content .subtitle }}
+      {{ $fn := "" }}
+      {{ with .background }}{{ with .image }}{{ with .filename }}{{ $fn = . }}{{ end }}{{ end }}{{ end }}
+      {{ if eq $fn "" }}{{ with .image }}{{ with .filename }}{{ $fn = . }}{{ end }}{{ end }}{{ end }}
       {{ $bgColor := .background.color }}
       <figure style="min-width:80%;margin:0;position:relative;scroll-snap-align:start;border-radius:12px;overflow:hidden;">
         {{/* Resolve image URL with graceful fallbacks */}}
@@ -58,8 +72,10 @@
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;">
       {{ range $slides }}
         {{ $title := .title }}
-        {{ $desc := .content }}
-        {{ $fn := .background.image.filename }}
+        {{ $desc := or .content .subtitle }}
+        {{ $fn := "" }}
+        {{ with .background }}{{ with .image }}{{ with .filename }}{{ $fn = . }}{{ end }}{{ end }}{{ end }}
+        {{ if eq $fn "" }}{{ with .image }}{{ with .filename }}{{ $fn = . }}{{ end }}{{ end }}{{ end }}
         {{ $bgColor := .background.color }}
         {{ $url := "" }}
         {{ if $fn }}
