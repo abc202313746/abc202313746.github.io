@@ -39,11 +39,21 @@ sections:
           <a class="btn btn-primary btn-lg d-inline-flex align-items-center" href="/"><i class="fas fa-globe me-2"></i>Korean/English</a>
           <a class="btn btn-primary btn-lg d-inline-flex align-items-center" href="https://jbnu.macs.or.kr" target="_blank" rel="noopener"><i class="fas fa-external-link-alt me-2"></i>Department</a>
         </div>
-  - block: markdown
+  - block: slider
     content:
-      title: Image Slider
-      text: |
-        {{< slider items="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80|Operating System|xv6 OS; https://images.unsplash.com/photo-1526378722419-350d4f3de0bb?auto=format&fit=crop&w=1600&q=80|Database|DB Design; https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1600&q=80|Frontend|Frontend Demo; https://images.unsplash.com/photo-1500576992153-0271099def59?auto=format&fit=crop&w=1600&q=80|Hello|Intro" height="360" autoplay="true" interval="4000" >}}
+      items:
+        - title: "Frontend Portfolio"
+          subtitle: "React · TypeScript"
+          image:
+            filename: uploads/unsplash-frontend.svg
+        - title: "Database & OS"
+          subtitle: "Course Projects"
+          image:
+            filename: uploads/unsplash-systems.svg
+        - title: "Learning by Building"
+          subtitle: "From idea to demo"
+          image:
+            filename: uploads/unsplash-build.svg
 
   - block: experience
     section_id: experience
@@ -65,21 +75,15 @@ sections:
           date_end: '2024-12-13'
           description: 'Participated in a mentoring program to enhance practical technical skills through interaction with a senior mentor.'
 
-  - block: markdown
+  - block: collection
     content:
-      title: 9-Card Grid
-      text: |
-        <div class="row row-cols-1 row-cols-md-3 g-3">
-          <div class="col">{{< card_compact title="DB Design" meta="Relational Model" image="https://images.unsplash.com/photo-1526378722419-350d4f3de0bb?auto=format&fit=crop&w=1200&q=80" link="/en/project/database/" >}}</div>
-          <div class="col">{{< card_compact title="Operating System" meta="Processes/Scheduling" image="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80" link="/en/project/os/" >}}</div>
-          <div class="col">{{< card_compact title="Stack Calculator" meta="C++ Data Structure" image="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1200&q=80" link="/en/project/stack/" >}}</div>
-          <div class="col">{{< card_overlay title="DB Design" subtitle="Jeonju Culture" image="https://images.unsplash.com/photo-1526378722419-350d4f3de0bb?auto=format&fit=crop&w=1200&q=80" link="/en/project/database/" >}}</div>
-          <div class="col">{{< card_overlay title="Operating System" subtitle="Threads/Sync" image="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80" link="/en/project/os/" >}}</div>
-          <div class="col">{{< card_overlay title="Stack Calculator" subtitle="Infix → Postfix" image="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1200&q=80" link="/en/project/stack/" >}}</div>
-          <div class="col">{{< card_compact title="DB Design" meta="Normalization" image="https://images.unsplash.com/photo-1526378722419-350d4f3de0bb?auto=format&fit=crop&w=1200&q=80" link="/en/project/database/" >}}</div>
-          <div class="col">{{< card_compact title="Operating System" meta="Deadlock" image="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80" link="/en/project/os/" >}}</div>
-          <div class="col">{{< card_compact title="Stack Calculator" meta="Stack Ops" image="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1200&q=80" link="/en/project/stack/" >}}</div>
-        </div>
+      title: Projects
+      count: 9
+      filters:
+        folders: ["project"]
+    design:
+      columns: 3
+      view: card
 
   - block: contact
     section_id: contact

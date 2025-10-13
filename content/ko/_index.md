@@ -21,10 +21,11 @@ sections:
     content:
       title: 프로젝트
       subtitle: ''
+      count: 9
       page_type: project
     design:
-      view: masonry
-      columns: '1'
+      view: card
+      columns: '3'
   - block: markdown
     content:
       title: 빠른 액션
@@ -41,19 +42,19 @@ sections:
         </div>
   - block: markdown
     content:
-      title: 자기소개 슬라이더
+      title: ''
       text: |
         {{< slider items="https://images.unsplash.com/photo-1500576992153-0271099def59?auto=format&fit=crop&w=1600&q=80|Hello|안녕하세요! 전북대 컴퓨터·AI 3학년 인숙영입니다.; https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1600&q=80|Code|React와 TypeScript로 사용자 경험을 만듭니다.; https://images.unsplash.com/photo-1526378722419-350d4f3de0bb?auto=format&fit=crop&w=1600&q=80|Database|DB 설계와 정규화 적용; https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80|Operating System|프로세스·스레드·동기화 학습" height="360" autoplay="true" interval="3800" >}}
 
   - block: markdown
     content:
-      title: 협력 슬라이더
+      title: ''
       text: |
         {{< slider items="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=1600&q=80|Teamwork|팀과 함께 성장하고 협업합니다.; https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1600&q=80|Pair Programming|코드 리뷰와 페어 프로그래밍; https://images.unsplash.com/photo-1500576992153-0271099def59?auto=format&fit=crop&w=1600&q=80|Communication|사용자와 팀을 잇는 소통" height="360" autoplay="true" interval="4200" >}}
 
   - block: markdown
     content:
-      title: 관심사 슬라이더
+      title: ''
       text: |
         {{< slider items="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1600&q=80|Frontend|프론트엔드 UI/UX; https://images.unsplash.com/photo-1526378722419-350d4f3de0bb?auto=format&fit=crop&w=1600&q=80|Data|데이터 모델링; https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80|Systems|시스템 이해와 최적화" height="360" autoplay="true" interval="4000" >}}
   - block: markdown
