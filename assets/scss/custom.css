@@ -8,6 +8,7 @@
   /* Text color tokens */
   --text-strong: #0d0e10; /* light mode strong text */
   --text-muted: #4b5563;  /* light mode muted text */
+  --link: #0d6efd;        /* light mode link color */
 }
 .btn-primary {
   background-color: var(--bs-primary);
@@ -74,6 +75,7 @@ body { color: var(--text-strong); }
   :root {
     --text-strong: #f1f3f5;
     --text-muted: #c8cbd0;
+    --link: #8ab4f8;
   }
 }
 
@@ -83,6 +85,7 @@ body.dark,
 .dark {
   --text-strong: #f1f3f5;
   --text-muted: #c8cbd0;
+  --link: #8ab4f8;
 }
 
 /* Apply tokens to common section headings and text */
@@ -92,3 +95,12 @@ body.dark,
 .home-section .lead,
 .home-section p,
 .home-section li { color: var(--text-strong); }
+
+/* Ensure About section inner markdown uses tokens regardless of theme CSS order */
+.home-section#about .article-style,
+.home-section#about .article-style p,
+.home-section#about .article-style li,
+.home-section#about .article-style small,
+.home-section#about .article-style .text-muted { color: var(--text-strong) !important; }
+.home-section#about .article-style .text-muted { color: var(--text-muted) !important; }
+.home-section#about .article-style a { color: var(--link) !important; }
