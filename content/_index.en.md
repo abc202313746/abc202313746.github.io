@@ -54,6 +54,8 @@ sections:
         Jeonbuk National University
         
         Contact: [GitHub](https://github.com/abc202313746) · [Instagram](https://www.instagram.com/insookyoung/)
+        Phone: [010-4544-0797](tel:+821045440797)
+        Email: [isy0110@jbnu.ac.kr](mailto:isy0110@jbnu.ac.kr)
       map:
         provider: OpenStreetMap
         zoom: 15

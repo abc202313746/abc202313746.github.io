@@ -61,6 +61,8 @@ sections:
         전북대학교 (Jeonbuk National University)
         
         연락처: [GitHub](https://github.com/abc202313746) · [Instagram](https://www.instagram.com/insookyoung/)
+        전화: [010-4544-0797](tel:+821045440797)
+        이메일: [isy0110@jbnu.ac.kr](mailto:isy0110@jbnu.ac.kr)
       map:
         provider: OpenStreetMap
         zoom: 15
