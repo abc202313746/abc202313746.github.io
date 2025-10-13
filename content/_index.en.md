@@ -43,7 +43,31 @@ sections:
     content:
       title: Self-Intro Slide
       text: |
-  {{< slider items="https://images.unsplash.com/photo-1500576992153-0271099def59?auto=format&fit=crop&w=1600&q=80|Hello sticker|Hi, I’m Sookyung — JBNU Computer & AI junior.; https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1600&q=80|Code|Building UX with React and TypeScript.; https://images.unsplash.com/photo-1526378722419-350d4f3de0bb?auto=format&fit=crop&w=1600&q=80|Database|Applying DB design and normalization to projects.; https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80|Operating System|Learning processes, threads, and synchronization.; https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=1600&q=80|Teamwork|Growing with teammates and sharing what I learn." height="360" interval="4200" >}}
+        <div class="cc-slider" data-autoplay="true" data-interval="4200">
+          <div class="cc-slider__track">
+            <figure>
+              <img src="https://images.unsplash.com/photo-1500576992153-0271099def59?auto=format&fit=crop&w=1600&q=80" alt="Hello sticker" style="height:360px;" />
+              <figcaption>Hi, I’m Sookyung — JBNU Computer & AI junior.</figcaption>
+            </figure>
+            <figure>
+              <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1600&q=80" alt="Code" style="height:360px;" />
+              <figcaption>Building UX with React and TypeScript.</figcaption>
+            </figure>
+            <figure>
+              <img src="https://images.unsplash.com/photo-1526378722419-350d4f3de0bb?auto=format&fit=crop&w=1600&q=80" alt="Database" style="height:360px;" />
+              <figcaption>Applying DB design and normalization to projects.</figcaption>
+            </figure>
+            <figure>
+              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80" alt="Operating System" style="height:360px;" />
+              <figcaption>Learning processes, threads, and synchronization.</figcaption>
+            </figure>
+            <figure>
+              <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=1600&q=80" alt="Teamwork" style="height:360px;" />
+              <figcaption>Growing with teammates and sharing what I learn.</figcaption>
+            </figure>
+          </div>
+          <div class="cc-slider__dots"></div>
+        </div>
 
   - block: experience
     section_id: experience
