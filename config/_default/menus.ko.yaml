@@ -21,7 +21,7 @@ main:
     parent: projects
     url: '/project/os/'
     weight: 22
-  - name: 자료구조-스택
+  - name: 스택
     parent: projects
     url: '/project/stack/'
     weight: 23
