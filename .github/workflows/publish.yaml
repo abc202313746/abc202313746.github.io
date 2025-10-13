@@ -50,8 +50,9 @@ jobs:
           HUGO_ENVIRONMENT: production
         run: |
           echo "Hugo Cache Dir: $(hugo config | grep cachedir)"
-          echo "Hugo baseURL & default language:" 
-          hugo config | egrep 'baseURL|defaultContentLanguage'
+          echo "Hugo baseURL & default language:"
+          # Print keys if present; don't fail build if absent
+          hugo config | grep -Ei '(^|[[:space:]])(baseURL|defaultContentLanguage)\b' || echo "(keys not found in hugo config output)"
           hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
