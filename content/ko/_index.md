@@ -11,7 +11,7 @@ sections:
         color: '#090a0b'
         text_color_light: true
         image:
-          filename: space.jpg
+          filename: ""
           filters:
             brightness: 0.5
       css_class: d-flex fullscreen align-items-center
