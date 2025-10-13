@@ -43,7 +43,7 @@ sections:
     content:
       title: Self-Intro Slide
       text: |
-        {{< slider items="https://images.unsplash.com/photo-1500576992153-0271099def59?auto=format&fit=crop&w=1600&q=80|Hello sticker|Hello! Nice to meet you." >}}
+  {{< slider items="https://images.unsplash.com/photo-1500576992153-0271099def59?auto=format&fit=crop&w=1600&q=80|Hello sticker|Hi, I’m Sookyung — JBNU Computer & AI junior.; https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1600&q=80|Code|Building UX with React and TypeScript.; https://images.unsplash.com/photo-1526378722419-350d4f3de0bb?auto=format&fit=crop&w=1600&q=80|Database|Applying DB design and normalization to projects.; https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80|Operating System|Learning processes, threads, and synchronization.; https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=1600&q=80|Teamwork|Growing with teammates and sharing what I learn." height="360" interval="4200" >}}
 
   - block: experience
     section_id: experience

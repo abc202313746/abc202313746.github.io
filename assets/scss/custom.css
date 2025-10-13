@@ -59,6 +59,13 @@
   min-height: 340px;
 }
 
+/* Generic slider styles (works for shortcode or plain HTML fallback) */
+.cc-slider { position: relative; }
+.cc-slider__track { display:flex; gap:12px; overflow-x:auto; padding:8px; scroll-snap-type:x mandatory; scrollbar-width:none; }
+.cc-slider__track::-webkit-scrollbar { display:none; }
+.cc-slider figure { min-width:80%; margin:0; position:relative; scroll-snap-align:start; border-radius:12px; overflow:hidden; }
+.cc-slider img { width:100%; height:320px; object-fit:cover; display:block; }
+
 /* Base text colors via tokens */
 body { color: var(--text-strong); }
 .home-section { color: var(--text-strong); }
