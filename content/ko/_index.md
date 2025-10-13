@@ -8,7 +8,7 @@ sections:
       username: admin
     design:
       background:
-        color: '#090a0b'
+        color:
         text_color_light: true
         image:
           filename: ""

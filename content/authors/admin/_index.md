@@ -43,18 +43,6 @@ social:
   - icon: instagram
     icon_pack: fab
     link: https://www.instagram.com/insookyoung/
-  - icon: linkedin
-    icon_pack: fab
-    link: https://www.linkedin.com/
-  - icon: x-twitter
-    icon_pack: fab
-    link: https://twitter.com/
-  - icon: youtube
-    icon_pack: fab
-    link: https://www.youtube.com/
-  - icon: facebook
-    icon_pack: fab
-    link: https://www.facebook.com/
   # - icon: envelope
   #   icon_pack: fas
   #   link: 'about/#contact'
