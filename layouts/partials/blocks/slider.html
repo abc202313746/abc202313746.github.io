@@ -15,14 +15,11 @@
   3) assets/media/<filename>         → resources.Get "media/<filename>" → .RelPermalink
 */}}
 
-{{ $block := .block }}
-{{ if not $block }}{{/* Attempt fallback if builder passes current scope as the block itself */}}{{ $block = . }}{{ end }}
-{{ $slides := $block.content.slides }}
-{{ if not $slides }}{{/* Nothing to render if no slides */}}{{ return }}{{ end }}
-
+{{ $block := or .block . }}
+{{ with $block.content.slides }}
 <div class="cc-slider" data-autoplay="true" data-interval="3500" style="position:relative;min-height: 320px;">
   <div class="cc-slider__track" style="display:flex;gap:12px;overflow-x:auto;white-space:nowrap;padding:8px;scroll-snap-type:x mandatory;scrollbar-width:none;">
-    {{ range $slides }}
+    {{ range . }}
       {{ $title := .title }}
       {{ $desc := .content }}
       {{ $fn := .background.image.filename }}
@@ -57,7 +54,7 @@
   <div class="cc-slider__dots" style="display:flex;gap:8px;justify-content:center;margin:8px 0 0 0;"></div>
   <noscript>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;">
-      {{ range $slides }}
+      {{ range . }}
         {{ $title := .title }}
         {{ $desc := .content }}
         {{ $fn := .background.image.filename }}
@@ -84,6 +81,7 @@
     </div>
   </noscript>
 </div>
+{{ end }}
 
 <style>
   .cc-slider__track::-webkit-scrollbar { display:none; }
