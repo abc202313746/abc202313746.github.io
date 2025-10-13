@@ -50,7 +50,10 @@ sections:
     section_id: contact
     content:
       title: Contact
-      text: Jeonbuk National University
+      text: |
+        Jeonbuk National University
+        
+        Contact: [GitHub](https://github.com/abc202313746) · [Instagram](https://www.instagram.com/insookyoung/)
       map:
         provider: OpenStreetMap
         zoom: 15
