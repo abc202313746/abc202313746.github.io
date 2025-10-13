@@ -5,6 +5,11 @@ image:
   caption: "프로젝트"
   focal_point: "Center"
   filename: "/project/database/featured.png"
+type: landing
+sections:
+  - block: markdown
+    content:
+      text: ""
 ---
 
 <!-- 하단 강조 카드: 자료구조-스택 -->
