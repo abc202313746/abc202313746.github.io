@@ -14,6 +14,9 @@ avatar: avatar.jpg
 # Short bio
 bio: Interested in Frontend & UX. Projects in DB/OS/Data Structures.
 
+status:
+  icon: 🐥
+
 social:
   - icon: github
     icon_pack: fab
