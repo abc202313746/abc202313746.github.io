@@ -6,6 +6,7 @@ sections:
     section_id: about
     content:
       username: admin
+      text: ""
     design:
       background:
         color: ""
@@ -23,6 +24,7 @@ sections:
       subtitle: ''
       count: 9
       page_type: project
+      text: ""
     design:
       view: card
       columns: '3'
@@ -30,22 +32,23 @@ sections:
 
   - block: slider
     content:
-    +      slides:
-    +        - title: "React · TypeScript"
-    +          content: "프론트엔드 프로젝트"      
-    +          background:
-    +            image:
-    +              filename: slider-react.jpg      
-    +        - title: "DB · OS · 자료구조"
-    +          content: "수업/실습 정리"
-    +          background:
-    +            image:
-    +              filename: slider-class.jpg
-    +        - title: "Learning by Building"
-    +          content: "아이디어에서 데모까지"
-    +          background:
-    +            image:
-    +              filename: slider-math.jpg
+      text: ""
+      slides:
+        - title: "자기소개"
+          content: "전북대 컴퓨터·AI 3학년, 프론트엔드 지향"
+          background:
+            image:
+              filename: unsplash-frontend.svg
+        - title: "협력"
+          content: "코드 리뷰와 페어 프로그래밍, 팀과 함께 성장"
+          background:
+            image:
+              filename: unsplash-systems.svg
+        - title: "관심사"
+          content: "React/TypeScript · 데이터 모델링 · 시스템 이해"
+          background:
+            image:
+              filename: unsplash-build.svg
 
   # Fallback slider via shortcode (renders even if block: slider is skipped)
   - block: markdown
@@ -62,6 +65,7 @@ sections:
     content:
       title: 경력
       subtitle: ''
+      text: ""
       date_format: Jan 2006
       items:
         - title: 동아리 활동 (Club Member)

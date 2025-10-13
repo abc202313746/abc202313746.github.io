@@ -23,6 +23,7 @@
       {{ $title := .title }}
       {{ $desc := .content }}
       {{ $fn := .background.image.filename }}
+      {{ $bgColor := .background.color }}
       <figure style="min-width:80%;margin:0;position:relative;scroll-snap-align:start;border-radius:12px;overflow:hidden;">
         {{/* Resolve image URL with graceful fallbacks */}}
         {{ $url := "" }}
@@ -41,7 +42,7 @@
         {{ if $url }}
           <img src="{{ $url }}" alt="{{ $title }}" style="width:100%;height:320px;object-fit:cover;display:block;" loading="lazy" />
         {{ else }}
-          <div style="width:100%;height:320px;background:linear-gradient(135deg,#7C4DFF,#651FFF);"></div>
+          <div class="cc-slide-bg" style="width:100%;height:320px;background:linear-gradient(135deg,#7C4DFF,#651FFF);" {{ with $bgColor }}data-bg="{{ . }}"{{ end }}></div>
         {{ end }}
 
         <figcaption style="position:absolute;left:0;right:0;bottom:0;color:#fff;background:linear-gradient(transparent, rgba(0,0,0,.55));padding:14px 16px;">
@@ -58,6 +59,7 @@
         {{ $title := .title }}
         {{ $desc := .content }}
         {{ $fn := .background.image.filename }}
+        {{ $bgColor := .background.color }}
         {{ $url := "" }}
         {{ if $fn }}
           {{ if hasPrefix $fn "/" }}
@@ -71,7 +73,11 @@
           {{ end }}
         {{ end }}
         <figure style="margin:0;border-radius:12px;overflow:hidden;">
-          {{ if $url }}<img src="{{ $url }}" alt="{{ $title }}" style="width:100%;height:220px;object-fit:cover;display:block;" />{{ end }}
+          {{ if $url }}
+            <img src="{{ $url }}" alt="{{ $title }}" style="width:100%;height:220px;object-fit:cover;display:block;" />
+          {{ else }}
+            <div class="cc-slide-bg" style="width:100%;height:220px;background:linear-gradient(135deg,#7C4DFF,#651FFF);" {{ with $bgColor }}data-bg="{{ . }}"{{ end }}></div>
+          {{ end }}
           <figcaption style="padding:8px 0;opacity:.85;">
             {{ with $title }}<div style="font-weight:700;">{{ . }}</div>{{ end }}
             {{ with $desc }}<div>{{ . }}</div>{{ end }}
@@ -98,6 +104,11 @@
       const track = el.querySelector('.cc-slider__track');
       const figs = Array.from(track.querySelectorAll('figure'));
       const dotsWrap = el.querySelector('.cc-slider__dots');
+      // Apply dynamic background colors for slides without image
+      track.querySelectorAll('.cc-slide-bg[data-bg]').forEach(function(bg){
+        var c = bg.getAttribute('data-bg');
+        if (c) bg.style.background = c;
+      });
       if (!figs.length) { el.setAttribute('hidden',''); return; }
       dotsWrap.innerHTML = '';
       figs.forEach((_,i)=>{

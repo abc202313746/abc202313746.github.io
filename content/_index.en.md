@@ -6,6 +6,7 @@ sections:
     section_id: about
     content:
       username: admin
+      text: ""
     design:
       background:
         color: ""
@@ -22,40 +23,35 @@ sections:
       count: 9
       filters:
         folders: ["project"]
+      text: ""
     design:
       view: card
       columns: 3
   - block: slider
     content:
+      text: ""
       slides:
         - title: "Frontend Portfolio"
           content: "React · TypeScript"
           background:
-            image:
-              filename: unsplash-frontend.svg
+            color: "#7C4DFF"
         - title: "Database & OS"
           content: "Course Projects"
           background:
-            image:
-              filename: unsplash-systems.svg
+            color: "#1E293B"
         - title: "Learning by Building"
           content: "From idea to demo"
           background:
-            image:
-              filename: unsplash-build.svg
+            color: "#0EA5E9"
 
-  # Fallback slider via shortcode (renders even if block: slider is skipped)
-  - block: markdown
-    content:
-      title: ""
-      text: |
-        {{< slider items="/uploads/unsplash-frontend.svg|Frontend Portfolio|React · TypeScript; /uploads/unsplash-systems.svg|Database & OS|Course Projects; /uploads/unsplash-build.svg|Learning by Building|From idea to demo" height="360" autoplay="true" interval="4000" >}}
+  
 
   - block: experience
     section_id: experience
     content:
       title: Experience
       subtitle: ''
+      text: ""
       date_format: Jan 2006
       items:
         - title: Club Member
@@ -94,6 +90,7 @@ sections:
             lng: 127.1295
   - block: markdown
     content:
+      title: ""
       text: |
         {{< fab >}}
 ---
