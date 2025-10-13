@@ -47,8 +47,6 @@ sections:
             image:
               filename: slider-math.svg
 
-
-
   - block: experience
     section_id: experience
     content:
@@ -70,10 +68,29 @@ sections:
           date_end: '2024-12-13'
           description: 'Participated in a mentoring program to enhance practical technical skills through interaction with a senior mentor.'
 
-
   - block: contact
     section_id: contact
     content:
       title: Contact
       text: |
-        Je
+        Jeonbuk National University
+
+        Contact: [GitHub](https://github.com/abc202313746) · [Instagram](https://www.instagram.com/insookyoung/)
+        Phone: [010-4544-0797](tel:+821045440797)
+        Email: [isy0110@jbnu.ac.kr](mailto:isy0110@jbnu.ac.kr)
+      map:
+        provider: OpenStreetMap
+        zoom: 15
+        center:
+          lat: 35.8469
+          lng: 127.1295
+        markers:
+          - title: Jeonbuk National University
+            lat: 35.8469
+            lng: 127.1295
+  - block: markdown
+    content:
+      title: ""
+      text: |
+        {{< fab >}}
+---
