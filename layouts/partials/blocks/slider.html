@@ -29,7 +29,16 @@
     (dict "title" "Learning by Building" "content" "From idea to demo" "background" (dict "image" (dict "filename" "slider-math.svg")))
   ) }}
 {{ end }}
-<div class="cc-slider" data-autoplay="true" data-interval="3500" style="position:relative;min-height: 320px;">
+
+{{/* Size controls from front matter */}}
+{{ $height := 320 }}
+{{ with $block.design.height }}{{ $height = . }}{{ end }}
+{{ if and (not (isset $block "design")) (isset $block "content") }}{{ with $block.content.height }}{{ $height = . }}{{ end }}{{ end }}
+{{ $slideMin := "80%" }}
+{{ with $block.design.slide_min_width }}{{ $slideMin = . }}{{ end }}
+{{ $nsHeight := 220 }}
+{{ with $block.design.noscript_height }}{{ $nsHeight = . }}{{ end }}
+<div class="cc-slider" data-autoplay="true" data-interval="3500" data-height="{{ $height }}" data-slide-minwidth="{{ $slideMin }}" style="position:relative;min-height:1px;">
   <div class="slider-debug" style="display:none" data-count="{{ len $slides }}">slider-partial-rendered</div>
   <div class="cc-slider__track" style="display:flex;gap:12px;overflow-x:auto;white-space:nowrap;padding:8px;scroll-snap-type:x mandatory;scrollbar-width:none;">
     {{ range $slides }}
@@ -57,7 +66,7 @@
       {{ end }}
       {{ if eq $fn "" }}{{ with .media }}{{ $fn = . }}{{ end }}{{ end }}
       {{ $bgColor := .background.color }}
-      <figure style="min-width:80%;margin:0;position:relative;scroll-snap-align:start;border-radius:12px;overflow:hidden;">
+  <figure style="min-width:80%;margin:0;position:relative;scroll-snap-align:start;border-radius:12px;overflow:hidden;">
         {{/* Resolve image URL with graceful fallbacks (prefer assets/media) */}}
         {{ $url := "" }}
         {{ if $fn }}
@@ -159,6 +168,12 @@
       const track = el.querySelector('.cc-slider__track');
       const figs = Array.from(track.querySelectorAll('figure'));
       const dotsWrap = el.querySelector('.cc-slider__dots');
+      // Apply sizing from data attributes
+      const h = parseInt(el.getAttribute('data-height')||'320',10);
+      const minW = el.getAttribute('data-slide-minwidth') || '80%';
+      el.style.minHeight = h+'px';
+      figs.forEach(f=>{ f.style.minWidth = minW; });
+      track.querySelectorAll('img, .cc-slide-bg').forEach(n=>{ n.style.height = h+'px'; });
       // Apply dynamic background colors for slides without image
       track.querySelectorAll('.cc-slide-bg[data-bg]').forEach(function(bg){
         var c = bg.getAttribute('data-bg');

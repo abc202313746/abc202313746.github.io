@@ -17,16 +17,17 @@ sections:
             brightness: 0.5
       css_class: d-flex fullscreen align-items-center
 
-  - block: collection
+  - block: portfolio
+    section_id: portfolio
     content:
       title: Projects
+      subtitle: ''
       count: 9
-      filters:
-        folders: ["project"]
+      page_type: project
       text: ""
     design:
       view: card
-      columns: 3
+      columns: '3'
   - block: slider
     content:
       text: ""
