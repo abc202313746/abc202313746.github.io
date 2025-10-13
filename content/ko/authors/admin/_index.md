@@ -40,6 +40,9 @@ social:
   - icon: github
     icon_pack: fab
     link: https://github.com/abc202313746
+  - icon: instagram
+    icon_pack: fab
+    link: https://www.instagram.com/insookyoung/
   # - icon: envelope
   #   icon_pack: fas
   #   link: 'about/#contact'
