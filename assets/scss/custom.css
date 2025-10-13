@@ -5,6 +5,9 @@
 /* Theming: primary color and button hover */
 :root {
   --bs-primary: #7C4DFF; /* Deep purple */
+  /* Text color tokens */
+  --text-strong: #0d0e10; /* light mode strong text */
+  --text-muted: #4b5563;  /* light mode muted text */
 }
 .btn-primary {
   background-color: var(--bs-primary);
@@ -55,17 +58,37 @@
   min-height: 340px;
 }
 
+/* Base text colors via tokens */
+body { color: var(--text-strong); }
+.home-section { color: var(--text-strong); }
+
 /* Hero text color without background (light vs dark) */
-.home-section#about { color: #0d0e10; }
+.home-section#about { color: var(--text-strong); }
 .home-section#about h1,
 .home-section#about h2,
 .home-section#about h3,
-.home-section#about .lead { color: #0d0e10; }
+.home-section#about .lead { color: var(--text-strong); }
 
+/* Dark mode (supports OS pref and common theme toggles) */
 @media (prefers-color-scheme: dark) {
-  .home-section#about { color: #f1f3f5; }
-  .home-section#about h1,
-  .home-section#about h2,
-  .home-section#about h3,
-  .home-section#about .lead { color: #f1f3f5; }
+  :root {
+    --text-strong: #f1f3f5;
+    --text-muted: #c8cbd0;
+  }
 }
+
+html.dark,
+body.dark,
+[data-theme="dark"],
+.dark {
+  --text-strong: #f1f3f5;
+  --text-muted: #c8cbd0;
+}
+
+/* Apply tokens to common section headings and text */
+.home-section h1,
+.home-section h2,
+.home-section h3,
+.home-section .lead,
+.home-section p,
+.home-section li { color: var(--text-strong); }
