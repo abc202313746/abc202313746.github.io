@@ -98,5 +98,5 @@ sections:
   - block: markdown
     content:
       text: |
-  {{< fab >}}
+        {{< fab >}}
 ---
