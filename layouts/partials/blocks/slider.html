@@ -34,6 +34,22 @@
 {{ end }}
 {{ if not (gt (len $slides) 0) }}{{ with .slides }}{{ $slides = . }}{{ $source = "dot.slides" }}{{ end }}{{ end }}
 {{ if not (gt (len $slides) 0) }}{{ with .items }}{{ $slides = . }}{{ $source = "dot.items" }}{{ end }}{{ end }}
+
+{{/* Extra: scan the current page front matter for a slider section if nothing found yet */}}
+{{ if and (not (gt (len $slides) 0)) .Page }}
+  {{ with .Page.Params.sections }}
+    {{ range . }}
+      {{ if and (not (gt (len $slides) 0)) (or (eq (printf "%v" .block) "slider") (eq (printf "%v" .Block) "slider")) }}
+        {{ with .content }}
+          {{ with .slides }}{{ $slides = . }}{{ $source = "page.params.sections.content.slides" }}{{ end }}
+          {{ if not (gt (len $slides) 0) }}{{ with .items }}{{ $slides = . }}{{ $source = "page.params.sections.content.items" }}{{ end }}{{ end }}
+        {{ end }}
+        {{ if not (gt (len $slides) 0) }}{{ with .slides }}{{ $slides = . }}{{ $source = "page.params.sections.slides" }}{{ end }}{{ end }}
+        {{ if not (gt (len $slides) 0) }}{{ with .items }}{{ $slides = . }}{{ $source = "page.params.sections.items" }}{{ end }}{{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
 {{ if not (gt (len $slides) 0) }}
   {{ $lang := lower (printf "%v" .Site.Language.Lang) }}
   {{ $ko := or (eq $lang "ko") (hasPrefix $lang "ko") }}
