@@ -34,21 +34,21 @@ sections:
     content:
       text: ""
       slides:
-        - title: "Frontend Portfolio"
-          content: "Building delightful UX with React and TypeScript"
+        - title: "Focus & Flow"
+          content: "Crafting UI with clean code"
           background:
             image:
-              filename: unsplash-coffee-keyboard.jpg
-        - title: "Collaboration"
-          content: "Growing via code reviews and pairing"
+              filename: slider-laptop-desk.jpg
+        - title: "Full-stack Visualization"
+          content: "From data to experience"
           background:
             image:
-              filename: unsplash-developer-desk.jpg
-        - title: "Learning by Building"
-          content: "From idea to demo"
+              filename: slider-3d-devstack.jpg
+        - title: "Code in Detail"
+          content: "Learning by shipping"
           background:
             image:
-              filename: unsplash-frontend.svg
+              filename: slider-code-macro.jpg
     design:
       is_fullscreen: false
       slide_height: '420px'

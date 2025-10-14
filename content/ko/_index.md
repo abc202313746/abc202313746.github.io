@@ -34,21 +34,21 @@ sections:
     content:
       text: ""
       slides:
-        - title: "자기소개"
-          content: "React/TypeScript를 중심으로 사용자 경험을 만드는 개발자 지망생"
+        - title: "집중과 몰입"
+          content: "깔끔한 코드로 만드는 사용자 경험"
           background:
             image:
-              filename: unsplash-coffee-keyboard.jpg
-        - title: "협력"
-          content: "코드 리뷰 · 페어 프로그래밍으로 함께 성장하는 팀워크 지향"
+              filename: slider-laptop-desk.jpg
+        - title: "풀스택 비주얼라이제이션"
+          content: "데이터부터 경험까지"
           background:
             image:
-              filename: unsplash-developer-desk.jpg
-        - title: "관심사"
-          content: "React/TypeScript · 데이터 모델링 · 시스템 이해"
+              filename: slider-3d-devstack.jpg
+        - title: "디테일한 코드"
+          content: "직접 만들어보며 배우기"
           background:
             image:
-              filename: unsplash-frontend.svg
+              filename: slider-code-macro.jpg
     design:
       is_fullscreen: false
       slide_height: '420px'
