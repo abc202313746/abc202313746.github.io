@@ -15,19 +15,33 @@
   3) assets/media/<filename>         → resources.Get "media/<filename>" → .RelPermalink
 */}}
 
-{{ $block := or .block (or .section .) }}
+{{ $block := or .block (or .Block (or .section (or .Section .))) }}
 {{ $slides := slice }}
-{{ with $block.content.slides }}{{ $slides = . }}{{ end }}
-{{ if not (gt (len $slides) 0) }}{{ with $block.slides }}{{ $slides = . }}{{ end }}{{ end }}
-{{ if not (gt (len $slides) 0) }}{{ with $block.content.items }}{{ $slides = . }}{{ end }}{{ end }}
-{{ if not (gt (len $slides) 0) }}{{ with $block.items }}{{ $slides = . }}{{ end }}{{ end }}
+{{ $source := "" }}
+{{ with $block }}
+  {{ with .content }}
+    {{ with .slides }}{{ $slides = . }}{{ $source = "block.content.slides" }}{{ end }}
+    {{ if not (gt (len $slides) 0) }}{{ with .items }}{{ $slides = . }}{{ $source = "block.content.items" }}{{ end }}{{ end }}
+  {{ end }}
+  {{ if not (gt (len $slides) 0) }}{{ with .slides }}{{ $slides = . }}{{ $source = "block.slides" }}{{ end }}{{ end }}
+  {{ if not (gt (len $slides) 0) }}{{ with .items }}{{ $slides = . }}{{ $source = "block.items" }}{{ end }}{{ end }}
+{{ end }}
 {{ if not (gt (len $slides) 0) }}
-  {{/* Fallback default slides to avoid blank output and help diagnose content wiring */}}
+  {{ with .content }}
+    {{ with .slides }}{{ $slides = . }}{{ $source = "dot.content.slides" }}{{ end }}
+    {{ if not (gt (len $slides) 0) }}{{ with .items }}{{ $slides = . }}{{ $source = "dot.content.items" }}{{ end }}{{ end }}
+  {{ end }}
+{{ end }}
+{{ if not (gt (len $slides) 0) }}{{ with .slides }}{{ $slides = . }}{{ $source = "dot.slides" }}{{ end }}{{ end }}
+{{ if not (gt (len $slides) 0) }}{{ with .items }}{{ $slides = . }}{{ $source = "dot.items" }}{{ end }}{{ end }}
+{{ if not (gt (len $slides) 0) }}
+  {{/* Fallback default slides (photo-style) to avoid blank output */}}
   {{ $slides = (slice
-    (dict "title" "Frontend Portfolio" "content" "React · TypeScript" "background" (dict "image" (dict "filename" "slider-react.svg")))
-    (dict "title" "Database & OS" "content" "Course Projects" "background" (dict "image" (dict "filename" "slider-class.svg")))
-    (dict "title" "Learning by Building" "content" "From idea to demo" "background" (dict "image" (dict "filename" "slider-math.svg")))
+    (dict "title" "Frontend Portfolio" "content" "React · TypeScript" "background" (dict "image" (dict "filename" "unsplash-coffee-keyboard.jpg")))
+    (dict "title" "Collaboration" "content" "Code reviews & pairing" "background" (dict "image" (dict "filename" "unsplash-developer-desk.jpg")))
+    (dict "title" "Explore & Build" "content" "Learn by shipping" "background" (dict "image" (dict "filename" "space.jpg")))
   ) }}
+  {{ $source = "fallback" }}
 {{ end }}
 
 {{/* Size controls from front matter (compute CSS-ready and numeric values) */}}
@@ -68,7 +82,7 @@
   {{ end }}
 {{ end }}
 
-{{ $slideMin := "80%" }}
+{{ $slideMin := "90%" }}
 {{ with $block.design.slide_min_width }}{{ $slideMin = . }}{{ end }}
 {{ $nsHeight := 220 }}
 {{ with $block.design.noscript_height }}{{ $nsHeight = . }}{{ end }}
@@ -88,7 +102,7 @@
 {{ end }}
 
 <div class="cc-slider" data-autoplay="{{ $autoplay }}" data-interval="{{ $interval }}" data-height="{{ $heightNum }}" data-slide-minwidth="{{ $slideMin }}" data-fullscreen="{{ $fullscreen }}" style="position:relative;min-height:1px;">
-  <div class="slider-debug" style="display:none" data-count="{{ len $slides }}">slider-partial-rendered</div>
+  <div class="slider-debug" style="display:none" data-count="{{ len $slides }}" data-source="{{ $source }}">slider-partial-rendered</div>
   <div class="cc-slider__track" style="display:flex;gap:12px;overflow-x:auto;white-space:nowrap;padding:8px;scroll-snap-type:x mandatory;scrollbar-width:none;">
     {{ range $slides }}
       {{ $title := .title }}

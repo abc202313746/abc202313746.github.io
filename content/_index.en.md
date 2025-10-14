@@ -50,8 +50,8 @@ sections:
             image:
               filename: unsplash-frontend.svg
     design:
-      slide_height: '300px'
-      slide_min_width: '90%'
+      slide_height: '360px'
+      slide_min_width: '92%'
 
   - block: experience
     section_id: experience
