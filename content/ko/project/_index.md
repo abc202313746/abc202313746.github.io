@@ -6,6 +6,11 @@ image:
   focal_point: "Center"
   filename: "/project/database/featured.png"
 type: landing
+cascade:
+  show_author: false
+  authors: []
+  share: false
+  show_tags: false
 sections:
   - block: markdown
     content:
