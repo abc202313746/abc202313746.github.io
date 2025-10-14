@@ -39,48 +39,19 @@ sections:
       view: card
       columns: '3'
 
-  - block: markdown
+  - block: portfolio
     section_id: programming-languages
     content:
       title: "Programming Languages"
       subtitle: ""
-      text: |
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 30px 0;">
-          <a href="/en/languages/python/" style="text-decoration: none; color: inherit;">
-            <div style="padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px; background: #f9f9f9; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 6px 20px rgba(124, 77, 255, 0.15)'; this.style.borderColor='#7c4dff';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.borderColor='#e0e0e0';">
-              <div style="display: flex; align-items: center; margin-bottom: 12px;">
-                <span style="font-size: 2rem; margin-right: 12px;">🐍</span>
-                <h3 style="color: #7c4dff; margin: 0; font-size: 1.2rem; font-weight: 600;">Python</h3>
-              </div>
-              <p style="margin: 0; color: #666; line-height: 1.5; font-size: 0.95rem;">Python Data Analysis and Visualization Project</p>
-            </div>
-          </a>
-          
-          <a href="/en/languages/c-language/" style="text-decoration: none; color: inherit;">
-            <div style="padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px; background: #f9f9f9; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 6px 20px rgba(124, 77, 255, 0.15)'; this.style.borderColor='#7c4dff';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.borderColor='#e0e0e0';">
-              <div style="display: flex; align-items: center; margin-bottom: 12px;">
-                <span style="font-size: 2rem; margin-right: 12px;">🔧</span>
-                <h3 style="color: #7c4dff; margin: 0; font-size: 1.2rem; font-weight: 600;">C Language</h3>
-              </div>
-              <p style="margin: 0; color: #666; line-height: 1.5; font-size: 0.95rem;">Custom Memory Allocator Implementation in C</p>
-            </div>
-          </a>
-          
-          <a href="/en/languages/java/" style="text-decoration: none; color: inherit;">
-            <div style="padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px; background: #f9f9f9; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 6px 20px rgba(124, 77, 255, 0.15)'; this.style.borderColor='#7c4dff';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.borderColor='#e0e0e0';">
-              <div style="display: flex; align-items: center; margin-bottom: 12px;">
-                <span style="font-size: 2rem; margin-right: 12px;">☕</span>
-                <h3 style="color: #7c4dff; margin: 0; font-size: 1.2rem; font-weight: 600;">Java</h3>
-              </div>
-              <p style="margin: 0; color: #666; line-height: 1.5; font-size: 0.95rem;">Object-Oriented Task Management System</p>
-            </div>
-          </a>
-        </div>
+      text: ""
+      filters:
+        folders:
+          - languages
+      count: 3
     design:
-      background:
-        color: 'white'
-      spacing:
-        padding: ['40px', '0', '40px', '0']
+      view: compact
+      columns: '3'
 
   - block: portfolio
     section_id: portfolio-showcase

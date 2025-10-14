@@ -5,6 +5,11 @@ date: '2024-01-01T00:00:00Z'
 type: page
 searchable: true
 tags: [C Language, 메모리관리, 시스템프로그래밍, 프로그래밍언어]
+image:
+  caption: 'C Language Programming'
+  focal_point: Smart
+  preview_only: false
+  filename: featured.png
 ---
 
 <div class="justify-text">

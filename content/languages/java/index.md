@@ -5,6 +5,11 @@ date: '2024-01-01T00:00:00Z'
 type: page
 searchable: true
 tags: [Java, 객체지향, OOP, 프로그래밍언어]
+image:
+  caption: 'Java Programming'
+  focal_point: Smart
+  preview_only: false
+  filename: featured.png
 ---
 
 <div class="justify-text">
