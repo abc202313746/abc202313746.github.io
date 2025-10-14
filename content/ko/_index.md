@@ -1,5 +1,4 @@
----
-# Homepage (Korean)
+title: "홈"
 type: landing
 sections:
   - block: about.avatar
