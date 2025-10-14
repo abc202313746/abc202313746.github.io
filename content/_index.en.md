@@ -30,11 +30,29 @@ sections:
     design:
       view: card
       columns: '3'
-  - block: markdown
+  - block: slider
     content:
-      title: ""
-      text: |
-        {{< slider items="/uploads/slide-1.jpg|React · TypeScript|Maintainable UIs through component design and state management; /uploads/slide-2.jpg|Learning by Building|Start small, iterate fast, and prove with results; /uploads/slide-3.jpg|Algorithms|Efficiency via complexity analysis and focused optimizations" height="360" autoplay="true" interval="4000" >}}
+      text: ""
+      slides:
+        - title: "React · TypeScript"
+          content: "Maintainable UIs through component design and state management"
+          background:
+            image:
+              filename: slide-1.jpg
+        - title: "Learning by Building"
+          content: "Start small, iterate fast, and prove with results"
+          background:
+            image:
+              filename: slide-2.jpg
+        - title: "Algorithms"
+          content: "Efficiency via complexity analysis and focused optimizations"
+          background:
+            image:
+              filename: slide-3.jpg
+    design:
+      is_fullscreen: false
+      slide_height: '420px'
+      interval: 0
 
   - block: experience
     section_id: experience
