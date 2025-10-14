@@ -4,6 +4,11 @@ defaultContentLanguage: ko
 hasCJKLanguage: true
 defaultContentLanguageInSubdir: false
 
+# Enable search index generation
+outputs:
+  home: ["HTML", "RSS", "JSON", "headers", "redirects"]
+  section: ["HTML", "RSS"]
+
 params:
   logo: 'chat-logo.svg'
 

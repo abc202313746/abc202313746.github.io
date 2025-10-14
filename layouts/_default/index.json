@@ -1,0 +1,23 @@
+{{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections -}}
+{{- $pages = $pages | union (where site.Pages "Params.searchable" true) -}}
+{{- $notHidden := where $pages "Params.hidden" "!=" true -}}
+{{- $filtered := (where $notHidden "IsDescendant" $) -}}
+{{- $result := slice -}}
+{{- range $filtered -}}
+  {{- if and .Title .RelPermalink -}}
+    {{- $context := . -}}
+    {{- $title := .Title -}}
+    {{- $content := .Plain -}}
+    {{- $summary := .Summary -}}
+    {{- $permalink := .RelPermalink -}}
+    {{- $section := .Section -}}
+    {{- $tags := .Params.tags -}}
+    {{- $categories := .Params.categories -}}
+    {{- $authors := .Params.authors -}}
+    {{- $date := .Date -}}
+    
+    {{- $item := dict "title" $title "content" $content "summary" $summary "permalink" $permalink "section" $section "tags" $tags "categories" $categories "authors" $authors "date" $date -}}
+    {{- $result = $result | append $item -}}
+  {{- end -}}
+{{- end -}}
+{{- $result | jsonify -}}

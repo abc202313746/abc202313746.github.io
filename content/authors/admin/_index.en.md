@@ -8,6 +8,10 @@ superuser: true
 # Role/position
 role: 'Jeonbuk National University — Computer Science Student'
 
+# Make this page searchable
+searchable: true
+tags: ["SookYoung In", "인숙영", "Jeonbuk National University", "전북대학교", "Computer Science", "Frontend"]
+
 # Profile photo (put `avatar.jpg` in this folder to use it)
 avatar: avatar.jpg
 

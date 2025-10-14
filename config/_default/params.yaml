@@ -94,6 +94,10 @@ features:
   search:
     enabled: true
     provider: wowchemy
+    wowchemy:
+      min_length: 1
+      threshold: 0.3
+      index_content: true
     algolia:
       app_id: ''
       api_key: ''

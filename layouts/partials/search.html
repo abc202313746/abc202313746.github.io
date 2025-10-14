@@ -1,0 +1,71 @@
+<!-- Enhanced Search Functionality -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Enhanced search functionality
+  const searchInput = document.querySelector('input[type="search"]');
+  const searchButton = document.querySelector('button[type="submit"]');
+  
+  if (searchInput) {
+    // Add search data attributes for better indexing
+    searchInput.setAttribute('data-search-index', '/index.json');
+    searchInput.setAttribute('placeholder', '인숙영, 전북대학교, SookYoung In 검색...');
+    
+    // Enhanced search with better Korean support
+    let searchIndex = [];
+    
+    // Load search index
+    fetch('/index.json')
+      .then(response => response.json())
+      .then(data => {
+        searchIndex = data;
+        console.log('Search index loaded:', searchIndex.length, 'items');
+      })
+      .catch(error => {
+        console.log('Search index not available, using fallback');
+        // Fallback search data
+        searchIndex = [
+          {
+            title: "인숙영",
+            content: "전북대학교 컴퓨터인공지능학부 3학년 재학생 SookYoung In 프론트엔드 개발자",
+            permalink: "/",
+            section: "home"
+          },
+          {
+            title: "SookYoung In",
+            content: "Jeonbuk National University Computer Science Student Frontend Developer 인숙영 전북대학교",
+            permalink: "/en/",
+            section: "home"
+          }
+        ];
+      });
+    
+    // Custom search function
+    function performSearch(query) {
+      if (!query || query.length < 1) return [];
+      
+      const results = searchIndex.filter(item => {
+        const searchText = (item.title + ' ' + item.content + ' ' + (item.tags || []).join(' ')).toLowerCase();
+        const queryLower = query.toLowerCase();
+        
+        return searchText.includes(queryLower) || 
+               searchText.includes('인숙영') && (queryLower.includes('인숙영') || queryLower.includes('sookyoung')) ||
+               searchText.includes('전북대') && (queryLower.includes('전북대') || queryLower.includes('jeonbuk')) ||
+               searchText.includes('컴퓨터') && queryLower.includes('컴퓨터');
+      });
+      
+      return results.slice(0, 10); // Limit to 10 results
+    }
+    
+    // Override search behavior if needed
+    if (searchButton) {
+      searchButton.addEventListener('click', function(e) {
+        const query = searchInput.value.trim();
+        if (query) {
+          const results = performSearch(query);
+          console.log('Search results for "' + query + '":', results);
+        }
+      });
+    }
+  }
+});
+</script>

@@ -8,8 +8,13 @@ tags:
   - ERD
   - Normalization
   - System Design
+  - 인숙영
+  - SookYoung In
+  - 전북대학교
+  - Jeonbuk National University
 date: 2025-06-20
 external_link: ''
+searchable: true
 ---
 <div class="justify-text">
 As a final project for the Database Design course at Jeonbuk National University, SookYoung In (인숙영) **designed a database for the 'Jeonju Cultural Tourism Integrated System'**. The goal was to collect information about cultural facilities, restaurants, festivals, weather, etc., scattered across various Jeonju City websites and provide useful customized information to tourists.

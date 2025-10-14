@@ -4,6 +4,8 @@ description: "SookYoung In (인숙영) - Computer Science Student at Jeonbuk Nat
 keywords: "SookYoung In, 인숙영, Jeonbuk National University, 전북대학교, Computer Science, Frontend Developer, React, TypeScript, Portfolio"
 # Homepage
 type: landing
+searchable: true
+tags: ["SookYoung In", "인숙영", "Jeonbuk National University", "전북대학교", "Computer Science", "Frontend", "React", "TypeScript"]
 sections:
   - block: about.avatar
     section_id: about
