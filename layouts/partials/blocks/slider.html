@@ -119,6 +119,7 @@
 {{ with $block.design.is_fullscreen }}{{ $fullscreen = . }}{{ end }}
 
 {{/* Apply fullscreen overrides for initial render */}}
+{{ $isKo := or (eq (lower (printf "%v" .Site.Language.Lang)) "ko") (hasPrefix (lower (printf "%v" .Site.Language.Lang)) "ko") }}
 {{ $hInline := $heightCss }}
 {{ $minWInline := $slideMin }}
 {{ if $fullscreen }}
@@ -135,7 +136,7 @@
       {{/* Localize common defaults when viewing Korean site, even if English text leaked in */}}
       {{ $.Scratch.Set "title" $title }}
       {{ $.Scratch.Set "desc" $desc }}
-      {{ if $ko }}
+      {{ if $isKo }}
         {{ if eq ($.Scratch.Get "title") "Learning by Building" }}{{ $.Scratch.Set "title" "실습을 통한 학습" }}{{ end }}
         {{ if eq ($.Scratch.Get "title") "Algorithms" }}{{ $.Scratch.Set "title" "알고리즘" }}{{ end }}
         {{ if eq ($.Scratch.Get "desc") "Maintainable UIs through component design and state management" }}{{ $.Scratch.Set "desc" "컴포넌트 설계와 상태 관리로 유지보수성 높은 UI를 구현" }}{{ end }}
