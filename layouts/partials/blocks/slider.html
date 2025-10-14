@@ -1,77 +1,32 @@
 {{/*
-  Local Slider Block Partial
-  Renders sections with `block: slider` using the expected schema:
-  content:
-    slides:
-      - title: "..."
-        content: "..."
-        background:
-          image:
-            filename: my-image.svg | /uploads/my-image.svg
-
-  Image resolution order per slide filename (no build failure if missing):
-  1) Absolute path (starts with '/') → use as-is
-  2) static/uploads/<filename>       → /uploads/<filename>
-  3) assets/media/<filename>         → resources.Get "media/<filename>" → .RelPermalink
+  Simplified Slider Block Partial - Force Korean content for Korean pages
 */}}
 
-{{ $block := or .block (or .Block (or .section (or .Section .))) }}
+{{ $lang := lower (printf "%v" .Site.Language.Lang) }}
+{{ $isKo := or (eq $lang "ko") (hasPrefix $lang "ko") }}
+
 {{ $slides := slice }}
-{{ $source := "" }}
-{{ with $block }}
-  {{ with .content }}
-    {{ with .slides }}{{ $slides = . }}{{ $source = "block.content.slides" }}{{ end }}
-    {{ if not (gt (len $slides) 0) }}{{ with .items }}{{ $slides = . }}{{ $source = "block.content.items" }}{{ end }}{{ end }}
-  {{ end }}
-  {{ if not (gt (len $slides) 0) }}{{ with .slides }}{{ $slides = . }}{{ $source = "block.slides" }}{{ end }}{{ end }}
-  {{ if not (gt (len $slides) 0) }}{{ with .items }}{{ $slides = . }}{{ $source = "block.items" }}{{ end }}{{ end }}
-{{ end }}
-{{ if not (gt (len $slides) 0) }}
-  {{ with .content }}
-    {{ with .slides }}{{ $slides = . }}{{ $source = "dot.content.slides" }}{{ end }}
-    {{ if not (gt (len $slides) 0) }}{{ with .items }}{{ $slides = . }}{{ $source = "dot.content.items" }}{{ end }}{{ end }}
-  {{ end }}
-{{ end }}
-{{ if not (gt (len $slides) 0) }}{{ with .slides }}{{ $slides = . }}{{ $source = "dot.slides" }}{{ end }}{{ end }}
-{{ if not (gt (len $slides) 0) }}{{ with .items }}{{ $slides = . }}{{ $source = "dot.items" }}{{ end }}{{ end }}
-
-{{/* Priority: scan the current page front matter for a slider section FIRST */}}
-{{ if .Page }}
-  {{ with .Page.Params.sections }}
-    {{ range . }}
-      {{ if and (not (gt (len $slides) 0)) (or (eq (printf "%v" .block) "slider") (eq (printf "%v" .Block) "slider")) }}
-        {{ with .content }}
-          {{ with .slides }}{{ $slides = . }}{{ $source = "page.params.sections.content.slides" }}{{ end }}
-          {{ if not (gt (len $slides) 0) }}{{ with .items }}{{ $slides = . }}{{ $source = "page.params.sections.content.items" }}{{ end }}{{ end }}
-        {{ end }}
-        {{ if not (gt (len $slides) 0) }}{{ with .slides }}{{ $slides = . }}{{ $source = "page.params.sections.slides" }}{{ end }}{{ end }}
-        {{ if not (gt (len $slides) 0) }}{{ with .items }}{{ $slides = . }}{{ $source = "page.params.sections.items" }}{{ end }}{{ end }}
-      {{ end }}
-    {{ end }}
-  {{ end }}
-{{ end }}
-{{ if not (gt (len $slides) 0) }}
-  {{ $lang := lower (printf "%v" .Site.Language.Lang) }}
-  {{ $ko := or (eq $lang "ko") (hasPrefix $lang "ko") }}
-  {{ if $ko }}
-    {{ $slides = (slice
-      (dict "title" "React · TypeScript" "content" "컴포넌트 설계와 상태 관리로 유지보수성 높은 UI 구현" "background" (dict "image" (dict "filename" "/uploads/1_unsplash.jpg")))
-      (dict "title" "실습을 통한 학습" "content" "작게 만들고 빠르게 개선하며 결과로 증명" "background" (dict "image" (dict "filename" "/uploads/2_unsplash.jpg")))
-      (dict "title" "알고리즘" "content" "복잡도 분석을 바탕으로 효율적인 로직과 최적화" "background" (dict "image" (dict "filename" "/uploads/3_unsplash.jpg")))
-    ) }}
-  {{ else }}
-    {{ $slides = (slice
-      (dict "title" "React · TypeScript" "content" "Maintainable UIs through component design and state management" "background" (dict "image" (dict "filename" "/uploads/1_unsplash.jpg")))
-      (dict "title" "Learning by Building" "content" "Start small, iterate fast, and prove with results" "background" (dict "image" (dict "filename" "/uploads/2_unsplash.jpg")))
-      (dict "title" "Algorithms" "content" "Efficiency via complexity analysis and focused optimizations" "background" (dict "image" (dict "filename" "/uploads/3_unsplash.jpg")))
-    ) }}
-  {{ end }}
-  {{ $source = "fallback" }}
+{{ if $isKo }}
+  {{ $slides = (slice
+    (dict "title" "React · TypeScript" "content" "컴포넌트 설계와 상태 관리로 유지보수성 높은 UI를 구현" "background" (dict "image" (dict "filename" "/uploads/1_unsplash.jpg")))
+    (dict "title" "실습을 통한 학습" "content" "작게 만들고 빠르게 개선하며 결과로 증명" "background" (dict "image" (dict "filename" "/uploads/2_unsplash.jpg")))
+    (dict "title" "알고리즘" "content" "복잡도 분석을 바탕으로 효율적인 로직과 최적화" "background" (dict "image" (dict "filename" "/uploads/3_unsplash.jpg")))
+  ) }}
+{{ else }}
+  {{ $slides = (slice
+    (dict "title" "React · TypeScript" "content" "Maintainable UIs through component design and state management" "background" (dict "image" (dict "filename" "/uploads/1_unsplash.jpg")))
+    (dict "title" "Learning by Building" "content" "Start small, iterate fast, and prove with results" "background" (dict "image" (dict "filename" "/uploads/2_unsplash.jpg")))
+    (dict "title" "Algorithms" "content" "Efficiency via complexity analysis and focused optimizations" "background" (dict "image" (dict "filename" "/uploads/3_unsplash.jpg")))
+  ) }}
 {{ end }}
 
-{{/* Size controls from front matter (compute CSS-ready and numeric values) */}}
-{{ $heightCss := "320px" }}
-{{ $heightNum := 320 }}
+{{ $block := or .block (or .Block (or .section (or .Section .))) }}
+{{ $heightCss := "420px" }}
+{{ $heightNum := 420 }}
+{{ $interval := 3500 }}
+{{ $autoplay := true }}
+{{ $fullscreen := false }}
+
 {{ if isset $block "design" }}
   {{ with $block.design.slide_height }}
     {{ $h := printf "%v" . }}
@@ -82,59 +37,18 @@
       {{ $heightCss = $h }}
       {{ $heightNum = (int (replaceRE "[^0-9]" "" $h)) }}
     {{ end }}
-  {{ else }}
-    {{ with $block.design.height }}
-      {{ $h := printf "%v" . }}
-      {{ if gt (len (findRE "^[0-9]+$" $h)) 0 }}
-        {{ $heightCss = printf "%spx" $h }}
-        {{ $heightNum = (int $h) }}
-      {{ else }}
-        {{ $heightCss = $h }}
-        {{ $heightNum = (int (replaceRE "[^0-9]" "" $h)) }}
-      {{ end }}
-    {{ end }}
   {{ end }}
-{{ else if and (not (isset $block "design")) (isset $block "content") }}
-  {{ with $block.content.height }}
-    {{ $h := printf "%v" . }}
-    {{ if gt (len (findRE "^[0-9]+$" $h)) 0 }}
-      {{ $heightCss = printf "%spx" $h }}
-      {{ $heightNum = (int $h) }}
-    {{ else }}
-      {{ $heightCss = $h }}
-      {{ $heightNum = (int (replaceRE "[^0-9]" "" $h)) }}
-    {{ end }}
-  {{ end }}
+  {{ with $block.design.interval }}{{ $interval = . }}{{ end }}
+  {{ with $block.design.loop }}{{ $autoplay = . }}{{ end }}
+  {{ with $block.design.is_fullscreen }}{{ $fullscreen = . }}{{ end }}
 {{ end }}
 
-{{ $slideMin := "90%" }}
-{{ with $block.design.slide_min_width }}{{ $slideMin = . }}{{ end }}
-{{ $nsHeight := 220 }}
-{{ with $block.design.noscript_height }}{{ $nsHeight = . }}{{ end }}
-{{ $interval := 3500 }}
-{{ with $block.design.interval }}{{ $interval = . }}{{ end }}
-{{ $autoplay := true }}
-{{ with $block.design.loop }}{{ $autoplay = . }}{{ end }}
-{{ $fullscreen := false }}
-{{ with $block.design.is_fullscreen }}{{ $fullscreen = . }}{{ end }}
-
-{{/* Apply fullscreen overrides for initial render */}}
-{{ $isKo := or (eq (lower (printf "%v" .Site.Language.Lang)) "ko") (hasPrefix (lower (printf "%v" .Site.Language.Lang)) "ko") }}
-{{ $hInline := $heightCss }}
-{{ $minWInline := $slideMin }}
-{{ if $fullscreen }}
-  {{ $hInline = "100vh" }}
-  {{ $minWInline = "100%" }}
-{{ end }}
-
-<div class="cc-slider" data-autoplay="{{ $autoplay }}" data-interval="{{ $interval }}" data-height="{{ $heightNum }}" data-slide-minwidth="{{ $slideMin }}" data-fullscreen="{{ $fullscreen }}" style="position:relative;min-height:1px;">
-  <div class="slider-debug" style="display:none" data-count="{{ len $slides }}" data-source="{{ $source }}" data-lang="{{ .Site.Language.Lang }}">slider-partial-rendered</div>
+<div class="cc-slider" data-autoplay="{{ $autoplay }}" data-interval="{{ $interval }}" data-height="{{ $heightNum }}" data-fullscreen="{{ $fullscreen }}" style="position:relative;min-height:{{ $heightCss }};">
   <div class="cc-slider__track" style="display:flex;gap:12px;overflow-x:auto;white-space:nowrap;padding:8px;scroll-snap-type:x mandatory;scrollbar-width:none;">
     {{ range $slides }}
       {{ $title := .title }}
       {{ $desc := or .content .subtitle }}
       {{ $fn := "" }}
-      {{/* Allow multiple schemas: background.image.filename | background.image (string) | image.filename | image (string) | media (string) */}}
       {{ with .background }}
         {{ with .image }}
           {{ if .filename }}
@@ -154,9 +68,8 @@
         {{ end }}
       {{ end }}
       {{ if eq $fn "" }}{{ with .media }}{{ $fn = . }}{{ end }}{{ end }}
-      {{ $bgColor := .background.color }}
-  <figure style="min-width:90%;margin:0;position:relative;scroll-snap-align:start;border-radius:12px;overflow:hidden;">
-        {{/* Resolve image URL with graceful fallbacks (prefer assets/media) */}}
+
+      <figure style="min-width:90%;margin:0;position:relative;scroll-snap-align:start;border-radius:12px;overflow:hidden;">
         {{ $url := "" }}
         {{ if $fn }}
           {{ if hasPrefix $fn "/" }}
@@ -173,9 +86,9 @@
         {{ end }}
 
         {{ if $url }}
-          <img src="{{ $url }}" data-src-debug="{{ $fn }}" alt="{{ $title }}" style="width:100%;height:300px;object-fit:cover;display:block;" loading="lazy" />
+          <img src="{{ $url }}" alt="{{ $title }}" style="width:100%;height:{{ $heightCss }};object-fit:cover;display:block;" loading="lazy" />
         {{ else }}
-          <div class="cc-slide-bg" style="width:100%;height:300px;background:linear-gradient(135deg,#7C4DFF,#651FFF);" {{ with $bgColor }}data-bg="{{ . }}"{{ end }}></div>
+          <div style="width:100%;height:{{ $heightCss }};background:linear-gradient(135deg,#7C4DFF,#651FFF);"></div>
         {{ end }}
 
         <figcaption style="position:absolute;left:0;right:0;bottom:0;color:#fff;background:linear-gradient(transparent, rgba(0,0,0,.55));padding:14px 16px;">
@@ -186,60 +99,6 @@
     {{ end }}
   </div>
   <div class="cc-slider__dots" style="display:flex;gap:8px;justify-content:center;margin:8px 0 0 0;"></div>
-  <noscript>
-    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;">
-      {{ range $slides }}
-        {{ $title := .title }}
-        {{ $desc := or .content .subtitle }}
-        {{ $fn := "" }}
-        {{ with .background }}
-          {{ with .image }}
-            {{ if .filename }}
-              {{ $fn = .filename }}
-            {{ else }}
-              {{ $fn = printf "%v" . }}
-            {{ end }}
-          {{ end }}
-        {{ end }}
-        {{ if eq $fn "" }}
-          {{ with .image }}
-            {{ if .filename }}
-              {{ $fn = .filename }}
-            {{ else }}
-              {{ $fn = printf "%v" . }}
-            {{ end }}
-          {{ end }}
-        {{ end }}
-        {{ if eq $fn "" }}{{ with .media }}{{ $fn = . }}{{ end }}{{ end }}
-        {{ $bgColor := .background.color }}
-        {{ $url := "" }}
-        {{ if $fn }}
-          {{ if hasPrefix $fn "/" }}
-            {{ $url = $fn }}
-          {{ else }}
-            {{ with (resources.Get (printf "media/%s" $fn)) }}
-              {{ $url = .RelPermalink }}
-            {{ else }}
-              {{ if (fileExists (printf "static/uploads/%s" $fn)) }}
-                {{ $url = (printf "/uploads/%s" $fn) }}
-              {{ end }}
-            {{ end }}
-          {{ end }}
-        {{ end }}
-        <figure style="margin:0;border-radius:12px;overflow:hidden;">
-          {{ if $url }}
-            <img src="{{ $url }}" data-src-debug="{{ $fn }}" alt="{{ $title }}" style="width:100%;height:220px;object-fit:cover;display:block;" />
-          {{ else }}
-            <div class="cc-slide-bg" style="width:100%;height:220px;background:linear-gradient(135deg,#7C4DFF,#651FFF);" {{ with $bgColor }}data-bg="{{ . }}"{{ end }}></div>
-          {{ end }}
-          <figcaption style="padding:8px 0;opacity:.85;">
-            {{ with $title }}<div style="font-weight:700;">{{ . }}</div>{{ end }}
-            {{ with $desc }}<div>{{ . }}</div>{{ end }}
-          </figcaption>
-        </figure>
-      {{ end }}
-    </div>
-  </noscript>
 </div>
 
 <style>
@@ -247,8 +106,6 @@
   .cc-slider__dot { width:28px;height:4px;border-radius:2px;background:#c7c7c7;opacity:.6;transition:opacity .2s,background-color .2s }
   .cc-slider__dot[aria-current="true"] { background: var(--bs-primary, #7C4DFF); opacity:1 }
   @media (max-width: 768px){ .cc-slider figure{ min-width: 92%; } }
-  @media (prefers-reduced-motion: reduce){ .cc-slider__track{ scroll-behavior: auto; } }
-  .cc-slider[hidden] { display: none !important; }
 </style>
 <script>
   (function(){
@@ -257,25 +114,9 @@
       const track = el.querySelector('.cc-slider__track');
       const figs = Array.from(track.querySelectorAll('figure'));
       const dotsWrap = el.querySelector('.cc-slider__dots');
-      // Apply sizing from data attributes
-      const isFull = (el.getAttribute('data-fullscreen')||'false') === 'true';
-      const h = parseInt(el.getAttribute('data-height')||'320',10);
-      const minW = el.getAttribute('data-slide-minwidth') || (isFull ? '100%' : '80%');
-      if (isFull){
-        el.style.minHeight = '100vh';
-        figs.forEach(f=>{ f.style.minWidth = '100%'; });
-        track.querySelectorAll('img, .cc-slide-bg').forEach(n=>{ n.style.height = '100vh'; });
-      } else {
-        el.style.minHeight = h+'px';
-        figs.forEach(f=>{ f.style.minWidth = minW; });
-        track.querySelectorAll('img, .cc-slide-bg').forEach(n=>{ n.style.height = h+'px'; });
-      }
-      // Apply dynamic background colors for slides without image
-      track.querySelectorAll('.cc-slide-bg[data-bg]').forEach(function(bg){
-        var c = bg.getAttribute('data-bg');
-        if (c) bg.style.background = c;
-      });
-      if (!figs.length) { el.setAttribute('hidden',''); return; }
+      
+      if (!figs.length) return;
+      
       dotsWrap.innerHTML = '';
       figs.forEach((_,i)=>{
         const dot = document.createElement('button');
@@ -288,16 +129,22 @@
         });
         dotsWrap.appendChild(dot);
       });
+      
       const setActive = ()=>{
         const idx = Math.round(track.scrollLeft / (track.scrollWidth / figs.length));
         Array.from(dotsWrap.children).forEach((d,j)=>d.setAttribute('aria-current', j===idx ? 'true':'false'));
       };
       track.addEventListener('scroll', ()=>{ window.requestAnimationFrame(setActive); });
       setActive();
-      // autoplay
+      
       if (el.dataset.autoplay === 'true'){
-        let i=0; let timer; const interval = parseInt(el.dataset.interval||'3500',10);
-        const play=()=>{ timer = setInterval(()=>{ i = (i+1)%figs.length; const t = figs[i]; track.scrollTo({ left: t.offsetLeft - track.offsetLeft, behavior:'smooth' }); }, interval); };
+        let i=0; let timer;
+        const interval = parseInt(el.dataset.interval||'3500',10);
+        const play=()=>{ timer = setInterval(()=>{
+          i = (i+1)%figs.length;
+          const t = figs[i];
+          track.scrollTo({ left: t.offsetLeft - track.offsetLeft, behavior:'smooth' });
+        }, interval); };
         const pause=()=>{ if (timer) clearInterval(timer); };
         el.addEventListener('mouseenter', pause);
         el.addEventListener('mouseleave', ()=>{ play(); });
