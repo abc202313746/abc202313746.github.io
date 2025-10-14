@@ -15,7 +15,7 @@ sections:
           filename: ""
           filters:
             brightness: 0.5
-  css_class: d-flex fullscreen align-items-center
+      css_class: d-flex fullscreen align-items-center
 
   - block: portfolio
     section_id: portfolio

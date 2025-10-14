@@ -1,11 +1,9 @@
-name: Pages (Hugo)
+name: Pages (Hugo) - disabled
 
+# This workflow is intentionally disabled to avoid duplicate builds.
+# Keep only 'publish.yaml' as the active Pages workflow.
+# You can still run this one manually if needed.
 on:
-  push:
-    branches: [ main ]         
-    paths-ignore:
-      - '.github/**'             
-      - 'README.md'             
   workflow_dispatch: {}
 
 permissions:
@@ -19,33 +17,14 @@ concurrency:
 
 jobs:
   build:
+    if: false  # disabled
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-   
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
-        with:
-          hugo-version: '0.124.1'
-          extended: true
-
-      - name: Build
-        run: hugo --minify
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./public
+      - run: echo "This workflow is disabled. Use publish.yaml instead."
 
   deploy:
+    if: false  # disabled
     needs: build
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
+      - run: echo "This workflow is disabled. Use publish.yaml instead."
