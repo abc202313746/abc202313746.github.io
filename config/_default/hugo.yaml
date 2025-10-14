@@ -5,21 +5,18 @@ hasCJKLanguage: true
 defaultContentLanguageInSubdir: false
 enableMissingTranslationPlaceholders: false
 
-# Enable search index generation
+# Enable search index generation for all page types
 outputs:
   home: ["HTML", "RSS", "JSON", "headers", "redirects"]
-  section: ["HTML", "RSS"]
+  section: ["HTML", "RSS", "JSON"]
+  page: ["HTML"]
+  taxonomy: ["HTML", "RSS"]
+  term: ["HTML", "RSS"]
 
 params:
   logo: 'chat-logo.svg'
 
-languages:
-  ko:
-    languageCode: ko-KR
-    weight: 1
-  en:
-    languageCode: en-US
-    weight: 2
+# Languages are configured in languages.yaml
 
 sitemap:
   changefreq: weekly

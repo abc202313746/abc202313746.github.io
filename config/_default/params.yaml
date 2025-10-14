@@ -99,6 +99,8 @@ features:
       min_length: 1
       threshold: 0.3
       index_content: true
+      show_parent_in_results: true
+      multilingual: true
     algolia:
       app_id: ''
       api_key: ''
