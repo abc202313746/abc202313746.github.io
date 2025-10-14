@@ -35,12 +35,20 @@
 {{ if not (gt (len $slides) 0) }}{{ with .slides }}{{ $slides = . }}{{ $source = "dot.slides" }}{{ end }}{{ end }}
 {{ if not (gt (len $slides) 0) }}{{ with .items }}{{ $slides = . }}{{ $source = "dot.items" }}{{ end }}{{ end }}
 {{ if not (gt (len $slides) 0) }}
-  {{/* Fallback default slides (photo-style) to avoid blank output */}}
-  {{ $slides = (slice
-    (dict "title" "Frontend Portfolio" "content" "React · TypeScript" "background" (dict "image" (dict "filename" "unsplash-coffee-keyboard.jpg")))
-    (dict "title" "Collaboration" "content" "Code reviews & pairing" "background" (dict "image" (dict "filename" "unsplash-developer-desk.jpg")))
-    (dict "title" "Explore & Build" "content" "Learn by shipping" "background" (dict "image" (dict "filename" "space.jpg")))
-  ) }}
+  {{ $ko := eq (printf "%v" .Site.Language.Lang) "ko" }}
+  {{ if $ko }}
+    {{ $slides = (slice
+      (dict "title" "React · TypeScript" "content" "컴포넌트 설계와 상태 관리로 유지보수성 높은 UI 구현" "background" (dict "image" (dict "filename" "/uploads/slide-1.jpg")))
+      (dict "title" "Learning by Building" "content" "작게 만들고 빠르게 개선하며 결과로 증명" "background" (dict "image" (dict "filename" "/uploads/slide-2.jpg")))
+      (dict "title" "Algorithms" "content" "복잡도 분석을 바탕으로 효율적인 로직과 최적화" "background" (dict "image" (dict "filename" "/uploads/slide-3.jpg")))
+    ) }}
+  {{ else }}
+    {{ $slides = (slice
+      (dict "title" "React · TypeScript" "content" "Maintainable UIs through component design and state management" "background" (dict "image" (dict "filename" "/uploads/slide-1.jpg")))
+      (dict "title" "Learning by Building" "content" "Start small, iterate fast, and prove with results" "background" (dict "image" (dict "filename" "/uploads/slide-2.jpg")))
+      (dict "title" "Algorithms" "content" "Efficiency via complexity analysis and focused optimizations" "background" (dict "image" (dict "filename" "/uploads/slide-3.jpg")))
+    ) }}
+  {{ end }}
   {{ $source = "fallback" }}
 {{ end }}
 
