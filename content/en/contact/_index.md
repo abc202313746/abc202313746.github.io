@@ -68,9 +68,6 @@ sections:
           </iframe>
         </div>
         
-        <div class="text-center mt-4">
-          <p class="text-muted">Jeonbuk National University (JBNU) is a national university located in Jeonju, Jeonbuk State, South Korea.</p>
-        </div>
     design:
       background:
         color: '#f8f9ff'

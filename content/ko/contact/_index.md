@@ -70,9 +70,6 @@ sections:
           </iframe>
         </div>
         
-        <div class="text-center mt-4">
-          <p class="text-muted">전북대학교는 전북특별자치도 전주시에 위치한 국립대학교입니다.</p>
-        </div>
     design:
       background:
         color: '#f8f9ff'
