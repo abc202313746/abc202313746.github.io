@@ -117,14 +117,14 @@ sections:
         이메일: [isy0110@jbnu.ac.kr](mailto:isy0110@jbnu.ac.kr)
 
         <div class="map-embed" style="margin-top:12px;">
-          <iframe
-            src="https://www.google.com/maps?q=35.8469,127.1295&hl=ko&z=15&output=embed"
-            width="100%"
-            height="360"
-            style="border:0;"
-            allowfullscreen
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <a href="https://maps.google.com/?q=35.8469,127.1295" target="_blank" rel="noopener">
+            <img
+              src="https://staticmap.openstreetmap.de/staticmap.php?center=35.8469,127.1295&zoom=16&size=1200x360&maptype=mapnik&markers=35.8469,127.1295,lightblue1"
+              alt="전북대학교 지도"
+              style="width:100%;height:360px;object-fit:cover;border:0;border-radius:8px;"
+              loading="lazy"
+            />
+          </a>
         </div>
       map:
         provider: OpenStreetMap
