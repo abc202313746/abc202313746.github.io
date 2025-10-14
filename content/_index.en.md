@@ -38,17 +38,17 @@ sections:
           content: "Maintainable UIs through component design and state management"
           background:
             image:
-              filename: slide-1.jpg
+              filename: /uploads/slide-1.jpg
         - title: "Learning by Building"
           content: "Start small, iterate fast, and prove with results"
           background:
             image:
-              filename: slide-2.jpg
+              filename: /uploads/slide-2.jpg
         - title: "Algorithms"
           content: "Efficiency via complexity analysis and focused optimizations"
           background:
             image:
-              filename: slide-3.jpg
+              filename: /uploads/slide-3.jpg
     design:
       is_fullscreen: false
       slide_height: '420px'

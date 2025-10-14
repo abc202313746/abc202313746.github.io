@@ -37,17 +37,17 @@ sections:
           content: "컴포넌트 설계와 상태 관리로 유지보수성 높은 UI 구현"
           background:
             image:
-              filename: slide-1.jpg
+              filename: /uploads/slide-1.jpg
         - title: "Learning by Building"
           content: "작게 만들고 빠르게 개선하며 결과로 증명"
           background:
             image:
-              filename: slide-2.jpg
+              filename: /uploads/slide-2.jpg
         - title: "Algorithms"
           content: "복잡도 분석을 바탕으로 효율적인 로직과 최적화"
           background:
             image:
-              filename: slide-3.jpg
+              filename: /uploads/slide-3.jpg
     design:
       is_fullscreen: false
       slide_height: '420px'
