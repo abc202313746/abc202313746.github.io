@@ -39,29 +39,51 @@ sections:
       view: card
       columns: '3'
 
-  - block: portfolio
-    section_id: portfolio-compact
+  - block: markdown
+    section_id: programming-languages
     content:
       title: "Programming Languages"
       subtitle: ""
       text: |
-        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin: 20px 0;">
-          <div style="padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px; background: #f9f9f9;">
-            <h3 style="color: #7c4dff; margin-bottom: 10px;">🐍 Python</h3>
-            <p style="margin: 0; color: #666;">Python Data Analysis and Visualization Project</p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 30px 0;">
+          <div style="padding: 25px; border: 2px solid #7c4dff; border-radius: 12px; background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%); box-shadow: 0 4px 15px rgba(124, 77, 255, 0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+              <span style="font-size: 2.5rem; margin-right: 15px;">🐍</span>
+              <h3 style="color: #7c4dff; margin: 0; font-size: 1.4rem; font-weight: 700;">Python</h3>
+            </div>
+            <p style="margin: 0; color: #555; line-height: 1.6; font-size: 1rem;">
+              <strong>Python Data Analysis and Visualization Project</strong><br>
+              <span style="color: #777; font-size: 0.9rem;">A comprehensive data analysis project utilizing Python's powerful libraries including Pandas, NumPy, and Matplotlib. This project demonstrates proficiency in data manipulation, statistical analysis, and creating insightful visualizations to derive meaningful insights from complex datasets.</span>
+            </p>
           </div>
-          <div style="padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px; background: #f9f9f9;">
-            <h3 style="color: #7c4dff; margin-bottom: 10px;">🔧 C Language</h3>
-            <p style="margin: 0; color: #666;">Custom Memory Allocator Implementation in C</p>
+          
+          <div style="padding: 25px; border: 2px solid #7c4dff; border-radius: 12px; background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%); box-shadow: 0 4px 15px rgba(124, 77, 255, 0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+              <span style="font-size: 2.5rem; margin-right: 15px;">🔧</span>
+              <h3 style="color: #7c4dff; margin: 0; font-size: 1.4rem; font-weight: 700;">C Language</h3>
+            </div>
+            <p style="margin: 0; color: #555; line-height: 1.6; font-size: 1rem;">
+              <strong>Custom Memory Allocator Implementation in C</strong><br>
+              <span style="color: #777; font-size: 0.9rem;">A low-level programming project implementing a custom memory allocator in C, demonstrating deep understanding of memory management, pointer manipulation, and system-level programming. This project showcases efficient memory allocation strategies and optimization techniques for improved performance.</span>
+            </p>
           </div>
-          <div style="padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px; background: #f9f9f9;">
-            <h3 style="color: #7c4dff; margin-bottom: 10px;">☕ Java</h3>
-            <p style="margin: 0; color: #666;">Object-Oriented Task Management System</p>
+          
+          <div style="padding: 25px; border: 2px solid #7c4dff; border-radius: 12px; background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%); box-shadow: 0 4px 15px rgba(124, 77, 255, 0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+              <span style="font-size: 2.5rem; margin-right: 15px;">☕</span>
+              <h3 style="color: #7c4dff; margin: 0; font-size: 1.4rem; font-weight: 700;">Java</h3>
+            </div>
+            <p style="margin: 0; color: #555; line-height: 1.6; font-size: 1rem;">
+              <strong>Object-Oriented Task Management System</strong><br>
+              <span style="color: #777; font-size: 0.9rem;">A full-featured task management application built with Java, applying object-oriented programming principles including inheritance, polymorphism, and encapsulation. The system features user authentication, task scheduling, and data persistence using file I/O operations.</span>
+            </p>
           </div>
         </div>
     design:
       background:
         color: 'white'
+      spacing:
+        padding: ['40px', '0', '40px', '0']
 
   - block: portfolio
     section_id: portfolio-showcase

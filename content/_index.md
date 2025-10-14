@@ -36,29 +36,51 @@ sections:
       view: card
       columns: "3"
 
-  - block: portfolio
-    section_id: portfolio-compact
+  - block: markdown
+    section_id: programming-languages
     content:
       title: "할 수 있는 언어"
       subtitle: ""
       text: |
-        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin: 20px 0;">
-          <div style="padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px; background: #f9f9f9;">
-            <h3 style="color: #7c4dff; margin-bottom: 10px;">🐍 파이썬 (Python)</h3>
-            <p style="margin: 0; color: #666;">파이썬 데이터 분석 및 시각화 프로젝트</p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 30px 0;">
+          <div style="padding: 25px; border: 2px solid #7c4dff; border-radius: 12px; background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%); box-shadow: 0 4px 15px rgba(124, 77, 255, 0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+              <span style="font-size: 2.5rem; margin-right: 15px;">🐍</span>
+              <h3 style="color: #7c4dff; margin: 0; font-size: 1.4rem; font-weight: 700;">파이썬 (Python)</h3>
+            </div>
+            <p style="margin: 0; color: #555; line-height: 1.6; font-size: 1rem;">
+              <strong>파이썬 데이터 분석 및 시각화 프로젝트</strong><br>
+              <span style="color: #777; font-size: 0.9rem;">Pandas, NumPy, Matplotlib 등 파이썬의 강력한 라이브러리를 활용한 종합적인 데이터 분석 프로젝트입니다. 복잡한 데이터셋에서 의미 있는 인사이트를 도출하기 위한 데이터 조작, 통계 분석 및 시각화 기술을 시연합니다.</span>
+            </p>
           </div>
-          <div style="padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px; background: #f9f9f9;">
-            <h3 style="color: #7c4dff; margin-bottom: 10px;">🔧 C언어 (C Language)</h3>
-            <p style="margin: 0; color: #666;">C언어 커스텀 메모리 할당자 구현</p>
+          
+          <div style="padding: 25px; border: 2px solid #7c4dff; border-radius: 12px; background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%); box-shadow: 0 4px 15px rgba(124, 77, 255, 0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+              <span style="font-size: 2.5rem; margin-right: 15px;">🔧</span>
+              <h3 style="color: #7c4dff; margin: 0; font-size: 1.4rem; font-weight: 700;">C언어 (C Language)</h3>
+            </div>
+            <p style="margin: 0; color: #555; line-height: 1.6; font-size: 1rem;">
+              <strong>C언어 커스텀 메모리 할당자 구현</strong><br>
+              <span style="color: #777; font-size: 0.9rem;">C언어로 커스텀 메모리 할당자를 구현한 저수준 프로그래밍 프로젝트로, 메모리 관리, 포인터 조작 및 시스템 수준 프로그래밍에 대한 깊은 이해를 보여줍니다. 효율적인 메모리 할당 전략과 성능 향상을 위한 최적화 기법을 적용했습니다.</span>
+            </p>
           </div>
-          <div style="padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px; background: #f9f9f9;">
-            <h3 style="color: #7c4dff; margin-bottom: 10px;">☕ 자바 (Java)</h3>
-            <p style="margin: 0; color: #666;">객체지향 작업 관리 시스템</p>
+          
+          <div style="padding: 25px; border: 2px solid #7c4dff; border-radius: 12px; background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%); box-shadow: 0 4px 15px rgba(124, 77, 255, 0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+              <span style="font-size: 2.5rem; margin-right: 15px;">☕</span>
+              <h3 style="color: #7c4dff; margin: 0; font-size: 1.4rem; font-weight: 700;">자바 (Java)</h3>
+            </div>
+            <p style="margin: 0; color: #555; line-height: 1.6; font-size: 1rem;">
+              <strong>객체지향 작업 관리 시스템</strong><br>
+              <span style="color: #777; font-size: 0.9rem;">자바로 구축된 완전한 기능의 작업 관리 애플리케이션으로, 상속, 다형성, 캡슐화를 포함한 객체지향 프로그래밍 원칙을 적용했습니다. 사용자 인증, 작업 스케줄링 및 파일 I/O 작업을 통한 데이터 영속성 기능을 제공합니다.</span>
+            </p>
           </div>
         </div>
     design:
       background:
         color: 'white'
+      spacing:
+        padding: ['40px', '0', '40px', '0']
 
   - block: portfolio
     section_id: portfolio-showcase
