@@ -4,6 +4,7 @@ defaultContentLanguage: ko
 hasCJKLanguage: true
 defaultContentLanguageInSubdir: false
 enableMissingTranslationPlaceholders: false
+disableLanguages: []
 
 # Enable search index generation for all page types
 outputs:
