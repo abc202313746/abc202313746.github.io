@@ -1,5 +1,4 @@
 ---
----
 # Homepage (Korean)
 type: landing
 sections:
@@ -99,5 +98,5 @@ sections:
   - block: markdown
     content:
       text: |
-        {{< fab >}}
+  {{< fab >}}
 ---
