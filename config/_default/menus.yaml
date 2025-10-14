@@ -1,0 +1,72 @@
+# Navigation Links
+#   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
+#     desired widget in your `content/home/` folder.
+#   The weight parameter defines the order that the links appear in.
+
+main:
+  - name: 홈
+    url: '/'
+    weight: 10
+  
+  - name: 프로젝트
+    identifier: projects
+    url: '/project/'
+    weight: 20
+  
+  # Project sub-menu items (parent-child relationship)
+  - name: 데이터베이스
+    parent: projects
+    url: '/project/database/'
+    weight: 21
+  
+  - name: 운영체제
+    parent: projects
+    url: '/project/os/'
+    weight: 22
+  
+  - name: 스택
+    parent: projects
+    url: '/project/stack/'
+    weight: 23
+  
+  - name: 프론트엔드
+    parent: projects
+    url: '/project/frontend/'
+    weight: 24
+  
+  - name: 알고리즘
+    parent: projects
+    url: '/project/algorithm/'
+    weight: 25
+  
+  - name: 웹개발
+    parent: projects
+    url: '/project/web-development/'
+    weight: 26
+  
+  - name: 모바일앱
+    parent: projects
+    url: '/project/mobile-app/'
+    weight: 27
+  
+  - name: 머신러닝
+    parent: projects
+    url: '/project/machine-learning/'
+    weight: 28
+  
+  - name: DevOps
+    parent: projects
+    url: '/project/devops/'
+    weight: 29
+  
+  - name: 경력
+    url: '/ko/experience/'
+    weight: 30
+  
+  - name: 연락처
+    url: '/ko/contact/'
+    weight: 40
+  
+  - name: 이력서
+    url: '/uploads/resume.pdf'
+    weight: 50
