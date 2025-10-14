@@ -74,3 +74,6 @@
 .cc-slider figure,
 .cc-slider img,
 .cc-slider .cc-slide-bg{ border-radius:0 !important; box-shadow:none !important; }
+
+/* Utility: justify long paragraphs for better readability */
+.justify-text{ text-align: justify; text-justify: inter-word; hyphens: auto; }

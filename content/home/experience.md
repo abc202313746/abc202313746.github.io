@@ -12,11 +12,11 @@ experience:
     location: Jeonbuk National University
     date_start: '2024-03-02'
     date_end: '2024-06-20'
-    description: 'Participated in club activities to cultivate algorithmic problem-solving abilities and logical thinking.'
+    description: '<span class="justify-text">Participated in club activities to cultivate algorithmic problem-solving abilities and logical thinking.</span>'
   - title: SW Mentoring Mentee
     company: Online
     location: Jeonbuk National University
     date_start: '2024-09-11'
     date_end: '2024-12-13'
-    description: 'Participated in a mentoring program to enhance practical technical skills through interaction with a senior mentor.'
+    description: '<span class="justify-text">Participated in a mentoring program to enhance practical technical skills through interaction with a senior mentor.</span>'
 ---

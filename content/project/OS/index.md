@@ -11,6 +11,7 @@ tags:
 date: 2024-12-15
 external_link: ''
 ---
+<div class="justify-text">
 As part of the Operating Systems course, I implemented **file system features and memory management** in the xv6 educational operating system. This project focused on two main aspects:
 
 ## File System Implementation
@@ -28,3 +29,4 @@ Through this project, I gained practical experience in:
 - Understanding operating system internals through hands-on implementation
 - Debugging complex system-level code
 - Managing memory and file systems at the operating system level
+</div>

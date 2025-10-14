@@ -11,6 +11,7 @@ tags:
 date: 2024-09-10
 external_link: ''
 ---
+<div class="justify-text">
 For the Data Structures course, I implemented a **stack data structure** and used it to create a calculator that can handle arithmetic expressions. The project consisted of two main components:
 
 ## Stack Implementation
@@ -38,3 +39,4 @@ Through this project, I strengthened my understanding of:
 - Algorithm design and optimization
 - Expression parsing and evaluation techniques
 - Error handling and edge cases in data structure implementations
+</div>
