@@ -38,6 +38,49 @@ sections:
     design:
       view: card
       columns: '3'
+
+  - block: portfolio
+    section_id: portfolio-compact
+    content:
+      title: "Key Projects (Compact View)"
+      subtitle: ""
+      count: 3
+      page_type: project
+      text: ""
+      filters:
+        folders:
+          - project
+        tags:
+          - Database
+          - OS
+          - Stack
+    design:
+      view: compact
+      columns: "2"
+
+  - block: portfolio
+    section_id: portfolio-showcase
+    content:
+      title: "Project Showcase"
+      subtitle: ""
+      count: 6
+      page_type: project
+      text: ""
+    design:
+      view: showcase
+      columns: "1"
+
+  - block: portfolio
+    section_id: portfolio-masonry
+    content:
+      title: "Project Gallery"
+      subtitle: ""
+      count: 6
+      page_type: project
+      text: ""
+    design:
+      view: masonry
+      columns: "2"
   - block: slider
     content:
       text: ""

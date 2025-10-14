@@ -36,6 +36,49 @@ sections:
       view: card
       columns: "3"
 
+  - block: portfolio
+    section_id: portfolio-compact
+    content:
+      title: "주요 프로젝트 (컴팩트 뷰)"
+      subtitle: ""
+      count: 3
+      page_type: project
+      text: ""
+      filters:
+        folders:
+          - project
+        tags:
+          - 데이터베이스
+          - 운영체제
+          - 스택
+    design:
+      view: compact
+      columns: "2"
+
+  - block: portfolio
+    section_id: portfolio-showcase
+    content:
+      title: "프로젝트 쇼케이스"
+      subtitle: ""
+      count: 6
+      page_type: project
+      text: ""
+    design:
+      view: showcase
+      columns: "1"
+
+  - block: portfolio
+    section_id: portfolio-masonry
+    content:
+      title: "프로젝트 갤러리"
+      subtitle: ""
+      count: 6
+      page_type: project
+      text: ""
+    design:
+      view: masonry
+      columns: "2"
+
   - block: slider
     content:
       text: ""
