@@ -40,12 +40,12 @@ sections:
           background:
             image:
               filename: "/uploads/1_unsplash.jpg"
-        - title: "Learning by Building"
+        - title: "실습을 통한 학습"
           content: "작게 만들고 빠르게 개선하며 결과로 증명"
           background:
             image:
               filename: "/uploads/2_unsplash.jpg"
-        - title: "Algorithms"
+        - title: "알고리즘"
           content: "복잡도 분석을 바탕으로 효율적인 로직과 최적화"
           background:
             image:
