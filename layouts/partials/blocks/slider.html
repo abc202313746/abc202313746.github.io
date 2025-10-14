@@ -56,8 +56,8 @@
   {{ if $ko }}
     {{ $slides = (slice
       (dict "title" "React · TypeScript" "content" "컴포넌트 설계와 상태 관리로 유지보수성 높은 UI 구현" "background" (dict "image" (dict "filename" "/uploads/1_unsplash.jpg")))
-      (dict "title" "Learning by Building" "content" "작게 만들고 빠르게 개선하며 결과로 증명" "background" (dict "image" (dict "filename" "/uploads/2_unsplash.jpg")))
-      (dict "title" "Algorithms" "content" "복잡도 분석을 바탕으로 효율적인 로직과 최적화" "background" (dict "image" (dict "filename" "/uploads/3_unsplash.jpg")))
+      (dict "title" "실습을 통한 학습" "content" "작게 만들고 빠르게 개선하며 결과로 증명" "background" (dict "image" (dict "filename" "/uploads/2_unsplash.jpg")))
+      (dict "title" "알고리즘" "content" "복잡도 분석을 바탕으로 효율적인 로직과 최적화" "background" (dict "image" (dict "filename" "/uploads/3_unsplash.jpg")))
     ) }}
   {{ else }}
     {{ $slides = (slice
@@ -133,16 +133,6 @@
     {{ range $slides }}
       {{ $title := .title }}
       {{ $desc := or .content .subtitle }}
-      {{/* Localize common defaults when viewing Korean site, even if English text leaked in */}}
-      {{ $.Scratch.Set "title" $title }}
-      {{ $.Scratch.Set "desc" $desc }}
-      {{ if $isKo }}
-        {{ if eq ($.Scratch.Get "title") "Learning by Building" }}{{ $.Scratch.Set "title" "실습을 통한 학습" }}{{ end }}
-        {{ if eq ($.Scratch.Get "title") "Algorithms" }}{{ $.Scratch.Set "title" "알고리즘" }}{{ end }}
-        {{ if eq ($.Scratch.Get "desc") "Maintainable UIs through component design and state management" }}{{ $.Scratch.Set "desc" "컴포넌트 설계와 상태 관리로 유지보수성 높은 UI를 구현" }}{{ end }}
-        {{ if eq ($.Scratch.Get "desc") "Start small, iterate fast, and prove with results" }}{{ $.Scratch.Set "desc" "작게 만들고 빠르게 개선하며 결과로 증명" }}{{ end }}
-        {{ if eq ($.Scratch.Get "desc") "Efficiency via complexity analysis and focused optimizations" }}{{ $.Scratch.Set "desc" "복잡도 분석을 바탕으로 효율적인 로직과 최적화" }}{{ end }}
-      {{ end }}
       {{ $fn := "" }}
       {{/* Allow multiple schemas: background.image.filename | background.image (string) | image.filename | image (string) | media (string) */}}
       {{ with .background }}
@@ -189,8 +179,8 @@
         {{ end }}
 
         <figcaption style="position:absolute;left:0;right:0;bottom:0;color:#fff;background:linear-gradient(transparent, rgba(0,0,0,.55));padding:14px 16px;">
-          {{ with ($.Scratch.Get "title") }}<div style="font-weight:700;font-size:1.1rem;line-height:1.3;">{{ . }}</div>{{ end }}
-          {{ with ($.Scratch.Get "desc") }}<div style="opacity:.9;">{{ . }}</div>{{ end }}
+          {{ with $title }}<div style="font-weight:700;font-size:1.1rem;line-height:1.3;">{{ . }}</div>{{ end }}
+          {{ with $desc }}<div style="opacity:.9;">{{ . }}</div>{{ end }}
         </figcaption>
       </figure>
     {{ end }}
