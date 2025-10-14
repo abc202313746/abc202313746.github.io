@@ -1,11 +1,14 @@
 # 인숙영 포트폴리오 웹사이트
 
+<img width="1176" height="818" alt="image" src="https://github.com/user-attachments/assets/deab3fce-7d52-4ff5-9305-61a1588ef991" />
+
+
 [![Website](https://img.shields.io/badge/Website-Live-brightgreen?style=for-the-badge)](https://abc202313746.github.io/)
 [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?style=for-the-badge&logo=github)](https://github.com/abc202313746)
 
 프론트엔드 개발자 인숙영의 개인 포트폴리오 웹사이트입니다.
 
-**"빠르게 구현하되, 읽기 쉬운 코드와 좋은 사용자 경험"**을 목표로 합니다.
+"빠르게 구현하되, 읽기 쉬운 코드와 좋은 사용자 경험"을 목표로 합니다.
 
 ## 🌐 웹사이트
 
