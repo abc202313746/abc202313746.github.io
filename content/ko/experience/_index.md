@@ -3,6 +3,9 @@ title: 경력 및 이력
 summary: 전북대학교 인숙영의 전문 경험, 교육 과정, 그리고 경력 개발 여정을 소개합니다.
 type: landing
 date: 2024-01-01
+image:
+  filename: 'uploads/aldi-sigun-K-sdQ12jZeY-unsplash (1).jpg'
+  caption: '경력 및 이력'
 tags:
   - 경력
   - 이력

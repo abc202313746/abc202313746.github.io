@@ -3,6 +3,9 @@ title: Experience & Background
 summary: Professional experience, educational journey, and career development of SookYoung In at Jeonbuk National University.
 type: landing
 date: 2024-01-01
+image:
+  filename: 'uploads/aldi-sigun-K-sdQ12jZeY-unsplash (1).jpg'
+  caption: 'Experience & Background'
 tags:
   - Experience
   - Background
