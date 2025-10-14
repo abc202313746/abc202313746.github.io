@@ -158,10 +158,11 @@ a[href*="이력서"]:hover {
   z-index: 1000;
   display: flex;
   flex-direction: column-reverse;
-  gap: 12px;
-  max-height: 80vh;
+  gap: 8px;
+  max-height: 85vh;
   overflow-y: auto;
   scrollbar-width: none;
+  padding: 8px 0;
 }
 
 .cc-fab::-webkit-scrollbar {
@@ -172,28 +173,130 @@ a[href*="이력서"]:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
-  background: #7c4dff;
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, #7c4dff 0%, #651fff 100%);
   color: white;
   border-radius: 50%;
   text-decoration: none;
-  box-shadow: 0 4px 12px rgba(124, 77, 255, 0.3);
-  transition: all 0.3s ease;
-  font-size: 18px;
+  box-shadow: 0 3px 10px rgba(124, 77, 255, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.cc-fab__btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cc-fab__btn:hover::before {
+  opacity: 1;
 }
 
 .cc-fab__btn:hover {
-  background: #651fff;
-  transform: scale(1.1);
-  box-shadow: 0 6px 20px rgba(124, 77, 255, 0.4);
+  background: linear-gradient(135deg, #651fff 0%, #5e35b1 100%);
+  transform: scale(1.15) translateX(-2px);
+  box-shadow: 0 6px 20px rgba(124, 77, 255, 0.5);
   color: white;
   text-decoration: none;
+}
+
+.cc-fab__btn:active {
+  transform: scale(1.05) translateX(-1px);
+  transition: transform 0.1s ease;
 }
 
 .cc-fab__btn:focus {
   outline: 2px solid #7c4dff;
-  outline-offset: 2px;
+  outline-offset: 3px;
+}
+
+/* Special styling for different button types */
+.cc-fab__btn[href*="github"] {
+  background: linear-gradient(135deg, #333 0%, #24292e 100%);
+}
+
+.cc-fab__btn[href*="instagram"] {
+  background: linear-gradient(135deg, #e4405f 0%, #c13584 100%);
+}
+
+.cc-fab__btn[href*="linkedin"] {
+  background: linear-gradient(135deg, #0077b5 0%, #005885 100%);
+}
+
+.cc-fab__btn[href*="youtube"] {
+  background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
+}
+
+.cc-fab__btn[href*="facebook"] {
+  background: linear-gradient(135deg, #1877f2 0%, #166fe5 100%);
+}
+
+.cc-fab__btn[href*="mailto"] {
+  background: linear-gradient(135deg, #ea4335 0%, #d33b2c 100%);
+}
+
+.cc-fab__btn[href*="resume.pdf"] {
+  background: linear-gradient(135deg, #28a745 0%, #1e7e34 100%);
+}
+
+/* Utility buttons */
+.cc-fab__print {
+  background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+}
+
+.cc-fab__share {
+  background: linear-gradient(135deg, #17a2b8 0%, #138496 100%);
+}
+
+.cc-fab__theme {
+  background: linear-gradient(135deg, #ffc107 0%, #e0a800 100%);
+}
+
+.cc-fab__search {
+  background: linear-gradient(135deg, #6f42c1 0%, #5a32a3 100%);
+}
+
+/* Tooltip-like labels on hover */
+.cc-fab__btn::after {
+  content: attr(title);
+  position: absolute;
+  right: 55px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1001;
+}
+
+.cc-fab__btn:hover::after {
+  opacity: 1;
+}
+
+/* Toast notification styling */
+.cc-toast {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-weight: 500;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /* Responsive adjustments */
