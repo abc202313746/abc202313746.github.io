@@ -1,32 +1,46 @@
-# [Hugo Portfolio Theme](https://github.com/wowchemy/starter-hugo-portfolio-theme)
+# 인숙영 포트폴리오 웹사이트
 
-[![Screenshot](preview.png)](https://hugoblox.com/hugo-themes/)
+[![Website](https://img.shields.io/badge/Website-Live-brightgreen?style=for-the-badge)](https://abc202313746.github.io/)
+[![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?style=for-the-badge&logo=github)](https://github.com/abc202313746)
 
-The **Hugo Portfolio Template** empowers you to easily create a portfolio website. Make it your own by choosing a color theme and grid layout!
+프론트엔드 개발자 인숙영의 개인 포트폴리오 웹사이트입니다.
 
-️**Trusted by 250,000+ researchers, educators, and students.** Highly customizable via the integrated **no-code, widget-based Wowchemy page builder**, making every site truly personalized ⭐⭐⭐⭐⭐
+**"빠르게 구현하되, 읽기 쉬운 코드와 좋은 사용자 경험"**을 목표로 합니다.
 
-[![Get Started](https://img.shields.io/badge/-Get%20started-ff4655?style=for-the-badge)](https://hugoblox.com/hugo-themes/)
-[![Discord](https://img.shields.io/discord/722225264733716590?style=for-the-badge)](https://discord.com/channels/722225264733716590/742892432458252370/742895548159492138)  
-[![Twitter Follow](https://img.shields.io/twitter/follow/GetResearchDev?label=Follow%20on%20Twitter)](https://twitter.com/wowchemy)
+## 🌐 웹사이트
 
-[Check out the latest demo](https://hugo-portfolio-theme.netlify.app/) of what you'll get in less than 10 minutes, or [view the showcase](https://hugoblox.com/creators/).
+**[https://abc202313746.github.io/](https://abc202313746.github.io/)**
 
-The integrated [**Wowchemy**](https://hugoblox.com) website builder and CMS makes it easy to create a beautiful website for free. Edit your site in the CMS (or your favorite editor), generate it with [Hugo](https://github.com/gohugoio/hugo), and deploy with GitHub or Netlify. Customize anything on your site with widgets, light/dark themes, and language packs.
+## 👨‍💻 소개
 
-- 👉 [**Get Started**](https://hugoblox.com/hugo-themes/)
-- 📚 [View the **documentation**](https://docs.hugoblox.com/)
-- 💬 [Chat with the **Wowchemy research community**](https://discord.gg/z8wNYzb) or [**Hugo community**](https://discourse.gohugo.io)
-- ⬇️ **Automatically import citations from BibTeX** with the [Hugo Academic CLI](https://github.com/GetRD/academic-file-converter)
-- 🐦 Share your new site with the community: [@wowchemy](https://twitter.com/wowchemy) [@GeorgeCushen](https://twitter.com/GeorgeCushen) [#MadeWithWowchemy](https://twitter.com/search?q=%23MadeWithWowchemy&src=typed_query)
-- 🗳 [Take the survey and help us improve #OpenSource](https://forms.gle/NioD9VhUg7PNmdCAA)
-- 🚀 [Contribute improvements](https://github.com/HugoBlox/hugo-blox-builder/blob/main/CONTRIBUTING.md) or [suggest improvements](https://github.com/HugoBlox/hugo-blox-builder/issues)
-- ⬆️ **Updating?** View the [Update Guide](https://docs.hugoblox.com/hugo-tutorials/update/) and [Release Notes](https://github.com/HugoBlox/hugo-blox-builder/releases)
+React와 TypeScript를 중심으로 프론트엔드 개발을 학습하고 있습니다.
 
-## We ask you, humbly, to support this open source movement
+### 현재 관심사
+- Next.js/TypeScript 심화
+- 테스트 (Vitest/Jest)
+- 디자인 시스템 (Storybook)
+- SEO 및 성능 최적화
 
-Today we ask you to defend the open source independence of the Wowchemy website builder and themes 🐧
+## 🎓 학력
+- 전북대학교
 
-We're an open source movement that depends on your support to stay online and thriving, but 99.9% of our creators don't give; they simply look the other way.
+## 📫 연락처
+- **이메일**: isy0110@jbnu.ac.kr
+- **전화**: 010-4544-0797
+- **GitHub**: [@abc202313746](https://github.com/abc202313746)
+- **Instagram**: [@insookyoung](https://www.instagram.com/insookyoung/)
 
-### [❤️ Click here to become a GitHub Sponsor, unlocking awesome perks such as _exclusive academic templates and widgets_](https://github.com/sponsors/gcushen)
+## 🛠️ 기술 스택
+
+이 포트폴리오 사이트는 다음 기술로 구축되었습니다:
+- Hugo Static Site Generator
+- Wowchemy (Hugo Blox Builder)
+- GitHub Pages
+
+## 📄 라이선스
+
+이 프로젝트는 개인 포트폴리오 목적으로 사용됩니다.
+
+---
+
+© 2024 인숙영 (SookYoung In). All rights reserved.
