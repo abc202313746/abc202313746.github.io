@@ -35,8 +35,8 @@
 {{ if not (gt (len $slides) 0) }}{{ with .slides }}{{ $slides = . }}{{ $source = "dot.slides" }}{{ end }}{{ end }}
 {{ if not (gt (len $slides) 0) }}{{ with .items }}{{ $slides = . }}{{ $source = "dot.items" }}{{ end }}{{ end }}
 
-{{/* Extra: scan the current page front matter for a slider section if nothing found yet */}}
-{{ if and (not (gt (len $slides) 0)) .Page }}
+{{/* Priority: scan the current page front matter for a slider section FIRST */}}
+{{ if .Page }}
   {{ with .Page.Params.sections }}
     {{ range . }}
       {{ if and (not (gt (len $slides) 0)) (or (eq (printf "%v" .block) "slider") (eq (printf "%v" .Block) "slider")) }}
