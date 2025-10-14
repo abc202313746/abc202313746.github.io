@@ -77,3 +77,9 @@
 
 /* Utility: justify long paragraphs for better readability */
 .justify-text{ text-align: justify; text-justify: inter-word; hyphens: auto; }
+
+/* Subtle hover color change using theme variables */
+.btn-primary:hover, a.btn:hover{
+  filter: brightness(0.92);
+  transition: filter .15s ease-in-out;
+}
