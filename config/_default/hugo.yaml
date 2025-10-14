@@ -16,6 +16,8 @@ outputs:
 
 params:
   logo: 'chat-logo.svg'
+  # Default Open Graph image for homepage
+  images: ['uploads/og-image.png']
 
 # Languages are configured in languages.yaml
 
