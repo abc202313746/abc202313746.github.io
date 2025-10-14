@@ -50,8 +50,10 @@ sections:
             image:
               filename: unsplash-frontend.svg
     design:
-      slide_height: '360px'
+      is_fullscreen: false
+      slide_height: '420px'
       slide_min_width: '92%'
+      interval: 3000
 
 
 
