@@ -39,11 +39,18 @@ sections:
   - block: portfolio
     section_id: portfolio-compact
     content:
-      title: "주요 프로젝트 (컴팩트 뷰)"
+      title: "할 수 있는 언어"
       subtitle: ""
       count: 3
       page_type: project
       text: ""
+      filters:
+        folders:
+          - project
+        tags:
+          - Python
+          - C Language
+          - Java
     design:
       view: compact
       columns: "2"

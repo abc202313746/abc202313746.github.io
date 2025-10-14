@@ -1,0 +1,70 @@
+---
+title: C언어 (C Language)
+summary: C언어 커스텀 메모리 할당자 구현
+authors: []
+tags: [C Language, 메모리관리, 시스템프로그래밍, 포인터, 최적화]
+categories: [Programming Languages]
+date: '2024-01-01T00:00:00Z'
+slides:
+  theme: white
+  highlight_style: dracula
+
+# Featured image
+image:
+  caption: 'Custom Memory Allocator in C'
+  focal_point: ''
+  preview_only: false
+  filename: featured.png
+
+# Projects (optional).
+projects: []
+searchable: true
+---
+
+<div class="justify-text">
+C언어로 커스텀 메모리 할당자를 구현한 저수준 프로그래밍 프로젝트로, 메모리 관리, 포인터 조작 및 시스템 수준 프로그래밍에 대한 깊은 이해를 보여줍니다. 효율적인 메모리 할당 전략과 성능 향상을 위한 최적화 기법을 적용했습니다.
+
+## 주요 기능
+
+### 🧠 메모리 관리
+- **커스텀 malloc()**: 동적 메모리 할당 구현
+- **커스텀 free()**: 메모리 해제 및 조각 모음
+- **메모리 풀**: 효율적인 메모리 블록 관리
+
+### ⚡ 성능 최적화
+- **First-Fit 알고리즘**: 빠른 메모리 할당
+- **메모리 정렬**: 캐시 효율성 향상
+- **조각화 방지**: 메모리 공간 최적화
+
+### 🔧 시스템 수준 기능
+- **포인터 연산**: 직접적인 메모리 주소 조작
+- **비트 연산**: 효율적인 메타데이터 관리
+- **시스템 콜**: OS와의 직접적인 인터페이스
+
+## 기술 스택
+
+- **언어**: C (C99 표준)
+- **컴파일러**: GCC, Clang
+- **디버깅**: GDB, Valgrind
+- **플랫폼**: Linux, Unix 계열
+
+## 핵심 알고리즘
+
+### 메모리 블록 구조
+```c
+typedef struct block {
+    size_t size;
+    int free;
+    struct block *next;
+} block_t;
+```
+
+### 할당 전략
+- **First-Fit**: 첫 번째 적합한 블록 사용
+- **Coalescing**: 인접한 빈 블록 병합
+- **Splitting**: 큰 블록을 필요한 크기로 분할
+
+## 학습 성과
+
+이 프로젝트를 통해 C언어의 저수준 메모리 관리 원리를 깊이 이해하고, 시스템 프로그래밍의 핵심 개념을 실제로 구현해볼 수 있었습니다.
+</div>

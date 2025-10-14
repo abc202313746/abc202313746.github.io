@@ -42,11 +42,18 @@ sections:
   - block: portfolio
     section_id: portfolio-compact
     content:
-      title: "Key Projects (Compact View)"
+      title: "Programming Languages"
       subtitle: ""
       count: 3
       page_type: project
       text: ""
+      filters:
+        folders:
+          - project
+        tags:
+          - Python
+          - C Language
+          - Java
     design:
       view: compact
       columns: "2"
