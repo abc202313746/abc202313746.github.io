@@ -38,17 +38,17 @@ sections:
           content: "Crafting UI with clean code"
           background:
             image:
-              filename: slider-laptop-desk.jpg
+              filename: 1_unsplash.jpg
         - title: "Full-stack Visualization"
           content: "From data to experience"
           background:
             image:
-              filename: slider-3d-devstack.jpg
+              filename: 2_unsplash.jpg
         - title: "Code in Detail"
           content: "Learning by shipping"
           background:
             image:
-              filename: slider-code-macro.jpg
+              filename: 3_unsplash.jpg
     design:
       is_fullscreen: false
       slide_height: '420px'

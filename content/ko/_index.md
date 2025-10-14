@@ -38,17 +38,17 @@ sections:
           content: "깔끔한 코드로 만드는 사용자 경험"
           background:
             image:
-              filename: slider-laptop-desk.jpg
+              filename: 1_unsplash.jpg
         - title: "풀스택 비주얼라이제이션"
           content: "데이터부터 경험까지"
           background:
             image:
-              filename: slider-3d-devstack.jpg
+              filename: 2_unsplash.jpg
         - title: "디테일한 코드"
           content: "직접 만들어보며 배우기"
           background:
             image:
-              filename: slider-code-macro.jpg
+              filename: 3_unsplash.jpg
     design:
       is_fullscreen: false
       slide_height: '420px'
