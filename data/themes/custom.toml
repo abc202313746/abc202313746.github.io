@@ -27,11 +27,17 @@ name = "Custom Portfolio"
   link = "#bb86fc"
   link_hover = "#d1c4e9"
   
-  # Dark theme colors
-  background = "rgb(18, 18, 18)"
-  text = "#e0e0e0"
-  home_section_odd = "rgb(25, 25, 25)"
-  home_section_even = "rgb(30, 30, 30)"
-  menu_primary = "rgb(25, 25, 25)"
-  menu_text = "#e0e0e0"
+  # Dark theme colors with better contrast
+  background = "#121212"
+  text = "#ffffff"
+  home_section_odd = "#1e1e1e"
+  home_section_even = "#2a2a2a"
+  menu_primary = "#1e1e1e"
+  menu_text = "#ffffff"
   menu_text_active = "#bb86fc"
+  
+  # Additional dark mode colors
+  card_background = "#2a2a2a"
+  card_text = "#ffffff"
+  heading = "#ffffff"
+  body_text = "#e0e0e0"
