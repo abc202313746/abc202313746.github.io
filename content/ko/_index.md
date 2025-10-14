@@ -36,7 +36,7 @@ sections:
       text: ""
       slides:
         - title: "React · TypeScript"
-          content: "컴포넌트 설계와 상태 관리로 유지보수성 높은 UI 구현"
+          content: "컴포넌트 설계와 상태 관리로 유지보수성 높은 UI를 구현"
           background:
             image:
               filename: "/uploads/1_unsplash.jpg"
