@@ -1,4 +1,7 @@
 ---
+title: "SookYoung In - Computer Science Student Portfolio"
+description: "SookYoung In (인숙영) - Computer Science Student at Jeonbuk National University. Frontend Developer Portfolio featuring React, TypeScript, Database Design, Operating Systems, and Data Structures projects."
+keywords: "SookYoung In, 인숙영, Jeonbuk National University, 전북대학교, Computer Science, Frontend Developer, React, TypeScript, Portfolio"
 # Homepage
 type: landing
 sections:
