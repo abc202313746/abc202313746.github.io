@@ -4,6 +4,9 @@ defaultContentLanguage: ko
 hasCJKLanguage: true
 defaultContentLanguageInSubdir: false
 
+params:
+  logo: 'chat-logo.svg'
+
 languages:
   ko:
     languageCode: ko-KR

@@ -3,7 +3,8 @@
 */}}
 
 {{ $currentPath := .Page.RelPermalink | default "/" }}
-{{ $isEnglishPage := hasPrefix $currentPath "/en/" }}
+{{ $lang := .Page.Language.Lang | default "ko" }}
+{{ $isEnglishPage := or (hasPrefix $currentPath "/en/") (eq $lang "en") }}
 {{ $isKoreanPage := not $isEnglishPage }}
 
 {{ $slides := slice }}

@@ -41,9 +41,9 @@ header:
     show_day_night: true
     show_search: true
     highlight_active_link: false
-    logo:
-      text: ""
-      filename: "chat-logo.svg"
+
+# Logo configuration
+logo: 'chat-logo.svg'
 
 footer:
   copyright:
