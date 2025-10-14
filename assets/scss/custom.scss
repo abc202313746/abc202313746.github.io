@@ -487,3 +487,41 @@ a[href*="이력서"]:hover {
   border-radius: 50%;
   z-index: 1;
 }
+
+/* Programming Languages section title styling */
+#programming-languages .section-heading h2,
+#programming-languages .section-heading .h2,
+#programming-languages h2,
+#programming-languages .h2 {
+  font-size: 1.8rem !important;
+  font-weight: 600 !important;
+  margin-bottom: 1.5rem !important;
+  color: #333 !important;
+}
+
+[data-mode="dark"] #programming-languages .section-heading h2,
+[data-mode="dark"] #programming-languages .section-heading .h2,
+[data-mode="dark"] #programming-languages h2,
+[data-mode="dark"] #programming-languages .h2 {
+  color: #ffffff !important;
+}
+
+/* Alternative approach - target by section ID */
+section[id="programming-languages"] .section-heading h2,
+section[id="programming-languages"] .section-heading .h2 {
+  font-size: 1.8rem !important;
+  font-weight: 600 !important;
+  margin-bottom: 1.5rem !important;
+}
+
+/* Responsive title sizing */
+@media (max-width: 768px) {
+  #programming-languages .section-heading h2,
+  #programming-languages .section-heading .h2,
+  #programming-languages h2,
+  #programming-languages .h2,
+  section[id="programming-languages"] .section-heading h2,
+  section[id="programming-languages"] .section-heading .h2 {
+    font-size: 1.5rem !important;
+  }
+}
