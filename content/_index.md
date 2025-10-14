@@ -41,19 +41,24 @@ sections:
     content:
       title: "할 수 있는 언어"
       subtitle: ""
-      count: 3
-      page_type: project
-      text: ""
-      filters:
-        folders:
-          - project
-        tags:
-          - Python
-          - C Language
-          - Java
+      text: |
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin: 20px 0;">
+          <div style="padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px; background: #f9f9f9;">
+            <h3 style="color: #7c4dff; margin-bottom: 10px;">🐍 파이썬 (Python)</h3>
+            <p style="margin: 0; color: #666;">파이썬 데이터 분석 및 시각화 프로젝트</p>
+          </div>
+          <div style="padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px; background: #f9f9f9;">
+            <h3 style="color: #7c4dff; margin-bottom: 10px;">🔧 C언어 (C Language)</h3>
+            <p style="margin: 0; color: #666;">C언어 커스텀 메모리 할당자 구현</p>
+          </div>
+          <div style="padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px; background: #f9f9f9;">
+            <h3 style="color: #7c4dff; margin-bottom: 10px;">☕ 자바 (Java)</h3>
+            <p style="margin: 0; color: #666;">객체지향 작업 관리 시스템</p>
+          </div>
+        </div>
     design:
-      view: compact
-      columns: "2"
+      background:
+        color: 'white'
 
   - block: portfolio
     section_id: portfolio-showcase

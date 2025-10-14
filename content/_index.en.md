@@ -44,19 +44,24 @@ sections:
     content:
       title: "Programming Languages"
       subtitle: ""
-      count: 3
-      page_type: project
-      text: ""
-      filters:
-        folders:
-          - project
-        tags:
-          - Python
-          - C Language
-          - Java
+      text: |
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin: 20px 0;">
+          <div style="padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px; background: #f9f9f9;">
+            <h3 style="color: #7c4dff; margin-bottom: 10px;">🐍 Python</h3>
+            <p style="margin: 0; color: #666;">Python Data Analysis and Visualization Project</p>
+          </div>
+          <div style="padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px; background: #f9f9f9;">
+            <h3 style="color: #7c4dff; margin-bottom: 10px;">🔧 C Language</h3>
+            <p style="margin: 0; color: #666;">Custom Memory Allocator Implementation in C</p>
+          </div>
+          <div style="padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px; background: #f9f9f9;">
+            <h3 style="color: #7c4dff; margin-bottom: 10px;">☕ Java</h3>
+            <p style="margin: 0; color: #666;">Object-Oriented Task Management System</p>
+          </div>
+        </div>
     design:
-      view: compact
-      columns: "2"
+      background:
+        color: 'white'
 
   - block: portfolio
     section_id: portfolio-showcase
