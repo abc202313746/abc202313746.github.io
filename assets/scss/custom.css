@@ -77,6 +77,15 @@
 .article-container footer.article-footer,
 .article-container .article-footer { display: none !important; }
 
+/* Hide inline social/FAB icon rows within articles (projects, posts) */
+.article-container .network-icon,
+.article-container .network-icon a,
+.article-container .btn-icon,
+.article-container .btn.btn-outline-primary,
+.article-container .btn.btn-outline-primary.btn-sm,
+.article-container .article-metadata .btn-icon,
+.article-container .article-metadata .network-icon { display: none !important; }
+
 /* Base text colors via tokens */
 body { color: var(--text-strong); }
 .home-section { color: var(--text-strong); }
