@@ -1,6 +1,29 @@
 {{ $lang := .Page.Language.Lang }}
+{{ $currentPath := .Page.RelPermalink }}
 {{ $prefix := cond (eq $lang "en") "/en" "" }}
-{{ $toggle := cond (eq $lang "en") "/" "/en/" }}
+
+{{/* Smart language toggle URL generation */}}
+{{ $toggle := "/" }}
+{{ if eq $lang "en" }}
+  {{/* English to Korean */}}
+  {{ if eq $currentPath "/en/" }}
+    {{ $toggle = "/" }}
+  {{ else if hasPrefix $currentPath "/en/" }}
+    {{ $toggle = strings.TrimPrefix $currentPath "/en" }}
+    {{ if eq $toggle "" }}{{ $toggle = "/" }}{{ end }}
+  {{ else }}
+    {{ $toggle = "/" }}
+  {{ end }}
+{{ else }}
+  {{/* Korean to English */}}
+  {{ if eq $currentPath "/" }}
+    {{ $toggle = "/en/" }}
+  {{ else if hasPrefix $currentPath "/" }}
+    {{ $toggle = printf "/en%s" $currentPath }}
+  {{ else }}
+    {{ $toggle = "/en/" }}
+  {{ end }}
+{{ end }}
 
 <div class="cc-fab" aria-label="Quick actions">
   <!-- Navigation & Quick Access -->
@@ -28,7 +51,7 @@
   <!-- Utilities -->
   <a class="cc-fab__btn cc-fab__theme" onclick="toggleTheme()" title="Toggle Theme"><i class="fas fa-moon" aria-hidden="true"></i></a>
   <a class="cc-fab__btn cc-fab__search" onclick="toggleSearch()" title="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
-  <a class="cc-fab__btn" href="{{ $toggle }}" title="Language"><i class="fas fa-globe" aria-hidden="true"></i></a>
+  <a class="cc-fab__btn cc-fab__language" href="{{ $toggle }}" onclick="smartLanguageToggle(event)" title="Language ({{ if eq $lang "en" }}한국어{{ else }}English{{ end }})"><i class="fas fa-globe" aria-hidden="true"></i></a>
 </div>
 
 <script>
@@ -98,6 +121,51 @@ function toggleSearch() {
   }
 }
 
+// Smart language toggle function
+function smartLanguageToggle(event) {
+  event.preventDefault();
+  
+  const currentPath = window.location.pathname;
+  const currentLang = currentPath.startsWith('/en/') ? 'en' : 'ko';
+  let targetUrl = '/';
+  
+  if (currentLang === 'en') {
+    // English to Korean
+    if (currentPath === '/en/') {
+      targetUrl = '/';
+    } else if (currentPath.startsWith('/en/')) {
+      targetUrl = currentPath.replace('/en', '');
+      if (targetUrl === '') targetUrl = '/';
+    } else {
+      targetUrl = '/';
+    }
+  } else {
+    // Korean to English
+    if (currentPath === '/') {
+      targetUrl = '/en/';
+    } else {
+      targetUrl = '/en' + currentPath;
+    }
+  }
+  
+  // Check if target page exists before navigating
+  fetch(targetUrl, { method: 'HEAD' })
+    .then(response => {
+      if (response.ok) {
+        window.location.href = targetUrl;
+      } else {
+        // Fallback to homepage if page doesn't exist
+        const fallbackUrl = currentLang === 'en' ? '/' : '/en/';
+        window.location.href = fallbackUrl;
+        showToast(`Redirected to ${currentLang === 'en' ? 'Korean' : 'English'} homepage`);
+      }
+    })
+    .catch(() => {
+      // If fetch fails, try the original URL anyway
+      window.location.href = targetUrl;
+    });
+}
+
 // Initialize theme icon on page load
 document.addEventListener('DOMContentLoaded', function() {
   const currentMode = document.body.getAttribute('data-mode') || 'light';
@@ -105,5 +173,20 @@ document.addEventListener('DOMContentLoaded', function() {
   if (themeIcon) {
     themeIcon.className = currentMode === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
   }
+  
+  // Update language button tooltip
+  updateLanguageButtonTooltip();
 });
+
+// Update language button tooltip based on current language
+function updateLanguageButtonTooltip() {
+  const currentPath = window.location.pathname;
+  const currentLang = currentPath.startsWith('/en/') ? 'en' : 'ko';
+  const languageBtn = document.querySelector('.cc-fab__language');
+  
+  if (languageBtn) {
+    const targetLang = currentLang === 'en' ? '한국어' : 'English';
+    languageBtn.setAttribute('title', `Language (${targetLang})`);
+  }
+}
 </script>
