@@ -7,19 +7,26 @@ tags:
   - 연락처
   - 위치
   - 전북대학교
+  - 전북대
+  - JBNU
+  - Jeonbuk National University
+  - 인숙영
+  - SookYoung In
   - 소통
+  - 전주
+  - 전북특별자치도
+searchable: true
 ---
 
 # 연락처
 
 ## 📧 이메일
-**ksl(at)jbnu.ac.kr**
-
-## 📞 연락처  
-**+82-63-270-2406**
+**isy0110@jbnu.ac.kr**
 
 ## 📍 위치
-**전북대학교 공과대학 7호관 626호, 전주시, 전라북도 54896**
+**전북대학교 공과대학, 전주시, 전북특별자치도 54896**
+
+전북대학교(Jeonbuk National University)는 전북특별자치도 전주시에 위치한 국립대학교입니다.
 
 ## 🗺️ 캠퍼스 지도
 

@@ -5,7 +5,7 @@ keywords: "SookYoung In, 인숙영, Jeonbuk National University, 전북대학교
 # Homepage
 type: landing
 searchable: true
-tags: ["SookYoung In", "인숙영", "Jeonbuk National University", "전북대학교", "Computer Science", "Frontend", "React", "TypeScript"]
+tags: ["SookYoung In", "인숙영", "Jeonbuk National University", "전북대학교", "전북대", "JBNU", "Computer Science", "Computer AI", "Frontend", "React", "TypeScript", "Jeonju", "Jeonbuk State"]
 sections:
   - block: about.avatar
     section_id: about

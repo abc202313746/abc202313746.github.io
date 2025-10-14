@@ -7,19 +7,24 @@ tags:
   - Contact
   - Location
   - Jeonbuk National University
+  - JBNU
+  - SookYoung In
+  - 인숙영
   - Communication
+  - Jeonju
+  - Jeonbuk State
+searchable: true
 ---
 
 # Contact
 
 ## 📧 Email
-**ksl(at)jbnu.ac.kr**
-
-## 📞 Phone  
-**+82-63-270-2406**
+**isy0110@jbnu.ac.kr**
 
 ## 📍 Location
-**Jeonbuk National University, Engineering Building 7, Room 626, Jeonju, Jeollabuk-do 54896**
+**Jeonbuk National University, College of Engineering, Jeonju, Jeonbuk State 54896**
+
+Jeonbuk National University (JBNU) is a national university located in Jeonju, Jeonbuk State, South Korea.
 
 ## 🗺️ Campus Map
 
