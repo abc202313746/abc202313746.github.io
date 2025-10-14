@@ -21,6 +21,7 @@ marketing:
     description: 'SookYoung In - Computer Science Student at Jeonbuk National University. Frontend Developer Portfolio with React, TypeScript, Database Design, Operating Systems, and Data Structures projects. 전북대학교 컴퓨터공학부 인숙영 포트폴리오.'
     twitter: ''
     keywords: 'SookYoung In, 인숙영, Jeonbuk National University, 전북대학교, Computer Science, Frontend Developer, React, TypeScript, Portfolio, Database Design, Operating Systems, Data Structures'
+    image: 'og-image.png'
   analytics:
     google_analytics: ''
     baidu_tongji: ''
