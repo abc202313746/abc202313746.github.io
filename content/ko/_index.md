@@ -1,3 +1,4 @@
+---
 title: "홈"
 type: landing
 sections:
@@ -81,7 +82,7 @@ sections:
         전북대학교
 
         [GitHub](https://github.com/abc202313746) · [Instagram](https://www.instagram.com/insookyoung/)
-        전화: [010-4544-0797](tel:+821045440797)
+        연락처: [010-4544-0797](tel:+821045440797)
         이메일: [isy0110@jbnu.ac.kr](mailto:isy0110@jbnu.ac.kr)
       map:
         provider: OpenStreetMap
