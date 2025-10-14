@@ -12,7 +12,7 @@ date: 2024-09-10
 external_link: ''
 ---
 <div class="justify-text">
-For the Data Structures course, I implemented a **stack data structure** and used it to create a calculator that can handle arithmetic expressions. The project consisted of two main components:
+For the Data Structures course at Jeonbuk National University, SookYoung In (인숙영) implemented a **stack data structure** and used it to create a calculator that can handle arithmetic expressions. The project consisted of two main components:
 
 ## Stack Implementation
 1. **Array-based Stack**: Implemented a stack using a dynamic array that can grow and shrink as needed.
