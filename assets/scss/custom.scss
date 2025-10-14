@@ -78,10 +78,28 @@
 /* Utility: justify long paragraphs for better readability */
 .justify-text{ text-align: justify; text-justify: inter-word; hyphens: auto; }
 
-/* Subtle hover color change using theme variables */
-.btn-primary:hover, a.btn:hover{
-  filter: brightness(0.92);
-  transition: filter .15s ease-in-out;
+/* Button hover effects - more visible color changes */
+.btn-primary, .btn {
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #651fff !important;
+  border-color: #651fff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(124, 77, 255, 0.3);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Download button specific hover */
+a[href*="resume.pdf"]:hover,
+a[href*="이력서"]:hover {
+  background-color: #28a745 !important;
+  border-color: #28a745 !important;
 }
 
 /* Logo styling */
@@ -99,4 +117,35 @@
   padding: 0.25rem 0;
   display: flex;
   align-items: center;
+}
+
+/* Custom theme color overrides */
+:root {
+  --bs-primary: #7c4dff;
+  --bs-primary-rgb: 124, 77, 255;
+}
+
+/* Apply new primary color to various elements */
+.text-primary, .link-primary {
+  color: #7c4dff !important;
+}
+
+.bg-primary {
+  background-color: #7c4dff !important;
+}
+
+/* Navigation active states */
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+  color: #7c4dff !important;
+}
+
+/* Card and section styling with new colors */
+.card {
+  border: 1px solid rgba(124, 77, 255, 0.1);
+}
+
+.card:hover {
+  border-color: rgba(124, 77, 255, 0.3);
+  box-shadow: 0 4px 12px rgba(124, 77, 255, 0.15);
 }

@@ -1,25 +1,37 @@
-# Essentially Minimal theme but with constant home section bg color.
-name = "Starter Blog"
+# Custom Portfolio Theme - Modified Colors
+name = "Custom Portfolio"
 
 [light]
-  # Primary
-  primary = "#2962ff"
+  # Primary - Changed to a vibrant purple
+  primary = "#7c4dff"
+  link = "#7c4dff"
+  link_hover = "#651fff"
 
-  # Menu
-  menu_primary = "rgb(247, 250, 252)"
-  menu_text = "#34495e"
-  menu_text_active = "#2962ff"
-  menu_title = "#2b2b2b"
+  # Menu - Updated with new color scheme
+  menu_primary = "rgb(248, 249, 250)"
+  menu_text = "#2c3e50"
+  menu_text_active = "#7c4dff"
+  menu_title = "#1a1a1a"
 
-  # Home sections
-  home_section_odd = "rgb(247, 250, 252)"
-  home_section_even = "rgb(247, 250, 252)"
+  # Home sections - Light purple tint
+  home_section_odd = "rgb(250, 248, 255)"
+  home_section_even = "rgb(245, 243, 255)"
+
+  # Additional colors
+  background = "#ffffff"
+  text = "#2c3e50"
 
 [dark]
-  primary = "#bbdefb"
-  link = "#bbdefb"
-  link_hover = "#bbdefb"
-  background = "rgb(26, 32, 44)"
-  home_section_odd = "rgb(26, 32, 44)"
-  home_section_even = "rgb(26, 32, 44)"
-  menu_primary = "rgb(26, 32, 44)"
+  # Primary - Bright purple for dark mode
+  primary = "#bb86fc"
+  link = "#bb86fc"
+  link_hover = "#d1c4e9"
+  
+  # Dark theme colors
+  background = "rgb(18, 18, 18)"
+  text = "#e0e0e0"
+  home_section_odd = "rgb(25, 25, 25)"
+  home_section_even = "rgb(30, 30, 30)"
+  menu_primary = "rgb(25, 25, 25)"
+  menu_text = "#e0e0e0"
+  menu_text_active = "#bb86fc"
