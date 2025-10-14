@@ -54,12 +54,14 @@ sections:
       columns: '3'
 
   - block: portfolio
-    section_id: portfolio-showcase
+    section_id: dream-goals
     content:
-      title: "Project Showcase"
+      title: "Dream Goals"
       subtitle: ""
       count: 3
-      page_type: project
+      filters:
+        folders:
+          - goals
       text: ""
     design:
       view: showcase

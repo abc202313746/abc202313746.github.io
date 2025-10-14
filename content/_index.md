@@ -51,12 +51,14 @@ sections:
       columns: '3'
 
   - block: portfolio
-    section_id: portfolio-showcase
+    section_id: dream-goals
     content:
-      title: "프로젝트 쇼케이스"
+      title: "꿈꾸는 목표"
       subtitle: ""
       count: 3
-      page_type: project
+      filters:
+        folders:
+          - goals
       text: ""
     design:
       view: showcase
