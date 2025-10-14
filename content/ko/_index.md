@@ -108,7 +108,7 @@ sections:
   - block: contact
     section_id: contact
     content:
-      title: "오시는 길"
+      title: "위치"
       text: |
         전북대학교
 
@@ -117,14 +117,13 @@ sections:
         이메일: [isy0110@jbnu.ac.kr](mailto:isy0110@jbnu.ac.kr)
 
         <div class="map-embed" style="margin-top:12px;">
-          <a href="https://maps.google.com/?q=35.8469,127.1295" target="_blank" rel="noopener">
-            <img
-              src="https://staticmap.openstreetmap.de/staticmap.php?center=35.8469,127.1295&zoom=16&size=1200x360&maptype=mapnik&markers=35.8469,127.1295,lightblue1"
-              alt="전북대학교 지도"
-              style="width:100%;height:360px;object-fit:cover;border:0;border-radius:8px;"
-              loading="lazy"
-            />
-          </a>
+          <iframe
+            src="https://www.openstreetmap.org/export/embed.html?bbox=127.1240%2C35.8440%2C127.1340%2C35.8500&layer=mapnik&marker=35.8469%2C127.1295"
+            width="100%"
+            height="360"
+            style="border:0;border-radius:8px;"
+            loading="lazy"
+          ></iframe>
         </div>
       map:
         provider: OpenStreetMap
