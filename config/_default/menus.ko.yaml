@@ -27,10 +27,10 @@ main:
     weight: 23
     
   - name: 경력
-    url: '#experience'
+    url: '/ko/experience/'
     weight: 30
   - name: 연락처
-    url: '#contact'
+    url: '/ko/contact/'
     weight: 40
   - name: 이력서
     url: '/uploads/resume.pdf'
