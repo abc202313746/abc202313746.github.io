@@ -77,6 +77,38 @@
 .article-container footer.article-footer,
 .article-container .article-footer { display: none !important; }
 
+/* Some templates render these blocks outside .article-container. Scope to main to avoid header/footer nav. */
+main .article-tags,
+main .tags,
+main .tag-cloud,
+main .share-box,
+main .article-share,
+main .share,
+main .share-buttons,
+main .author-card,
+main .media.author-card,
+main footer.article-footer,
+main .article-footer,
+main .article-metadata .network-icon,
+main .network-icon { display: none !important; }
+
+/* Some themes nest content in <article>. Hide there as well. */
+main article .article-tags,
+main article .tags,
+main article .tag-cloud,
+main article a.badge,
+main article .badge,
+main article .share-box,
+main article .article-share,
+main article .share,
+main article .share-buttons,
+main article .author-card,
+main article .media.author-card,
+main article footer.article-footer,
+main article .article-footer,
+main article .article-metadata .network-icon,
+main article .network-icon { display: none !important; }
+
 /* Hide inline social/FAB icon rows within articles (projects, posts) */
 .article-container .network-icon,
 .article-container .network-icon a,
