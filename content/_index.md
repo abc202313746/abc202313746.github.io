@@ -25,6 +25,18 @@ sections:
       css_class: d-flex fullscreen align-items-center
 
   - block: portfolio
+    section_id: portfolio-masonry
+    content:
+      title: "프로젝트 갤러리"
+      subtitle: ""
+      count: 3
+      page_type: project
+      text: ""
+    design:
+      view: masonry
+      columns: "2"
+
+  - block: portfolio
     section_id: portfolio
     content:
       title: "프로젝트"
@@ -63,18 +75,6 @@ sections:
     design:
       view: showcase
       columns: "1"
-
-  - block: portfolio
-    section_id: portfolio-masonry
-    content:
-      title: "프로젝트 갤러리"
-      subtitle: ""
-      count: 3
-      page_type: project
-      text: ""
-    design:
-      view: masonry
-      columns: "2"
 
   - block: slider
     content:
