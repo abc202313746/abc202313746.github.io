@@ -84,6 +84,17 @@ sections:
         [GitHub](https://github.com/abc202313746) · [Instagram](https://www.instagram.com/insookyoung/)
         연락처: [010-4544-0797](tel:+821045440797)
         이메일: [isy0110@jbnu.ac.kr](mailto:isy0110@jbnu.ac.kr)
+
+        <div class="map-embed" style="margin-top:12px;">
+          <iframe
+            src="https://www.google.com/maps?q=35.8469,127.1295&hl=ko&z=15&output=embed"
+            width="100%"
+            height="360"
+            style="border:0;"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
       map:
         provider: OpenStreetMap
         zoom: 15
