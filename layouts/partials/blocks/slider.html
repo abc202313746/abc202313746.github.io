@@ -35,7 +35,8 @@
 {{ if not (gt (len $slides) 0) }}{{ with .slides }}{{ $slides = . }}{{ $source = "dot.slides" }}{{ end }}{{ end }}
 {{ if not (gt (len $slides) 0) }}{{ with .items }}{{ $slides = . }}{{ $source = "dot.items" }}{{ end }}{{ end }}
 {{ if not (gt (len $slides) 0) }}
-  {{ $ko := eq (printf "%v" .Site.Language.Lang) "ko" }}
+  {{ $lang := lower (printf "%v" .Site.Language.Lang) }}
+  {{ $ko := or (eq $lang "ko") (hasPrefix $lang "ko") }}
   {{ if $ko }}
     {{ $slides = (slice
       (dict "title" "리액트 · 타입스크립트" "content" "컴포넌트 설계와 상태 관리로 유지보수성 높은 UI 구현" "background" (dict "image" (dict "filename" "/uploads/1_unsplash.jpg")))
@@ -110,7 +111,7 @@
 {{ end }}
 
 <div class="cc-slider" data-autoplay="{{ $autoplay }}" data-interval="{{ $interval }}" data-height="{{ $heightNum }}" data-slide-minwidth="{{ $slideMin }}" data-fullscreen="{{ $fullscreen }}" style="position:relative;min-height:1px;">
-  <div class="slider-debug" style="display:none" data-count="{{ len $slides }}" data-source="{{ $source }}">slider-partial-rendered</div>
+  <div class="slider-debug" style="display:none" data-count="{{ len $slides }}" data-source="{{ $source }}" data-lang="{{ .Site.Language.Lang }}">slider-partial-rendered</div>
   <div class="cc-slider__track" style="display:flex;gap:12px;overflow-x:auto;white-space:nowrap;padding:8px;scroll-snap-type:x mandatory;scrollbar-width:none;">
     {{ range $slides }}
       {{ $title := .title }}
