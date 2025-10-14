@@ -30,29 +30,11 @@ sections:
     design:
       view: card
       columns: '3'
-  - block: slider
+  - block: markdown
     content:
-      text: ""
-      slides:
-        - title: "Focus & Flow"
-          content: "Crafting UI with clean code"
-          background:
-            image:
-              filename: 1_unsplash.jpg
-        - title: "Full-stack Visualization"
-          content: "From data to experience"
-          background:
-            image:
-              filename: 2_unsplash.jpg
-        - title: "Code in Detail"
-          content: "Learning by shipping"
-          background:
-            image:
-              filename: 3_unsplash.jpg
-    design:
-      is_fullscreen: false
-      slide_height: '420px'
-      interval: 0
+      title: ""
+      text: |
+        {{< slider items="/uploads/slide-1.jpg|React · TypeScript|Maintainable UIs through component design and state management; /uploads/slide-2.jpg|Learning by Building|Start small, iterate fast, and prove with results; /uploads/slide-3.jpg|Algorithms|Efficiency via complexity analysis and focused optimizations" height="360" autoplay="true" interval="4000" >}}
 
   - block: experience
     section_id: experience

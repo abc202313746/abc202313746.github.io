@@ -29,30 +29,11 @@ sections:
       view: card
       columns: '3'
 
-
-  - block: slider
+  - block: markdown
     content:
-      text: ""
-      slides:
-        - title: "집중과 몰입"
-          content: "깔끔한 코드로 만드는 사용자 경험"
-          background:
-            image:
-              filename: 1_unsplash.jpg
-        - title: "풀스택 비주얼라이제이션"
-          content: "데이터부터 경험까지"
-          background:
-            image:
-              filename: 2_unsplash.jpg
-        - title: "디테일한 코드"
-          content: "직접 만들어보며 배우기"
-          background:
-            image:
-              filename: 3_unsplash.jpg
-    design:
-      is_fullscreen: false
-      slide_height: '420px'
-      interval: 0
+      title: ""
+      text: |
+        {{< slider items="/uploads/slide-1.jpg|React · TypeScript|컴포넌트 설계와 상태 관리로 유지보수성 높은 UI 구현; /uploads/slide-2.jpg|Learning by Building|작게 만들고 빠르게 개선하며 결과로 증명; /uploads/slide-3.jpg|Algorithms|복잡도 분석을 바탕으로 효율적인 로직과 최적화" height="360" autoplay="true" interval="4000" >}}
 
 
 
