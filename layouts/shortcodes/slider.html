@@ -12,9 +12,10 @@
         {{- $parts := split $entry "|" -}}
         <figure style="min-width:80%;margin:0;position:relative;scroll-snap-align:start;border-radius:12px;overflow:hidden;">
           <img src="{{ index $parts 0 }}" alt="{{ if ge (len $parts) 2 }}{{ index $parts 1 }}{{ end }}" style="width:100%;height:{{ $height }}px;object-fit:cover;display:block;" loading="lazy" />
-          {{ if ge (len $parts) 3 }}
-            <figcaption style="position:absolute;left:0;right:0;bottom:0;color:#fff;background:linear-gradient(transparent, rgba(0,0,0,.6));padding:12px 16px;">{{ index $parts 2 }}</figcaption>
-          {{ end }}
+          <figcaption style="position:absolute;left:0;right:0;bottom:0;color:#fff;background:linear-gradient(transparent, rgba(0,0,0,.6));padding:12px 16px;">
+            {{ if ge (len $parts) 2 }}<div>{{ index $parts 1 }}</div>{{ end }}
+            {{ if ge (len $parts) 3 }}<div>{{ index $parts 2 }}</div>{{ end }}
+          </figcaption>
         </figure>
       {{- end -}}
     {{- end -}}
@@ -28,9 +29,10 @@
           {{- $parts := split $entry "|" -}}
           <figure style="margin:0;border-radius:12px;overflow:hidden;">
             <img src="{{ index $parts 0 }}" alt="{{ if ge (len $parts) 2 }}{{ index $parts 1 }}{{ end }}" style="width:100%;height:{{ $height }}px;object-fit:cover;display:block;" />
-            {{ if ge (len $parts) 3 }}
-              <figcaption style="padding:8px 0;opacity:.8;">{{ index $parts 2 }}</figcaption>
-            {{ end }}
+            <figcaption style="padding:8px 0;opacity:.8;">
+              {{ if ge (len $parts) 2 }}<div>{{ index $parts 1 }}</div>{{ end }}
+              {{ if ge (len $parts) 3 }}<div>{{ index $parts 2 }}</div>{{ end }}
+            </figcaption>
           </figure>
         {{- end -}}
       {{- end -}}
