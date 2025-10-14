@@ -2,11 +2,11 @@
   Simplified Slider Block Partial - Force Korean content for Korean pages
 */}}
 
-{{ $lang := lower (printf "%v" .Site.Language.Lang) }}
-{{ $isKo := or (eq $lang "ko") (hasPrefix $lang "ko") }}
+{{ $currentPath := .Page.RelPermalink | default "/" }}
+{{ $isKoreanPage := or (eq $currentPath "/") (hasPrefix $currentPath "/ko/") (not (hasPrefix $currentPath "/en/")) }}
 
 {{ $slides := slice }}
-{{ if $isKo }}
+{{ if $isKoreanPage }}
   {{ $slides = (slice
     (dict "title" "React · TypeScript" "content" "컴포넌트 설계와 상태 관리로 유지보수성 높은 UI를 구현" "background" (dict "image" (dict "filename" "/uploads/1_unsplash.jpg")))
     (dict "title" "실습을 통한 학습" "content" "작게 만들고 빠르게 개선하며 결과로 증명" "background" (dict "image" (dict "filename" "/uploads/2_unsplash.jpg")))
