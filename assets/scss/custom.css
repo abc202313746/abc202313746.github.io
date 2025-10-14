@@ -66,6 +66,17 @@
 .cc-slider figure { min-width:80%; margin:0; position:relative; scroll-snap-align:start; border-radius:12px; overflow:hidden; }
 .cc-slider img { width:100%; height:320px; object-fit:cover; display:block; }
 
+/* Hide tags/share/author blocks on project detail pages */
+/* These selectors are scoped to common article containers used by Hugo Blox/Wowchemy. */
+.article-container .article-tags,
+.article-container .share-box,
+.article-container .article-share,
+.article-container .share,
+.article-container .author-card,
+.article-container .media.author-card,
+.article-container footer.article-footer,
+.article-container .article-footer { display: none !important; }
+
 /* Base text colors via tokens */
 body { color: var(--text-strong); }
 .home-section { color: var(--text-strong); }
