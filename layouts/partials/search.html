@@ -1,82 +1,227 @@
-<!-- Enhanced Search Functionality -->
+<!-- Pagefind Search Integration -->
+<div id="pagefind-search" style="display: none;"></div>
+
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  // Enhanced search functionality
+  // Initialize Pagefind search
+  const searchButton = document.querySelector('.search-btn, button[aria-label="Search"]');
   const searchInput = document.querySelector('input[type="search"]');
-  const searchButton = document.querySelector('button[type="submit"]');
   
-  if (searchInput) {
-    // Add search data attributes for better indexing
-    searchInput.setAttribute('data-search-index', '/index.json');
-    searchInput.setAttribute('placeholder', '인숙영, 전북대학교, SookYoung In, JBNU 검색...');
-    
-    // Enhanced search with better Korean support
-    let searchIndex = [];
-    
-    // Load search index
-    fetch('/index.json')
-      .then(response => response.json())
-      .then(data => {
-        searchIndex = data;
-        console.log('Search index loaded:', searchIndex.length, 'items');
-      })
-      .catch(error => {
-        console.log('Search index not available, using fallback');
-        // Fallback search data with enhanced keywords
-        searchIndex = [
-          {
-            title: "인숙영",
-            content: "전북대학교 전북대 JBNU Jeonbuk National University 컴퓨터인공지능학부 3학년 재학생 SookYoung In 프론트엔드 개발자 전주 전북특별자치도",
-            permalink: "/",
-            section: "home",
-            tags: ["인숙영", "SookYoung In", "전북대학교", "전북대", "JBNU", "Jeonbuk National University"]
-          },
-          {
-            title: "SookYoung In",
-            content: "Jeonbuk National University JBNU 전북대학교 전북대 Computer Science Student Frontend Developer 인숙영 전주 Jeonju Jeonbuk State",
-            permalink: "/en/",
-            section: "home",
-            tags: ["SookYoung In", "인숙영", "Jeonbuk National University", "전북대학교", "JBNU", "전북대"]
-          }
-        ];
-      });
-    
-    // Custom search function
-    function performSearch(query) {
-      if (!query || query.length < 1) return [];
-      
-      const results = searchIndex.filter(item => {
-        const searchText = (item.title + ' ' + item.content + ' ' + (item.tags || []).join(' ')).toLowerCase();
-        const queryLower = query.toLowerCase();
-        
-        // Enhanced search logic for better Korean-English matching
-        return searchText.includes(queryLower) || 
-               // Name matching
-               (searchText.includes('인숙영') && (queryLower.includes('인숙영') || queryLower.includes('sookyoung') || queryLower.includes('in'))) ||
-               (searchText.includes('sookyoung') && (queryLower.includes('sookyoung') || queryLower.includes('인숙영'))) ||
-               // University matching
-               (searchText.includes('전북대') && (queryLower.includes('전북대') || queryLower.includes('jeonbuk') || queryLower.includes('jbnu'))) ||
-               (searchText.includes('jeonbuk') && (queryLower.includes('jeonbuk') || queryLower.includes('전북대') || queryLower.includes('전북대학교'))) ||
-               (searchText.includes('jbnu') && (queryLower.includes('jbnu') || queryLower.includes('전북대') || queryLower.includes('전북대학교'))) ||
-               // Department matching
-               (searchText.includes('컴퓨터') && (queryLower.includes('컴퓨터') || queryLower.includes('computer'))) ||
-               // Location matching
-               (searchText.includes('전주') && (queryLower.includes('전주') || queryLower.includes('jeonju')));
-      });
-      
-      return results.slice(0, 10); // Limit to 10 results
-    }
-    
-    // Override search behavior if needed
-    if (searchButton) {
-      searchButton.addEventListener('click', function(e) {
-        const query = searchInput.value.trim();
-        if (query) {
-          const results = performSearch(query);
-          console.log('Search results for "' + query + '":', results);
-        }
-      });
+  // Create search modal
+  const searchModal = document.createElement('div');
+  searchModal.id = 'search-modal';
+  searchModal.style.cssText = `
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    padding: 20px;
+    overflow-y: auto;
+  `;
+  
+  const searchContainer = document.createElement('div');
+  searchContainer.style.cssText = `
+    max-width: 800px;
+    margin: 50px auto;
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  `;
+  
+  // Close button
+  const closeBtn = document.createElement('button');
+  closeBtn.innerHTML = '×';
+  closeBtn.style.cssText = `
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 40px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #666;
+  `;
+  closeBtn.onclick = () => searchModal.style.display = 'none';
+  
+  // Pagefind search container
+  const pagefindContainer = document.createElement('div');
+  pagefindContainer.id = 'pagefind-ui';
+  
+  searchContainer.appendChild(closeBtn);
+  searchContainer.appendChild(pagefindContainer);
+  searchModal.appendChild(searchContainer);
+  document.body.appendChild(searchModal);
+  
+  // Dark mode styling for search modal
+  function updateSearchModalTheme() {
+    const isDarkMode = document.body.getAttribute('data-mode') === 'dark';
+    if (isDarkMode) {
+      searchContainer.style.background = '#1e1e1e';
+      searchContainer.style.color = '#ffffff';
+      closeBtn.style.color = '#ffffff';
+    } else {
+      searchContainer.style.background = 'white';
+      searchContainer.style.color = '#333';
+      closeBtn.style.color = '#666';
     }
   }
+  
+  // Load Pagefind UI
+  function loadPagefind() {
+    if (window.pagefindLoaded) return;
+    
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = '/pagefind/pagefind-ui.css';
+    document.head.appendChild(link);
+    
+    const script = document.createElement('script');
+    script.src = '/pagefind/pagefind-ui.js';
+    script.onload = () => {
+      new PagefindUI({
+        element: '#pagefind-ui',
+        showSubResults: true,
+        showImages: false,
+        excerptLength: 30,
+        resetStyles: false,
+        translations: {
+          placeholder: "인숙영, 전북대학교, SookYoung In, JBNU 검색...",
+          clear_search: "검색 초기화",
+          load_more: "더 보기",
+          search_label: "사이트 검색",
+          filters_label: "필터",
+          zero_results: "검색 결과가 없습니다: [SEARCH_TERM]",
+          many_results: "[COUNT]개의 결과를 찾았습니다: [SEARCH_TERM]",
+          one_result: "1개의 결과를 찾았습니다: [SEARCH_TERM]",
+          alt_search: "[SEARCH_TERM]에 대한 검색 결과",
+          search_suggestion: "다른 검색어를 시도해보세요",
+          searching: "검색 중..."
+        }
+      });
+      window.pagefindLoaded = true;
+    };
+    document.head.appendChild(script);
+  }
+  
+  // Open search modal
+  function openSearch() {
+    loadPagefind();
+    searchModal.style.display = 'block';
+    updateSearchModalTheme();
+    setTimeout(() => {
+      const searchInput = document.querySelector('#pagefind-ui input');
+      if (searchInput) searchInput.focus();
+    }, 100);
+  }
+  
+  // Attach to search button
+  if (searchButton) {
+    searchButton.addEventListener('click', function(e) {
+      e.preventDefault();
+      openSearch();
+    });
+  }
+  
+  // Attach to search input
+  if (searchInput) {
+    searchInput.addEventListener('focus', function(e) {
+      openSearch();
+    });
+    searchInput.setAttribute('placeholder', '인숙영, 전북대학교, SookYoung In, JBNU 검색...');
+  }
+  
+  // Keyboard shortcut (Ctrl/Cmd + K)
+  document.addEventListener('keydown', function(e) {
+    if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+      e.preventDefault();
+      openSearch();
+    }
+    
+    // ESC to close
+    if (e.key === 'Escape') {
+      searchModal.style.display = 'none';
+    }
+  });
+  
+  // Close on outside click
+  searchModal.addEventListener('click', function(e) {
+    if (e.target === searchModal) {
+      searchModal.style.display = 'none';
+    }
+  });
+  
+  // Update theme when mode changes
+  const observer = new MutationObserver(updateSearchModalTheme);
+  observer.observe(document.body, { attributes: true, attributeFilter: ['data-mode'] });
 });
 </script>
+
+<!-- Pagefind Custom Styling -->
+<style>
+#pagefind-ui {
+  font-family: inherit;
+}
+
+#pagefind-ui .pagefind-ui__search-input {
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: 2px solid #7c4dff;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+#pagefind-ui .pagefind-ui__result {
+  padding: 15px;
+  margin-bottom: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+#pagefind-ui .pagefind-ui__result:hover {
+  border-color: #7c4dff;
+  box-shadow: 0 2px 8px rgba(124, 77, 255, 0.2);
+}
+
+#pagefind-ui .pagefind-ui__result-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #7c4dff;
+  margin-bottom: 8px;
+}
+
+#pagefind-ui .pagefind-ui__result-excerpt {
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Dark mode styles */
+[data-mode="dark"] #pagefind-ui .pagefind-ui__search-input {
+  background: #2a2a2a;
+  color: #ffffff;
+  border-color: #bb86fc;
+}
+
+[data-mode="dark"] #pagefind-ui .pagefind-ui__result {
+  background: #2a2a2a;
+  border-color: #444;
+}
+
+[data-mode="dark"] #pagefind-ui .pagefind-ui__result:hover {
+  border-color: #bb86fc;
+}
+
+[data-mode="dark"] #pagefind-ui .pagefind-ui__result-title {
+  color: #bb86fc;
+}
+
+[data-mode="dark"] #pagefind-ui .pagefind-ui__result-excerpt {
+  color: #e0e0e0;
+}
+</style>

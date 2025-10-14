@@ -26,9 +26,9 @@ sections:
       css_class: d-flex fullscreen align-items-center
 
   - block: portfolio
-    section_id: portfolio-masonry
+    section_id: portfolio
     content:
-      title: "Project Gallery"
+      title: "Projects"
       subtitle: ""
       count: 3
       page_type: project
@@ -36,20 +36,6 @@ sections:
     design:
       view: masonry
       columns: "2"
-
-  - block: portfolio
-    section_id: portfolio
-    content:
-      title: Projects
-      subtitle: ''
-      count: 3
-      page_type: project
-      filters:
-        folders: ["project"]
-      text: ""
-    design:
-      view: card
-      columns: '3'
 
   - block: portfolio
     section_id: programming-languages

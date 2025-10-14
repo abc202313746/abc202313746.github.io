@@ -393,6 +393,58 @@ a[href*="이력서"]:hover {
   color: #d1c4e9 !important;
 }
 
+/* Homepage intro section dark mode */
+[data-mode="dark"] .wg-hero,
+[data-mode="dark"] .hero-section,
+[data-mode="dark"] .home-section {
+  background-color: #121212 !important;
+  color: #ffffff !important;
+}
+
+[data-mode="dark"] .wg-hero h1,
+[data-mode="dark"] .wg-hero h2,
+[data-mode="dark"] .wg-hero h3,
+[data-mode="dark"] .hero-section h1,
+[data-mode="dark"] .hero-section h2,
+[data-mode="dark"] .hero-section h3,
+[data-mode="dark"] .home-section h1,
+[data-mode="dark"] .home-section h2,
+[data-mode="dark"] .home-section h3 {
+  color: #ffffff !important;
+}
+
+[data-mode="dark"] .wg-hero p,
+[data-mode="dark"] .wg-hero .hero-lead,
+[data-mode="dark"] .hero-section p,
+[data-mode="dark"] .hero-section .hero-lead,
+[data-mode="dark"] .home-section p,
+[data-mode="dark"] .home-section .hero-lead {
+  color: #e0e0e0 !important;
+}
+
+/* Hero title and content */
+[data-mode="dark"] .hero-title,
+[data-mode="dark"] .hero-content,
+[data-mode="dark"] .hero-text {
+  color: #ffffff !important;
+}
+
+/* About me section in homepage */
+[data-mode="dark"] .wg-about,
+[data-mode="dark"] .about-section {
+  background-color: #1e1e1e !important;
+}
+
+[data-mode="dark"] .wg-about .portrait-title,
+[data-mode="dark"] .about-section .portrait-title {
+  color: #ffffff !important;
+}
+
+[data-mode="dark"] .wg-about .biography,
+[data-mode="dark"] .about-section .biography {
+  color: #e0e0e0 !important;
+}
+
 /* About section specific */
 [data-mode="dark"] .about-section,
 [data-mode="dark"] .wg-about,

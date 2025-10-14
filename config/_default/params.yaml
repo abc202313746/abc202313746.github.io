@@ -94,7 +94,11 @@ features:
       category_id: ''
   search:
     enabled: true
-    provider: wowchemy
+    provider: pagefind
+    pagefind:
+      multilingual: true
+      index_content: true
+      show_parent_in_results: true
     wowchemy:
       min_length: 1
       threshold: 0.3
