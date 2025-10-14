@@ -7,10 +7,72 @@ en:
   languageCode: en-US
   contentDir: content
   weight: 2
+  title: "SookYoung In Portfolio"
+  menu:
+    main:
+      - name: Home
+        url: '/en/'
+        weight: 10
+      - name: Projects
+        identifier: projects
+        url: '/en/project/'
+        weight: 20
+      - name: DB
+        parent: projects
+        url: '/en/project/database/'
+        weight: 21
+      - name: OS
+        parent: projects
+        url: '/en/project/os/'
+        weight: 22
+      - name: Stack
+        parent: projects
+        url: '/en/project/stack/'
+        weight: 23
+      - name: Experience
+        url: '/en/experience/'
+        weight: 30
+      - name: Contact
+        url: '/en/contact/'
+        weight: 40
+      - name: Resumé
+        url: '/uploads/resume.pdf'
+        weight: 50
 ko:
   languageCode: ko-KR
   contentDir: content/ko
   weight: 1
+  title: "인숙영의 포트폴리오"
+  menu:
+    main:
+      - name: 홈
+        url: '/'
+        weight: 10
+      - name: 프로젝트
+        identifier: projects
+        url: '/ko/project/'
+        weight: 20
+      - name: 데이터베이스
+        parent: projects
+        url: '/ko/project/database/'
+        weight: 21
+      - name: 운영체제
+        parent: projects
+        url: '/ko/project/os/'
+        weight: 22
+      - name: 스택
+        parent: projects
+        url: '/ko/project/stack/'
+        weight: 23
+      - name: 경력
+        url: '/ko/experience/'
+        weight: 30
+      - name: 연락처
+        url: '/ko/contact/'
+        weight: 40
+      - name: 이력서
+        url: '/uploads/resume.pdf'
+        weight: 50
 
 # Uncomment the lines below to configure your website in a second language.
 #zh:

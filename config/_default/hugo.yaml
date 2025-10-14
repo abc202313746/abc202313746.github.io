@@ -3,6 +3,7 @@ title: '인숙영의 포트폴리오'
 defaultContentLanguage: ko
 hasCJKLanguage: true
 defaultContentLanguageInSubdir: false
+enableMissingTranslationPlaceholders: false
 
 # Enable search index generation
 outputs:
