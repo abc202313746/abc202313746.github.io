@@ -1,0 +1,40 @@
+/* path: assets/scss/custom.scss */
+
+.section-slider, .wg-slider {
+
+  h1, .slide-title {
+    font-size: clamp(24px, 4vw, 40px);
+    line-height: 1.15;
+    font-weight: 700;
+  }
+  p, .slide-content {
+    font-size: clamp(14px, 2.2vw, 18px);
+    line-height: 1.5;
+    margin-top: .5rem;
+  }
+
+  /* 가운데 정렬 */
+  .carousel-caption, .slide-caption, .slide-content { text-align: center; }
+
+  /* 배경 이미지 채우기 */
+  .bg-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+
+.cc-slider figcaption div:first-child{ 
+  font-size: clamp(22px, 3.6vw, 36px);
+  line-height: 1.15;
+  font-weight: 700;
+  text-align: center;
+}
+.cc-slider figcaption div:nth-child(2){ 
+  font-size: clamp(14px, 2.2vw, 18px);
+  line-height: 1.5;
+  margin-top: .4rem;
+  text-align: center;
+}

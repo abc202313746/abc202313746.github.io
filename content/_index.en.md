@@ -52,8 +52,7 @@ sections:
     design:
       is_fullscreen: false
       slide_height: '420px'
-      slide_min_width: '92%'
-      interval: 3000
+      interval: 0
 
   - block: experience
     section_id: experience
