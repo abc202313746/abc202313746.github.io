@@ -29,36 +29,6 @@ main:
     url: '/en/project/stack/'
     weight: 23
   
-  - name: Frontend
-    parent: projects
-    url: '/en/project/frontend/'
-    weight: 24
-  
-  - name: Algorithm
-    parent: projects
-    url: '/en/project/algorithm/'
-    weight: 25
-  
-  - name: Web Dev
-    parent: projects
-    url: '/en/project/web-development/'
-    weight: 26
-  
-  - name: Mobile App
-    parent: projects
-    url: '/en/project/mobile-app/'
-    weight: 27
-  
-  - name: ML
-    parent: projects
-    url: '/en/project/machine-learning/'
-    weight: 28
-  
-  - name: DevOps
-    parent: projects
-    url: '/en/project/devops/'
-    weight: 29
-  
   - name: Experience
     url: '/en/experience/'
     weight: 30

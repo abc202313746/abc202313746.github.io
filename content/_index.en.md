@@ -30,7 +30,7 @@ sections:
     content:
       title: Projects
       subtitle: ''
-      count: 9
+      count: 3
       page_type: project
       filters:
         folders: ["project"]
@@ -47,13 +47,6 @@ sections:
       count: 3
       page_type: project
       text: ""
-      filters:
-        folders:
-          - project
-        tags:
-          - Database
-          - OS
-          - Stack
     design:
       view: compact
       columns: "2"
@@ -63,7 +56,7 @@ sections:
     content:
       title: "Project Showcase"
       subtitle: ""
-      count: 6
+      count: 3
       page_type: project
       text: ""
     design:
@@ -75,7 +68,7 @@ sections:
     content:
       title: "Project Gallery"
       subtitle: ""
-      count: 6
+      count: 3
       page_type: project
       text: ""
     design:

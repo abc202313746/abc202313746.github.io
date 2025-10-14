@@ -29,7 +29,7 @@ sections:
     content:
       title: "프로젝트"
       subtitle: ""
-      count: 9
+      count: 3
       page_type: project
       text: ""
     design:
@@ -44,13 +44,6 @@ sections:
       count: 3
       page_type: project
       text: ""
-      filters:
-        folders:
-          - project
-        tags:
-          - 데이터베이스
-          - 운영체제
-          - 스택
     design:
       view: compact
       columns: "2"
@@ -60,7 +53,7 @@ sections:
     content:
       title: "프로젝트 쇼케이스"
       subtitle: ""
-      count: 6
+      count: 3
       page_type: project
       text: ""
     design:
@@ -72,7 +65,7 @@ sections:
     content:
       title: "프로젝트 갤러리"
       subtitle: ""
-      count: 6
+      count: 3
       page_type: project
       text: ""
     design:
