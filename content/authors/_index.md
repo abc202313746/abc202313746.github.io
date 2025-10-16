@@ -5,8 +5,8 @@ type: page
 # Redirect to experience page
 url: /ko/experience/
 aliases:
-  - /authors/admin/
-  - /authors/admin/index.html
+  - /authors/
+  - /authors/index.html
 
 # Add meta refresh as backup
 meta:
