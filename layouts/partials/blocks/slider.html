@@ -87,15 +87,9 @@
           {{ end }}
         {{ end }}
 
-        {{ if $url }}
-          <img src="{{ $url }}" alt="{{ $title }}" style="width:100%;height:{{ $heightCss }};object-fit:cover;display:block;" loading="lazy" />
-        {{ else }}
-          <div style="width:100%;height:{{ $heightCss }};background:linear-gradient(135deg,#7C4DFF,#651FFF);"></div>
-        {{ end }}
+      
 
-        <!-- Enhanced overlay with transparency layer -->
-        <div style="position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(135deg, rgba(124,77,255,0.3) 0%, rgba(101,31,255,0.4) 50%, rgba(0,0,0,0.2) 100%);"></div>
-        
+       
         <figcaption style="position:absolute;left:0;right:0;bottom:0;color:#fff;background:linear-gradient(transparent 0%, rgba(0,0,0,0.4) 30%, rgba(0,0,0,0.8) 100%);padding:20px 24px;z-index:2;">
           {{ with $title }}<div style="font-weight:700;font-size:1.2rem;line-height:1.3;text-shadow:2px 2px 4px rgba(0,0,0,0.8);margin-bottom:8px;">{{ . }}</div>{{ end }}
           {{ with $desc }}<div style="opacity:0.95;font-size:1rem;text-shadow:1px 1px 3px rgba(0,0,0,0.7);">{{ . }}</div>{{ end }}
