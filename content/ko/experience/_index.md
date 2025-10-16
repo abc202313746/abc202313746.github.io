@@ -13,15 +13,6 @@ aliases:
 organizations:
   - name: 전북대학교 컴퓨터인공지능학부
     url: ''
-interests:
-  - 프론트엔드 개발
-  - React
-  - TypeScript
-education:
-  courses:
-    - course: 컴퓨터인공지능학부
-      institution: 전북대학교
-      year: 2023 ~ 현재
 
 bio: 저의 주요 관심사는 프론트엔드 개발, 특히 React와 TypeScript입니다.
 
@@ -57,21 +48,6 @@ sections:
     content:
       title: 경력소개
       username: admin
-  
-  - block: accomplishments
-    content:
-      title: 교육
-      items:
-        - title: 컴퓨터과학 및 인공지능 학사
-          organization: 전북대학교
-          date_start: '2023-03-01'
-          date_end: ''
-          description: |
-            - 인공지능에 중점을 둔 컴퓨터 과학 학위 과정 수행
-            - 실무 프로그래밍 기술 개발과 함께 우수한 학업 성과 유지
-            - 다양한 컴퓨터 과학 프로젝트 및 과제에 적극적으로 참여
-    design:
-      columns: '1'
 
   - block: experience
     content:
