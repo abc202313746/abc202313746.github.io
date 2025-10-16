@@ -115,6 +115,11 @@ features:
     api_key: ''
     zoom: 15
 
+features:
+  search:
+    provider: pagefind
+    show_in_header: true
+
 extensions:
   cms:
     branch: main
