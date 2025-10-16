@@ -3,6 +3,7 @@ title: 연락처 및 위치
 summary: 인숙영과 연락하기. 연락처 정보, 위치 세부사항, 그리고 전북대학교 오시는 길을 안내합니다.
 type: landing
 date: 2024-01-01
+translationKey: contact
 image:
   filename: 'uploads/justin-lim-tloFnD-7EpI-unsplash (1).jpg'
   caption: '연락처 및 위치'
