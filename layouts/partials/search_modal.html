@@ -89,9 +89,12 @@
       if (window.PagefindUI) {
         pagefindUI = new window.PagefindUI({
           element: '#search-modal-results',
-          showSubResults: true,
+          showSubResults: false,
           showImages: false,
-          excerptLength: 15,
+          excerptLength: 30,
+          autofocus: false,
+          resetStyles: true,
+          showEmptyFilters: false,
           translations: {
             placeholder: '{{ i18n "search_placeholder" | default "검색어를 입력하세요..." }}'
           }
@@ -160,6 +163,27 @@
 .search-modal .pagefind-ui__result-excerpt {
   color: #666;
   line-height: 1.5;
+}
+
+/* Hide any suggestion or autocomplete elements */
+.search-modal .pagefind-ui__drawer,
+.search-modal .pagefind-ui__suggestions,
+.search-modal .pagefind-ui__filter-panel {
+  display: none !important;
+}
+
+/* Hide filters and other UI elements */
+.search-modal .pagefind-ui__filters,
+.search-modal .pagefind-ui__sort-select,
+.search-modal .pagefind-ui__button {
+  display: none !important;
+}
+
+/* Hide search results count and stats */
+.search-modal .pagefind-ui__stats,
+.search-modal .pagefind-ui__results-area > p,
+.search-modal .pagefind-ui__message {
+  display: none !important;
 }
 
 @media (max-width: 768px) {
