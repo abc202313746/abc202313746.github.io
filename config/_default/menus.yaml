@@ -33,9 +33,6 @@ main:
     url: '/ko/experience/'
     weight: 30
 
-  - name: 전북대학교
-    url: '/ko/jbnu/'
-    weight: 35
 
   - name: 연락처
     url: '/ko/contact/'
