@@ -47,25 +47,64 @@ sections:
       background:
         color: 'white'
 
-  - block: contact
+  - block: markdown
     content:
       title: "🗺️ 전북대학교 위치"
       text: |
         전북대학교 공과대학 컴퓨터인공지능학부 위치입니다.
+        
+        <div style="margin: 20px 0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+          <div id="map" style="height: 400px; width: 100%;"></div>
+        </div>
+        
+        <script>
+        // Leaflet 지도 라이브러리 로드
+        if (!window.L) {
+          const link = document.createElement('link');
+          link.rel = 'stylesheet';
+          link.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
+          document.head.appendChild(link);
+          
+          const script = document.createElement('script');
+          script.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
+          script.onload = function() {
+            initMap();
+          };
+          document.head.appendChild(script);
+        } else {
+          initMap();
+        }
+        
+        function initMap() {
+          // 전북대학교 좌표
+          const jbnu = [35.8469, 127.1295];
+          
+          // 지도 생성
+          const map = L.map('map').setView(jbnu, 16);
+          
+          // OpenStreetMap 타일 추가
+          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+          }).addTo(map);
+          
+          // 전북대학교 마커 추가
+          L.marker(jbnu).addTo(map)
+            .bindPopup('<b>전북대학교</b><br>컴퓨터인공지능학부<br>전북특별자치도 전주시')
+            .openPopup();
+        }
+        </script>
+        
+        **📍 주소:** 전북대학교로 567, 전주시, 전북특별자치도 54896
+    
+    design:
+      columns: '1'
+
+  - block: contact
+    content:
+      title: "💬 연락처"
+      text: |
+        궁금한 점이 있으시면 언제든 연락주세요!
       
-      # Contact details - these will be rendered nicely
-      address:
-        street: 전북대학교로 567
-        city: 전주시
-        region: 전북특별자치도
-        postcode: '54896'
-        country: 대한민국
-        country_code: KR
-      coordinates:
-        latitude: '35.8469'
-        longitude: '127.1295'
-      
-      # Contact form
       contact_links:
         - icon: envelope
           icon_pack: fas
