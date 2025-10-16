@@ -1,9 +1,10 @@
 ---
-title: "Search"
-type: page
----
----
-title: "Search"
-type: "search"
-summary: "Search"
+title: Search
+type: landing
+
+sections:
+  - block: search
+    id: search
+    content:
+      title: Search
 ---

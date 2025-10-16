@@ -1,0 +1,161 @@
+{{/* Hugo Blox Builder: Search Block */}}
+{{/* Documentation: https://docs.hugoblox.com/reference/blocks/ */}}
+{{/* License: https://github.com/HugoBlox/hugo-blox-builder/blob/main/LICENSE.md */}}
+
+{{/* Initialise */}}
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+{{ $search_provider := site.Params.features.search.provider | default "wowchemy" }}
+
+<div class="search-container">
+  <div id="search-box">
+    {{- if eq $search_provider "wowchemy" -}}
+      <input name="q" id="search-query" type="search" placeholder="{{ i18n "search_placeholder" }}" autocomplete="off">
+    {{- else if eq $search_provider "algolia" -}}
+      <div id="search-searchbar"></div>
+    {{- else if eq $search_provider "pagefind" -}}
+      <div id="pagefind-search"></div>
+    {{- end -}}
+  </div>
+
+  {{- if eq $search_provider "wowchemy" -}}
+    <div id="search-hits">
+      {{- i18n "search_no_results" -}}
+    </div>
+  {{- else if eq $search_provider "algolia" -}}
+    <div id="search-hits"></div>
+  {{- end -}}
+</div>
+
+{{- if eq $search_provider "wowchemy" -}}
+  {{ $min_length := site.Params.search.wowchemy.min_length | default 1 }}
+  {{ $threshold := site.Params.search.wowchemy.threshold | default 0.3 }}
+  {{ $search_config := dict "threshold" $threshold "minMatchCharLength" $min_length }}
+  <script>
+    const searchConfig = {{ $search_config | jsonify | safeJS }};
+  </script>
+  {{ $js_search := resources.Get "js/wowchemy/search.js" }}
+  {{ $js_search = $js_search | js.Build }}
+  <script src="{{ $js_search.RelPermalink }}"></script>
+{{- else if eq $search_provider "algolia" -}}
+  {{ $algolia_config := dict "appId" site.Params.search.algolia.app_id "apiKey" site.Params.search.algolia.api_key "indexName" site.Params.search.algolia.index_name "poweredBy" site.Params.search.algolia.show_logo }}
+  <script>
+    const algoliaConfig = {{ $algolia_config | jsonify | safeJS }};
+  </script>
+  {{ $js_algolia := resources.Get "js/wowchemy/algolia.js" }}
+  {{ $js_algolia = $js_algolia | js.Build }}
+  <script src="{{ $js_algolia.RelPermalink }}"></script>
+{{- else if eq $search_provider "pagefind" -}}
+  <link rel="stylesheet" href="/pagefind/pagefind-ui.css">
+  <script src="/pagefind/pagefind-ui.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+      new PagefindUI({
+        element: "#pagefind-search",
+        showSubResults: true,
+        showImages: false,
+        excerptLength: 30,
+        translations: {
+          placeholder: "{{ i18n "search_placeholder" | default "인숙영, 전북대학교, SookYoung In, JBNU 검색..." }}",
+          clear_search: "{{ i18n "search_clear" | default "검색 초기화" }}",
+          load_more: "{{ i18n "search_load_more" | default "더 보기" }}",
+          search_label: "{{ i18n "search_label" | default "사이트 검색" }}",
+          filters_label: "{{ i18n "search_filters" | default "필터" }}",
+          zero_results: "{{ i18n "search_no_results" | default "검색 결과가 없습니다: [SEARCH_TERM]" }}",
+          many_results: "{{ i18n "search_many_results" | default "[COUNT]개의 결과를 찾았습니다: [SEARCH_TERM]" }}",
+          one_result: "{{ i18n "search_one_result" | default "1개의 결과를 찾았습니다: [SEARCH_TERM]" }}",
+          alt_search: "{{ i18n "search_alt" | default "[SEARCH_TERM]에 대한 검색 결과" }}",
+          search_suggestion: "{{ i18n "search_suggestion" | default "다른 검색어를 시도해보세요" }}",
+          searching: "{{ i18n "search_searching" | default "검색 중..." }}"
+        }
+      });
+    });
+  </script>
+
+  <style>
+    .search-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    #pagefind-search {
+      font-family: inherit;
+    }
+
+    #pagefind-search .pagefind-ui__search-input {
+      width: 100%;
+      padding: 12px 20px;
+      font-size: 16px;
+      border: 2px solid #7c4dff;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    #pagefind-search .pagefind-ui__result {
+      padding: 15px;
+      margin-bottom: 10px;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    #pagefind-search .pagefind-ui__result:hover {
+      border-color: #7c4dff;
+      box-shadow: 0 2px 8px rgba(124, 77, 255, 0.2);
+    }
+
+    #pagefind-search .pagefind-ui__result-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #7c4dff;
+      margin-bottom: 8px;
+    }
+
+    #pagefind-search .pagefind-ui__result-excerpt {
+      color: #666;
+      line-height: 1.5;
+    }
+
+    /* Dark mode styles */
+    [data-mode="dark"] #pagefind-search .pagefind-ui__search-input {
+      background: #2a2a2a;
+      color: #ffffff;
+      border-color: #bb86fc;
+    }
+
+    [data-mode="dark"] #pagefind-search .pagefind-ui__result {
+      background: #2a2a2a;
+      border-color: #444;
+    }
+
+    [data-mode="dark"] #pagefind-search .pagefind-ui__result:hover {
+      border-color: #bb86fc;
+    }
+
+    [data-mode="dark"] #pagefind-search .pagefind-ui__result-title {
+      color: #bb86fc;
+    }
+
+    [data-mode="dark"] #pagefind-search .pagefind-ui__result-excerpt {
+      color: #e0e0e0;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .search-container {
+        padding: 10px;
+      }
+
+      #pagefind-search .pagefind-ui__search-input {
+        font-size: 14px;
+        padding: 10px 16px;
+      }
+
+      #pagefind-search .pagefind-ui__result-title {
+        font-size: 16px;
+      }
+    }
+  </style>
+{{- end -}}
+

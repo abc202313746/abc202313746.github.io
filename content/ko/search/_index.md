@@ -1,5 +1,10 @@
 ---
-title: "검색"
-type: "search"
-summary: "검색"
+title: 검색
+type: landing
+
+sections:
+  - block: search
+    id: search
+    content:
+      title: 검색
 ---
