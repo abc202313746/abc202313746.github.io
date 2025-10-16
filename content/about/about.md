@@ -4,6 +4,10 @@ summary: Learn more about SookYoung In's background, education, and interests in
 featured: featured.png
 date: 2024-01-01
 active: false
+draft: true
+_build:
+  list: false
+  publishResources: false
 ---
 
 # About Me
