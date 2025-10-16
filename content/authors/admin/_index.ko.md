@@ -16,19 +16,6 @@ organizations:
   - name: 전공:컴퓨터인공지능학부
     url: ''
 
-# Interests
-interests:
-  - 프론트엔드 개발
-  - React
-  - TypeScript
-
-# Education
-education:
-  courses:
-    - course: 컴퓨터인공지능학부 (학사 과정)
-      institution: 전북대학교
-      year: 2023 ~ 현재
-
 # Status emoji
 status:
   icon: 🐥
