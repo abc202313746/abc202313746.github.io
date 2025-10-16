@@ -2,10 +2,6 @@
 title: Jeonju Cultural Tourism Integrated System Database Design
 summary: A project to design a relational database for providing personalized services by integrating scattered tourism information in the Jeonju area.
 featured: featured.png
-
-  - SookYoung In
-  - 전북대학교
-  - Jeonbuk National University
 date: 2025-06-20
 external_link: ''
 searchable: true

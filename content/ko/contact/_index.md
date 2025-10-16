@@ -6,18 +6,6 @@ date: 2024-01-01
 image:
   filename: 'uploads/justin-lim-tloFnD-7EpI-unsplash (1).jpg'
   caption: '연락처 및 위치'
-
-  - 연락처
-  - 위치
-  - 전북대학교
-  - 전북대
-  - JBNU
-  - Jeonbuk National University
-  - 인숙영
-  - SookYoung In
-  - 소통
-  - 전주
-  - 전북특별자치도
 searchable: true
 
 sections:

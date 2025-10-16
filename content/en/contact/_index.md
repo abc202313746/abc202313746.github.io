@@ -6,16 +6,6 @@ date: 2024-01-01
 image:
   filename: 'uploads/justin-lim-tloFnD-7EpI-unsplash (1).jpg'
   caption: 'Contact & Location'
-
-  - Contact
-  - Location
-  - Jeonbuk National University
-  - JBNU
-  - SookYoung In
-  - 인숙영
-  - Communication
-  - Jeonju
-  - Jeonbuk State
 searchable: true
 
 sections:

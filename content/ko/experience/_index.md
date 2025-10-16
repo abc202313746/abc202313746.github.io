@@ -6,15 +6,6 @@ date: 2024-01-01
 image:
   filename: 'uploads/aldi-sigun-K-sdQ12jZeY-unsplash (1).jpg'
   caption: '경력 및 이력'
-
-  - 경력
-  - 이력
-  - 교육
-  - 전문성 개발
-  - 전북대학교
-  - 인숙영
-  - SookYoung In
-  - JBNU
 searchable: true
 
 sections:

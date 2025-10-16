@@ -6,15 +6,6 @@ date: 2024-01-01
 image:
   filename: 'uploads/aldi-sigun-K-sdQ12jZeY-unsplash (1).jpg'
   caption: 'Experience & Background'
-
-  - Experience
-  - Background
-  - Education
-  - Professional Development
-  - Jeonbuk National University
-  - SookYoung In
-  - 인숙영
-  - JBNU
 searchable: true
 
 sections:
