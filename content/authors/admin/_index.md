@@ -4,20 +4,6 @@ role: 전북대학교 컴퓨터인공지능학부 3학년 재학생
 avatar: avatar.jpg
 bio: 사용자 중심의 웹 경험을 만드는 것이 제 열정입니다. 현재 전북대학교에서 컴퓨터 과학을 공부하며, 특히 React와 TypeScript로 인터랙티브한 웹 애플리케이션을 개발하는 데 관심이 많습니다.
 
-interests:
-  - 웹 개발 (React, TypeScript)
-  - 사용자 경험 (UX) 디자인
-  - 반응형 웹 디자인
-  - 알고리즘 문제 해결
-  - 오픈소스 프로젝트 기여
-
-education:
-  courses:
-    - course: 컴퓨터인공지능학부 재학
-      institution: 전북대학교
-      year: 2023년 3월 - 현재
-    
-
 experience:
   - title: SW 멘토링 프로그램 - 멘티
     company: 전북대학교
