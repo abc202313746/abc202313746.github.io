@@ -13,7 +13,8 @@ sections:
         전북대학교에는 인숙영이 존재합니다.
     design:
       background:
-        image: 'uploads/jbnucampus.jpg'
+        image:
+          filename: 'jbnucampus.jpg'
         image_darken: 0.3
         gradient_start: '#ff2ecb7a'
         gradient_end: '#7c3aed'
