@@ -19,8 +19,8 @@ sections:
         </div>
     design:
       background:
-        gradient_start: '#7c4dff'
-        gradient_end: '#651fff'
+        gradient_start: '#fcff4dff'
+        gradient_end: '#f9ff50ff'
         text_color_light: true
       spacing:
         padding: ['60px', '0', '60px', '0']
@@ -54,45 +54,8 @@ sections:
         전북대학교 공과대학 컴퓨터인공지능학부 위치입니다.
         
         <div style="margin: 20px 0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-          <div id="map" style="height: 400px; width: 100%;"></div>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3234.0891654813036!2d127.1299221!3d35.846817099999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35702334621b3bb9%3A0xd2ef0eee158844e1!2z7KCE67aB64yA7ZWZ6rWQIOyghOyjvOy6oO2NvOyKpA!5e0!3m2!1sko!2skr!4v1760653472836!5m2!1sko!2skr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-        
-        <script>
-        // Leaflet 지도 라이브러리 로드
-        if (!window.L) {
-          const link = document.createElement('link');
-          link.rel = 'stylesheet';
-          link.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
-          document.head.appendChild(link);
-          
-          const script = document.createElement('script');
-          script.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
-          script.onload = function() {
-            initMap();
-          };
-          document.head.appendChild(script);
-        } else {
-          initMap();
-        }
-        
-        function initMap() {
-          // 전북대학교 좌표
-          const jbnu = [35.8469, 127.1295];
-          
-          // 지도 생성
-          const map = L.map('map').setView(jbnu, 16);
-          
-          // OpenStreetMap 타일 추가
-          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '© OpenStreetMap contributors'
-          }).addTo(map);
-          
-          // 전북대학교 마커 추가
-          L.marker(jbnu).addTo(map)
-            .bindPopup('<b>전북대학교</b><br>컴퓨터인공지능학부<br>전북특별자치도 전주시')
-            .openPopup();
-        }
-        </script>
         
         **📍 주소:** 전북대학교로 567, 전주시, 전북특별자치도 54896
     
@@ -146,4 +109,6 @@ sections:
       view: card
       background:
         color: 'white'
+
+
 ---
