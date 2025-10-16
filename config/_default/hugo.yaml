@@ -19,6 +19,11 @@ params:
   logo: 'chat-logo.svg'
   # Default Open Graph image for homepage
   images: ['uploads/og-image.png']
+  
+  # Disable asset processing to prevent CSS color code errors
+  assets:
+    css_bundle: false
+    js_bundle: false
 
 # Languages are configured in languages.yaml
 
@@ -27,6 +32,19 @@ sitemap:
   priority: 0.5
   filename: sitemap.xml
 
+# Disable asset processing that might cause CSS color code errors
+minify:
+  disableCSS: true
+  disableJS: true
+  disableHTML: false
+  disableJSON: false
+  disableSVG: false
+  disableXML: false
+
+# Disable Hugo's transform processing
+build:
+  writeStats: false
+  noJSConfigInAssets: true
 
 module:
   imports:
