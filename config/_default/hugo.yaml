@@ -6,13 +6,14 @@ defaultContentLanguageInSubdir: false
 enableMissingTranslationPlaceholders: false
 disableLanguages: []
 
+# Disable taxonomy pages (tags, categories)
+disableKinds: ["taxonomy", "term"]
+
 # Enable search index generation for all page types
 outputs:
   home: ["HTML", "RSS", "JSON", "headers", "redirects"]
   section: ["HTML", "RSS", "JSON"]
   page: ["HTML"]
-  taxonomy: ["HTML", "RSS"]
-  term: ["HTML", "RSS"]
 
 params:
   logo: 'chat-logo.svg'
