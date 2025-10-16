@@ -26,20 +26,29 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: ${{ env.WC_HUGO_VERSION }}
           extended: true
+
       - uses: actions/cache@v4
         with:
           path: /tmp/hugo_cache_runner/
           key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.mod') }}
           restore-keys: |
             ${{ runner.os }}-hugomod-
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
       - name: Build with Hugo
         env:
           HUGO_ENVIRONMENT: production
@@ -48,10 +57,11 @@ jobs:
           echo "Hugo baseURL & default language:"
           hugo config | grep -Ei '(^|[[:space:]])(baseURL|defaultContentLanguage)\b' || echo "(keys not found in hugo config output)"
           hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
-      - name: Install and run Pagefind
+
+      - name: Generate Pagefind search index
         run: |
-          npm install -g pagefind
-          pagefind --site public --output-path public/pagefind
+          npx --yes pagefind --site public
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
