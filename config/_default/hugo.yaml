@@ -5,6 +5,7 @@ hasCJKLanguage: true
 defaultContentLanguageInSubdir: false
 enableMissingTranslationPlaceholders: false
 disableLanguages: []
+buildFuture: true
 
 disableKinds: ["taxonomy", "term"]
 
