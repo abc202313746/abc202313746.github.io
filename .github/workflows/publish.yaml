@@ -54,6 +54,10 @@ jobs:
           # Print keys if present; don't fail build if absent
           hugo config | grep -Ei '(^|[[:space:]])(baseURL|defaultContentLanguage)\b' || echo "(keys not found in hugo config output)"
           hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+      - name: Install and run Pagefind
+        run: |
+          curl -L https://github.com/CloudCannon/pagefind/releases/latest/download/pagefind-v1.0.4-x86_64-unknown-linux-musl.tar.gz | tar -xz
+          ./pagefind --site public --output-path public/pagefind
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
