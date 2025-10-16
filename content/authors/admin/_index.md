@@ -15,7 +15,31 @@ education:
   courses:
     - course: 컴퓨터인공지능학부 재학
       institution: 전북대학교
-      year: 2023년 입학
+      year: 2023년 3월 - 현재
+    
+
+experience:
+  - title: SW 멘토링 프로그램 - 멘티
+    company: 전북대학교
+    company_url: 'https://jbnu.ac.kr'
+    date_start: '2024-09-11'
+    date_end: '2024-12-13'
+    description: |
+      - 실무 기술 향상을 위한 체계적인 멘토링 프로그램 참여
+      - 선배 멘토와 긴밀히 협력하여 실무 프로그래밍 능력 개발
+      - 업계 모범 사례 및 전문적 개발 전략에 대한 통찰력 습득
+      - React와 TypeScript를 포함한 프론트엔드 개발 기술에 집중
+
+  - title: 코알라 알고리즘 동아리 - 활동 멤버
+    company: 전북대학교
+    company_url: 'https://jbnu.ac.kr'
+    date_start: '2024-03-02'
+    date_end: '2024-06-20'
+    description: |
+      - 정기적인 알고리즘 문제 해결 세션 및 대회 참여
+      - 논리적 사고 및 분석적 문제 해결 능력 개발
+      - 복잡한 알고리즘 챌린지에서 동료들과 협력
+      - 데이터 구조 및 알고리즘 최적화 기법에 대한 이해 향상
 
 organizations:
   - name: 전북대학교
