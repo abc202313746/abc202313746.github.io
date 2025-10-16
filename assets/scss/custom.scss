@@ -447,6 +447,14 @@ a[href*="이력서"]:hover {
   color: #e0e0e0 !important;
 }
 
+[data-mode="dark"] .wg-about .biography .justify-text {
+  color: #ffffff !important;
+}
+
+[data-mode="dark"] .wg-about .biography div {
+  color: #ffffff !important;
+}
+
 [data-mode="dark"] .wg-about .network-icon {
   color: #bb86fc !important;
 }
@@ -517,6 +525,18 @@ a[href*="이력서"]:hover {
   color: #e0e0e0 !important;
 }
 
+[data-mode="dark"] .about-section .justify-text,
+[data-mode="dark"] .wg-about .justify-text,
+[data-mode="dark"] .about-avatar .justify-text {
+  color: #ffffff !important;
+}
+
+[data-mode="dark"] .about-section div,
+[data-mode="dark"] .wg-about div,
+[data-mode="dark"] .about-avatar div {
+  color: #ffffff !important;
+}
+
 [data-mode="dark"] .social-icons a {
   color: #bb86fc !important;
   background-color: rgba(187, 134, 252, 0.1) !important;
@@ -525,6 +545,32 @@ a[href*="이력서"]:hover {
 [data-mode="dark"] .social-icons a:hover {
   color: #ffffff !important;
   background-color: #bb86fc !important;
+}
+
+[data-mode="dark"] .wg-about-avatar .biography,
+[data-mode="dark"] .wg-about-avatar .justify-text,
+[data-mode="dark"] .wg-about-avatar div,
+[data-mode="dark"] .author-bio,
+[data-mode="dark"] .author-bio .justify-text,
+[data-mode="dark"] .author-bio div {
+  color: #ffffff !important;
+}
+
+[data-mode="dark"] .wg-about .author-card .biography,
+[data-mode="dark"] .wg-about .author-card .justify-text,
+[data-mode="dark"] .wg-about .author-card div {
+  color: #ffffff !important;
+}
+
+[data-mode="dark"] .author-profile .biography,
+[data-mode="dark"] .author-profile .justify-text,
+[data-mode="dark"] .author-profile div {
+  color: #ffffff !important;
+}
+
+[data-mode="dark"] .wg-about .content .justify-text,
+[data-mode="dark"] .wg-about .content div {
+  color: #ffffff !important;
 }
 
 .hero-overlay,
