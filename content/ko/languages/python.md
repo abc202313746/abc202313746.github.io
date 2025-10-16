@@ -4,7 +4,6 @@ summary: 파이썬 데이터 분석 및 시각화 프로젝트
 date: '2024-01-01T00:00:00Z'
 type: page
 searchable: true
-tags: [Python, 데이터분석, 시각화, 프로그래밍언어]
 ---
 
 <div class="justify-text">

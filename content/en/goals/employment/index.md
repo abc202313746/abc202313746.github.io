@@ -4,7 +4,6 @@ summary: Launch Career as a Frontend Developer
 date: '2024-01-01T00:00:00Z'
 type: page
 searchable: true
-tags: [Employment, Frontend, React, TypeScript, Developer]
 image:
   caption: 'Employment Goal'
   focal_point: Smart

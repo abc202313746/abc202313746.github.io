@@ -6,7 +6,7 @@ date: 2024-01-01
 image:
   filename: 'uploads/justin-lim-tloFnD-7EpI-unsplash (1).jpg'
   caption: '연락처 및 위치'
-tags:
+
   - 연락처
   - 위치
   - 전북대학교

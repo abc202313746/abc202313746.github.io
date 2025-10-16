@@ -4,7 +4,6 @@ summary: 프론트엔드 개발자로 커리어 시작하기
 date: '2024-01-01T00:00:00Z'
 type: page
 searchable: true
-tags: [취업, 프론트엔드, React, TypeScript, 개발자]
 image:
   caption: 'Employment Goal'
   focal_point: Smart

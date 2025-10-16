@@ -4,7 +4,6 @@ summary: Custom Memory Allocator Implementation in C
 date: '2024-01-01T00:00:00Z'
 type: page
 searchable: true
-tags: [C Language, Memory Management, System Programming, Programming Language]
 ---
 
 <div class="justify-text">

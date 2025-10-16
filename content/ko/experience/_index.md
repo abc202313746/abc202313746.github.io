@@ -6,7 +6,7 @@ date: 2024-01-01
 image:
   filename: 'uploads/aldi-sigun-K-sdQ12jZeY-unsplash (1).jpg'
   caption: '경력 및 이력'
-tags:
+
   - 경력
   - 이력
   - 교육

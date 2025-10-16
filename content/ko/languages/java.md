@@ -4,7 +4,6 @@ summary: 객체지향 작업 관리 시스템
 date: '2024-01-01T00:00:00Z'
 type: page
 searchable: true
-tags: [Java, 객체지향, OOP, 프로그래밍언어]
 ---
 
 <div class="justify-text">

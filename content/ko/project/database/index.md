@@ -1,12 +1,7 @@
 ---
 title: 전주 문화관광 통합 시스템 데이터베이스 설계
 summary: 전주 지역의 분산된 관광 정보를 통합하여 사용자 맞춤형 서비스를 제공하기 위한 관계형 데이터베이스를 설계한 프로젝트입니다.
-tags:
-  - Database Design
-  - SQL
-  - ERD
-  - Normalization
-  - System Design
+
 date: 2025-06-20
 external_link: ''
 featured: featured.png

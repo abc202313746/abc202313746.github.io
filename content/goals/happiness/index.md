@@ -4,7 +4,6 @@ summary: 일과 삶의 균형 속에서 성장하기
 date: '2024-01-01T00:00:00Z'
 type: page
 searchable: true
-tags: [행복, 워라밸, 성장, 멘토링, 커뮤니티]
 image:
   caption: 'Happiness Goal'
   focal_point: Smart

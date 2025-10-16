@@ -4,7 +4,6 @@ summary: Complete Bachelor's Degree with Excellence
 date: '2024-01-01T00:00:00Z'
 type: page
 searchable: true
-tags: [Graduation, Bachelor's Degree, Computer Science, JBNU]
 image:
   caption: 'Graduation Goal'
   focal_point: Smart

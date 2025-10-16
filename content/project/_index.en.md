@@ -10,7 +10,7 @@ cascade:
   show_author: false
   authors: []
   share: false
-  show_tags: false
+
 sections:
   - block: markdown
     content:

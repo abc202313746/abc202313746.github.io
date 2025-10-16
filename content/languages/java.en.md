@@ -4,7 +4,6 @@ summary: Object-Oriented Task Management System
 date: '2024-01-01T00:00:00Z'
 type: page
 searchable: true
-tags: [Java, Object-Oriented, OOP, Programming Language]
 ---
 
 <div class="justify-text">

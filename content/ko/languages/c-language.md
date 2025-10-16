@@ -4,7 +4,6 @@ summary: C언어 커스텀 메모리 할당자 구현
 date: '2024-01-01T00:00:00Z'
 type: page
 searchable: true
-tags: [C Language, 메모리관리, 시스템프로그래밍, 프로그래밍언어]
 ---
 
 <div class="justify-text">

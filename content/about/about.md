@@ -3,12 +3,7 @@ title: About SookYoung In
 summary: Learn more about SookYoung In's background, education, and interests in computer science and frontend development.
 featured: featured.png
 date: 2024-01-01
-tags:
-  - About
-  - Profile
-  - Computer Science
-  - Frontend Development
-  - Jeonbuk National University
+
 
 # Choose the user profile to display
 author: admin

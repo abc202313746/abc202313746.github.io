@@ -4,7 +4,6 @@ summary: Python Data Analysis and Visualization Project
 date: '2024-01-01T00:00:00Z'
 type: page
 searchable: true
-tags: [Python, Data Analysis, Visualization, Programming Language]
 ---
 
 <div class="justify-text">

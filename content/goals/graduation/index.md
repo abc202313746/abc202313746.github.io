@@ -4,7 +4,6 @@ summary: 우수한 성적으로 학사 학위 완료하기
 date: '2024-01-01T00:00:00Z'
 type: page
 searchable: true
-tags: [졸업, 학사학위, 컴퓨터인공지능학부, 전북대학교]
 image:
   caption: 'Graduation Goal'
   focal_point: Smart
