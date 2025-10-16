@@ -4,8 +4,8 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   // Initialize Pagefind search
-  const searchButton = document.querySelector('.search-btn, button[aria-label="Search"]');
-  const searchInput = document.querySelector('input[type="search"]');
+  const searchButton = document.querySelector('.search-btn, button[aria-label="Search"], .navbar-nav .nav-link[href*="search"], button[type="submit"], .btn-search, #search-button, .search-toggle');
+  const searchInput = document.querySelector('input[type="search"], input[name="q"], .search-input');
   
   // Create search modal
   const searchModal = document.createElement('div');
@@ -127,6 +127,16 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   
+  // Additional search button detection
+  document.addEventListener('click', function(e) {
+    // Check if clicked element is a search-related button
+    if (e.target.matches('button[aria-label*="search" i], button[title*="search" i], .search-btn, .btn-search, [data-search], .navbar-nav .nav-link[href*="search"]') ||
+        e.target.closest('button[aria-label*="search" i], button[title*="search" i], .search-btn, .btn-search, [data-search], .navbar-nav .nav-link[href*="search"]')) {
+      e.preventDefault();
+      openSearch();
+    }
+  });
+  
   // Attach to search input
   if (searchInput) {
     searchInput.addEventListener('focus', function(e) {
@@ -158,6 +168,18 @@ document.addEventListener('DOMContentLoaded', function() {
   // Update theme when mode changes
   const observer = new MutationObserver(updateSearchModalTheme);
   observer.observe(document.body, { attributes: true, attributeFilter: ['data-mode'] });
+  
+  // Listen for FAB search button
+  document.addEventListener('openPagefindSearch', function() {
+    openSearch();
+  });
+  
+  // Debug: Log when search elements are found
+  console.log('Search button found:', !!searchButton);
+  console.log('Search input found:', !!searchInput);
+  if (searchButton) {
+    console.log('Search button element:', searchButton);
+  }
 });
 </script>
 

@@ -90,6 +90,11 @@ function toggleTheme() {
 
 // Toggle search function
 function toggleSearch() {
+  // Try to trigger the Pagefind search modal
+  const searchEvent = new CustomEvent('openPagefindSearch');
+  document.dispatchEvent(searchEvent);
+  
+  // Fallback to regular search input
   const searchInput = document.querySelector('input[type="search"]');
   if (searchInput) {
     searchInput.focus();
