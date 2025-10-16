@@ -23,10 +23,10 @@ marketing:
     keywords: 'SookYoung In, 인숙영, Jeonbuk National University, 전북대학교, Computer Science, Frontend Developer, React, TypeScript, Portfolio, Database Design, Operating Systems, Data Structures'
     image: 'uploads/og-image.png'
   analytics:
-    google_analytics: ''
-    baidu_tongji: ''
-    google_tag_manager: ''
-    microsoft_clarity: ''
+    google_analytics: ""
+    baidu_tongji: ""
+    google_tag_manager: ""
+    microsoft_clarity: ""
   verification:
     google: ''
     baidu: ''

@@ -1,4 +1,85 @@
-/* path: assets/scss/custom.scss */
+.justify-text {
+  text-align: justify !important;
+}
+
+:root {
+  --bs-primary: #7C4DFF; 
+  --text-strong: #0d0e10;
+  --text-muted: #4b5563;
+  --link: #0d6efd;
+}
+.btn-primary {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #651FFF;
+  border-color: #651FFF;
+}
+
+.cc-fab {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1050;
+}
+.cc-fab__btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--bs-primary);
+  color: #fff !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+  transition: transform .15s ease, background-color .15s ease, box-shadow .15s ease;
+}
+.cc-fab__btn:hover,
+.cc-fab__btn:focus {
+  background: #651FFF;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+.cc-fab__btn i { font-size: 18px; }
+
+.home-section#contact .leaflet-container,
+#contact .leaflet-container,
+.section-contact .leaflet-container,
+#contact .js-map {
+  height: 340px !important;
+  min-height: 340px;
+}
+
+.cc-slider { position: relative; }
+.cc-slider__track { display:flex; gap:12px; overflow-x:auto; padding:8px; scroll-snap-type:x mandatory; scrollbar-width:none; }
+.cc-slider__track::-webkit-scrollbar { display:none; }
+.cc-slider figure { min-width:80%; margin:0; position:relative; scroll-snap-align:start; border-radius:12px; overflow:hidden; }
+.cc-slider img { width:100%; height:320px; object-fit:cover; display:block; }
+
+.cc-slider figcaption{ text-align:center; }
+.cc-slider figcaption > div:first-child{
+  font-size: clamp(28px, 5vw, 48px);
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  margin-bottom: 4px;
+  text-shadow: 0 2px 8px rgba(0,0,0,.35);
+}
+.cc-slider figcaption > div:nth-child(2){
+  font-size: clamp(14px, 2.2vw, 18px);
+  line-height: 1.45;
+  max-width: 88ch;
+  margin: 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  opacity: .95;
+}
 
 .section-slider, .wg-slider {
 
@@ -13,10 +94,7 @@
     margin-top: .5rem;
   }
 
-  /* 가운데 정렬 */
   .carousel-caption, .slide-caption, .slide-content { text-align: center; }
-
-  /* 배경 이미지 채우기 */
   .bg-image img {
     width: 100%;
     height: 100%;
@@ -75,10 +153,8 @@
 .cc-slider img,
 .cc-slider .cc-slide-bg{ border-radius:0 !important; box-shadow:none !important; }
 
-/* Utility: justify long paragraphs for better readability */
 .justify-text{ text-align: justify; text-justify: inter-word; hyphens: auto; }
 
-/* Button hover effects - more visible color changes */
 .btn-primary, .btn {
   transition: all 0.3s ease-in-out;
 }
@@ -95,14 +171,12 @@
   box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
-/* Download button specific hover */
 a[href*="resume.pdf"]:hover,
 a[href*="이력서"]:hover {
   background-color: #28a745 !important;
   border-color: #28a745 !important;
 }
 
-/* Logo styling */
 .navbar-brand img, .navbar-brand svg {
   height: 36px;
   width: auto;
@@ -119,13 +193,11 @@ a[href*="이력서"]:hover {
   align-items: center;
 }
 
-/* Custom theme color overrides */
 :root {
   --bs-primary: #7c4dff;
   --bs-primary-rgb: 124, 77, 255;
 }
 
-/* Apply new primary color to various elements */
 .text-primary, .link-primary {
   color: #7c4dff !important;
 }
@@ -134,13 +206,11 @@ a[href*="이력서"]:hover {
   background-color: #7c4dff !important;
 }
 
-/* Navigation active states */
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link:hover {
   color: #7c4dff !important;
 }
 
-/* Card and section styling with new colors */
 .card {
   border: 1px solid rgba(124, 77, 255, 0.1);
 }
@@ -150,7 +220,6 @@ a[href*="이력서"]:hover {
   box-shadow: 0 4px 12px rgba(124, 77, 255, 0.15);
 }
 
-/* Enhanced FAB styling for multiple buttons */
 .cc-fab {
   position: fixed;
   bottom: 20px;
@@ -222,7 +291,6 @@ a[href*="이력서"]:hover {
   outline-offset: 3px;
 }
 
-/* Special styling for different button types */
 .cc-fab__btn[href*="github"] {
   background: linear-gradient(135deg, #333 0%, #24292e 100%);
 }
@@ -251,7 +319,6 @@ a[href*="이력서"]:hover {
   background: linear-gradient(135deg, #28a745 0%, #1e7e34 100%);
 }
 
-/* Utility buttons */
 .cc-fab__print {
   background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
 }
@@ -285,7 +352,6 @@ a[href*="이력서"]:hover {
   opacity: 0.8;
 }
 
-/* Tooltip-like labels on hover */
 .cc-fab__btn::after {
   content: attr(title);
   position: absolute;
@@ -308,7 +374,6 @@ a[href*="이력서"]:hover {
   opacity: 1;
 }
 
-/* Toast notification styling */
 .cc-toast {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-weight: 500;
@@ -316,7 +381,6 @@ a[href*="이력서"]:hover {
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .cc-fab {
     bottom: 15px;
@@ -331,7 +395,6 @@ a[href*="이력서"]:hover {
   }
 }
 
-/* Dark mode improvements */
 [data-mode="dark"] {
   color: #ffffff !important;
   background-color: #121212 !important;
@@ -375,7 +438,6 @@ a[href*="이력서"]:hover {
   color: #ffffff !important;
 }
 
-/* Author profile section dark mode */
 [data-mode="dark"] .wg-about .portrait-title h2,
 [data-mode="dark"] .wg-about .portrait-title h3 {
   color: #ffffff !important;
@@ -393,7 +455,6 @@ a[href*="이력서"]:hover {
   color: #d1c4e9 !important;
 }
 
-/* Homepage intro section dark mode */
 [data-mode="dark"] .wg-hero,
 [data-mode="dark"] .hero-section,
 [data-mode="dark"] .home-section {
@@ -422,14 +483,12 @@ a[href*="이력서"]:hover {
   color: #e0e0e0 !important;
 }
 
-/* Hero title and content */
 [data-mode="dark"] .hero-title,
 [data-mode="dark"] .hero-content,
 [data-mode="dark"] .hero-text {
   color: #ffffff !important;
 }
 
-/* About me section in homepage */
 [data-mode="dark"] .wg-about,
 [data-mode="dark"] .about-section {
   background-color: #1e1e1e !important;
@@ -445,7 +504,6 @@ a[href*="이력서"]:hover {
   color: #e0e0e0 !important;
 }
 
-/* About section specific */
 [data-mode="dark"] .about-section,
 [data-mode="dark"] .wg-about,
 [data-mode="dark"] .about-avatar {
@@ -459,7 +517,6 @@ a[href*="이력서"]:hover {
   color: #e0e0e0 !important;
 }
 
-/* Social icons in author profile */
 [data-mode="dark"] .social-icons a {
   color: #bb86fc !important;
   background-color: rgba(187, 134, 252, 0.1) !important;
@@ -470,7 +527,6 @@ a[href*="이력서"]:hover {
   background-color: #bb86fc !important;
 }
 
-/* Enhanced text overlay with transparency layer */
 .hero-overlay,
 .slide-overlay,
 .image-overlay {
@@ -504,7 +560,6 @@ a[href*="이력서"]:hover {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
-/* Slider text overlay improvements */
 .cc-slider figcaption {
   background: linear-gradient(
     transparent 0%, 
@@ -519,7 +574,6 @@ a[href*="이력서"]:hover {
   color: #ffffff !important;
 }
 
-/* About section with image overlay */
 .about.avatar .avatar {
   position: relative;
 }
@@ -540,7 +594,6 @@ a[href*="이력서"]:hover {
   z-index: 1;
 }
 
-/* Programming Languages section title styling */
 #programming-languages .section-heading h2,
 #programming-languages .section-heading .h2,
 #programming-languages h2,
@@ -558,7 +611,6 @@ a[href*="이력서"]:hover {
   color: #ffffff !important;
 }
 
-/* Alternative approach - target by section ID */
 section[id="programming-languages"] .section-heading h2,
 section[id="programming-languages"] .section-heading .h2 {
   font-size: 1.8rem !important;
@@ -566,7 +618,6 @@ section[id="programming-languages"] .section-heading .h2 {
   margin-bottom: 1.5rem !important;
 }
 
-/* Responsive title sizing */
 @media (max-width: 768px) {
   #programming-languages .section-heading h2,
   #programming-languages .section-heading .h2,

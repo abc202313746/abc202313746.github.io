@@ -1,7 +1,5 @@
 {{/*
   Simplified Slider Block Partial - Force Korean content for Korean pages
-  - Safer field access with isset/index
-  - Robust slide_height parsing
 */}}
 
 {{ $currentPath := .Page.RelPermalink | default "/" }}
@@ -9,7 +7,6 @@
 {{ $isEnglishPage := or (hasPrefix $currentPath "/en/") (eq $lang "en") }}
 {{ $isKoreanPage := not $isEnglishPage }}
 
-{{/* Slides (ko/en) */}}
 {{ $slides := slice }}
 {{ if $isKoreanPage }}
   {{ $slides = (slice
@@ -25,69 +22,56 @@
   ) }}
 {{ end }}
 
-{{/* Safely derive $block or fall back to page context */}}
-{{ $block := . }}
-{{ if isset . "block" }}   {{ $block = index . "block" }}   {{ end }}
-{{ if isset . "Block" }}   {{ $block = index . "Block" }}   {{ end }}
-{{ if isset . "section" }} {{ $block = index . "section" }} {{ end }}
-{{ if isset . "Section" }} {{ $block = index . "Section" }} {{ end }}
-
-{{/* Defaults */}}
+{{ $block := or .block (or .Block (or .section (or .Section .))) }}
 {{ $heightCss := "420px" }}
 {{ $heightNum := 420 }}
 {{ $interval := 3500 }}
 {{ $autoplay := true }}
 {{ $fullscreen := false }}
 
-{{/* Read optional design settings (if present) */}}
 {{ if isset $block "design" }}
-  {{ $design := index $block "design" }}
-
-  {{ with (index $design "slide_height") }}
+  {{ with $block.design.slide_height }}
     {{ $h := printf "%v" . }}
     {{ if gt (len (findRE "^[0-9]+$" $h)) 0 }}
       {{ $heightCss = printf "%spx" $h }}
       {{ $heightNum = (int $h) }}
     {{ else }}
       {{ $heightCss = $h }}
-      {{ $digits := replaceRE "[^0-9]" "" $h }}
-      {{ if gt (len $digits) 0 }}
-        {{ $heightNum = (int $digits) }}
-      {{ end }}
+      {{ $heightNum = (int (replaceRE "[^0-9]" "" $h)) }}
     {{ end }}
   {{ end }}
-
-  {{ with (index $design "interval") }}     {{ $interval = . }}    {{ end }}
-  {{ with (index $design "loop") }}         {{ $autoplay = . }}    {{ end }}
-  {{ with (index $design "is_fullscreen") }}{{ $fullscreen = . }}  {{ end }}
+  {{ with $block.design.interval }}{{ $interval = . }}{{ end }}
+  {{ with $block.design.loop }}{{ $autoplay = . }}{{ end }}
+  {{ with $block.design.is_fullscreen }}{{ $fullscreen = . }}{{ end }}
 {{ end }}
 
-<div class="cc-slider"
-     data-autoplay="{{ $autoplay }}"
-     data-interval="{{ $interval }}"
-     data-height="{{ $heightNum }}"
-     data-fullscreen="{{ $fullscreen }}"
-     style="position:relative;min-height:{{ $heightCss }};">
-
+<div class="cc-slider" data-autoplay="{{ $autoplay }}" data-interval="{{ $interval }}" data-height="{{ $heightNum }}" data-fullscreen="{{ $fullscreen }}" style="position:relative;min-height:{{ $heightCss }};">
   <div class="cc-slider__track" style="display:flex;gap:12px;overflow-x:auto;white-space:nowrap;padding:8px;scroll-snap-type:x mandatory;scrollbar-width:none;">
     {{ range $slides }}
       {{ $title := .title }}
       {{ $desc := or .content .subtitle }}
-
-      {{/* Extract filename from background.image / image / media */}}
       {{ $fn := "" }}
-      {{ with .background }}{{ with .image }}
-        {{ if .filename }}{{ $fn = .filename }}{{ else }}{{ $fn = printf "%v" . }}{{ end }}
-      {{ end }}{{ end }}
+      {{ with .background }}
+        {{ with .image }}
+          {{ if .filename }}
+            {{ $fn = .filename }}
+          {{ else }}
+            {{ $fn = printf "%v" . }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
       {{ if eq $fn "" }}
         {{ with .image }}
-          {{ if .filename }}{{ $fn = .filename }}{{ else }}{{ $fn = printf "%v" . }}{{ end }}
+          {{ if .filename }}
+            {{ $fn = .filename }}
+          {{ else }}
+            {{ $fn = printf "%v" . }}
+          {{ end }}
         {{ end }}
       {{ end }}
       {{ if eq $fn "" }}{{ with .media }}{{ $fn = . }}{{ end }}{{ end }}
 
       <figure style="min-width:90%;margin:0;position:relative;scroll-snap-align:start;border-radius:12px;overflow:hidden;">
-        {{/* Resolve URL: absolute / assets(media) / static/uploads */}}
         {{ $url := "" }}
         {{ if $fn }}
           {{ if hasPrefix $fn "/" }}
@@ -109,9 +93,9 @@
           <div style="width:100%;height:{{ $heightCss }};background:linear-gradient(135deg,#7C4DFF,#651FFF);"></div>
         {{ end }}
 
-        <!-- Overlay -->
+        <!-- Enhanced overlay with transparency layer -->
         <div style="position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(135deg, rgba(124,77,255,0.3) 0%, rgba(101,31,255,0.4) 50%, rgba(0,0,0,0.2) 100%);"></div>
-
+        
         <figcaption style="position:absolute;left:0;right:0;bottom:0;color:#fff;background:linear-gradient(transparent 0%, rgba(0,0,0,0.4) 30%, rgba(0,0,0,0.8) 100%);padding:20px 24px;z-index:2;">
           {{ with $title }}<div style="font-weight:700;font-size:1.2rem;line-height:1.3;text-shadow:2px 2px 4px rgba(0,0,0,0.8);margin-bottom:8px;">{{ . }}</div>{{ end }}
           {{ with $desc }}<div style="opacity:0.95;font-size:1rem;text-shadow:1px 1px 3px rgba(0,0,0,0.7);">{{ . }}</div>{{ end }}
@@ -122,60 +106,61 @@
   <div class="cc-slider__dots" style="display:flex;gap:8px;justify-content:center;margin:8px 0 0 0;"></div>
 </div>
 
-<style>
-  .cc-slider__track::-webkit-scrollbar { display: none; }
-  .cc-slider__dot { width:28px; height:4px; border-radius:2px; background:#c7c7c7; opacity:.6; transition:opacity .2s, background-color .2s; }
-  .cc-slider__dot[aria-current="true"] { background: var(--bs-primary, #7C4DFF); opacity:1; }
-  @media (max-width: 768px) { .cc-slider figure { min-width: 92%; } }
-</style>
+{{ $cssStyles := `
+.cc-slider__track::-webkit-scrollbar { display:none; }
+.cc-slider__dot { width:28px;height:4px;border-radius:2px;background:#c7c7c7;opacity:.6;transition:opacity .2s,background-color .2s }
+.cc-slider__dot[aria-current="true"] { background: var(--bs-primary, #7C4DFF); opacity:1 }
+@media (max-width: 768px){ .cc-slider figure{ min-width: 92%; } }
+` }}
 
-<script>
+{{ $jsCode := `
 (function(){
   function init(el){
     if (el.dataset.enhanced) return; el.dataset.enhanced = '1';
     const track = el.querySelector('.cc-slider__track');
     const figs = Array.from(track.querySelectorAll('figure'));
     const dotsWrap = el.querySelector('.cc-slider__dots');
+    
     if (!figs.length) return;
-
-    // dots
+    
     dotsWrap.innerHTML = '';
-    figs.forEach((_, i) => {
+    figs.forEach((_,i)=>{
       const dot = document.createElement('button');
       dot.type = 'button';
       dot.className = 'cc-slider__dot';
-      dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
-      dot.addEventListener('click', () => {
+      dot.setAttribute('aria-label','Go to slide '+(i+1));
+      dot.addEventListener('click',()=>{
         const target = figs[i];
-        track.scrollTo({ left: target.offsetLeft - track.offsetLeft, behavior: 'smooth' });
+        track.scrollTo({ left: target.offsetLeft - track.offsetLeft, behavior:'smooth' });
       });
       dotsWrap.appendChild(dot);
     });
-
-    const setActive = () => {
-      // approximate index by scrollLeft ratio
+    
+    const setActive = ()=>{
       const idx = Math.round(track.scrollLeft / (track.scrollWidth / figs.length));
-      Array.from(dotsWrap.children).forEach((d, j) => d.setAttribute('aria-current', j === idx ? 'true' : 'false'));
+      Array.from(dotsWrap.children).forEach((d,j)=>d.setAttribute('aria-current', j===idx ? 'true':'false'));
     };
-    track.addEventListener('scroll', () => { window.requestAnimationFrame(setActive); });
+    track.addEventListener('scroll', ()=>{ window.requestAnimationFrame(setActive); });
     setActive();
-
+    
     if (el.dataset.autoplay === 'true'){
-      let i = 0;
-      let timer;
-      const interval = parseInt(el.dataset.interval || '3500', 10);
-      const play = () => {
-        timer = setInterval(() => {
-          i = (i + 1) % figs.length;
-          const t = figs[i];
-          track.scrollTo({ left: t.offsetLeft - track.offsetLeft, behavior: 'smooth' });
-        }, interval);
-      };
-      const pause = () => { if (timer) clearInterval(timer); };
+      let i=0; let timer;
+      const interval = parseInt(el.dataset.interval||'3500',10);
+      const play=()=>{ timer = setInterval(()=>{
+        i = (i+1)%figs.length;
+        const t = figs[i];
+        track.scrollTo({ left: t.offsetLeft - track.offsetLeft, behavior:'smooth' });
+      }, interval); };
+      const pause=()=>{ if (timer) clearInterval(timer); };
       el.addEventListener('mouseenter', pause);
-      el.addEventListener('mouseleave', () => { play(); });
+      el.addEventListener('mouseleave', ()=>{ play(); });
       play();
     }
   }
   function onReady(){ document.querySelectorAll('.cc-slider').forEach(init); }
-  if (document.readyState === 'loading') document.addEventListener('DOM
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', onReady); else onReady();
+})();
+` }}
+
+<style>{{ $cssStyles | safeCSS }}</style>
+<script>{{ $jsCode | safeJS }}</script>

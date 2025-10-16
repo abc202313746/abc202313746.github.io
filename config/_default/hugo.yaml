@@ -26,6 +26,9 @@ params:
     js_bundle: false
 
 
+# Google Analytics (disabled for local development)
+googleAnalytics: ""
+
 sitemap:
   changefreq: weekly
   priority: 0.5
