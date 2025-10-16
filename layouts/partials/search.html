@@ -1,3 +1,38 @@
+<div id="search">
+  <input id="search-input" type="search" placeholder="{{ i18n "search" | default "Search" }}" style="width:100%;padding:10px 12px;border:1px solid var(--bs-border-color, #ddd);border-radius:8px;">
+  <div id="search-results" style="margin-top:12px;"></div>
+</div>
+<script>
+  (function(){
+    const s = document.createElement('script');
+    s.src = '/pagefind/pagefind-ui.js';
+    s.onload = function(){
+      if (!window.PagefindUI) return;
+      new PagefindUI({
+        element: '#search-results',
+        showSubResults: true,
+        translations: {
+          placeholder: '{{ i18n "search_placeholder" | default "Search the site" }}'
+        }
+      });
+      // Hook up the external input to Pagefind UI
+      const input = document.querySelector('#search-input');
+      if (input){
+        input.addEventListener('input', (e)=>{
+          const q = e.target.value || '';
+          const evt = new CustomEvent('input', { detail: q });
+          document.querySelector('#search-results input[type="search"]').value = q;
+          document.querySelector('#search-results input[type="search"]').dispatchEvent(new Event('input'));
+        });
+      }
+    };
+    document.head.appendChild(s);
+    const l = document.createElement('link');
+    l.rel = 'stylesheet';
+    l.href = '/pagefind/pagefind-ui.css';
+    document.head.appendChild(l);
+  })();
+  </script>
 <!-- Pagefind Search Integration -->
 <div id="pagefind-search" style="display: none;"></div>
 
