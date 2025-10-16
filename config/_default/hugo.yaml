@@ -2,7 +2,7 @@ baseURL: 'https://abc202313746.github.io/'
 title: '인숙영의 포트폴리오'
 defaultContentLanguage: ko
 hasCJKLanguage: true
-defaultContentLanguageInSubdir: false
+defaultContentLanguageInSubdir: true
 enableMissingTranslationPlaceholders: false
 disableLanguages: []
 
@@ -17,7 +17,9 @@ params:
   logo: 'chat-logo.svg'
   images: ['uploads/og-image.png']
   
- 
+  # Language switcher
+  show_language_switcher: true
+  
   assets:
     css_bundle: false
     js_bundle: false
