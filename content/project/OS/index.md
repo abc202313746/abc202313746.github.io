@@ -7,7 +7,7 @@ date: 2024-12-15
 external_link: ''
 ---
 <div class="justify-text">
-As part of the Operating Systems course at Jeonbuk National University, SookYoung In (인숙영) implemented **file system features and memory management** in the xv6 educational operating system. This project focused on two main aspects:
+As part of the Operating Systems course at Jeonbuk National University, I implemented **file system features and memory management** in the xv6 educational operating system. This project focused on two main aspects:
 
 ## File System Implementation
 1. **System Call Development**: Added new system calls including `symlink()` for creating symbolic links and `readlink()` for reading symbolic links.
