@@ -40,7 +40,3 @@ main:
   - name: Resumé
     url: '/uploads/resume.pdf'
     weight: 50
-
-  - name: Search
-    url: '/en/search/'
-    weight: 100

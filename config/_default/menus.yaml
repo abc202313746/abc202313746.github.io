@@ -40,7 +40,3 @@ main:
   - name: 이력서
     url: '/uploads/resume.pdf'
     weight: 50
-
-  - name: 검색
-    url: '/search/'
-    weight: 100
