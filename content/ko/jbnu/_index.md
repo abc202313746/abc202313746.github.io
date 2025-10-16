@@ -11,11 +11,10 @@ sections:
       subtitle: "Jeonbuk National University"
       text: |
         전북대학교에는 인숙영이 존재합니다.
-      image:
-        filename: 'uploads/jbnucampus.jpg'
-        alt: '전북대학교 캠퍼스'
     design:
       background:
+        image: 'uploads/jbnucampus.jpg'
+        image_darken: 0.3
         gradient_start: '#ff2ecb7a'
         gradient_end: '#7c3aed'
         text_color_light: true
