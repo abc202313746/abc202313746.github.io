@@ -38,7 +38,7 @@ social:
     link: mailto:isy0110@jbnu.ac.kr
   - icon: linkedin
     icon_pack: fab
-    link: https://www.linkedin.com/in/sookyoung-in
+    link: https://www.linkedin.com
   - icon: youtube
     icon_pack: fab
     link: https://www.youtube.com
@@ -53,12 +53,9 @@ social:
     link: /uploads/resume.pdf
 
 sections:
-  - block: about.avatar
+  - block: about.biography
     id: about
     content:
+      title: Biography
       username: admin
-      text: |
-        안녕하세요, 인숙영입니다. 전북대학교 컴퓨터인공지능학부에서 3학년으로 재학 중이며, 프론트엔드 개발에 특별한 관심을 가지고 있습니다.
-        
-        주요 관심 분야는 React와 TypeScript를 활용한 현대적인 웹 개발이며, 사용자에게 도움이 되는 웹 경험을 만드는 것이 저의 목표입니다.
 ---
