@@ -44,28 +44,11 @@ social:
     link: /uploads/resume.pdf
 
 sections:
-  - block: markdown
+  - block: about.biography
     id: about
     content:
       title: 경력소개
-      text: |
-        <div class="row">
-          <div class="col-md-12">
-            <p class="lead">
-            주요 관심 분야는 전북대학교에서 배우고 있는 프론트엔드 개발이며, 특히 React와 TypeScript를 중점적으로 학습하고 있습니다. 전북대학교 컴퓨터인공지능학부의 교육과정을 통해 데이터베이스 설계, 운영체제, 자료구조 등을 학습하며 실무 역량을 기르고 있습니다.
-            </p>
-            <p class="lead">
-            사용자에게 도움이 되는 웹 경험을 만드는 것이 저의 목표이며, 전북대학교에서의 학업과 다양한 프로젝트 경험을 통해 지속적으로 성장하고 있습니다. 전북대학교 컴퓨터인공지능학부 인숙영으로서 최선을 다하고 있습니다.
-            </p>
-            <p>
-              <a href="/uploads/resume.pdf" class="btn btn-primary" target="_blank">
-                <i class="fas fa-download me-2"></i>이력서 다운로드
-              </a>
-            </p>
-          </div>
-        </div>
-    design:
-      columns: '1'
+      username: admin
 
   - block: experience
     content:
