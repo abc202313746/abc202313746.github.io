@@ -121,3 +121,7 @@ extensions:
     local_backend: false
   academicons:
     enable: false
+
+marketing:
+  verification:
+    google: google-site-verification=4cRrWPGCBmnSBF15v3_qtBpdj_7AZ0AChy5wN9Lv9A8
