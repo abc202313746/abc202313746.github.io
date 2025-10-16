@@ -19,8 +19,8 @@ sections:
         </div>
     design:
       background:
-        gradient_start: '#fcff4dff'
-        gradient_end: '#f9ff50ff'
+        gradient_start: '#7b00ffff'
+        gradient_end: '#a600ffff'
         text_color_light: true
       spacing:
         padding: ['60px', '0', '60px', '0']
@@ -53,9 +53,7 @@ sections:
       text: |
         전북대학교 공과대학 컴퓨터인공지능학부 위치입니다.
         
-        <div style="margin: 20px 0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3234.0891654813036!2d127.1299221!3d35.846817099999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35702334621b3bb9%3A0xd2ef0eee158844e1!2z7KCE67aB64yA7ZWZ6rWQIOyghOyjvOy6oO2NvOyKpA!5e0!3m2!1sko!2skr!4v1760653472836!5m2!1sko!2skr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+        {{< google-map src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3234.0891654813036!2d127.1299221!3d35.846817099999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35702334621b3bb9%3A0xd2ef0eee158844e1!2z7KCE67aB64yA7ZWZ6rWQIOyghOyjvOy6oO2NvOyKpA!5e0!3m2!1sko!2skr!4v1760653472836!5m2!1sko!2skr" >}}
         
         **📍 주소:** 전북대학교로 567, 전주시, 전북특별자치도 54896
     

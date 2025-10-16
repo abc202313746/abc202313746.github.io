@@ -26,7 +26,7 @@ params:
     js_bundle: false
 
 
-# Google Analytics (disabled for local development)
+
 googleAnalytics: ""
 
 sitemap:
@@ -58,3 +58,6 @@ security:
       - ^HUGO_
       - ^CI$
       - ^WC_
+  http:
+    urls:
+      - '.*'
