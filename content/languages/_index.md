@@ -2,6 +2,10 @@
 title: 할 수 있는 언어
 summary: 프로그래밍 언어 능력 소개
 type: page
+draft: true
+_build:
+  list: false
+  publishResources: false
 ---
 
 프로그래밍 언어별 프로젝트와 역량을 소개합니다.
