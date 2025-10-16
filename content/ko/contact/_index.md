@@ -47,26 +47,41 @@ sections:
       background:
         color: 'white'
 
-  - block: markdown
+  - block: contact
     content:
-      title: "🗺️ 캠퍼스 지도"
+      title: "🗺️ 전북대학교 위치"
       text: |
-        <div class="map-container" style="margin: 20px 0; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 25px rgba(124, 77, 255, 0.15);">
-          <iframe 
-            src="https://www.openstreetmap.org/export/embed.html?bbox=127.1240%2C35.8440%2C127.1340%2C35.8500&layer=mapnik&marker=35.8469%2C127.1295"
-            width="100%" 
-            height="450" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy">
-          </iframe>
-        </div>
-        
+        전북대학교 공과대학 컴퓨터인공지능학부 위치입니다.
+      
+      # Contact details - these will be rendered nicely
+      address:
+        street: 전북대학교로 567
+        city: 전주시
+        region: 전북특별자치도
+        postcode: '54896'
+        country: 대한민국
+        country_code: KR
+      coordinates:
+        latitude: '35.8469'
+        longitude: '127.1295'
+      
+      # Contact form
+      contact_links:
+        - icon: envelope
+          icon_pack: fas
+          name: 이메일 보내기
+          link: 'mailto:isy0110@jbnu.ac.kr'
+        - icon: github
+          icon_pack: fab
+          name: GitHub
+          link: 'https://github.com/abc202313746'
+        - icon: instagram
+          icon_pack: fab
+          name: Instagram
+          link: 'https://www.instagram.com/insookyoung/'
+    
     design:
-      background:
-        color: '#f8f9ff'
-      spacing:
-        padding: ['40px', '0', '40px', '0']
+      columns: '1'
 
   - block: features
     content:
