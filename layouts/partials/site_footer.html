@@ -1,21 +1,4 @@
-<!-- Pagefind Search Integration -->
-<script>
-  // Initialize Pagefind when the page loads
-  window.addEventListener('DOMContentLoaded', (event) => {
-    // Load Pagefind if it exists
-    if (typeof PagefindUI !== 'undefined') {
-      new PagefindUI({
-        element: "#pagefind-search",
-        showSubResults: true,
-        showImages: false,
-        excerptLength: 30,
-        resetStyles: false
-      });
-    }
-  });
-</script>
-
-<!-- Load Pagefind CSS and JS -->
-<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
-<script src="/pagefind/pagefind-ui.js"></script>
+{{ if site.Params.features.search.enabled }}
+  {{ partial "search_modal.html" . }}
+{{ end }}
 

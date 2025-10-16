@@ -1,0 +1,30 @@
+{{ define "main" }}
+<div class="page-body">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1>{{ .Title }}</h1>
+        {{- .Content -}}
+        
+        {{/* Include search modal */}}
+        {{ partial "search_modal.html" . }}
+        
+        {{/* Auto-open modal if accessed directly */}}
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById('search-modal');
+            if (modal) {
+              modal.style.display = 'block';
+              document.body.style.overflow = 'hidden';
+              setTimeout(() => {
+                const input = document.getElementById('search-modal-input');
+                if (input) input.focus();
+              }, 100);
+            }
+          });
+        </script>
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}
