@@ -4,13 +4,10 @@ env:
   WC_HUGO_VERSION: '0.124.1'
 
 on:
-  # Trigger the workflow every time you push to the `main` branch
   push:
     branches: ["main"]
-  # Allows you to run this workflow manually from the Actions tab on GitHub.
   workflow_dispatch:
 
-# Provide permission to clone the repo and deploy it to GitHub Pages
 permissions:
   contents: read
   pages: write
@@ -21,7 +18,6 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Build website
   build:
     if: github.repository_owner != 'HugoBlox'
     runs-on: ubuntu-latest
@@ -29,7 +25,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          # Fetch history for Hugo's .GitInfo and .Lastmod
           fetch-depth: 0
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
@@ -51,25 +46,17 @@ jobs:
         run: |
           echo "Hugo Cache Dir: $(hugo config | grep cachedir)"
           echo "Hugo baseURL & default language:"
-          # Print keys if present; don't fail build if absent
           hugo config | grep -Ei '(^|[[:space:]])(baseURL|defaultContentLanguage)\b' || echo "(keys not found in hugo config output)"
           hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
       - name: Install and run Pagefind
         run: |
-          # Get the latest Pagefind release
-          PAGEFIND_VERSION=$(curl -s https://api.github.com/repos/CloudCannon/pagefind/releases/latest | grep -oP '"tag_name": "\K(.*)(?=")')
-          echo "Installing Pagefind $PAGEFIND_VERSION"
-          curl -L "https://github.com/CloudCannon/pagefind/releases/latest/download/pagefind-${PAGEFIND_VERSION}-x86_64-unknown-linux-musl.tar.gz" | tar -xz
-          chmod +x ./pagefind
-          echo "Running Pagefind indexing..."
-          ./pagefind --site public --output-path public/pagefind
-          echo "Pagefind indexing completed"
+          npm install -g pagefind
+          pagefind --site public --output-path public/pagefind
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
 
-  # Deploy website to GitHub Pages hosting
   deploy:
     if: github.repository_owner != 'HugoBlox'
     environment:
