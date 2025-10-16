@@ -6,10 +6,8 @@ defaultContentLanguageInSubdir: false
 enableMissingTranslationPlaceholders: false
 disableLanguages: []
 
-# Disable taxonomy pages (tags, categories)
 disableKinds: ["taxonomy", "term"]
 
-# Enable search index generation for all page types
 outputs:
   home: ["HTML", "RSS", "JSON", "headers", "redirects"]
   section: ["HTML", "RSS", "JSON"]
@@ -17,22 +15,19 @@ outputs:
 
 params:
   logo: 'chat-logo.svg'
-  # Default Open Graph image for homepage
   images: ['uploads/og-image.png']
   
-  # Disable asset processing to prevent CSS color code errors
+ 
   assets:
     css_bundle: false
     js_bundle: false
 
-# Languages are configured in languages.yaml
 
 sitemap:
   changefreq: weekly
   priority: 0.5
   filename: sitemap.xml
 
-# Disable asset processing that might cause CSS color code errors
 minify:
   disableCSS: true
   disableJS: true
@@ -41,7 +36,6 @@ minify:
   disableSVG: false
   disableXML: false
 
-# Disable Hugo's transform processing
 build:
   writeStats: false
   noJSConfigInAssets: true
@@ -51,9 +45,6 @@ module:
     - path: github.com/HugoBlox/hugo-blox-builder/modules/blox-plugin-netlify
     - path: github.com/HugoBlox/hugo-blox-builder/modules/blox-bootstrap/v5
 
-############################
-## SECURITY
-############################
 
 security:
   funcs:
