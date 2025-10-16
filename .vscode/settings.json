@@ -1,0 +1,12 @@
+{
+  "files.associations": {
+    "*.html": "html",
+    "layouts/**/*.html": "gotemplate",
+    "archetypes/**/*.md": "hugo"
+  },
+  "emmet.includeLanguages": {
+    "gotemplate": "html"
+  },
+  "html.validate.styles": false,
+  "css.validate": false
+}
