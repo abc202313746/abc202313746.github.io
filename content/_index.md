@@ -7,7 +7,6 @@ image:
   filename: 'uploads/og-image.png'
   caption: '인숙영의 포트폴리오'
 searchable: true
-tags: ["인숙영", "SookYoung In", "전북대학교", "전북대", "Jeonbuk National University", "JBNU", "컴퓨터공학부", "컴퓨터인공지능학부", "프론트엔드", "React", "TypeScript", "전주", "전북특별자치도"]
 sections:
   - block: about.avatar
     section_id: about

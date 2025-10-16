@@ -10,7 +10,6 @@ role: '전북대학교 컴퓨터인공지능학부 3학년 재학생'
 
 # Make this page searchable
 searchable: true
-tags: ["인숙영", "SookYoung In", "전북대학교", "Jeonbuk National University", "컴퓨터공학", "프론트엔드"]
 
 # Profile photo (put `avatar.jpg` in this folder to use it)
 avatar: avatar.jpg

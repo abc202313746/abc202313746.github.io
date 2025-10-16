@@ -64,7 +64,6 @@ social:
 
 # Make this page searchable
 searchable: true
-tags: ["인숙영", "SookYoung In", "전북대학교", "전북대", "Jeonbuk National University", "JBNU", "컴퓨터공학", "컴퓨터인공지능학부", "프론트엔드", "전주", "전라북도", "전북특별자치도"]
 ---
 
 <div class="justify-text">

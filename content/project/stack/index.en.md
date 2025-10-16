@@ -3,12 +3,7 @@ title: Implementation of Stack Data Structure and Calculator
 description: Implementation of a stack data structure and a calculator for arithmetic expressions using C++.
 summary: A project to implement a stack data structure and utilize it to create a calculator that handles arithmetic expressions.
 featured: featured.png
-tags:
-  - Data Structures
-  - Algorithm
-  - C++
-  - Stack
-  - Calculator
+
 date: 2024-09-10
 external_link: ''
 ---
