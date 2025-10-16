@@ -56,8 +56,14 @@ jobs:
           hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
       - name: Install and run Pagefind
         run: |
-          curl -L https://github.com/CloudCannon/pagefind/releases/latest/download/pagefind-v1.0.4-x86_64-unknown-linux-musl.tar.gz | tar -xz
+          # Get the latest Pagefind release
+          PAGEFIND_VERSION=$(curl -s https://api.github.com/repos/CloudCannon/pagefind/releases/latest | grep -oP '"tag_name": "\K(.*)(?=")')
+          echo "Installing Pagefind $PAGEFIND_VERSION"
+          curl -L "https://github.com/CloudCannon/pagefind/releases/latest/download/pagefind-${PAGEFIND_VERSION}-x86_64-unknown-linux-musl.tar.gz" | tar -xz
+          chmod +x ./pagefind
+          echo "Running Pagefind indexing..."
           ./pagefind --site public --output-path public/pagefind
+          echo "Pagefind indexing completed"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
