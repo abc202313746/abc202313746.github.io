@@ -13,14 +13,21 @@ sections:
         전북대학교에는 인숙영이 존재합니다.
     design:
       background:
-        image:
-          filename: 'jbnucampus.jpg'
-        image_darken: 0.3
         gradient_start: '#ff2ecb7a'
         gradient_end: '#7c3aed'
         text_color_light: true
       spacing:
         padding: ['80px', '0', '80px', '0']
+
+  - block: markdown
+    content:
+      title: ""
+      text: |
+        <div style="text-align: center; margin: 20px 0;">
+          <img src="/uploads/jbnucampus.jpg" alt="전북대학교 캠퍼스" style="max-width: 100%; height: auto; border-radius: 8px;">
+        </div>
+    design:
+      columns: '1'
 
   - block: markdown
     content:
