@@ -912,3 +912,19 @@ body[data-mode="dark"] #about .dark-mode-text * {
 [data-mode="dark"] .text-secondary {
   color: #ffffff !important;
 }
+
+.dark #about,
+.dark #about :where(p,li,span,small,strong,em),
+.dark #about :where(h1,h2,h3,h4,h5,h6),
+.dark .wg-about .article-style,
+.dark .wg-about .article-style :where(p,li,span,small,strong,em),
+.dark .home-section :where(h1,h2,h3,h4,h5,h6),
+.dark .home-section :where(p,li,span,small),
+.dark .biography,
+.dark .biography *,
+.dark .justify-text,
+.dark .justify-text *,
+.dark .portrait-title,
+.dark .portrait-title * {
+  color: #ffffff !important;
+}
