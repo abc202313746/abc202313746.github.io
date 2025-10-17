@@ -60,3 +60,53 @@
   ]
 }
 </script>
+
+<style>
+/* Add chick emoji overlay to avatar image */
+.avatar-wrapper, .about-avatar .avatar, .wg-about-avatar .avatar, 
+[data-widget="about.avatar"] .avatar, .about-section .avatar {
+  position: relative !important;
+}
+
+.avatar-wrapper::after, .about-avatar .avatar::after, .wg-about-avatar .avatar::after,
+[data-widget="about.avatar"] .avatar::after, .about-section .avatar::after,
+.avatar::after, img.avatar::after, .rounded-circle::after {
+  content: "🐥";
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: white;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  z-index: 10;
+}
+
+/* Alternative selectors for different avatar implementations */
+.about .portrait::after, .portrait-container::after {
+  content: "🐥";
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: white;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  z-index: 10;
+}
+
+/* Ensure parent container has relative positioning */
+.about .portrait, .portrait-container, .about-avatar, .wg-about-avatar {
+  position: relative !important;
+}
+</style>

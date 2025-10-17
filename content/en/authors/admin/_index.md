@@ -13,7 +13,7 @@ avatar: uploads/avatar.jpg
 bio: My main interests are frontend development, especially React and TypeScript.
 
 # Status emoji
-status_emoji: "🐤"
+status_emoji: "🐥"
 
 # Language
 language: en
