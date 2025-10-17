@@ -43,6 +43,7 @@ sections:
       view: compact
       columns: '3'
 
+
   - block: portfolio
     section_id: dream-goals
     content:
@@ -56,6 +57,10 @@ sections:
     design:
       view: showcase
       columns: "1"
+    active: true
+    weight: 50
+
+
   - block: slider
     content:
       text: ""
