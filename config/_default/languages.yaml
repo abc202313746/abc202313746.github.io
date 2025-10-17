@@ -10,29 +10,29 @@ ko:
   menu:
     main:
       - name: 홈
-        url: '/ko/'
+        url: '/'
         weight: 10
       - name: 프로젝트
         identifier: projects
-        url: '/ko/project/'
+        url: '/project/'
         weight: 20
       - name: 데이터베이스
         parent: projects
-        url: '/ko/project/database/'
+        url: '/project/database/'
         weight: 21
       - name: 운영체제
         parent: projects
-        url: '/ko/project/os/'
+        url: '/project/os/'
         weight: 22
       - name: 스택
         parent: projects
-        url: '/ko/project/stack/'
+        url: '/project/stack/'
         weight: 23
       - name: 경력
-        url: '/ko/experience/'
+        url: '/experience/'
         weight: 30
       - name: 연락처
-        url: '/ko/contact/'
+        url: '/contact/'
         weight: 40
       - name: 이력서
         url: '/uploads/resume.pdf'
