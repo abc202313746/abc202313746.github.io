@@ -6,7 +6,14 @@ sections:
     section_id: about
     content:
       username: admin
-      text: ""
+      text: |
+        <p class="justify-text" style="color: #FFC107;">
+        👋 Hello! I'm <strong>SookYoung In</strong>, a university student aspiring to become a front-end developer.<br>
+        I am particularly interested in technologies like React and TypeScript.<br>
+        My goal is to create the best, most helpful web experiences for users.
+        </p>
+        
+        Check out my [resumé](/uploads/resume.pdf) and portfolio below 😍
     design:
       background:
         color: ""
@@ -134,6 +141,21 @@ sections:
           date_start: '2024-01-01'
           date_end: ''
           description: '<span class="justify-text">Using technology to solve real-world problems and create meaningful impact. I am particularly interested in developing applications that improve user experience and make complex tasks more accessible.</span>'
+
+  - block: markdown
+    content:
+      title: ""
+      text: |
+        <div style="text-align: center; margin: 60px 0; padding: 40px 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 20px; color: white;">
+          <h2 style="margin-bottom: 20px; font-weight: 700;">📄 Resume Download</h2>
+          <p style="margin-bottom: 30px; font-size: 1.1rem; opacity: 0.9;">Check out my detailed experience and project information!</p>
+          <a href="/uploads/resume.pdf" download="SookYoung_In_Resume.pdf" 
+             style="display: inline-block; padding: 15px 40px; background: white; color: #667eea; text-decoration: none; border-radius: 50px; font-weight: 700; font-size: 1.1rem; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.2);"
+             onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.3)';"
+             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.2)';">
+            <i class="fas fa-download" style="margin-right: 10px;"></i>Download Resume
+          </a>
+        </div>
 
   - block: contact
     section_id: contact

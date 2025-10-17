@@ -109,4 +109,145 @@
 .about .portrait, .portrait-container, .about-avatar, .wg-about-avatar {
   position: relative !important;
 }
+
+/* More comprehensive selectors for different page structures */
+img[src*="avatar"]::after, 
+img[alt*="avatar"]::after,
+img[alt*="SookYoung"]::after,
+img[alt*="인숙영"]::after,
+.author-avatar::after,
+.profile-image::after,
+.user-avatar::after {
+  content: "🐥";
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: white;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  z-index: 10;
+}
+
+/* Force apply to any circular image in about section */
+.about-section img::after,
+[data-widget="about.avatar"] img::after,
+section[id="about"] img::after {
+  content: "🐥";
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: white;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  z-index: 10;
+}
+
+/* Ensure all parent containers have relative positioning */
+img[src*="avatar"], 
+img[alt*="avatar"],
+img[alt*="SookYoung"],
+img[alt*="인숙영"],
+.author-avatar,
+.profile-image,
+.user-avatar,
+.about-section img,
+[data-widget="about.avatar"] img,
+section[id="about"] img {
+  position: relative !important;
+}
 </style>
+
+<script>
+// Add chick emoji to avatar images after page load
+document.addEventListener('DOMContentLoaded', function() {
+  function addChickEmoji() {
+    // Find avatar images using various selectors
+    const selectors = [
+      'img[src*="avatar"]',
+      'img[alt*="avatar"]', 
+      'img[alt*="SookYoung"]',
+      'img[alt*="인숙영"]',
+      '.avatar img',
+      '.portrait img',
+      '.about img',
+      'section[id="about"] img',
+      '[data-widget="about.avatar"] img',
+      '.rounded-circle'
+    ];
+    
+    let avatarImg = null;
+    
+    // Try each selector to find the avatar image
+    for (const selector of selectors) {
+      const imgs = document.querySelectorAll(selector);
+      if (imgs.length > 0) {
+        avatarImg = imgs[0]; // Take the first match
+        break;
+      }
+    }
+    
+    // If still not found, try finding any circular image in about section
+    if (!avatarImg) {
+      const aboutSection = document.querySelector('#about, [data-widget="about.avatar"], .about');
+      if (aboutSection) {
+        const imgs = aboutSection.querySelectorAll('img');
+        if (imgs.length > 0) {
+          avatarImg = imgs[0];
+        }
+      }
+    }
+    
+    if (avatarImg && !avatarImg.parentNode.querySelector('.chick-emoji')) {
+      // Ensure parent has relative positioning
+      const parent = avatarImg.parentNode;
+      parent.style.position = 'relative';
+      
+      // Create chick emoji element
+      const chickEmoji = document.createElement('div');
+      chickEmoji.className = 'chick-emoji';
+      chickEmoji.innerHTML = '🐥';
+      chickEmoji.style.cssText = `
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        background: white;
+        border-radius: 50%;
+        width: 35px;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        z-index: 10;
+        pointer-events: none;
+      `;
+      
+      // Add the chick emoji to the parent
+      parent.appendChild(chickEmoji);
+      
+      console.log('🐥 Chick emoji added to avatar!');
+    }
+  }
+  
+  // Try to add immediately
+  addChickEmoji();
+  
+  // Also try after a short delay in case content loads later
+  setTimeout(addChickEmoji, 500);
+  setTimeout(addChickEmoji, 1000);
+  setTimeout(addChickEmoji, 2000);
+});
+</script>

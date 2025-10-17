@@ -12,7 +12,14 @@ sections:
     section_id: about
     content:
       username: admin
-      text: ""
+      text: |
+        <p class="justify-text" style="color: #FFC107;">
+        👋 안녕하세요! 저는 프론트엔드 개발자를 희망하는 대학생, 제 이름은 <strong>인숙영</strong>입니다.<br>
+        특히 React와 TypeScript 기술에 관심이 많습니다.<br>
+        저의 목표는 사용자에게 도움이 되는 최고의 웹사이트를 구현하는 것입니다.
+        </p>
+        
+        아래에서 제 [이력서](/uploads/resume.pdf)와 포트폴리오를 확인해보세요 😍
     design:
       background:
         color: ""
@@ -133,6 +140,21 @@ sections:
           date_start: "2024-01-01"
           date_end: ""
           description: '<span class="justify-text">기술을 활용하여 실제 문제를 해결하고 의미 있는 영향을 만들어내는 것에 관심이 있습니다. 특히 사용자 경험을 개선하고 복잡한 작업을 더 접근하기 쉽게 만드는 애플리케이션 개발에 관심이 많습니다.</span>'
+
+  - block: markdown
+    content:
+      title: ""
+      text: |
+        <div style="text-align: center; margin: 60px 0; padding: 40px 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 20px; color: white;">
+          <h2 style="margin-bottom: 20px; font-weight: 700;">📄 이력서 다운로드</h2>
+          <p style="margin-bottom: 30px; font-size: 1.1rem; opacity: 0.9;">저의 상세한 이력과 프로젝트 정보를 확인해보세요!</p>
+          <a href="/uploads/resume.pdf" download="인숙영_이력서.pdf" 
+             style="display: inline-block; padding: 15px 40px; background: white; color: #667eea; text-decoration: none; border-radius: 50px; font-weight: 700; font-size: 1.1rem; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.2);"
+             onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.3)';"
+             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.2)';">
+            <i class="fas fa-download" style="margin-right: 10px;"></i>이력서 다운로드
+          </a>
+        </div>
 
   - block: contact
     section_id: contact
