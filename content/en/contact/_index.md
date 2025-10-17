@@ -38,7 +38,7 @@ sections:
           icon: map-marker-alt
           icon_pack: fas
         - name: "🏫 Affiliation"
-          description: "**JBNU (전북대학교)**<br>Jeonbuk National University<br>Computer Science & AI Department"
+          description: "**JBNU (Jeonbuk National University)**<br>Computer Science & AI Department"
           icon: university
           icon_pack: fas
     design:
