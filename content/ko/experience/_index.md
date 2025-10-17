@@ -44,11 +44,13 @@ social:
     link: /uploads/resume.pdf
 
 sections:
-  - block: about.biography
-    id: about
+  - block: hero
     content:
-      title: 경력소개
-      username: admin
+      title: "경력소개"
+      text: |
+        <div class="justify-text">
+        전북대학교 컴퓨터인공지능학부 학생으로서의 전문적인 여정과 활동들을 소개합니다.
+        </div>
 
   - block: experience
     content:
