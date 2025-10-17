@@ -3,7 +3,7 @@
 }
 
 :root {
-  --bs-primary: #7C4DFF; 
+  --bs-primary: #FFC107; 
   --text-strong: #0d0e10;
   --text-muted: #4b5563;
   --link: #0d6efd;
@@ -14,8 +14,8 @@
 }
 .btn-primary:hover,
 .btn-primary:focus {
-  background-color: #651FFF;
-  border-color: #651FFF;
+  background-color: #E0A800;
+  border-color: #E0A800;
 }
 
 .cc-fab {
@@ -41,7 +41,7 @@
 }
 .cc-fab__btn:hover,
 .cc-fab__btn:focus {
-  background: #651FFF;
+  background: #E0A800;
   transform: translateY(-2px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.25);
 }
@@ -160,10 +160,10 @@
 }
 
 .btn-primary:hover {
-  background-color: #651fff !important;
-  border-color: #651fff !important;
+  background-color: #e0a800 !important;
+  border-color: #e0a800 !important;
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(124, 77, 255, 0.3);
+  box-shadow: 0 4px 8px rgba(255, 193, 7, 0.3);
 }
 
 .btn:hover {
@@ -194,30 +194,30 @@ a[href*="이력서"]:hover {
 }
 
 :root {
-  --bs-primary: #7c4dff;
-  --bs-primary-rgb: 124, 77, 255;
+  --bs-primary: #ffc107;
+  --bs-primary-rgb: 255, 193, 7;
 }
 
 .text-primary, .link-primary {
-  color: #7c4dff !important;
+  color: #ffc107 !important;
 }
 
 .bg-primary {
-  background-color: #7c4dff !important;
+  background-color: #ffc107 !important;
 }
 
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link:hover {
-  color: #7c4dff !important;
+  color: #ffc107 !important;
 }
 
 .card {
-  border: 1px solid rgba(124, 77, 255, 0.1);
+  border: 1px solid rgba(255, 193, 7, 0.1);
 }
 
 .card:hover {
-  border-color: rgba(124, 77, 255, 0.3);
-  box-shadow: 0 4px 12px rgba(124, 77, 255, 0.15);
+  border-color: rgba(255, 193, 7, 0.3);
+  box-shadow: 0 4px 12px rgba(255, 193, 7, 0.15);
 }
 
 .cc-fab {
@@ -244,7 +244,7 @@ a[href*="이력서"]:hover {
   justify-content: center;
   width: 44px;
   height: 44px;
-  background: linear-gradient(135deg, #7c4dff 0%, #651fff 100%);
+  background: linear-gradient(135deg, #ffc107 0%, #e0a800 100%);
   color: white;
   border-radius: 50%;
   text-decoration: none;
@@ -274,9 +274,9 @@ a[href*="이력서"]:hover {
 }
 
 .cc-fab__btn:hover {
-  background: linear-gradient(135deg, #651fff 0%, #5e35b1 100%);
+  background: linear-gradient(135deg, #e0a800 0%, #d39e00 100%);
   transform: scale(1.15) translateX(-2px);
-  box-shadow: 0 6px 20px rgba(124, 77, 255, 0.5);
+  box-shadow: 0 6px 20px rgba(255, 193, 7, 0.5);
   color: white;
   text-decoration: none;
 }
@@ -287,7 +287,7 @@ a[href*="이력서"]:hover {
 }
 
 .cc-fab__btn:focus {
-  outline: 2px solid #7c4dff;
+  outline: 2px solid #ffc107;
   outline-offset: 3px;
 }
 
@@ -605,8 +605,8 @@ a[href*="이력서"]:hover {
   bottom: 0;
   background: linear-gradient(
     135deg, 
-    rgba(124, 77, 255, 0.7) 0%, 
-    rgba(101, 31, 255, 0.8) 50%,
+    rgba(255, 193, 7, 0.7) 0%, 
+    rgba(224, 168, 0, 0.8) 50%,
     rgba(0, 0, 0, 0.6) 100%
   );
   z-index: 1;
@@ -648,8 +648,8 @@ a[href*="이력서"]:hover {
   bottom: 0;
   background: linear-gradient(
     45deg,
-    rgba(124, 77, 255, 0.1) 0%,
-    rgba(101, 31, 255, 0.2) 100%
+    rgba(255, 193, 7, 0.1) 0%,
+    rgba(224, 168, 0, 0.2) 100%
   );
   border-radius: 50%;
   z-index: 1;

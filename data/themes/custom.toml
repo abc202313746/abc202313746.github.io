@@ -1,13 +1,13 @@
 name = "Custom Portfolio"
 
 [light]
-  primary = "#7c4dff"
-  link = "#7c4dff"
-  link_hover = "#651fff"
+  primary = "#ffc107"
+  link = "#ffc107"
+  link_hover = "#e0a800"
 
   menu_primary = "rgb(248, 249, 250)"
   menu_text = "#2c3e50"
-  menu_text_active = "#7c4dff"
+  menu_text_active = "#ffc107"
   menu_title = "#1a1a1a"
 
   home_section_odd = "rgb(250, 248, 255)"
@@ -17,9 +17,9 @@ name = "Custom Portfolio"
   text = "#2c3e50"
 
 [dark]
-  primary = "#bb86fc"
-  link = "#bb86fc"
-  link_hover = "#d1c4e9"
+  primary = "#ffeb3b"
+  link = "#ffeb3b"
+  link_hover = "#fff176"
   
   background = "#121212"
   text = "#ffffff"
@@ -27,7 +27,7 @@ name = "Custom Portfolio"
   home_section_even = "#2a2a2a"
   menu_primary = "#1e1e1e"
   menu_text = "#ffffff"
-  menu_text_active = "#bb86fc"
+  menu_text_active = "#ffeb3b"
   
   card_background = "#2a2a2a"
   card_text = "#ffffff"
