@@ -826,7 +826,6 @@ html[data-mode="dark"] #about * {
   color: #ffffff !important;
 }
 
-/* Specific class for dark mode text */
 [data-mode="dark"] .dark-mode-text,
 [data-mode="dark"] .dark-mode-text *,
 html[data-mode="dark"] .dark-mode-text,
@@ -834,7 +833,6 @@ html[data-mode="dark"] .dark-mode-text * {
   color: #ffffff !important;
 }
 
-/* Force white text for main page bio section */
 [data-mode="dark"] .wg-about-avatar .biography,
 [data-mode="dark"] .wg-about-avatar .biography *,
 [data-mode="dark"] .wg-about-avatar .justify-text,
@@ -847,5 +845,36 @@ html[data-mode="dark"] .wg-about-avatar .justify-text,
 html[data-mode="dark"] .wg-about-avatar .justify-text *,
 html[data-mode="dark"] .wg-about-avatar .dark-mode-text,
 html[data-mode="dark"] .wg-about-avatar .dark-mode-text * {
+  color: #ffffff !important;
+}
+
+:root[data-mode="dark"] {
+  --bs-body-color: #ffffff !important;
+  --bs-text-color: #ffffff !important;
+  --text-color: #ffffff !important;
+  --body-text-color: #ffffff !important;
+}
+
+[data-mode="dark"] {
+  --bs-body-color: #ffffff !important;
+  --bs-text-color: #ffffff !important;
+  color: #ffffff !important;
+}
+
+
+[data-mode="dark"] .wg-about,
+[data-mode="dark"] .wg-about .article-style,
+[data-mode="dark"] .wg-about .biography,
+[data-mode="dark"] .wg-about .justify-text,
+[data-mode="dark"] .wg-about-avatar,
+[data-mode="dark"] .wg-about-avatar .article-style,
+[data-mode="dark"] .wg-about-avatar .biography,
+[data-mode="dark"] .wg-about-avatar .justify-text {
+  color: #ffffff !important;
+}
+
+
+[data-mode="dark"] .wg-about *,
+[data-mode="dark"] .wg-about-avatar * {
   color: #ffffff !important;
 }
