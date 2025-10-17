@@ -11,7 +11,7 @@ ko:
 en:
   languageCode: en-US
   languageName: English
-  contentDir: content
+  contentDir: content/en
   weight: 2
   title: "SookYoung In Portfolio"
   params:
