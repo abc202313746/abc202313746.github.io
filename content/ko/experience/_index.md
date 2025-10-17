@@ -45,15 +45,19 @@ social:
 
 sections:
   - block: about.avatar
-    id: about
+    section_id: about
     content:
-      title: 경력소개
       username: admin
       text: ""
     design:
       background:
         color: ""
         text_color_light: false
+        image:
+          filename: ""
+          filters:
+            brightness: 0.5
+      css_class: d-flex fullscreen align-items-center
 
   - block: experience
     content:
