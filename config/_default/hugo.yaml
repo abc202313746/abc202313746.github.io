@@ -2,7 +2,7 @@ baseURL: 'https://abc202313746.github.io/'
 title: '인숙영의 포트폴리오'
 defaultContentLanguage: ko
 hasCJKLanguage: true
-defaultContentLanguageInSubdir: true
+defaultContentLanguageInSubdir: false
 enableMissingTranslationPlaceholders: false
 disableLanguages: []
 enableRobotsTXT: true

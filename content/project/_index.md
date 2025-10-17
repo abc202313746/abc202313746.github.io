@@ -1,15 +1,21 @@
 ---
-title: Projects
-summary: A collection of projects. English translations will be added progressively.
+title: 프로젝트
+summary: 최근 작업과 실험
+language: ko
 image:
-  caption: "Projects"
+  caption: "프로젝트"
   focal_point: "Center"
   filename: "/project/database/featured.png"
 type: landing
+cascade:
+  show_author: false
+  authors: []
+  share: false
+
 sections:
   - block: markdown
     content:
       text: ""
 ---
 
-Here you'll find selected projects. Some items may currently display Korean content until English translations are added.
+{{< card_overlay title="자료구조-스택" subtitle="C++ 스택 계산기" image="/project/stack/featured.png" link="/project/stack/" >}}
