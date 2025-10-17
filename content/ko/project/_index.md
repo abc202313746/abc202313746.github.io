@@ -17,6 +17,4 @@ sections:
       text: ""
 ---
 
-<!-- 하단 강조 카드: 자료구조-스택 -->
-
 {{< card_overlay title="자료구조-스택" subtitle="C++ 스택 계산기" image="/project/stack/featured.png" link="/project/stack/" >}}

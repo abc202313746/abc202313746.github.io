@@ -20,7 +20,6 @@ params:
   logo: 'chat-logo.svg'
   images: ['uploads/og-image.png']
   
-  # Language switcher
   show_language_switcher: true
   
   assets:

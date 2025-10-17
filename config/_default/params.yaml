@@ -1,17 +1,8 @@
-# SITE SETUP
-# Guide: https://docs.hugoblox.com/tutorial/
-# Documentation: https://docs.hugoblox.com/
-# This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
-
-# Appearance
-
 appearance:
   theme_day: custom
   theme_night: custom
   font: minimal
   font_size: L
-
-# SEO
 
 marketing:
   seo:
@@ -20,7 +11,7 @@ marketing:
     org_name: 'Jeonbuk National University'
     description: 'SookYoung In - Computer Science Student at Jeonbuk National University. Frontend Developer Portfolio with React, TypeScript, Database Design, Operating Systems, and Data Structures projects. 전북대학교 컴퓨터공학부 인숙영 포트폴리오.'
     twitter: ''
-    keywords: 'SookYoung In, 인숙영, Jeonbuk National University, 전북대학교, Computer Science, Frontend Developer, React, TypeScript, Portfolio, Database Design, Operating Systems, Data Structures'
+    keywords: 'SookYoung In, 인숙영, Jeonbuk National University, 인숙영 전북대, 전북대학교, Computer Science, Frontend Developer, React, TypeScript, Portfolio, Database Design, Operating Systems, Data Structures'
     image: 'uploads/og-image.png'
   analytics:
     google_analytics: ""
@@ -30,8 +21,6 @@ marketing:
   verification:
     google: ''
     baidu: ''
-
-# Site header
 
 header:
   navbar:
@@ -44,7 +33,6 @@ header:
     show_search: true
     highlight_active_link: false
 
-# Logo configuration
 logo: 'chat-logo.svg'
 
 footer:
@@ -56,13 +44,9 @@ footer:
       share_alike: true
       allow_commercial: false
 
-# Localization
-
 locale:
   date_format: 'Jan 2, 2006'
   time_format: '3:04 PM'
-
-# Site features
 
 features:
   syntax_highlighter:
