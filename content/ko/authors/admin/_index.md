@@ -9,7 +9,7 @@ superuser: true
 role: '전북대학교 컴퓨터인공지능학부'
 
 # Profile photo (put `avatar.jpg` in this folder to use it)
-avatar: avatar.jpg
+avatar: uploads/avatar.jpg
 
 # Short bio
 bio: 저의 관심사는 프론트엔드 & UX입니다. DB/OS/자료구조 프로젝트 경험이 있습니다.

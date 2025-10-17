@@ -8,7 +8,7 @@ role: 'Computer Science Student at Jeonbuk National University'
 searchable: true
 
 
-avatar: avatar.jpg
+avatar: uploads/avatar.jpg
 
 bio: My main interests are frontend development, especially React and TypeScript.
 

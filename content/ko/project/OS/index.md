@@ -1,7 +1,7 @@
 ---
 title: 운영체제(OS) 핵심 개념 구현 및 분석
 summary: 프로세스, 스레드, CPU 스케줄링, 교착 상태 등 운영체제의 핵심 원리를 C언어 코드 구현과 이론 분석을 통해 깊이 있게 학습한 프로젝트입니다.
-
+language: ko
 date: 2025-06-11
 external_link: ''
 featured: featured.png

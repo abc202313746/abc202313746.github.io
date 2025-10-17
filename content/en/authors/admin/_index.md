@@ -8,7 +8,7 @@ superuser: true
 
 role: 'JBNU — School of Computer & Artificial Intelligence'
 
-avatar: avatar.jpg
+avatar: uploads/avatar.jpg
 
 
 bio: Interested in Frontend & UX. Projects in DB/OS/Data Structures.

@@ -6,7 +6,7 @@ superuser: true
 
 role: '전북대학교 컴퓨터인공지능학부 3학년 재학생'
 
-avatar: avatar.jpg
+avatar: uploads/avatar.jpg
 
 organizations:
   - name: 전공:컴퓨터인공지능학부

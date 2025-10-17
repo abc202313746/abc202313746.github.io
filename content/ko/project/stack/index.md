@@ -1,10 +1,9 @@
 ---
 title: C++ 스택 자료구조를 이용한 수식 계산기
 summary: 중위 표기법으로 입력된 수식을 후위 표기법으로 변환하고, 스택을 이용해 최종 결과값을 계산하는 콘솔 프로그램입니다.
-
+language: ko
 date: 2023-06-15
 external_link: ''
-
 featured: featured.png
 ---
 자료구조 수업 과제로, **스택(Stack)의 LIFO(Last-In, First-Out) 특성을 활용해 복잡한 수식을 계산하는 프로그램**을 C++로 구현했습니다.
