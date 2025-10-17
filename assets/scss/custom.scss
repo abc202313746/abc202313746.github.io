@@ -760,17 +760,6 @@ section[id="programming-languages"] .section-heading .h2 {
   text-decoration: underline;
 }
 
-:root[data-theme="dark"] .biography,
-:root[data-theme="dark"] .biography *,
-:root[data-theme="dark"] .portrait-title,
-:root[data-theme="dark"] .portrait-title *,
-:root[data-theme="dark"] .author-bio,
-:root[data-theme="dark"] .author-bio *,
-:root[data-theme="dark"] .home-section,
-:root[data-theme="dark"] .home-section * {
-  color: #fff !important;
-}
-
 
 [data-mode="dark"] body,
 [data-mode="dark"] .biography,
@@ -791,4 +780,34 @@ section[id="programming-languages"] .section-heading .h2 {
 :root[data-theme="dark"] .justify-text,
 :root[data-theme="dark"] .justify-text * {
   color: #fff !important;
+}
+
+[data-mode="dark"] .home-section .justify-text,
+[data-mode="dark"] .home-section .justify-text *,
+[data-mode="dark"] .home-section .biography,
+[data-mode="dark"] .home-section .biography *,
+[data-mode="dark"] .home-section .article-style,
+[data-mode="dark"] .home-section .article-style *,
+[data-mode="dark"] .home-section p,
+[data-mode="dark"] .home-section div,
+[data-mode="dark"] .home-section span,
+[data-mode="dark"] .wg-about .justify-text,
+[data-mode="dark"] .wg-about .justify-text *,
+[data-mode="dark"] .wg-about .biography,
+[data-mode="dark"] .wg-about .biography *,
+[data-mode="dark"] .wg-about .article-style,
+[data-mode="dark"] .wg-about .article-style *,
+[data-mode="dark"] .wg-about p,
+[data-mode="dark"] .wg-about div,
+[data-mode="dark"] .wg-about span,
+[data-mode="dark"] #about .justify-text,
+[data-mode="dark"] #about .justify-text *,
+[data-mode="dark"] #about .biography,
+[data-mode="dark"] #about .biography *,
+[data-mode="dark"] #about .article-style,
+[data-mode="dark"] #about .article-style *,
+[data-mode="dark"] #about p,
+[data-mode="dark"] #about div,
+[data-mode="dark"] #about span {
+  color: #ffffff !important;
 }
