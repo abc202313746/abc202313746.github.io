@@ -2,7 +2,7 @@
 widget: about.avatar
 headless: true
 weight: 10
-active: false
+active: true
 ---
 
 <p class="justify-text" style="color: #FFC107;">

@@ -1,6 +1,6 @@
 ---
 widget: portfolio
-active: false
+active: true
 headless: true
 weight: 20
 title: 프로젝트

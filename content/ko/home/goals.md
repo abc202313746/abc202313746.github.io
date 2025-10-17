@@ -2,6 +2,7 @@
 widget: accomplishments
 headless: true
 weight: 25
+active: true
 title: 진로 목표 및 관심사
 subtitle: ''
 date_format: 2006년 1월
