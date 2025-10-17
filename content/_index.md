@@ -172,5 +172,4 @@ sections:
     content:
       text: |
         {{< fab >}}
-        {{< partial "dark-mode-fix.html" >}}
 ---
