@@ -425,9 +425,12 @@ a[href*="이력서"]:hover {
 }
 
 [data-mode="dark"] p, 
-[data-mode="dark"] .text-muted,
-[data-mode="dark"] .justify-text {
+[data-mode="dark"] .text-muted {
   color: #e0e0e0 !important;
+}
+
+[data-mode="dark"] .justify-text {
+  color: #ffffff !important;
 }
 
 [data-mode="dark"] .navbar-nav .nav-link {
@@ -570,6 +573,18 @@ a[href*="이력서"]:hover {
 
 [data-mode="dark"] .wg-about .content .justify-text,
 [data-mode="dark"] .wg-about .content div {
+  color: #ffffff !important;
+}
+
+[data-mode="dark"] div.justify-text,
+[data-mode="dark"] .content .justify-text,
+[data-mode="dark"] .biography .justify-text {
+  color: #ffffff !important;
+}
+
+[data-mode="dark"] .wg-about-avatar .justify-text,
+[data-mode="dark"] .wg-author .justify-text,
+[data-mode="dark"] .author-content .justify-text {
   color: #ffffff !important;
 }
 
