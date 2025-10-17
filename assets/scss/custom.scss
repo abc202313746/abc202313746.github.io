@@ -655,21 +655,21 @@ a[href*="이력서"]:hover {
   z-index: 1;
 }
 
-#programming-languages .section-heading h2,
-#programming-languages .section-heading .h2,
-#programming-languages h2,
-#programming-languages .h2 {
-  font-size: 1.8rem !important;
-  font-weight: 600 !important;
-  margin-bottom: 1.5rem !important;
-  color: #333 !important;
+:root:not([data-theme="dark"]) #programming-languages .section-heading h2,
+:root:not([data-theme="dark"]) #programming-languages .section-heading .h2,
+:root:not([data-theme="dark"]) #programming-languages h2,
+:root:not([data-theme="dark"]) #programming-languages .h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #333;
 }
 
-[data-mode="dark"] #programming-languages .section-heading h2,
-[data-mode="dark"] #programming-languages .section-heading .h2,
-[data-mode="dark"] #programming-languages h2,
-[data-mode="dark"] #programming-languages .h2 {
-  color: #ffffff !important;
+:root[data-theme="dark"] #programming-languages .section-heading h2,
+:root[data-theme="dark"] #programming-languages .section-heading .h2,
+:root[data-theme="dark"] #programming-languages h2,
+:root[data-theme="dark"] #programming-languages .h2 {
+  color: #fff;
 }
 
 section[id="programming-languages"] .section-heading h2,
