@@ -10,13 +10,16 @@ image:
   caption: 'SookYoung In'
 
 sections:
-  - block: hero
+  - block: about.avatar
+    id: about
     content:
-      title: "Experience Overview"
-      text: |
-        <div class="justify-text">
-        My professional journey and activities as a Computer Science student at Jeonbuk National University.
-        </div>
+      title: Experience Overview
+      username: admin
+      text: ""
+    design:
+      background:
+        color: ""
+        text_color_light: false
 
   - block: experience
     content:
