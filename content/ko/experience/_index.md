@@ -44,11 +44,15 @@ social:
     link: /uploads/resume.pdf
 
 sections:
-  - block: about.biography
+  - block: markdown
     id: about
     content:
       title: 경력소개
-      username: admin
+      text: |
+        <div class="justify-text">
+        전북대학교 컴퓨터인공지능학부에서 프론트엔드 개발을 중심으로 학습하고 있습니다.
+        React와 TypeScript를 활용한 웹 개발에 관심이 많으며, 사용자 경험을 중시하는 개발자를 목표로 하고 있습니다.
+        </div>
 
   - block: experience
     content:
