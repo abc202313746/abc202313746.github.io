@@ -1,2 +1,39 @@
 
-main: []
+main:
+  - name: Home
+    url: '/en/'
+    weight: 10
+
+  - name: Projects
+    identifier: projects
+    url: '/en/project/'
+    weight: 20
+
+  - name: Database
+    parent: projects
+    url: '/en/project/database/'
+    weight: 21
+
+  - name: OS
+    parent: projects
+    url: '/en/project/os/'
+    weight: 22
+
+  - name: Stack
+    parent: projects
+    url: '/en/project/stack/'
+    weight: 23
+
+  - name: Experience
+    url: '/en/experience/'
+    weight: 30
+
+  - name: Contact
+    url: '/en/contact/'
+    weight: 40
+
+  - name: Resumé
+    url: 'https://abc202313746.github.io/uploads/resume.pdf'
+    weight: 50
+    params:
+      target: "_blank"
