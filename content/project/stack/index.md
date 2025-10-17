@@ -1,37 +1,16 @@
 ---
-title: Implementation of Stack Data Structure and Calculator
-summary: A project to implement a stack data structure and utilize it to create a calculator that handles arithmetic expressions.
-featured: featured.png
-
-date: 2024-09-10
+title: C++ 스택 자료구조를 이용한 수식 계산기
+summary: 중위 표기법으로 입력된 수식을 후위 표기법으로 변환하고, 스택을 이용해 최종 결과값을 계산하는 콘솔 프로그램입니다.
+date: 2023-06-15
 external_link: ''
+featured: featured.png
 ---
 <div class="justify-text">
-For the Data Structures course at Jeonbuk National University, I implemented a **stack data structure** and used it to create a calculator that can handle arithmetic expressions. The project consisted of two main components:
+자료구조 수업 과제로, **스택(Stack)의 LIFO(Last-In, First-Out) 특성을 활용해 복잡한 수식을 계산하는 프로그램**을 C++로 구현했습니다.
 
-## Stack Implementation
-1. **Array-based Stack**: Implemented a stack using a dynamic array that can grow and shrink as needed.
-2. **Basic Operations**: Implemented core stack operations:
-   - `push()`: Add an element to the top
-   - `pop()`: Remove and return the top element
-   - `peek()`: View the top element without removing it
-   - `isEmpty()`: Check if stack is empty
-   - `isFull()`: Check if stack is full
-3. **Error Handling**: Added comprehensive error checking for stack overflow and underflow conditions.
+프로젝트는 두 가지 핵심 알고리즘으로 구성됩니다. 첫째, 사용자가 입력한 중위 표기법 수식(예: `(3 + 4) * 5`)을 컴퓨터가 계산하기 쉬운 후위 표기법(예: `3 4 + 5 *`)으로 변환합니다. 이 과정에서 연산자의 우선순위와 괄호를 처리하기 위해 스택을 효과적으로 사용했습니다.
 
-## Calculator Implementation
-1. **Expression Parsing**: Developed a parser to handle arithmetic expressions in both infix and postfix notations.
-2. **Conversion Algorithm**: Implemented the Shunting Yard algorithm to convert infix expressions to postfix notation.
-3. **Expression Evaluation**: Created an evaluator that processes postfix expressions using the stack to calculate results.
-4. **Support for Operations**:
-   - Basic arithmetic (+, -, *, /)
-   - Parentheses handling
-   - Operator precedence
-   - Multi-digit numbers
+둘째, 변환된 후위 표기법 수식을 스택을 이용해 계산합니다. 피연산자는 스택에 push하고, 연산자를 만나면 필요한 만큼의 피연산자를 pop하여 계산한 뒤 결과를 다시 push하는 방식으로 최종 결과값을 도출했습니다.
 
-Through this project, I strengthened my understanding of:
-- Stack data structure implementation and applications
-- Algorithm design and optimization
-- Expression parsing and evaluation techniques
-- Error handling and edge cases in data structure implementations
+이 프로젝트를 통해 스택 자료구조를 직접 클래스로 구현하고, 동적 배열 할당과 해제를 관리하며 메모리 효율성을 높이는 방법을 익혔습니다. 또한 0으로 나누기 예외 처리 등 실용적인 프로그래밍 기술을 적용하며 알고리즘의 실제적인 구현 능력을 길렀습니다.
 </div>

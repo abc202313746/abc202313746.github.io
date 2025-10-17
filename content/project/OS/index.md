@@ -1,27 +1,17 @@
 ---
-title: Implementation of File System and Memory Management in xv6
-summary: A project focused on implementing file system features and memory management in the xv6 operating system.
-featured: featured.png
-
-date: 2024-12-15
+title: 운영체제(OS) 핵심 개념 구현 및 분석
+summary: 프로세스, 스레드, CPU 스케줄링, 교착 상태 등 운영체제의 핵심 원리를 C언어 코드 구현과 이론 분석을 통해 깊이 있게 학습한 프로젝트입니다.
+date: 2024-06-11
 external_link: ''
+featured: featured.png
 ---
 <div class="justify-text">
-As part of the Operating Systems course at Jeonbuk National University, I implemented **file system features and memory management** in the xv6 educational operating system. This project focused on two main aspects:
+운영체제 수업의 중간/기말 과제로, 컴퓨터 시스템의 근간을 이루는 OS의 핵심 개념들을 학습하고 분석했습니다. 이론에만 머무르지 않고, C언어 예제 코드를 통해 각 개념이 실제로 어떻게 동작하는지 확인하는 데 중점을 두었습니다.
 
-## File System Implementation
-1. **System Call Development**: Added new system calls including `symlink()` for creating symbolic links and `readlink()` for reading symbolic links.
-2. **Hard Link Support**: Enhanced the file system to support hard links between files, requiring modifications to the inode structure.
-3. **File System Features**: Implemented various file system features including file permissions and directory manipulation.
+주요 학습 내용은 다음과 같습니다.
+* **프로세스와 스레드**: C언어의 `fork()` 시스템 호출을 이용해 자식 프로세스를 생성하고, 부모와 자식 프로세스 간에 메모리(Stack, Heap)가 어떻게 분리되고 공유되는지 분석했습니다. 또한, 커널 수준 스레드와 사용자 수준 스레드의 차이점을 학습하고, 멀티스레딩 환경의 성능에 대해 탐구했습니다.
+* **CPU 스케줄링**: **FCFS, SJF, Priority, Round-Robin** 등 다양한 CPU 스케줄링 알고리즘의 동작 방식을 이해하고, 주어진 프로세스에 따라 **간트 차트(Gantt Chart)**를 직접 그려 성능을 시각화했습니다. 이를 통해 각 알고리즘의 평균 반환 시간(Turnaround Time)과 대기 시간(Waiting Time)을 계산하며 성능을 비교 분석하는 능력을 길렀습니다.
+* **교착 상태 (Deadlock)**: 여러 프로세스가 자원을 놓고 경쟁할 때 발생할 수 있는 교착 상태의 개념을 학습했습니다. 특히, **은행원 알고리즘(Banker's Algorithm)**을 적용하여 주어진 시스템의 자원 할당 상태가 안전(Safe)한지, 불안전(Unsafe)한지를 직접 판단하는 문제를 해결했습니다.
 
-## Memory Management
-1. **Page Table Management**: Modified the page table management system to support memory mapping and unmapping.
-2. **Memory Allocation**: Enhanced the memory allocator to handle dynamic memory allocation more efficiently.
-3. **System Call Implementation**: Added system calls like `mmap()` and `munmap()` for memory mapping functionality.
-
-Through this project, I gained practical experience in:
-- Working with low-level system programming in C
-- Understanding operating system internals through hands-on implementation
-- Debugging complex system-level code
-- Managing memory and file systems at the operating system level
+이 프로젝트를 통해 개발자로서 반드시 알아야 할 컴퓨터 시스템의 내부 동작 원리에 대한 깊은 이해를 다질 수 있었습니다.
 </div>
