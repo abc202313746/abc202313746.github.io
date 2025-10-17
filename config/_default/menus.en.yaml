@@ -25,11 +25,11 @@ main:
     weight: 23
 
   - name: Experience
-    url: '/en/experience/'
+    url: '/experience/'
     weight: 30
 
   - name: Contact
-    url: '/en/contact/'
+    url: '/contact/'
     weight: 40
 
   - name: Resumé
