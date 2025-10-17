@@ -878,3 +878,37 @@ html[data-mode="dark"] .wg-about-avatar .dark-mode-text * {
 [data-mode="dark"] .wg-about-avatar * {
   color: #ffffff !important;
 }
+
+body[data-mode="dark"] *,
+html[data-mode="dark"] *,
+[data-mode="dark"] * {
+  color: #ffffff !important;
+}
+
+body[data-mode="dark"] .wg-about .biography,
+body[data-mode="dark"] .wg-about .biography *,
+body[data-mode="dark"] .wg-about .justify-text,
+body[data-mode="dark"] .wg-about .justify-text *,
+body[data-mode="dark"] .wg-about .dark-mode-text,
+body[data-mode="dark"] .wg-about .dark-mode-text *,
+body[data-mode="dark"] .wg-about-avatar .biography,
+body[data-mode="dark"] .wg-about-avatar .biography *,
+body[data-mode="dark"] .wg-about-avatar .justify-text,
+body[data-mode="dark"] .wg-about-avatar .justify-text *,
+body[data-mode="dark"] .wg-about-avatar .dark-mode-text,
+body[data-mode="dark"] .wg-about-avatar .dark-mode-text *,
+body[data-mode="dark"] #about .biography,
+body[data-mode="dark"] #about .biography *,
+body[data-mode="dark"] #about .justify-text,
+body[data-mode="dark"] #about .justify-text *,
+body[data-mode="dark"] #about .dark-mode-text,
+body[data-mode="dark"] #about .dark-mode-text * {
+  color: #ffffff !important;
+}
+
+[data-mode="dark"] .text-dark,
+[data-mode="dark"] .text-muted,
+[data-mode="dark"] .text-body,
+[data-mode="dark"] .text-secondary {
+  color: #ffffff !important;
+}
