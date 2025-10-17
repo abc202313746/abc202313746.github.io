@@ -1,3 +1,5 @@
+# Ignore archived workflow copies
+.github/workflows/*.disabled
 # IDEs
 .idea/
 
