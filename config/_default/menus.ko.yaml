@@ -34,5 +34,7 @@ main:
   - name: 이력서
     url: 'https://abc202313746.github.io/uploads/resume.pdf'
     weight: 50
+    params:
+      target: "_blank"
 
 
