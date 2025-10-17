@@ -1,6 +1,6 @@
 ---
 title: Contact & Location
-summary: Get in touch with SookYoung In. Find contact information, location details, and directions to Jeonbuk National University.
+summary: Get in touch with SookYoung In. Contact information, location details, and directions to Jeonbuk National University.
 type: landing
 date: 2024-01-01
 translationKey: contact
@@ -16,81 +16,46 @@ sections:
       title: "Contact & Location"
       text: |
         <div class="justify-text">
-        Get in touch with SookYoung In, Computer Science student at Jeonbuk National University.
+        Contact and location information guide.
         </div>
-    design:
-      background:
-        gradient_start: '#7c4dff'
-        gradient_end: '#651fff'
-        text_color_light: true
-      spacing:
-        padding: ['60px', '0', '60px', '0']
 
-  - block: features
+  - block: contact
     content:
-      title: "Contact Information"
-      items:
-        - name: "📧 Email"
-          description: "**isy0110@jbnu.ac.kr**"
-          icon: envelope
+      title: "Contact"
+      text: |
+        Feel free to contact me anytime if you have any questions!
+      
+      contact_links:
+        - icon: envelope
           icon_pack: fas
-        - name: "📍 Location"
-          description: "**Jeonbuk National University**<br>College of Engineering<br>Jeonju, Jeonbuk State 54896"
-          icon: map-marker-alt
-          icon_pack: fas
-        - name: "🏫 Affiliation"
-          description: "**JBNU (Jeonbuk National University)**<br>Computer Science & AI Department"
-          icon: university
-          icon_pack: fas
+          name: Email
+          link: 'mailto:isy0110@jbnu.ac.kr'
+        - icon: github
+          icon_pack: fab
+          name: GitHub
+          link: 'https://github.com/abc202313746'
+        - icon: instagram
+          icon_pack: fab
+          name: Instagram
+          link: 'https://www.instagram.com/insookyoung/'
+    
     design:
-      columns: '3'
-      view: card
-      background:
-        color: 'white'
+      columns: '1'
+
 
   - block: markdown
     content:
-      title: "🗺️ Campus Map"
+      title: "Directions"
       text: |
-        <div class="map-container" style="margin: 20px 0; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 25px rgba(124, 77, 255, 0.15);">
-          <iframe 
-            src="https://www.openstreetmap.org/export/embed.html?bbox=127.1240%2C35.8440%2C127.1340%2C35.8500&layer=mapnik&marker=35.8469%2C127.1295"
-            width="100%" 
-            height="450" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy">
-          </iframe>
+        Location of Jeonbuk National University College of Engineering Building 7, Department of Computer Science & AI.
+        
+        <div style="margin: 20px 0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3234.1211439474255!2d127.13189354054641!3d35.84603292101703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35702330dc920b9d%3A0x1d0d425396006646!2z7KCE67aB64yA7ZWZ6rWQIOqzteqzvOuMgO2VmSA37Zi46rSE!5e0!3m2!1sko!2skr!4v1760654083193!5m2!1sko!2skr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         
+        **📍 Address:** 567 Baekje-daero, Deokjin-gu, Jeonju-si, Jeonbuk Special Self-Governing Province, Building 7
+    
     design:
-      background:
-        color: '#f8f9ff'
-      spacing:
-        padding: ['40px', '0', '40px', '0']
+      columns: '1'
 
-  - block: features
-    content:
-      title: "🔗 Social Media"
-      items:
-        - name: "GitHub"
-          description: "Projects and code repositories"
-          icon: github
-          icon_pack: fab
-          link: "https://github.com/abc202313746"
-        - name: "Instagram"
-          description: "Daily life and learning journey"
-          icon: instagram
-          icon_pack: fab
-          link: "https://www.instagram.com/insookyoung/"
-        - name: "Email"
-          description: "Direct contact"
-          icon: envelope
-          icon_pack: fas
-          link: "mailto:isy0110@jbnu.ac.kr"
-    design:
-      columns: '3'
-      view: card
-      background:
-        color: 'white'
 ---

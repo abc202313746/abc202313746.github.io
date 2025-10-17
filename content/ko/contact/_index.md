@@ -16,7 +16,7 @@ sections:
       text: |
         <div class="justify-text">
         연락처 및 위치 정보를 안내합니다.
-        </div>ㅋㅋ
+        </div>
 
   - block: contact
     content:
