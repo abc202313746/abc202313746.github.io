@@ -32,7 +32,7 @@ main:
     weight: 40
 
   - name: 이력서
-    url: '/uploads/resume.pdf'
+    url: 'https://abc202313746.github.io/uploads/resume.pdf'
     weight: 50
     params:
       target: "_blank"
