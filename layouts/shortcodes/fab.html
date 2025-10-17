@@ -27,12 +27,40 @@
 
 <div class="cc-fab" aria-label="Quick actions">
   <a class="cc-fab__btn" href="#about" title="Top"><i class="fas fa-arrow-up" aria-hidden="true"></i></a>
+  <a class="cc-fab__btn cc-fab__print" href="javascript:void(0)" onclick="window.print()" title="Print"><i class="fas fa-print" aria-hidden="true"></i></a>
+  <a class="cc-fab__btn cc-fab__share" href="javascript:void(0)" onclick="shareCurrentPage()" title="Share"><i class="fas fa-share-alt" aria-hidden="true"></i></a>
+  <a class="cc-fab__btn cc-fab__theme" href="javascript:void(0)" onclick="toggleTheme()" title="Toggle Theme"><i class="fas fa-moon" aria-hidden="true"></i></a>
+  <a class="cc-fab__btn cc-fab__search" href="javascript:void(0)" onclick="toggleSearch()" title="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
   <a class="cc-fab__btn" href="https://github.com/abc202313746" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
   <a class="cc-fab__btn" href="https://www.instagram.com/insookyoung/" target="_blank" rel="noopener" title="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+  <a class="cc-fab__btn" href="mailto:isy0110@jbnu.ac.kr" title="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+  <a class="cc-fab__btn" href="https://abc202313746.github.io/uploads/resume.pdf" target="_blank" rel="noopener" title="Resume"><i class="fas fa-file-pdf" aria-hidden="true"></i></a>
   <a class="cc-fab__btn cc-fab__language" href="{{ $toggle }}" onclick="smartLanguageToggle(event)" title="Language ({{ if eq $lang "en" }}한국어{{ else }}English{{ end }})"><i class="fas fa-globe" aria-hidden="true"></i></a>
 </div>
 
 <script>
+// Share current page function
+function shareCurrentPage() {
+  if (navigator.share) {
+    navigator.share({
+      title: document.title,
+      url: window.location.href
+    }).then(() => {
+      showToast('Page shared successfully!');
+    }).catch(() => {
+      fallbackShare();
+    });
+  } else {
+    fallbackShare();
+  }
+}
+
+// Fallback share function
+function fallbackShare() {
+  copyToClipboard(window.location.href);
+  showToast('Page URL copied to clipboard!');
+}
+
 // Copy to clipboard function
 function copyToClipboard(text) {
   navigator.clipboard.writeText(text).then(function() {
@@ -50,7 +78,7 @@ function showToast(message) {
     position: fixed;
     bottom: 100px;
     right: 20px;
-    background: var(--bs-primary, #7c4dff);
+    background: var(--bs-primary, #ffc107);
     color: white;
     padding: 12px 20px;
     border-radius: 25px;
@@ -58,7 +86,7 @@ function showToast(message) {
     z-index: 10000;
     opacity: 0;
     transition: opacity 0.3s ease;
-    box-shadow: 0 4px 12px rgba(124, 77, 255, 0.3);
+    box-shadow: 0 4px 12px rgba(255, 193, 7, 0.3);
   `;
   document.body.appendChild(toast);
   
@@ -82,7 +110,9 @@ function toggleTheme() {
   
   // Update icon
   const themeIcon = document.querySelector('.cc-fab__theme i');
-  themeIcon.className = newMode === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+  if (themeIcon) {
+    themeIcon.className = newMode === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+  }
   
   showToast(`Switched to ${newMode} mode`);
 }
@@ -163,13 +193,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Update language button tooltip based on current language
 function updateLanguageButtonTooltip() {
-  const currentPath = window.location.pathname;
-  const currentLang = currentPath.startsWith('/en/') ? 'en' : 'ko';
-  const languageBtn = document.querySelector('.cc-fab__language');
-  
-  if (languageBtn) {
+  const langButton = document.querySelector('.cc-fab__language');
+  if (langButton) {
+    const currentLang = window.location.pathname.startsWith('/en/') ? 'en' : 'ko';
     const targetLang = currentLang === 'en' ? '한국어' : 'English';
-    languageBtn.setAttribute('title', `Language (${targetLang})`);
+    langButton.setAttribute('title', `Language (${targetLang})`);
   }
 }
 </script>
