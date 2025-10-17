@@ -45,6 +45,34 @@ social:
     link: /uploads/resume.pdf
 
 sections:
+  - block: about.avatar
+    section_id: about
+    content:
+      username: admin
+      text: |
+        <div style="text-align: center; padding: 20px 0;">
+          <h2 style="margin-top: 20px; color: #2c3e50; font-weight: 700;">인숙영</h2>
+          <p style="font-size: 1.2rem; color: #7f8c8d; margin: 10px 0;">전북대학교 컴퓨터인공지능학부 3학년 재학생</p>
+          <p style="color: #34495e; max-width: 700px; margin: 20px auto; line-height: 1.7;">
+            <strong>🚀 관심 분야:</strong> 프론트엔드 개발에 깊은 열정을 가지고 있으며, 특히 React와 TypeScript를 활용한 
+            현대적인 웹 애플리케이션 개발에 집중하고 있습니다. 사용자 경험(UX)을 최우선으로 생각하며, 
+            직관적이고 접근성 높은 인터페이스 설계에 관심이 많습니다.
+            <br><br>
+            <strong>🎯 진로 목표:</strong> 단기적으로는 프론트엔드 전문 개발자로 실무 경험을 쌓고, 
+            중장기적으로는 풀스택 개발 역량을 갖춘 종합적인 개발자로 성장하고자 합니다. 
+            팀과의 협업을 통해 의미 있는 프로덕트를 만들어나가는 것이 목표입니다.
+            <br><br>
+            <strong>💡 기술적 관심사:</strong> 컴포넌트 기반 아키텍처, 상태 관리, 성능 최적화, 반응형 디자인 등 
+            모던 웹 개발의 핵심 기술들을 깊이 있게 학습하고 있으며, 오픈소스 커뮤니티 참여를 통해 
+            지속적으로 성장하고 있습니다.
+          </p>
+        </div>
+    design:
+      background:
+        color: ""
+        text_color_light: false
+      css_class: ""
+
   - block: experience
     content:
       title: 경력 및 활동
