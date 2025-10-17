@@ -3,14 +3,14 @@ title: SookYoung In
 
 superuser: true
 
-role: 'Jeonbuk National University — Computer Science Student'
+role: 'Computer Science Student at Jeonbuk National University'
 
 searchable: true
 
 
 avatar: avatar.jpg
 
-bio: Frontend & UX-focused. Projects in Database, Operating Systems, and Data Structures.
+bio: My main interests are frontend development, especially React and TypeScript.
 
 status:
   icon: 🐥

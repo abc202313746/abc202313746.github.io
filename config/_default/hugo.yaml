@@ -5,6 +5,7 @@ hasCJKLanguage: true
 defaultContentLanguageInSubdir: false
 enableMissingTranslationPlaceholders: false
 disableLanguages: []
+enableRobotsTXT: true
 buildFuture: true
 
 ignoreLogs: ['warning-goldmark-raw-html']
