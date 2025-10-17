@@ -16,22 +16,31 @@ sections:
     content:
       username: admin
       text: |
-        <div style="text-align: center; padding: 20px 0;">
-          <h2 style="margin-top: 20px; color: #2c3e50; font-weight: 700;">SookYoung In</h2>
-          <p style="font-size: 1.2rem; color: #7f8c8d; margin: 10px 0;">3rd Year Student, Computer Science & AI, Jeonbuk National University</p>
-          <p style="color: #34495e; max-width: 700px; margin: 20px auto; line-height: 1.7;">
-            <strong>🚀 Areas of Interest:</strong> Passionate about frontend development with a deep focus on modern web applications 
-            using React and TypeScript. Particularly interested in user experience (UX) design, creating intuitive and 
-            accessible interfaces that solve real-world problems for users.
-            <br><br>
-            <strong>🎯 Career Goals:</strong> Short-term goal is to gain practical experience as a frontend specialist, 
-            while long-term aspiration is to grow into a well-rounded full-stack developer. 
-            Aim to contribute to meaningful products through collaborative teamwork and innovative solutions.
-            <br><br>
-            <strong>💡 Technical Interests:</strong> Deeply studying core modern web development concepts including 
-            component-based architecture, state management, performance optimization, and responsive design. 
-            Actively participating in open-source communities to continuously expand knowledge and skills.
-          </p>
+        <div style="display: flex; align-items: center; gap: 40px; padding: 40px 20px; max-width: 1000px; margin: 0 auto;">
+          <div style="flex-shrink: 0;">
+            <img src="/uploads/avatar.jpg" alt="SookYoung In" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+          </div>
+          <div style="flex: 1; text-align: left;">
+            <h2 style="margin: 0 0 10px 0; color: #2c3e50; font-weight: 700; font-size: 2.2rem;">SookYoung In</h2>
+            <p style="font-size: 1.3rem; color: #7f8c8d; margin: 0 0 25px 0; font-weight: 500;">3rd Year Student, Computer Science & AI, Jeonbuk National University</p>
+            <div style="color: #34495e; line-height: 1.7; font-size: 1rem;">
+              <p style="margin: 15px 0;">
+                <strong style="color: #2c3e50;">Areas of Interest:</strong> Passionate about frontend development with a deep focus on modern web applications 
+                using React and TypeScript. Particularly interested in user experience (UX) design, creating intuitive and 
+                accessible interfaces that solve real-world problems for users.
+              </p>
+              <p style="margin: 15px 0;">
+                <strong style="color: #2c3e50;">Career Goals:</strong> Short-term goal is to gain practical experience as a frontend specialist, 
+                while long-term aspiration is to grow into a well-rounded full-stack developer. 
+                Aim to contribute to meaningful products through collaborative teamwork and innovative solutions.
+              </p>
+              <p style="margin: 15px 0;">
+                <strong style="color: #2c3e50;">Technical Interests:</strong> Deeply studying core modern web development concepts including 
+                component-based architecture, state management, performance optimization, and responsive design. 
+                Actively participating in open-source communities to continuously expand knowledge and skills.
+              </p>
+            </div>
+          </div>
         </div>
     design:
       background:
