@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
 코드 품질: 적절한 문서화가 포함된 깔끔하고 유지 관리 가능한 코드
 지속적인 학습: 최신 웹 기술에 대한 최신 정보 유지하기
 
-현재 전북대학교에서 학위를 취득하면서 Next.js, TypeScript, 테스트 프레임워크, 성능 최적화에 대한 지식을 넓히고 있습니다!
+현재 전북대학교에서 학위를 취득하면서 Next.js, TypeScript, 테스트 프레임워크, 성능 최적화에 대한 지식을 넓히고 있습니다.
 </div>
 
 {{< icon name="download" pack="fas" >}} {{< staticref "uploads/resume.pdf" "newtab" >}}이력서 다운로드{{< /staticref >}}
