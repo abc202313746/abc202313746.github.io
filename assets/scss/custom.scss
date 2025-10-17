@@ -770,3 +770,20 @@ section[id="programming-languages"] .section-heading .h2 {
 :root[data-theme="dark"] .home-section * {
   color: #fff !important;
 }
+
+
+[data-mode="dark"] body,
+[data-mode="dark"] .biography,
+[data-mode="dark"] .biography *,
+[data-mode="dark"] .portrait-title,
+[data-mode="dark"] .portrait-title *,
+[data-mode="dark"] .author-bio,
+[data-mode="dark"] .author-bio *,
+[data-mode="dark"] .home-section,
+[data-mode="dark"] .home-section *,
+[data-mode="dark"] .wg-about,
+[data-mode="dark"] .wg-about *,
+[data-mode="dark"] .article-style,
+[data-mode="dark"] .article-style * {
+  color: #fff !important;
+}
