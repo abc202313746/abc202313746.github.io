@@ -15,7 +15,7 @@ sections:
       title: "연락처 및 위치"
       text: |
         <div class="justify-text">
-        전북대학교 컴퓨터인공지능학부 인숙영과 연락하는 방법과 위치 정보를 안내합니다.
+        연락처 및 위치 정보를 안내합니다.
         </div>
 
   - block: contact
@@ -44,7 +44,7 @@ sections:
 
   - block: markdown
     content:
-      title: "찾아오시는 길 🗺️"
+      title: "찾아오시는 길"
       text: |
         전북대학교 공과대학 7호관 컴퓨터인공지능학부 위치입니다.
         
