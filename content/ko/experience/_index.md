@@ -45,21 +45,6 @@ social:
     link: /uploads/resume.pdf
 
 sections:
-  - block: about.avatar
-    section_id: about
-    content:
-      username: admin
-      text: ""
-    design:
-      background:
-        color: ""
-        text_color_light: false
-        image:
-          filename: ""
-          filters:
-            brightness: 0.5
-      css_class: d-flex fullscreen align-items-center
-
   - block: experience
     content:
       title: 경력 및 활동
