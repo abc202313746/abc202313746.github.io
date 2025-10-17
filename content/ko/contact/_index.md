@@ -4,6 +4,7 @@ summary: 인숙영과 연락하기. 연락처 정보, 위치 세부사항, 그�
 type: landing
 date: 2024-01-01
 translationKey: contact
+language: ko
 image:
   filename: 'uploads/justin-lim-tloFnD-7EpI-unsplash (1).jpg'
   caption: '연락처 및 위치'
