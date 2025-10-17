@@ -29,10 +29,10 @@ ko:
         url: '/project/stack/'
         weight: 23
       - name: 경력
-        url: '/experience/'
+        url: '/ko/experience/'
         weight: 30
       - name: 연락처
-        url: '/contact/'
+        url: '/ko/contact/'
         weight: 40
       - name: 이력서
         url: '/uploads/resume.pdf'
@@ -69,10 +69,10 @@ en:
         url: '/en/project/stack/'
         weight: 23
       - name: Experience
-        url: '/en/en/experience/'
+        url: '/en/experience/'
         weight: 30
       - name: Contact
-        url: '/en/en/contact/'
+        url: '/en/contact/'
         weight: 40
       - name: Resumé
         url: 'https://abc202313746.github.io/uploads/resume.pdf'
