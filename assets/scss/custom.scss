@@ -760,3 +760,13 @@ section[id="programming-languages"] .section-heading .h2 {
   text-decoration: underline;
 }
 
+:root[data-theme="dark"] .biography,
+:root[data-theme="dark"] .biography *,
+:root[data-theme="dark"] .portrait-title,
+:root[data-theme="dark"] .portrait-title *,
+:root[data-theme="dark"] .author-bio,
+:root[data-theme="dark"] .author-bio *,
+:root[data-theme="dark"] .home-section,
+:root[data-theme="dark"] .home-section * {
+  color: #fff !important;
+}
