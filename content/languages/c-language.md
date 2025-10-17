@@ -1,13 +1,15 @@
 ---
 title: C언어 (C Language)
-summary: C언어 커스텀 메모리 할당자 구현
+summary: C언어 커스텀 메모리 할당자 구현 - 시스템 프로그래밍의 핵심
 date: '2024-01-01T00:00:00Z'
 type: page
 searchable: true
+featured: true
 image:
   caption: 'C Language Programming'
   focal_point: Smart
   preview_only: false
+  filename: featured.png
 ---
 
 <div class="justify-text">

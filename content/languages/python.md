@@ -1,13 +1,15 @@
 ---
 title: 파이썬 (Python)
-summary: 파이썬 데이터 분석 및 시각화 프로젝트
+summary: 파이썬 데이터 분석 및 시각화 프로젝트 - 데이터 과학의 실전 적용
 date: '2024-01-01T00:00:00Z'
 type: page
 searchable: true
+featured: true
 image:
   caption: 'Python Programming'
   focal_point: Smart
   preview_only: false
+  filename: featured.png
 ---
 
 <div class="justify-text">

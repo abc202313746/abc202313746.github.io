@@ -1,9 +1,15 @@
 ---
 title: C Language
-summary: Custom Memory Allocator Implementation in C
+summary: Custom Memory Allocator Implementation in C - Core of System Programming
 date: '2024-01-01T00:00:00Z'
 type: page
 searchable: true
+featured: true
+image:
+  caption: 'C Language Programming'
+  focal_point: Smart
+  preview_only: false
+  filename: featured.png
 ---
 
 <div class="justify-text">

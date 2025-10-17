@@ -24,6 +24,26 @@ main:
     url: '/en/project/stack/'
     weight: 23
 
+  - name: Languages
+    identifier: languages
+    url: '/en/languages/'
+    weight: 25
+
+  - name: C Language
+    parent: languages
+    url: '/en/languages/c-language/'
+    weight: 26
+
+  - name: Java
+    parent: languages
+    url: '/en/languages/java/'
+    weight: 27
+
+  - name: Python
+    parent: languages
+    url: '/en/languages/python/'
+    weight: 28
+
   - name: Experience
     url: '/en/experience/'
     weight: 30

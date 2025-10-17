@@ -1,9 +1,15 @@
 ---
 title: Java
-summary: Object-Oriented Task Management System
+summary: Object-Oriented Task Management System - Practical Application of OOP Principles
 date: '2024-01-01T00:00:00Z'
 type: page
 searchable: true
+featured: true
+image:
+  caption: 'Java Programming'
+  focal_point: Smart
+  preview_only: false
+  filename: featured.png
 ---
 
 <div class="justify-text">

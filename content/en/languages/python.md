@@ -1,9 +1,15 @@
 ---
 title: Python
-summary: Python Data Analysis and Visualization Project
+summary: Python Data Analysis and Visualization Project - Practical Data Science Application
 date: '2024-01-01T00:00:00Z'
 type: page
 searchable: true
+featured: true
+image:
+  caption: 'Python Programming'
+  focal_point: Smart
+  preview_only: false
+  filename: featured.png
 ---
 
 <div class="justify-text">

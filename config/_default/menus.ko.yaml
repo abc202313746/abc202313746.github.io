@@ -23,6 +23,26 @@ main:
     url: '/project/stack/'
     weight: 23
 
+  - name: 언어
+    identifier: languages
+    url: '/languages/'
+    weight: 25
+
+  - name: C언어
+    parent: languages
+    url: '/languages/c-language/'
+    weight: 26
+
+  - name: Java
+    parent: languages
+    url: '/languages/java/'
+    weight: 27
+
+  - name: Python
+    parent: languages
+    url: '/languages/python/'
+    weight: 28
+
   - name: 경력
     url: '/ko/experience/'
     weight: 30
