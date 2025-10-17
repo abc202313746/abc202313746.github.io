@@ -60,4 +60,4 @@ What I value in development:
 Currently expanding my knowledge in Next.js, TypeScript, testing frameworks, and performance optimization while pursuing my degree at Jeonbuk National University.
 </div>
 
-{{< icon name="download" pack="fas" >}} {{< staticref "uploads/resume.pdf" "newtab" >}}Download Resumé{{< /staticref >}}
+{{< icon name="download" pack="fas" >}} [Download Resumé](https://abc202313746.github.io/uploads/resume.pdf){target="_blank"}
