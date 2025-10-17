@@ -19,7 +19,7 @@ outputs:
 
 params:
   logo: 'chat-logo.svg'
-  images: ['uploads/aldi-sigun-K-sdQ12jZeY-unsplash (1).jpg']
+  images: ['uploads/og-image.png?v=2']
   
   show_language_switcher: true
   

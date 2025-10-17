@@ -4,7 +4,7 @@ description: "전북대 컴퓨터인공지능공학부 인숙영의 포트폴리
 keywords: "인숙영, SookYoung In, 전북대학교, 컴퓨터공학부, 프론트엔드 개발자, React, TypeScript, 포트폴리오, 데이터베이스 설계, 운영체제, 자료구조"
 type: landing
 image:
-  filename: 'uploads/og-image.png'
+  filename: 'uploads/og-image.png?v=2'
   caption: '인숙영의 포트폴리오'
 searchable: true
 sections:
