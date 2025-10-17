@@ -2,13 +2,12 @@
   text-align: justify !important;
 }
 
-/* Theming: primary color and button hover */
 :root {
-  --bs-primary: #7C4DFF; /* Deep purple */
-  /* Text color tokens */
-  --text-strong: #0d0e10; /* light mode strong text */
-  --text-muted: #4b5563;  /* light mode muted text */
-  --link: #0d6efd;        /* light mode link color */
+  --bs-primary: #7C4DFF;
+
+  --text-strong: #0d0e10;
+  --text-muted: #4b5563;
+  --link: #0d6efd;
 }
 .btn-primary {
   background-color: var(--bs-primary);
@@ -16,11 +15,10 @@
 }
 .btn-primary:hover,
 .btn-primary:focus {
-  background-color: #651FFF; /* Hover shade */
+  background-color: #651FFF; 
   border-color: #651FFF;
 }
 
-/* Floating FAB buttons */
 .cc-fab {
   position: fixed;
   right: 18px;
@@ -50,7 +48,7 @@
 }
 .cc-fab__btn i { font-size: 18px; }
 
-/* Ensure contact map is visible with a fixed height */
+
 .home-section#contact .leaflet-container,
 #contact .leaflet-container,
 .section-contact .leaflet-container,
@@ -59,24 +57,22 @@
   min-height: 340px;
 }
 
-/* Generic slider styles (works for shortcode or plain HTML fallback) */
 .cc-slider { position: relative; }
 .cc-slider__track { display:flex; gap:12px; overflow-x:auto; padding:8px; scroll-snap-type:x mandatory; scrollbar-width:none; }
 .cc-slider__track::-webkit-scrollbar { display:none; }
 .cc-slider figure { min-width:80%; margin:0; position:relative; scroll-snap-align:start; border-radius:12px; overflow:hidden; }
 .cc-slider img { width:100%; height:320px; object-fit:cover; display:block; }
 
-/* Slider caption typography: big title + one short line below */
+
 .cc-slider figcaption{ text-align:center; }
-.cc-slider figcaption > div:first-child{ /* Title */
-  font-size: clamp(28px, 5vw, 48px);
+.cc-slider figcaption > div:first-child{ 
   line-height: 1.15;
   font-weight: 800;
   letter-spacing: -0.01em;
   margin-bottom: 4px;
   text-shadow: 0 2px 8px rgba(0,0,0,.35);
 }
-.cc-slider figcaption > div:nth-child(2){ /* Subtitle - single line */
+.cc-slider figcaption > div:nth-child(2){ 
   font-size: clamp(14px, 2.2vw, 18px);
   line-height: 1.45;
   max-width: 88ch;
@@ -87,8 +83,7 @@
   opacity: .95;
 }
 
-/* Hide tags/share/author blocks on project detail pages */
-/* These selectors are scoped to common article containers used by Hugo Blox/Wowchemy. */
+
 .article-container .article-tags,
 .article-container .share-box,
 .article-container .article-share,
@@ -98,7 +93,6 @@
 .article-container footer.article-footer,
 .article-container .article-footer { display: none !important; }
 
-/* Some templates render these blocks outside .article-container. Scope to main to avoid header/footer nav. */
 main .article-tags,
 main .tags,
 main .tag-cloud,
@@ -113,7 +107,6 @@ main .article-footer,
 main .article-metadata .network-icon,
 main .network-icon { display: none !important; }
 
-/* Some themes nest content in <article>. Hide there as well. */
 main article .article-tags,
 main article .tags,
 main article .tag-cloud,
@@ -130,7 +123,6 @@ main article .article-footer,
 main article .article-metadata .network-icon,
 main article .network-icon { display: none !important; }
 
-/* Hide inline social/FAB icon rows within articles (projects, posts) */
 .article-container .network-icon,
 .article-container .network-icon a,
 .article-container .btn-icon,
@@ -139,18 +131,15 @@ main article .network-icon { display: none !important; }
 .article-container .article-metadata .btn-icon,
 .article-container .article-metadata .network-icon { display: none !important; }
 
-/* Base text colors via tokens */
 body { color: var(--text-strong); }
 .home-section { color: var(--text-strong); }
 
-/* Hero text color without background (light vs dark) */
 .home-section#about { color: var(--text-strong); }
 .home-section#about h1,
 .home-section#about h2,
 .home-section#about h3,
 .home-section#about .lead { color: var(--text-strong); }
 
-/* Dark mode (supports OS pref and common theme toggles) */
 @media (prefers-color-scheme: dark) {
   :root {
     --text-strong: #f1f3f5;
@@ -170,7 +159,6 @@ body.dark,
   --link: #8ab4f8;
 }
 
-/* Apply tokens to common section headings and text */
 .home-section h1,
 .home-section h2,
 .home-section h3,
@@ -178,7 +166,6 @@ body.dark,
 .home-section p,
 .home-section li { color: var(--text-strong); }
 
-/* Ensure About section inner markdown uses tokens regardless of theme CSS order */
 .home-section#about .article-style,
 .home-section#about .article-style p,
 .home-section#about .article-style li,
@@ -187,11 +174,9 @@ body.dark,
 .home-section#about .article-style .text-muted { color: var(--text-muted) !important; }
 .home-section#about .article-style a { color: var(--link) !important; }
 
-/* Strong override for About widget text (handles theme-specific classes) */
 #about .portrait-title h2, #about .portrait-title h3 { color: var(--text-strong) !important; }
 #about :where(h1,h2,h3,h4,h5,h6,p,li,small,span,strong,em) { color: var(--text-strong) !important; }
 #about .text-muted { color: var(--text-muted) !important; opacity: 1 !important; }
 #about a:not(.btn):not(.badge):not(.nav-link) { color: var(--link) !important; }
 #about .network-icon a { color: var(--link) !important; }
-/* Bio block commonly used by About widget */
 #about .bio, #about .bio p, #about .bio li, #about .bio small { color: var(--text-strong) !important; }

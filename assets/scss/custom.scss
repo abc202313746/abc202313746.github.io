@@ -699,3 +699,64 @@ section[id="programming-languages"] .section-heading .h2 {
 }
 
 .justify-text { text-align: justify; }
+
+
+:root[data-theme="dark"] .prose,
+:root[data-theme="dark"] .article-style,
+:root[data-theme="dark"] .home-section,
+:root[data-theme="dark"] .home-section :where(p, li, span, small),
+:root[data-theme="dark"] .home-section :where(h1,h2,h3,h4,h5,h6) {
+  color: #fff;
+}
+
+:root[data-theme="dark"] .home-section a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+:root[data-theme="dark"] #dream-goals,
+:root[data-theme="dark"] #dream-goals :where(p,li,span,small),
+:root[data-theme="dark"] #dream-goals :where(h1,h2,h3,h4,h5,h6),
+:root[data-theme="dark"] #dream-goals .project-title,
+:root[data-theme="dark"] #dream-goals .project-summary {
+  color: #fff;
+}
+:root[data-theme="dark"] #dream-goals a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+
+
+:root[data-theme="dark"] #about,
+:root[data-theme="dark"] #about :where(p,li,span,small,strong,em),
+:root[data-theme="dark"] #about :where(h1,h2,h3,h4,h5,h6) {
+  color: #fff !important;
+}
+
+
+:root[data-theme="dark"] .wg-about .article-style,
+:root[data-theme="dark"] .wg-about .article-style :where(p,li,span,small,strong,em),
+:root[data-theme="dark"] .wg-about .portrait-title :where(h1,h2,h3),
+:root[data-theme="dark"] .wg-about .network-icon a {
+  color: #fff !important;
+}
+
+
+:root[data-theme="dark"] .author-bio,
+:root[data-theme="dark"] .author-bio :where(p,li,span,strong,em),
+:root[data-theme="dark"] .article-style,
+:root[data-theme="dark"] .article-style :where(p,li,span,small,strong,em),
+:root[data-theme="dark"] .home-section :where(h1,h2,h3,h4,h5,h6) {
+  color: #fff !important;
+}
+
+
+:root[data-theme="dark"] #about a,
+:root[data-theme="dark"] .wg-about a,
+:root[data-theme="dark"] .author-bio a,
+:root[data-theme="dark"] .article-style a {
+  color: #fff !important;
+  text-decoration: underline;
+}
+
