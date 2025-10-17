@@ -782,7 +782,6 @@ section[id="programming-languages"] .section-heading .h2 {
   color: #fff !important;
 }
 
-/* Force all text in dark mode to be white - most specific selectors */
 [data-mode="dark"] body,
 [data-mode="dark"] body *,
 [data-mode="dark"] .home-section,
@@ -812,12 +811,10 @@ section[id="programming-languages"] .section-heading .h2 {
   color: #ffffff !important;
 }
 
-/* Override any inline styles or other CSS */
 [data-mode="dark"] * {
   color: #ffffff !important;
 }
 
-/* Specific override for text elements */
 html[data-mode="dark"] body,
 html[data-mode="dark"] body *,
 html[data-mode="dark"] .home-section,
@@ -826,5 +823,29 @@ html[data-mode="dark"] .wg-about,
 html[data-mode="dark"] .wg-about *,
 html[data-mode="dark"] #about,
 html[data-mode="dark"] #about * {
+  color: #ffffff !important;
+}
+
+/* Specific class for dark mode text */
+[data-mode="dark"] .dark-mode-text,
+[data-mode="dark"] .dark-mode-text *,
+html[data-mode="dark"] .dark-mode-text,
+html[data-mode="dark"] .dark-mode-text * {
+  color: #ffffff !important;
+}
+
+/* Force white text for main page bio section */
+[data-mode="dark"] .wg-about-avatar .biography,
+[data-mode="dark"] .wg-about-avatar .biography *,
+[data-mode="dark"] .wg-about-avatar .justify-text,
+[data-mode="dark"] .wg-about-avatar .justify-text *,
+[data-mode="dark"] .wg-about-avatar .dark-mode-text,
+[data-mode="dark"] .wg-about-avatar .dark-mode-text *,
+html[data-mode="dark"] .wg-about-avatar .biography,
+html[data-mode="dark"] .wg-about-avatar .biography *,
+html[data-mode="dark"] .wg-about-avatar .justify-text,
+html[data-mode="dark"] .wg-about-avatar .justify-text *,
+html[data-mode="dark"] .wg-about-avatar .dark-mode-text,
+html[data-mode="dark"] .wg-about-avatar .dark-mode-text * {
   color: #ffffff !important;
 }
