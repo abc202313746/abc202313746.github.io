@@ -18,7 +18,7 @@ outputs:
 
 params:
   logo: 'chat-logo.svg'
-  images: ['uploads/og-image.png']
+  images: ['uploads/aldi-sigun-K-sdQ12jZeY-unsplash (1).jpg']
   
   show_language_switcher: true
   
