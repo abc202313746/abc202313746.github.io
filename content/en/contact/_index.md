@@ -1,6 +1,5 @@
 ---
 title: Contact & Location
-lang: en
 summary: Get in touch with SookYoung In. Find contact information, location details, and directions to Jeonbuk National University.
 type: landing
 date: 2024-01-01
