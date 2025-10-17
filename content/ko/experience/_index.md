@@ -109,7 +109,6 @@ sections:
         - title: SW 멘토링 프로그램 - 멘티
           company: 전북대학교
           company_url: 'https://jbnu.ac.kr'
-          location: 전주, 전라북도
           date_start: '2024-09-11'
           date_end: '2024-12-13'
           description: |
@@ -121,7 +120,6 @@ sections:
         - title: 코알라 알고리즘 동아리 - 활동 멤버
           company: 전북대학교
           company_url: 'https://jbnu.ac.kr'
-          location: 전주, 전라북도
           date_start: '2024-03-02'
           date_end: '2024-06-20'
           description: |
