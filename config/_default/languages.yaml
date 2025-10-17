@@ -1,19 +1,17 @@
-# Languages
-#   Create a section for each of your site's languages.
-#   Documentation: https://docs.hugoblox.com/reference/language/
 
-# Default language (Korean)
 ko:
   languageCode: ko-KR
+  languageName: 한국어
   contentDir: content
   weight: 1
   title: "인숙영의 포트폴리오"
   params:
     description: "전북대학교 컴퓨터공학부 인숙영의 포트폴리오"
 
-# English language
+
 en:
   languageCode: en-US
+  languageName: English
   contentDir: content
   weight: 2
   title: "SookYoung In Portfolio"
