@@ -1,6 +1,12 @@
 ---
-title: "홈"
+title: "인숙영의 포트폴리오 - 전북대학교 컴퓨터공학부"
+description: "전북대학교 컴퓨터공학부 인숙영의 포트폴리오. 프론트엔드 개발자 지망생으로 React, TypeScript, 데이터베이스 설계, 운영체제, 자료구조 프로젝트를 소개합니다."
+keywords: "인숙영, SookYoung In, 전북대학교, 컴퓨터공학부, 프론트엔드 개발자, React, TypeScript, 포트폴리오, 데이터베이스 설계, 운영체제, 자료구조"
 type: landing
+image:
+  filename: 'uploads/og-image.png'
+  caption: '인숙영의 포트폴리오'
+searchable: true
 sections:
   - block: about.avatar
     section_id: about
@@ -22,29 +28,54 @@ sections:
     content:
       title: "프로젝트"
       subtitle: ""
-      count: 9
+      count: 3
       page_type: project
       text: ""
     design:
-      view: card
-      columns: "3"
+      view: masonry
+      columns: "2"
+
+  - block: portfolio
+    section_id: programming-languages
+    content:
+      title: "할 수 있는 언어"
+      subtitle: ""
+      text: ""
+      filters:
+        folders:
+          - languages
+      count: 3
+    design:
+      view: compact
+      columns: '3'
+
+  - block: portfolio
+    section_id: dream-goals
+    content:
+      title: "꿈꾸는 목표"
+      subtitle: ""
+      count: 3
+      filters:
+        folders:
+          - goals
+      text: ""
+    design:
+      view: showcase
+      columns: "1"
 
   - block: slider
     content:
       text: ""
       slides:
         - title: "React · TypeScript"
-          content: "컴포넌트 설계와 상태 관리로 유지보수성 높은 UI를 구현"
           background:
             image:
               filename: "/uploads/1_unsplash.jpg"
-        - title: "실습을 통한 학습"
-          content: "작게 만들고 빠르게 개선하며 결과로 증명"
+        - title: "Coding my style"
           background:
             image:
               filename: "/uploads/2_unsplash.jpg"
-        - title: "알고리즘"
-          content: "복잡도 분석을 바탕으로 효율적인 로직과 최적화"
+        - title: "Algorithm"
           background:
             image:
               filename: "/uploads/3_unsplash.jpg"
