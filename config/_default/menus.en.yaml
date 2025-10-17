@@ -33,7 +33,7 @@ main:
     weight: 40
 
   - name: Resumé
-    url: 'https://abc202313746.github.io/uploads/resume.pdf'
+    url: '/uploads/resume.pdf'
     weight: 50
     params:
       target: "_blank"
