@@ -782,32 +782,49 @@ section[id="programming-languages"] .section-heading .h2 {
   color: #fff !important;
 }
 
-[data-mode="dark"] .home-section .justify-text,
-[data-mode="dark"] .home-section .justify-text *,
-[data-mode="dark"] .home-section .biography,
-[data-mode="dark"] .home-section .biography *,
-[data-mode="dark"] .home-section .article-style,
-[data-mode="dark"] .home-section .article-style *,
-[data-mode="dark"] .home-section p,
-[data-mode="dark"] .home-section div,
-[data-mode="dark"] .home-section span,
-[data-mode="dark"] .wg-about .justify-text,
-[data-mode="dark"] .wg-about .justify-text *,
-[data-mode="dark"] .wg-about .biography,
-[data-mode="dark"] .wg-about .biography *,
-[data-mode="dark"] .wg-about .article-style,
-[data-mode="dark"] .wg-about .article-style *,
-[data-mode="dark"] .wg-about p,
-[data-mode="dark"] .wg-about div,
-[data-mode="dark"] .wg-about span,
-[data-mode="dark"] #about .justify-text,
-[data-mode="dark"] #about .justify-text *,
-[data-mode="dark"] #about .biography,
-[data-mode="dark"] #about .biography *,
-[data-mode="dark"] #about .article-style,
-[data-mode="dark"] #about .article-style *,
-[data-mode="dark"] #about p,
-[data-mode="dark"] #about div,
-[data-mode="dark"] #about span {
+/* Force all text in dark mode to be white - most specific selectors */
+[data-mode="dark"] body,
+[data-mode="dark"] body *,
+[data-mode="dark"] .home-section,
+[data-mode="dark"] .home-section *,
+[data-mode="dark"] .wg-about,
+[data-mode="dark"] .wg-about *,
+[data-mode="dark"] #about,
+[data-mode="dark"] #about *,
+[data-mode="dark"] .justify-text,
+[data-mode="dark"] .justify-text *,
+[data-mode="dark"] .biography,
+[data-mode="dark"] .biography *,
+[data-mode="dark"] .article-style,
+[data-mode="dark"] .article-style *,
+[data-mode="dark"] p,
+[data-mode="dark"] div,
+[data-mode="dark"] span,
+[data-mode="dark"] strong,
+[data-mode="dark"] em,
+[data-mode="dark"] li,
+[data-mode="dark"] .content,
+[data-mode="dark"] .content *,
+[data-mode="dark"] .author-bio,
+[data-mode="dark"] .author-bio *,
+[data-mode="dark"] .portrait-title,
+[data-mode="dark"] .portrait-title * {
+  color: #ffffff !important;
+}
+
+/* Override any inline styles or other CSS */
+[data-mode="dark"] * {
+  color: #ffffff !important;
+}
+
+/* Specific override for text elements */
+html[data-mode="dark"] body,
+html[data-mode="dark"] body *,
+html[data-mode="dark"] .home-section,
+html[data-mode="dark"] .home-section *,
+html[data-mode="dark"] .wg-about,
+html[data-mode="dark"] .wg-about *,
+html[data-mode="dark"] #about,
+html[data-mode="dark"] #about * {
   color: #ffffff !important;
 }
