@@ -787,3 +787,8 @@ section[id="programming-languages"] .section-heading .h2 {
 [data-mode="dark"] .article-style * {
   color: #fff !important;
 }
+
+:root[data-theme="dark"] .justify-text,
+:root[data-theme="dark"] .justify-text * {
+  color: #fff !important;
+}
