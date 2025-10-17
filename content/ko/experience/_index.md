@@ -74,6 +74,26 @@ sections:
                 지속적으로 성장하고 있습니다.
               </p>
             </div>
+            <div style="margin-top: 25px; padding-top: 20px; border-top: 1px solid #eee;">
+              <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap; justify-content: flex-start;">
+                <a href="mailto:isy0110@jbnu.ac.kr" style="display: flex; align-items: center; gap: 8px; padding: 8px 15px; background: #f8f9fa; border-radius: 25px; text-decoration: none; color: #495057; font-size: 0.9rem; transition: all 0.3s ease;" onmouseover="this.style.background='#e9ecef'" onmouseout="this.style.background='#f8f9fa'">
+                  <i class="fas fa-envelope" style="color: #6c757d;"></i>
+                  <span>isy0110@jbnu.ac.kr</span>
+                </a>
+                <a href="https://github.com/abc202313746" target="_blank" style="display: flex; align-items: center; gap: 8px; padding: 8px 15px; background: #f8f9fa; border-radius: 25px; text-decoration: none; color: #495057; font-size: 0.9rem; transition: all 0.3s ease;" onmouseover="this.style.background='#e9ecef'" onmouseout="this.style.background='#f8f9fa'">
+                  <i class="fab fa-github" style="color: #6c757d;"></i>
+                  <span>GitHub</span>
+                </a>
+                <a href="https://www.instagram.com/insookyoung/" target="_blank" style="display: flex; align-items: center; gap: 8px; padding: 8px 15px; background: #f8f9fa; border-radius: 25px; text-decoration: none; color: #495057; font-size: 0.9rem; transition: all 0.3s ease;" onmouseover="this.style.background='#e9ecef'" onmouseout="this.style.background='#f8f9fa'">
+                  <i class="fab fa-instagram" style="color: #6c757d;"></i>
+                  <span>Instagram</span>
+                </a>
+                <a href="/uploads/resume.pdf" download="인숙영_이력서.pdf" style="display: flex; align-items: center; gap: 8px; padding: 8px 15px; background: #007bff; border-radius: 25px; text-decoration: none; color: white; font-size: 0.9rem; font-weight: 500; transition: all 0.3s ease;" onmouseover="this.style.background='#0056b3'" onmouseout="this.style.background='#007bff'">
+                  <i class="fas fa-download" style="color: white;"></i>
+                  <span>이력서 다운로드</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
     design:
