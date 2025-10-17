@@ -1,1 +1,5 @@
 # Intentionally empty. Use publish.yaml for GitHub Pages deployment
+
+# Prevent GitHub from treating this as a workflow file by breaking the schema.
+# Using a non-workflow top-level key ensures it won't show or trigger.
+x-disabled: true
