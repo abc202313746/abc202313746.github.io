@@ -4,6 +4,7 @@ summary: Get in touch with SookYoung In. Find contact information, location deta
 type: landing
 date: 2024-01-01
 translationKey: contact
+language: en
 image:
   filename: 'uploads/justin-lim-tloFnD-7EpI-unsplash (1).jpg'
   caption: 'Contact & Location'

@@ -2,7 +2,7 @@
 ko:
   languageCode: ko-KR
   languageName: 한국어
-  contentDir: content
+  contentDir: content/ko
   weight: 1
   title: "인숙영의 포트폴리오"
   params:

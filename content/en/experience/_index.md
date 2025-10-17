@@ -5,6 +5,7 @@ role: 'Computer Science Student at Jeonbuk National University'
 type: landing
 searchable: true
 translationKey: experience
+language: en
 image:
   filename: 'uploads/avatar.jpg'
   caption: 'SookYoung In'
