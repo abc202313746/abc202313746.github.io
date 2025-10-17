@@ -1,20 +1,15 @@
 ---
-# Display name
 title: SookYoung In
 
-# Is this the primary user of the site?
 superuser: true
 
-# Role/position
 role: 'Jeonbuk National University — Computer Science Student'
 
-# Make this page searchable
 searchable: true
 
-# Profile photo (put `avatar.jpg` in this folder to use it)
+
 avatar: avatar.jpg
 
-# Short bio
 bio: Frontend & UX-focused. Projects in Database, Operating Systems, and Data Structures.
 
 status:

@@ -689,3 +689,11 @@ section[id="programming-languages"] .section-heading .h2 {
     font-size: 1.5rem !important;
   }
 }
+
+:root[data-theme="dark"] .justify-text,
+:root[data-theme="dark"] .justify-text p,
+:root[data-theme="dark"] .article-style {  
+  color: #fff;
+}
+
+.justify-text { text-align: justify; }
