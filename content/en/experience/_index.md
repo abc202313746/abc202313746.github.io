@@ -1,5 +1,6 @@
 ---
 title: SookYoung In
+lang: en
 superuser: true
 role: 'Computer Science Student at Jeonbuk National University'
 type: landing
