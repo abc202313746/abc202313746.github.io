@@ -5,6 +5,9 @@ role: '전북대학교 컴퓨터인공지능학부 3학년 재학생'
 avatar: uploads/avatar.jpg
 bio: 저의 주요 관심사는 프론트엔드 개발, 특히 React와 TypeScript입니다.
 
+# Status emoji
+status_emoji: "🐤"
+
 social:
   - icon: github
     icon_pack: fab
