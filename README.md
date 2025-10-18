@@ -1,12 +1,12 @@
 # 인숙영 포트폴리오 웹사이트
 
-<img width="1176" height="818" alt="image" src="https://github.com/user-attachments/assets/deab3fce-7d52-4ff5-9305-61a1588ef991" />
+<img width="1900" height="858" alt="image" src="https://github.com/user-attachments/assets/189fcaa9-c57e-4642-859a-fc131ee93e0d" />
 
 
 [![Website](https://img.shields.io/badge/Website-Live-brightgreen?style=for-the-badge)](https://abc202313746.github.io/)
 [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?style=for-the-badge&logo=github)](https://github.com/abc202313746)
 
-프론트엔드 개발자 인숙영의 개인 포트폴리오 웹사이트입니다.
+프론트엔드 개발자가 꿈인 인숙영의 개인 포트폴리오 웹사이트입니다.
 
 "빠르게 구현하되, 읽기 쉬운 코드와 좋은 사용자 경험"을 목표로 합니다.
 
@@ -19,13 +19,12 @@
 React와 TypeScript를 중심으로 프론트엔드 개발을 학습하고 있습니다.
 
 ### 현재 관심사
-- Next.js/TypeScript 심화
-- 테스트 (Vitest/Jest)
-- 디자인 시스템 (Storybook)
-- SEO 및 성능 최적화
+- 프론트엔드
+- React와 TypeScript
+- UI와 UX
 
 ## 🎓 학력
-- 전북대학교
+- 전북대학교 재학
 
 ## 📫 연락처
 - **이메일**: isy0110@jbnu.ac.kr
