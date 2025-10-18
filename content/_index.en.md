@@ -8,7 +8,9 @@ sections:
       username: admin
       text: |
         <p class="justify-text" style="color: #FFC107;">
-        👋 Hello! I'm <strong>SookYoung In</strong>, a university student aspiring to become a front-end developer.<br>
+        👋 Hello! I'm a front-end developer aspiring <br>
+        3rd year student at Jeonbuk National University, Department of Computer Science & AI, <br>
+        My name is <strong>SookYoung In</strong>.<br>
         I am particularly interested in technologies like React and TypeScript.<br>
         My goal is to create the best, most helpful web experiences for users.
         </p>
